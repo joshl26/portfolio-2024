@@ -1,0 +1,38 @@
+.footer-header {
+  color: var(--bg-color-light);
+  text-align: center;
+}
+
+.copyright-text {
+  color: var(--bg-color-light);
+  font-weight: 200;
+  font-family: raleway;
+  font-size: clamp(1rem, 0.8037rem + 0.9816vw, 2rem);
+  /* margin-left: 1rem; */
+  transition: 0.25s;
+}
+.copyright-text:hover {
+  color: grey;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.social-icon {
+  color: var(--bg-color-light);
+  height: 30px;
+  width: auto;
+  transition: 0.25s;
+}
+
+.social-icon:hover {
+  color: grey;
+  height: 30px;
+  width: auto;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.copyright-container,
+.social-icon-col {
+  text-align: center;
+}

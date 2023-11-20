@@ -1,0 +1,30 @@
+.responsive-menu-section {
+  position: relative;
+  background-color: var(--bg-color-dark);
+  z-index: 1000;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.responsive-menu-container {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.responsive-menu-header {
+  color: var(--bg-color-light);
+  font-size: clamp(3rem, 2.2147rem + 3.9264vw, 7rem);
+  width: fit-content;
+  margin-left: 4rem;
+  transition: 1s;
+}
+
+.responsive-menu-header:hover {
+  transition: 1s;
+  color: gray;
+}
+
+.menu-spacer {
+  height: 15vh;
+}
