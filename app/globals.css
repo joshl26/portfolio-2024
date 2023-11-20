@@ -1,6 +1,6 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -24,4 +24,70 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.scroll-container {
+  position: relative !important;
+}
+
+.dropdown-menu li > a {
+  color: white;
+}
+.dropdown-menu > li {
+  padding: 5px;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+.dropdown-menu li > a:hover {
+  background: white;
+}
+
+.spacer {
+  height: 5vh;
+  height: 5dvh;
+}
+
+.spacer-small {
+  height: 2vh;
+  height: 2dvh;
+}
+
+.spacer-xsmall {
+  height: 15px;
+}
+
+.round-button {
+  height: fit-content !important;
+  border-radius: 25px;
+  padding: 10px 20px 10px 20px;
+  transition: 0.5s;
+}
+
+.round-button:hover {
+  height: fit-content !important;
+  border-radius: 25px;
+  background-color: var(--bg-color-dark);
+  border-color: beige;
+  color: beige;
+  padding: 10px 20px 10px 20px;
+  transition: 0.5s;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
 }
