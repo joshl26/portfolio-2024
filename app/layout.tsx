@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <div id="root"></div>
         <MenuContextProvider>
           <ResponsiveHeader />
           <ResponsiveMenu />
