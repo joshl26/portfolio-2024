@@ -4,6 +4,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import RoundButton from "../../ui/RoundButton";
 import "../../ui/Portfolio.css";
+import LeavesShade from "public/Iphone_leaves_shade_pomo.png";
+import VerticalVases from "public/Iphone_horizontal_and_vertical_pomo_vases.png";
+import VerticalModern from "public/Iphone_vertical_modern_office_pomo.png";
+import Image from "next/image";
 
 const PortfolioPomodor = () => {
   return (
@@ -19,11 +23,11 @@ const PortfolioPomodor = () => {
             },
           }}
         >
-          {/* <img
+          <Image
             className="portfolio-hero"
             alt="two iphones leaning against pottery"
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384650/PortfolioSite/Iphone_horizontal_and_vertical_pomo_vases_ng2hpt.png"
-          /> */}
+            src={VerticalVases}
+          />
         </motion.div>
       </section>
       <div className="spacer-small"></div>
@@ -280,12 +284,30 @@ const PortfolioPomodor = () => {
             },
           }}
         >
-          {/* <img
+          <Image
             className="portfolio-screen"
             alt="iphone in vertical position"
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384651/PortfolioSite/Iphone_vertical_modern_office_pomo_kex0v8.png"
-          /> */}
+            src={VerticalModern}
+          />
         </motion.div>
+
+        {/* <div className="spacer"></div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: {
+              duration: 0.75,
+              delay: 0.5,
+            },
+          }}
+        >
+          {/* <Image
+            className="portfolio-screen"
+            alt="iphone in vertical position"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_vertical_pomo_vases_dvoqbs.png"
+          /> 
+        </motion.div> */}
 
         <div className="spacer"></div>
         <motion.div
@@ -298,28 +320,11 @@ const PortfolioPomodor = () => {
             },
           }}
         >
-          {/* <img
-            className="portfolio-screen"
-            alt="iphone in vertical position"
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_vertical_pomo_vases_dvoqbs.png"
-          /> */}
-        </motion.div>
-        <div className="spacer"></div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: {
-              duration: 0.75,
-              delay: 0.5,
-            },
-          }}
-        >
-          {/* <img
+          <Image
             className="portfolio-screen"
             alt="iphone laying on the ground"
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384650/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
-          /> */}
+            src={LeavesShade}
+          />
         </motion.div>
         <div className="spacer"></div>
       </section>
