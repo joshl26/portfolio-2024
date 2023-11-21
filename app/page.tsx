@@ -21,7 +21,7 @@ export default function Home() {
         </section>
         <section className="showcased-work">
           <Link href={"/portfolio"}>
-            <div>
+            <div className="intro-row">
               <div>
                 <h2 className="showcased-h2">SHOWCASED WORK</h2>
               </div>
@@ -31,8 +31,8 @@ export default function Home() {
               </div>
             </div>
           </Link>
-          <div>
-            <div>
+          <div className="intro-grid">
+            <div className="intro-container">
               <Link href={"/portfolio/el-in"}>
                 <Image
                   className="showcase-card-container"
@@ -42,18 +42,18 @@ export default function Home() {
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />
                 <div className="spacer-small"></div>
-                <div>
-                  <div>
+                <div className="intro-row">
+                  <div className="intro-col">
                     <h3 className="showcased-h3">ELECTRONICS INVENTORY</h3>
                   </div>
-                  <div className="text-right">
+                  <div className="text-right intro-col">
                     <FaArrowCircleUp className="showcased-work-link" />
                   </div>
                   <div className="spacer-small"></div>
                 </div>
               </Link>
             </div>
-            <div>
+            <div className="intro-container">
               <Link href={"/portfolio/pomodor"}>
                 <Image
                   className="showcase-card-container"
@@ -63,11 +63,11 @@ export default function Home() {
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />
                 <div className="spacer-small"></div>
-                <div>
-                  <div>
+                <div className="intro-row">
+                  <div className="intro-col">
                     <h3 className="showcased-h3">POMODOR TIMER</h3>
                   </div>
-                  <div className="text-right">
+                  <div className="text-right intro-col">
                     <FaArrowCircleUp className="showcased-work-link" />
                   </div>
                   <div className="spacer-small"></div>
@@ -76,8 +76,8 @@ export default function Home() {
             </div>
           </div>
           <div className="spacer-small"></div>
-          <div>
-            <div>
+          <div className="intro-grid">
+            <div className="intro-container">
               <Link href={"/portfolio/3dportfolio"}>
                 <Image
                   className="showcase-card-container"
@@ -88,18 +88,18 @@ export default function Home() {
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />
                 <div className="spacer-small"></div>
-                <div>
-                  <div>
+                <div className="intro-row">
+                  <div className="intro-col">
                     <h3 className="showcased-h3">3D PORTFOLIO</h3>
                   </div>
-                  <div className="text-right">
+                  <div className="text-right intro-col">
                     <FaArrowCircleUp className="showcased-work-link" />
                   </div>
                   <div className="spacer-small"></div>
                 </div>
               </Link>
             </div>
-            <div>
+            <div className="intro-container">
               <Link href={"/portfolio/outdoorsy"}>
                 <Image
                   className="showcase-card-container"
@@ -109,11 +109,11 @@ export default function Home() {
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />
                 <div className="spacer-small"></div>
-                <div>
-                  <div>
+                <div className="intro-row">
+                  <div className="intro-col">
                     <h3 className="showcased-h3">OUTDOORSY</h3>
                   </div>
-                  <div className="text-right">
+                  <div className="text-right row-col">
                     <FaArrowCircleUp className="showcased-work-link" />
                   </div>
                   <div className="spacer-small"></div>

@@ -42,6 +42,7 @@
 }
 
 .showcase-card-container {
+  height: auto;
   width: 100%;
   border-radius: 0.75rem;
 }
@@ -73,4 +74,27 @@
   .margin-top {
     margin-top: 1.5rem;
   }
+}
+
+.intro-grid {
+  display: flex;
+  align-items: top;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.intro-container {
+  flex-grow: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  flex-basis: 350px;
+}
+
+.intro-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro-col {
+  width: 100%;
 }
