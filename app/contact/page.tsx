@@ -54,19 +54,11 @@ const ContactSection = () => {
         <div>
           <div>
             <div>
-              <div className="interface-spacer-small"></div>
-              <h3 className="contact-h3">Schedule a time with Calendly:</h3>
-              <div className="interface-spacer-small"></div>
+              <div className="spacer"></div>
               <div>
                 <div>
                   <div></div>
                   <div style={{ textAlign: "center" }}>
-                    {/* <PopupButton
-                      url="https://calendly.com/joshlehman-dev"
-                      rootElement={document.getElementById("root")}
-                      text="Click here to schedule!"
-                      className="round-button"
-                    /> */}
                     <div className="container">
                       <h1>Schedule an Appointment</h1>
                       <CalendlyEmbed url="https://calendly.com/joshlehman-dev/30-min-coffee-chat-with-josh" />

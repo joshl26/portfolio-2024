@@ -55,8 +55,8 @@ const About = () => {
         <div>
           <h2 className="portfolio-h2">ENGINEERING EXPERIENCE</h2>
         </div>
-        <div>
-          <div>
+        <div className="about-grid">
+          <div className="experience-container">
             <div className="experience-card">
               <RoundButton
                 buttonClass={"round-button"}
@@ -181,7 +181,7 @@ const About = () => {
             </div>
             <div className="spacer-small"></div>
           </div>
-          <div>
+          <div className="experience-container">
             <div className="experience-card">
               <RoundButton
                 buttonClass={"round-button"}
@@ -296,7 +296,7 @@ const About = () => {
             </div>
             <div className="spacer-small"></div>
           </div>
-          <div>
+          <div className="experience-container">
             <div className="experience-card">
               <RoundButton
                 buttonClass={"round-button"}

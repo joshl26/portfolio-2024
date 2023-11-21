@@ -45,6 +45,7 @@
   text-transform: uppercase;
   font-family: raleway;
   font-weight: 300;
+  padding-left: 1rem;
 }
 
 .portfolio-hero,
@@ -62,12 +63,15 @@
 }
 
 .portfolio-h2 {
+  padding: 0.25rem;
+
   text-transform: uppercase;
   font-family: lucitana;
   font-size: clamp(1.5rem, 1.0092rem + 2.454vw, 4rem);
 }
 
 .portfolio-p {
+  padding: 0.5rem;
   text-transform: uppercase;
   font-family: raleway;
   font-size: clamp(1rem, 0.9018rem + 0.4908vw, 1.5rem);
@@ -116,7 +120,7 @@
 
 .experience-card {
   border: 1px solid white;
-  padding: 0.75rem;
+  padding: 1rem;
   border-radius: 0.5rem;
   gap: 0.625rem;
   display: flex;
@@ -125,4 +129,18 @@
 
 .portfolio-about-h4 {
   padding-top: 1rem;
+}
+
+.about-grid {
+  display: flex;
+  align-items: top;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.experience-container {
+  flex-grow: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  flex-basis: 350px;
 }

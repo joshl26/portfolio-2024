@@ -118,10 +118,9 @@ a {
 
 .main-container {
   background-color: var(--bg-color-dark);
-
   display: flex;
   flex-direction: column;
-  max-width: 120rem;
+  max-width: 100rem;
   width: 100%;
   margin: 0 auto;
   min-height: 100vh;
