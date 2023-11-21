@@ -1,6 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FaArrowCircleUp } from "react-icons/fa";
 import "./Home.css";
+import ElInApple from "public/Laptop_apple_electronics_inventory_golden.png";
+import ModernDesk from "public/Iphone_3dportfolio_modern_desktop.png";
 
 export default function Home() {
   return (
@@ -29,11 +32,11 @@ export default function Home() {
           <div>
             <div>
               <Link href={"/portfolio/el-in"}>
-                {/* <img
+                <Image
                   className="showcase-card-container"
                   alt="electronics inventory hero"
-                  src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
-                /> */}
+                  src={ElInApple}
+                />
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />
                 <div className="spacer-small"></div>
@@ -50,11 +53,11 @@ export default function Home() {
             </div>
             <div>
               <Link href={"/portfolio/pomodor"}>
-                {/* <img
+                <Image
                   className="showcase-card-container"
                   alt="pomodoro timer hero"
-                  src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384650/PortfolioSite/Iphone_horizontal_and_vertical_pomo_vases_ng2hpt.png"
-                /> */}
+                  src={ModernDesk}
+                />
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />
                 <div className="spacer-small"></div>
