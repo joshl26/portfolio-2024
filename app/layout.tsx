@@ -2,6 +2,9 @@ import MenuContextProvider from "@/context/menu-context";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ResponsiveFooter from "./ui/ResponsiveFooter";
+import ResponsiveHeader from "./ui/ResponsiveHeader";
+import ResponsiveMenu from "./ui/ResponsiveMenu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <MenuContextProvider>{children}</MenuContextProvider>
+        <MenuContextProvider>
+          <ResponsiveHeader />
+          <ResponsiveMenu />
+          {children}
+          <ResponsiveFooter />
+        </MenuContextProvider>
       </body>
     </html>
   );
