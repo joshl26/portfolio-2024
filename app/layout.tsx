@@ -2,8 +2,8 @@ import MenuContextProvider from "@/context/menu-context";
 import type { Metadata } from "next";
 import { Lusitana, Raleway, Nunito, Cabin, Noto_Sans } from "next/font/google";
 import "./globals.css";
-import ResponsiveFooter from "./ui/ResponsiveFooter";
-import ResponsiveHeader from "./ui/ResponsiveHeader";
+import ResponsiveFooter from "@/app/ui/ResponsiveFooter";
+import ResponsiveHeader from "@/app/ui/ResponsiveHeader";
 import ResponsiveMenu from "./ui/ResponsiveMenu";
 
 const noto_sans = Noto_Sans({
@@ -39,7 +39,7 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "J  Lehman | Digital Crfatsman",
+  title: "Josh Lehman | Digital Craftsman",
   description: "Created with NextJS and Typescript",
 };
 
