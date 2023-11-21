@@ -6,6 +6,11 @@ import "../ui/Portfolio.css";
 import RoundButton from "../ui/RoundButton";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import ElInApple from "public/Laptop_apple_electronics_inventory_golden.png";
+import ModernDesk from "public/Iphone_3dportfolio_modern_desktop.png";
+import LeavesShade from "public/Iphone_leaves_shade_pomo.png";
+import DesertHorizontal from "public/Itab_outdoorsy_desert_horizontal.png";
+import Image from "next/image";
 
 const Portfolio = () => {
   return (
@@ -27,11 +32,11 @@ const Portfolio = () => {
               }}
             >
               <Link href={"/portfolio/el-in"}>
-                {/* <img
+                <Image
                   className="showcase-card-container"
                   alt="3d portfolio hero"
-                  src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
-                /> */}
+                  src={ElInApple}
+                />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
               </Link>
@@ -134,11 +139,11 @@ const Portfolio = () => {
               }}
             >
               <Link href={"/portfolio/pomodor"}>
-                {/* <img
+                <Image
                   className="showcase-card-container"
-                  alt="pomodor timer hero"
-                  src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384650/PortfolioSite/Iphone_horizontal_and_vertical_pomo_vases_ng2hpt.png"
-                /> */}
+                  alt="pomodoro timer hero"
+                  src={LeavesShade}
+                />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
               </Link>
@@ -226,11 +231,11 @@ const Portfolio = () => {
               }}
             >
               <Link href={"/portfolio/3dportfolio"}>
-                {/* <img
+                <Image
                   className="showcase-card-container"
                   alt="3d portfolio hero"
-                  src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
-                /> */}
+                  src={ModernDesk}
+                />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
               </Link>
@@ -322,11 +327,11 @@ const Portfolio = () => {
               }}
             >
               <Link href={"/portfolio/outdoorsy"}>
-                {/* <img
+                <Image
                   className="showcase-card-container"
-                  alt="outdoorsy hero"
-                  src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384653/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
-                /> */}
+                  alt="outdoorsy app hero"
+                  src={DesertHorizontal}
+                />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
               </Link>

@@ -1,3 +1,13 @@
+.footer-grid {
+  display: grid;
+  grid: auto / auto auto auto auto auto;
+}
+
+.footer-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
 .footer-header {
   color: var(--bg-color-light);
   text-align: center;
@@ -19,15 +29,14 @@
 
 .social-icon {
   color: var(--bg-color-light);
-  height: 30px;
-  width: auto;
+  height: 50px;
+  width: 50px;
   transition: 0.25s;
 }
 
 .social-icon:hover {
   color: grey;
-  height: 30px;
-  width: auto;
+  height: 40px;
   cursor: pointer;
   transition: 0.25s;
 }
@@ -35,4 +44,8 @@
 .copyright-container,
 .social-icon-col {
   text-align: center;
+}
+
+.social-icon-div {
+  margin: 0 auto;
 }

@@ -3,7 +3,6 @@ import React from "react";
 import "../ui/Portfolio.css";
 import RoundButton from "../ui/RoundButton";
 
-
 const About = () => {
   return (
     <main className="main-container">
@@ -34,7 +33,7 @@ const About = () => {
           </p>
 
           <p className="portfolio-p">
-            I enjoy meeting and divlaborating with new people who also love to
+            I enjoy meeting and collaborating with new people who also love to
             design and implement user-friendly and functional interfaces,
             systems and devices that meet or exceed the needs and expectations
             of my client.

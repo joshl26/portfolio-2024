@@ -4,6 +4,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import RoundButton from "../../ui/RoundButton";
 import "../../ui/Portfolio.css";
+import ElInApple from "public/Laptop_apple_electronics_inventory_golden.png";
+import ElInLaptop from "public/Laptop_apple_electronics_inventory.png";
+import Image from "next/image";
 
 const PortfolioElectronicInv = () => {
   return (
@@ -19,11 +22,11 @@ const PortfolioElectronicInv = () => {
             },
           }}
         >
-          {/* <img
+          <Image
             alt="laptop on a gold platform"
             className="portfolio-hero"
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
-          /> */}
+            src={ElInApple}
+          />
         </motion.div>
       </section>
       <div className="spacer-small"></div>
@@ -312,11 +315,11 @@ const PortfolioElectronicInv = () => {
             },
           }}
         >
-          {/* <img
+          <Image
             alt="laptop in a modern office"
             className="portfolio-screen"
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384653/PortfolioSite/Laptop_apple_electronics_inventory_a1gelp.png"
-          /> */}
+            src={ElInLaptop}
+          />
         </motion.div>
         <div className="spacer"></div>
         <motion.div
@@ -329,11 +332,11 @@ const PortfolioElectronicInv = () => {
             },
           }}
         >
-          {/* <img
+          <Image
             alt="laptop on a gold platform"
             className="portfolio-screen"
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
-          /> */}
+            src={ElInApple}
+          />
         </motion.div>
         <div className="spacer"></div>
       </section>

@@ -4,6 +4,8 @@ import { FaArrowCircleUp } from "react-icons/fa";
 import "./Home.css";
 import ElInApple from "public/Laptop_apple_electronics_inventory_golden.png";
 import ModernDesk from "public/Iphone_3dportfolio_modern_desktop.png";
+import LeavesShade from "public/Iphone_leaves_shade_pomo.png";
+import DesertHorizontal from "public/Itab_outdoorsy_desert_horizontal.png";
 
 export default function Home() {
   return (
@@ -56,7 +58,7 @@ export default function Home() {
                 <Image
                   className="showcase-card-container"
                   alt="pomodoro timer hero"
-                  src={ModernDesk}
+                  src={LeavesShade}
                 />
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />
@@ -77,11 +79,12 @@ export default function Home() {
           <div>
             <div>
               <Link href={"/portfolio/3dportfolio"}>
-                {/* <img
+                <Image
                   className="showcase-card-container"
                   alt="3d portfolio hero"
-                  src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
-                /> */}
+                  src={ModernDesk}
+                />
+
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />
                 <div className="spacer-small"></div>
@@ -98,11 +101,11 @@ export default function Home() {
             </div>
             <div>
               <Link href={"/portfolio/outdoorsy"}>
-                {/* <img
+                <Image
                   className="showcase-card-container"
                   alt="outdoorsy app hero"
-                  src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384653/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
-                /> */}
+                  src={DesertHorizontal}
+                />
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />
                 <div className="spacer-small"></div>

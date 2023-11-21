@@ -5,7 +5,7 @@ import { FaLinkedinIn, FaGithub, FaYoutubeSquare } from "react-icons/fa";
 const ResponsiveFooter = () => {
   return (
     <footer className="responsive-footer">
-      <div className="footer-container">
+      <div>
         <div>
           <div>
             <div className="copyright-container">
@@ -18,9 +18,9 @@ const ResponsiveFooter = () => {
               </a>
             </div>
           </div>
-          <div></div>
-          <div>
-            <div>
+          <div className="spacer"></div>
+          <div className="footer-container">
+            <div className="footer-grid">
               <div></div>
               <div className="social-icon-div">
                 <a
