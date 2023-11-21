@@ -1,6 +1,6 @@
 // import { div, div } from "react-bootstrap";
 import "./ResponsiveFooter.css";
-// import { FaLinkedinIn, FaGithub, FaYoutubeSquare } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaYoutubeSquare } from "react-icons/fa";
 
 const ResponsiveFooter = () => {
   return (
@@ -28,7 +28,7 @@ const ResponsiveFooter = () => {
                   target={"_blank"}
                   href="https://www.linkedin.com/in/joshrlehman/"
                 >
-                  {/* <FaLinkedinIn className="social-icon" /> */}
+                  <FaLinkedinIn className="social-icon" />
                 </a>
               </div>
               <div className="social-icon-div">
@@ -37,7 +37,7 @@ const ResponsiveFooter = () => {
                   target={"_blank"}
                   href="https://github.com/joshl26"
                 >
-                  {/* <FaGithub className="social-icon" /> */}
+                  <FaGithub className="social-icon" />
                 </a>
               </div>
               <div className="social-icon-div">
@@ -46,7 +46,7 @@ const ResponsiveFooter = () => {
                   target={"_blank"}
                   href="https://www.youtube.com/channel/UCp73vCN8JROvOh-DrCczCew"
                 >
-                  {/* <FaYoutubeSquare className="social-icon" /> */}
+                  <FaYoutubeSquare className="social-icon" />
                 </a>
               </div>
               <div></div>

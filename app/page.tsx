@@ -1,20 +1,23 @@
+"use client";
+
+import { useState } from "react";
+import ResponsiveFooter from "./ui/ResponsiveFooter";
 import ResponsiveHeader from "./ui/ResponsiveHeader";
 import ResponsiveMenu from "./ui/ResponsiveMenu";
 
-let menuClicked = "";
-let hamburgerMenuClicked = "";
-
 export default function Home() {
+  const [section, setSection] = useState(0);
+  const [menuOpened, setMenuOpened] = useState(false);
+  // const [menuClicked, setMenuClicked] = useState(false);
+  // const hamburgerMenuClicked = () => {
+  //   setMenuClicked(!menuClicked);
+  // };
+
   return (
-    <main className="">
-      <ResponsiveHeader
-        menuClicked={menuClicked}
-        hamburgerMenuClicked={hamburgerMenuClicked}
-      />
-      <ResponsiveMenu
-        menuClicked={menuClicked}
-        hamburgerMenuClicked={hamburgerMenuClicked}
-      />
+    <main>
+      <ResponsiveHeader />
+      <ResponsiveMenu />
+      <ResponsiveFooter />
     </main>
   );
 }

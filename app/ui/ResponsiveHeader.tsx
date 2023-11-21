@@ -1,15 +1,14 @@
+"use client";
+
 import React from "react";
 // import { div, Image, Row } from "react-bootstrap";
 import "./ResponsiveHeader.css";
 import JLIconSmall from "../data/images/JL_Icon_Small.png";
+import { useMenuClicked } from "@/context/menu-context";
 
-const ResponsiveHeader = ({
-  menuClicked,
-  hamburgerMenuClicked,
-}: {
-  menuClicked: any;
-  hamburgerMenuClicked: any;
-}) => {
+const ResponsiveHeader = () => {
+  const { menuClicked, toggleMenuClicked } = useMenuClicked();
+
   var hamburgerMenuStyle = menuClicked ? "is-active" : "";
 
   return (
@@ -31,7 +30,7 @@ const ResponsiveHeader = ({
           <div>
             <div className="hamburger-container">
               <div
-                onClick={hamburgerMenuClicked}
+                onClick={toggleMenuClicked}
                 className={`hamburger hamburger--spring + ${hamburgerMenuStyle}`}
               >
                 <div className="hamburger-box">
