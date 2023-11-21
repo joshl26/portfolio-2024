@@ -19,8 +19,8 @@ const Portfolio = () => {
         <h1 className="portfolio-h1">Portfolio</h1>
       </section>
       <section className="projects-section">
-        <div>
-          <div>
+        <div className="portfolio-grid">
+          <div className="portfolio-container">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
@@ -43,7 +43,7 @@ const Portfolio = () => {
               <div className="spacer"></div>
             </motion.div>
           </div>
-          <div>
+          <div className="portfolio-container">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
@@ -65,6 +65,7 @@ const Portfolio = () => {
                 to the smallest handheld. Manage your electronics inventory from
                 anywhere!
               </p>
+              <div className="spacer-small"></div>
               <div>
                 <div>
                   <ul className="showcased-list">
@@ -89,6 +90,7 @@ const Portfolio = () => {
                   </ul>
                 </div>
               </div>
+              <div className="spacer-small"></div>
               <div>
                 <RoundButton
                   buttonClass={"round-button"}
@@ -125,9 +127,8 @@ const Portfolio = () => {
           </div>
         </div>
         <div className="spacer-small"></div>
-
-        <div>
-          <div>
+        <div className="portfolio-grid">
+          <div className="portfolio-container">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
@@ -150,7 +151,7 @@ const Portfolio = () => {
               <div className="spacer"></div>
             </motion.div>
           </div>
-          <div>
+          <div className="portfolio-container">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
@@ -218,8 +219,8 @@ const Portfolio = () => {
             </motion.div>
           </div>
         </div>
-        <div>
-          <div>
+        <div className="portfolio-grid">
+          <div className="portfolio-container">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
@@ -242,7 +243,7 @@ const Portfolio = () => {
               <div className="spacer"></div>
             </motion.div>
           </div>
-          <div>
+          <div className="portfolio-container">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
@@ -314,8 +315,8 @@ const Portfolio = () => {
             </motion.div>
           </div>
         </div>
-        <div>
-          <div>
+        <div className="portfolio-grid">
+          <div className="portfolio-container">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{
@@ -338,8 +339,7 @@ const Portfolio = () => {
               <div className="spacer"></div>
             </motion.div>
           </div>
-
-          <div>
+          <div className="portfolio-container">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{

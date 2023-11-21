@@ -32,9 +32,15 @@
 
 .showcased-h3 {
   padding-top: 1rem;
+  font-size: 2rem;
+  font-style: normal;
+  text-transform: uppercase;
+  font-family: raleway;
+  font-weight: 300;
 }
 
 .showcased-list {
+  padding-left: 1rem;
   font-size: 1.25rem;
   font-family: raleway;
   font-weight: 300;
@@ -131,16 +137,22 @@
   padding-top: 1rem;
 }
 
-.about-grid {
+.portfolio-grid {
   display: flex;
   align-items: top;
   flex-wrap: wrap;
   gap: 16px;
 }
 
-.experience-container {
+.portfolio-container {
   flex-grow: 1;
   padding-left: 1rem;
   padding-right: 1rem;
-  flex-basis: 350px;
+  flex-basis: 450px;
+}
+
+.showcase-card-container {
+  height: auto;
+  width: 100%;
+  border-radius: 1rem;
 }
