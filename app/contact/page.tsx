@@ -2,7 +2,6 @@
 
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { PopupButton } from "react-calendly";
 import TopicRadio from "../ui/TopicRadio";
 import CalendlyEmbed from "../ui/CalendlyEmbed";
 
@@ -11,20 +10,15 @@ const EMAIL_JS_TEMPLATEID = "template_n48n2mb";
 const EMAIL_JS_PUBLIC_KEY = "87SpQ-1mR0MN2Rug9";
 
 const ContactSection = () => {
-  // const [captcha, setCaptcha] = useState(null);
   const [emailSent, setEmailSent] = useState(false);
   const [confirmReceipt, setConfirmReceipt] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [topic, setTopic] = useState("Comment");
 
-  //   var correctedColorMode = colorMode === "light" ? "dark" : "light";
-
   const onTopicChanged = (e: any) => {
     setTopic(e.target.innerHTML);
     console.log(topic);
   };
-
-  // useEffect(() => {}, [emailSent, confirmReceipt, topic, setTopic]);
 
   const form: any = useRef();
 
