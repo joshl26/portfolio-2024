@@ -134,3 +134,32 @@ a {
 .align-left {
   text-align: left;
 }
+
+.align-center {
+  text-align: center;
+}
+
+.contact-text-area {
+  width: 250px;
+  height: 100px;
+}
+
+.input {
+  width: 250px;
+}
+
+.submit-btn-col {
+  text-align: center;
+}
+
+.interface-spacer-xsmall {
+  height: 0.25vh;
+}
+
+.email-sent {
+  color: yellow;
+}
+
+.email-confirmation {
+  color: green;
+}

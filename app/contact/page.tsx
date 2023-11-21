@@ -4,6 +4,7 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import TopicRadio from "../ui/TopicRadio";
 import CalendlyEmbed from "../ui/CalendlyEmbed";
+import "../globals.css";
 
 const EMAIL_JS_SERVICEID = "service_45dcwgn";
 const EMAIL_JS_TEMPLATEID = "template_n48n2mb";
@@ -60,7 +61,7 @@ const ContactSection = () => {
                   <div></div>
                   <div style={{ textAlign: "center" }}>
                     <div className="container">
-                      <h1>Schedule an Appointment</h1>
+                      <h1>Schedule an Appointment with Calendly</h1>
                       <CalendlyEmbed url="https://calendly.com/joshlehman-dev/30-min-coffee-chat-with-josh" />
                     </div>
                   </div>
@@ -68,26 +69,101 @@ const ContactSection = () => {
                 </div>
               </div>
             </div>
-            <div className="interface-spacer-small"></div>
-            <div>
+            <div className="spacer"></div>
+            <div className="align-center">
               <div className="interface-spacer-small"></div>
-              <h3>Send a message via Email:</h3>
+              <h2>Send a message via Email:</h2>
+              <div className="spacer-small"></div>
             </div>
-            <form ref={form} id="contact-form" onSubmit={sendEmail}>
-              {emailSent === false ? (
-                <>
-                  <div>
+            <div style={{ display: "flex" }}>
+              <form
+                style={{ margin: "auto" }}
+                ref={form}
+                id="contact-form"
+                onSubmit={sendEmail}
+              >
+                {emailSent === false ? (
+                  <>
                     <div>
-                      <label htmlFor="name" className="interface-label">
-                        Name
+                      <div>
+                        <label htmlFor="name" className="interface-label">
+                          Name
+                        </label>
+                      </div>
+                      <div>
+                        <div>
+                          <input
+                            placeholder="Full name"
+                            autoComplete="given-name"
+                            required
+                            type="text"
+                            name="name"
+                            id="name"
+                            className="input"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="interface-spacer-xsmall"></div>
+                    <div>
+                      <label htmlFor="email" className="interface-label">
+                        Email
                       </label>
                     </div>
                     <div>
                       <div>
                         <input
-                          placeholder="Full name"
-                          autoComplete="given-name"
+                          placeholder="Email address"
+                          autoComplete="off"
                           required
+                          type="email"
+                          name="email"
+                          id="email"
+                          className="input"
+                        />
+                      </div>
+                    </div>
+                    <div className="interface-spacer-xsmall"></div>
+                    {/* <div>
+                      <label htmlFor="topic" className="interface-label">
+                        Choose a Topic
+                      </label>
+                    </div>
+                    <div>
+                      {/* <TopicRadio
+                      colorMode={correctedColorMode}
+                      onTopicChanged={onTopicChanged}
+                    /> 
+                    </div> */}
+                    <div className="interface-spacer-xsmall"></div>
+                    <div>
+                      <label htmlFor="message" className="interface-label">
+                        Message
+                      </label>
+                    </div>
+                    <div>
+                      <div>
+                        <textarea
+                          placeholder="Type message"
+                          required
+                          name="message"
+                          id="message"
+                          className="contact-text-area"
+                        />
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div>
+                      <div>
+                        <label htmlFor="name" className="interface-label">
+                          Name
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          disabled
                           type="text"
                           name="name"
                           id="name"
@@ -95,130 +171,75 @@ const ContactSection = () => {
                         />
                       </div>
                     </div>
-                  </div>
-                  <div className="interface-spacer-xsmall"></div>
-                  <div>
-                    <label htmlFor="email" className="interface-label">
-                      Email
-                    </label>
-                  </div>
-                  <div>
                     <div>
-                      <input
-                        placeholder="Email address"
-                        autoComplete="off"
-                        required
-                        type="email"
-                        name="email"
-                        id="email"
-                        className="input"
-                      />
+                      <div>
+                        <label htmlFor="email" className="interface-label">
+                          Email
+                        </label>
+                      </div>
+                      <div>
+                        <input
+                          disabled
+                          type="email"
+                          name="email"
+                          id="email"
+                          className="input"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="interface-spacer-xsmall"></div>
-                  <div>
-                    <label htmlFor="topic" className="interface-label">
-                      Choose a Topic
-                    </label>
-                  </div>
-                  <div>
-                    {/* <TopicRadio
-                      colorMode={correctedColorMode}
-                      onTopicChanged={onTopicChanged}
-                    /> */}
-                  </div>
-                  <div className="interface-spacer-xsmall"></div>
-                  <div>
-                    <label htmlFor="message" className="interface-label">
-                      Message
-                    </label>
-                  </div>
-                  <div>
+                    {/* <div>
+                      <label htmlFor="topic" className="interface-label">
+                        Topic
+                      </label>
+                      {/* <TopicRadio disabled={true} /> 
+                    </div> */}
                     <div>
-                      <textarea
-                        placeholder="Type message"
-                        required
-                        name="message"
-                        id="message"
-                        className="contact-text-area"
-                      />
+                      <div>
+                        <label htmlFor="message" className="interface-label">
+                          Message
+                        </label>
+                      </div>
+                      <div>
+                        <textarea
+                          disabled
+                          name="message"
+                          id="message"
+                          className="contact-text-area"
+                        />
+                      </div>
                     </div>
+                  </>
+                )}
+                <div className="spacer-small"></div>
+                <div>
+                  <div className="submit-btn-col">
+                    {emailSent === false && confirmReceipt === false ? (
+                      <button
+                        className="round-button"
+                        type="submit"
+                        data-sitekey="reCAPTCHA_site_key"
+                        data-callback="onSubmit"
+                        data-action="submit"
+                      >
+                        Submit Message
+                      </button>
+                    ) : (
+                      <p className="email-sent">
+                        Message sent, awaiting confirmation...
+                      </p>
+                    )}
+                    {emailSent === true && confirmReceipt === true ? (
+                      <p className="email-confirmation">
+                        Message received! <br />
+                        Check your inbox to confirm.
+                      </p>
+                    ) : (
+                      <p className="email-confirmation">{emailError}</p>
+                    )}
                   </div>
-                </>
-              ) : (
-                <>
-                  <div>
-                    <label htmlFor="name" className="interface-label">
-                      Name
-                    </label>
-                    <input
-                      disabled
-                      type="text"
-                      name="name"
-                      id="name"
-                      className=""
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="interface-label">
-                      Email
-                    </label>
-                    <input
-                      disabled
-                      type="email"
-                      name="email"
-                      id="email"
-                      className=""
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="topic" className="interface-label">
-                      Topic
-                    </label>
-                    {/* <TopicRadio disabled={true} /> */}
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="interface-label">
-                      Message
-                    </label>
-                    <textarea
-                      disabled
-                      name="message"
-                      id="message"
-                      className="contact-text-area"
-                    />
-                  </div>
-                </>
-              )}
-              <div className="interface-spacer-small"></div>
-              <div>
-                <div className="submit-btn-col">
-                  {emailSent === false && confirmReceipt === false ? (
-                    <button
-                      className="round-button"
-                      type="submit"
-                      data-sitekey="reCAPTCHA_site_key"
-                      data-callback="onSubmit"
-                      data-action="submit"
-                    >
-                      Submit Message
-                    </button>
-                  ) : (
-                    <p className="email-sent">
-                      Message sent, awaiting confirmation...
-                    </p>
-                  )}
-                  {emailSent === true && confirmReceipt === true ? (
-                    <p className="email-confirmation">
-                      Message received! <br />
-                      Check your inbox to confirm.
-                    </p>
-                  ) : (
-                    <p className="email-confirmation">{emailError}</p>
-                  )}
                 </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
           <div className="spacer"></div>
         </div>
