@@ -4,6 +4,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import RoundButton from "../../ui/RoundButton";
 import "../../ui/Portfolio.css";
+import ModernDesk from "public/Iphone_3dportfolio_modern_desktop.png";
+import Image from "next/image";
 
 const PortfolioThreeJS = () => {
   return (
@@ -19,12 +21,11 @@ const PortfolioThreeJS = () => {
             },
           }}
         >
-          {/* <img
-            className="portfolio-hero"
-            alt="iphone laying on des"
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png
-            "
-          /> */}
+          <Image
+            className="portfolio-screen"
+            alt="iphone laying on desk"
+            src={ModernDesk}
+          />
         </motion.div>
       </section>
       <div className="spacer-small"></div>
@@ -296,11 +297,11 @@ const PortfolioThreeJS = () => {
             },
           }}
         >
-          {/* <img
+          <Image
             className="portfolio-screen"
             alt="iphone laying on desk"
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
-          /> */}
+            src={ModernDesk}
+          />
         </motion.div>
         <div className="spacer"></div>
       </section>

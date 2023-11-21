@@ -4,6 +4,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import RoundButton from "../../ui/RoundButton";
 import "../../ui/Portfolio.css";
+import Image from "next/image";
+
+import DesertHorizontal from "public/Itab_outdoorsy_desert_horizontal.png";
+import DesertHorizontalOne from "public/Itab_outdoorsy_desert_horizontal_1.png";
 
 const PortfolioOutdoorsy = () => {
   return (
@@ -19,11 +23,11 @@ const PortfolioOutdoorsy = () => {
             },
           }}
         >
-          {/* <img
-            className="portfolio-hero"
-            alt="tablet among rocks"
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/f_auto/q_auto/v1697384653/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
-          /> */}
+          <Image
+            className="showcase-card-container"
+            alt="outdoorsy app hero"
+            src={DesertHorizontal}
+          />
         </motion.div>
       </section>
       <div className="spacer-small"></div>
@@ -283,11 +287,11 @@ const PortfolioOutdoorsy = () => {
             },
           }}
         >
-          {/* <img
+          <Image
             className="portfolio-screen"
             alt="tablets among the rocks"
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/f_auto/q_auto/v1697384654/PortfolioSite/Itab_outdoorsy_desert_horizontal_1_nbm9mz.png"
-          /> */}
+            src={DesertHorizontalOne}
+          />
         </motion.div>
         <div className="spacer"></div>
         <motion.div
@@ -300,11 +304,11 @@ const PortfolioOutdoorsy = () => {
             },
           }}
         >
-          {/* <img
+          <Image
             className="portfolio-screen"
             alt="tablet among the rocks"
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/f_auto/q_auto/v1697384653/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
-          /> */}
+            src={DesertHorizontal}
+          />
         </motion.div>
         <div className="spacer"></div>
       </section>
