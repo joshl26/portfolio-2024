@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import RoundButton from "../../ui/RoundButton";
-import "./Portfolio.css";
+import "../../ui/Portfolio.css";
 
 const PortfolioOutdoorsy = () => {
   return (
