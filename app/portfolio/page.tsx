@@ -27,11 +27,11 @@ const Portfolio = () => {
               }}
             >
               <Link href={"/portfolio/el-in"}>
-                <img
+                {/* <img
                   className="showcase-card-container"
                   alt="3d portfolio hero"
                   src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
-                />
+                /> */}
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
               </Link>
@@ -134,11 +134,11 @@ const Portfolio = () => {
               }}
             >
               <Link href={"/portfolio/pomodor"}>
-                <img
+                {/* <img
                   className="showcase-card-container"
                   alt="pomodor timer hero"
                   src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384650/PortfolioSite/Iphone_horizontal_and_vertical_pomo_vases_ng2hpt.png"
-                />
+                /> */}
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
               </Link>
