@@ -1,7 +1,7 @@
 .portfolio-h1 {
   display: flex;
   flex-direction: column;
-  font-family: lucitana;
+  font-family: var(--font-lusitana);
   font-style: italic;
   font-weight: 400;
   font-size: clamp(2.875rem, 0.125rem + 13.75vw, 12.5rem);
@@ -25,7 +25,7 @@
 .showcased-p {
   font-size: 1.5rem;
   font-weight: 200;
-  font-family: raleway;
+  font-family: var(--font-raleway);
   padding-top: 1rem;
   text-transform: uppercase;
 }
@@ -35,21 +35,21 @@
   font-size: 2rem;
   font-style: normal;
   text-transform: uppercase;
-  font-family: raleway;
+  font-family: var(--font-raleway);
   font-weight: 300;
 }
 
 .showcased-list {
   padding-left: 1rem;
   font-size: 1.25rem;
-  font-family: raleway;
+  font-family: var(--font-raleway);
   font-weight: 300;
 }
 
 .portfolio-about-list {
   font-style: normal;
   text-transform: uppercase;
-  font-family: raleway;
+  font-family: var(--font-raleway);
   font-weight: 300;
   padding-left: 1rem;
 }
@@ -72,43 +72,43 @@
   padding: 0.25rem;
 
   text-transform: uppercase;
-  font-family: lucitana;
+  font-family: var(--font-lusitana);
   font-size: clamp(1.5rem, 1.0092rem + 2.454vw, 4rem);
 }
 
 .portfolio-p {
   padding: 0.5rem;
   text-transform: uppercase;
-  font-family: raleway;
+  font-family: var(--font-raleway);
   font-size: clamp(1rem, 0.9018rem + 0.4908vw, 1.5rem);
 }
 .portfolio-font-noto {
   text-transform: uppercase;
-  font-family: "Noto Sans Display", sans-serif;
+  font-family: var(--font-noto-sans);
   font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
 }
 
 .portfolio-font-rale {
   text-transform: uppercase;
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font-raleway);
   font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
 }
 
 .portfolio-font-nunito {
   text-transform: uppercase;
-  font-family: "Nunito", sans-serif;
+  font-family: var(--font-nunito);
   font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
 }
 
 .portfolio-font-lusi {
   text-transform: uppercase;
-  font-family: "Lusitana", sans-serif;
+  font-family: var(--font-lusitana);
   font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
 }
 
 .portfolio-font-cabin {
   text-transform: uppercase;
-  font-family: "Cabin", sans-serif;
+  font-family: var(--font-cabin);
   font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
 }
 
@@ -120,7 +120,7 @@
 
 .portfolio-li {
   text-transform: uppercase;
-  font-family: lucitana;
+  font-family: var(--font-lusitana);
   font-size: clamp(1rem, 0.9018rem + 0.4908vw, 1.5rem);
 }
 

@@ -13,7 +13,7 @@
 
 .title-accent {
   color: beige;
-  font-family: lucitana;
+  font-family: var(--font-lusitana);
   font-size: clamp(2rem, 0.9295rem + 5.3524vw, 5.75rem);
 }
 
@@ -29,15 +29,15 @@
   font-size: clamp(1.5rem, 1.0092rem + 2.454vw, 4rem);
   font-style: normal;
   text-transform: uppercase;
-  font-family: lucitana;
-  font-weight: 200;
+  font-family: var(--font-lusitana);
+  font-weight: 400;
 }
 
 .showcased-h3 {
   font-size: 2rem;
   font-style: normal;
   text-transform: uppercase;
-  font-family: raleway;
+  font-family: var(--font-raleway);
   font-weight: 300;
 }
 

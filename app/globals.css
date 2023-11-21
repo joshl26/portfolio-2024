@@ -56,12 +56,12 @@ html a {
 p,
 h3,
 h4 {
-  font-family: "Lusitana";
+  font-family: var(--font-lusitana);
 }
 
 h1,
 h2 {
-  font-family: "Raleway";
+  font-family: var(--font-raleway);
 }
 a {
   color: var(--bg-color-light) !important;
