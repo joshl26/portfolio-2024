@@ -38,6 +38,8 @@ export default function Home() {
                   className="showcase-card-container"
                   alt="electronics inventory hero"
                   src={ElInApple}
+                  placeholder="blur"
+                  quality={100}
                 />
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />
@@ -59,6 +61,8 @@ export default function Home() {
                   className="showcase-card-container"
                   alt="pomodoro timer hero"
                   src={LeavesShade}
+                  placeholder="blur"
+                  quality={100}
                 />
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />
@@ -83,6 +87,8 @@ export default function Home() {
                   className="showcase-card-container"
                   alt="3d portfolio hero"
                   src={ModernDesk}
+                  placeholder="blur"
+                  quality={100}
                 />
 
                 <div className="spacer-small"></div>
@@ -105,6 +111,8 @@ export default function Home() {
                   className="showcase-card-container"
                   alt="outdoorsy app hero"
                   src={DesertHorizontal}
+                  placeholder="blur"
+                  quality={100}
                 />
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />

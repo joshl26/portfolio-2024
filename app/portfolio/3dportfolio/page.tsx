@@ -25,6 +25,8 @@ const PortfolioThreeJS = () => {
             className="portfolio-screen"
             alt="iphone laying on desk"
             src={ModernDesk}
+            placeholder="blur"
+            quality={100}
           />
         </motion.div>
       </section>
@@ -301,6 +303,8 @@ const PortfolioThreeJS = () => {
             className="portfolio-screen"
             alt="iphone laying on desk"
             src={ModernDesk}
+            placeholder="blur"
+            quality={100}
           />
         </motion.div>
         <div className="spacer"></div>

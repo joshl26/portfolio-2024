@@ -27,6 +27,8 @@ const PortfolioOutdoorsy = () => {
             className="showcase-card-container"
             alt="outdoorsy app hero"
             src={DesertHorizontal}
+            placeholder="blur"
+            quality={100}
           />
         </motion.div>
       </section>
@@ -291,6 +293,8 @@ const PortfolioOutdoorsy = () => {
             className="portfolio-screen"
             alt="tablets among the rocks"
             src={DesertHorizontalOne}
+            placeholder="blur"
+            quality={100}
           />
         </motion.div>
         <div className="spacer"></div>
@@ -308,6 +312,8 @@ const PortfolioOutdoorsy = () => {
             className="portfolio-screen"
             alt="tablet among the rocks"
             src={DesertHorizontal}
+            placeholder="blur"
+            quality={100}
           />
         </motion.div>
         <div className="spacer"></div>

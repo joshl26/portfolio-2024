@@ -36,6 +36,8 @@ const Portfolio = () => {
                   className="showcase-card-container"
                   alt="3d portfolio hero"
                   src={ElInApple}
+                  placeholder="blur"
+                  quality={100}
                 />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
@@ -144,6 +146,8 @@ const Portfolio = () => {
                   className="showcase-card-container"
                   alt="pomodoro timer hero"
                   src={LeavesShade}
+                  placeholder="blur"
+                  quality={100}
                 />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
@@ -236,6 +240,8 @@ const Portfolio = () => {
                   className="showcase-card-container"
                   alt="3d portfolio hero"
                   src={ModernDesk}
+                  placeholder="blur"
+                  quality={100}
                 />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
@@ -332,6 +338,8 @@ const Portfolio = () => {
                   className="showcase-card-container"
                   alt="outdoorsy app hero"
                   src={DesertHorizontal}
+                  placeholder="blur"
+                  quality={100}
                 />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>

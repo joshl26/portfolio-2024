@@ -26,6 +26,8 @@ const PortfolioElectronicInv = () => {
             alt="laptop on a gold platform"
             className="portfolio-hero"
             src={ElInApple}
+            placeholder="blur"
+            quality={100}
           />
         </motion.div>
       </section>
@@ -319,6 +321,8 @@ const PortfolioElectronicInv = () => {
             alt="laptop in a modern office"
             className="portfolio-screen"
             src={ElInLaptop}
+            placeholder="blur"
+            quality={100}
           />
         </motion.div>
         <div className="spacer"></div>
@@ -336,6 +340,8 @@ const PortfolioElectronicInv = () => {
             alt="laptop on a gold platform"
             className="portfolio-screen"
             src={ElInApple}
+            placeholder="blur"
+            quality={100}
           />
         </motion.div>
         <div className="spacer"></div>

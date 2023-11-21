@@ -39,9 +39,6 @@ const ResponsiveMenu = () => {
         <Link onClick={() => toggleMenuClicked()} href="/portfolio">
           <h3 className="responsive-menu-header">Portfolio</h3>
         </Link>
-        {/* <Link onClick={() => toggleMenuClicked()} to="/manifesto">
-            <h3 className="responsive-menu-header">Mission</h3>
-          </Link> */}
         <a
           rel="noreferrer"
           target="_blank"
@@ -50,9 +47,6 @@ const ResponsiveMenu = () => {
         >
           <h3 className="responsive-menu-header">Resume</h3>
         </a>
-        {/* <Link onClick={() => toggleMenuClicked()} to="/services">
-            <h3 className="responsive-menu-header">Services</h3>
-          </Link> */}
         <Link onClick={() => toggleMenuClicked()} href="/contact">
           <h3 className="responsive-menu-header">Contact</h3>
         </Link>

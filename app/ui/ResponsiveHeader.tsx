@@ -23,6 +23,8 @@ const ResponsiveHeader = () => {
                   className="header-hero-image"
                   alt="header hero image"
                   src={JLIconSmall}
+                  placeholder="blur"
+                  quality={100}
                 ></Image>
               </a>
             </div>
