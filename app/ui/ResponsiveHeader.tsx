@@ -3,7 +3,8 @@
 import React from "react";
 // import { div, Image, Row } from "react-bootstrap";
 import "./ResponsiveHeader.css";
-import JLIconSmall from "../data/images/JL_Icon_Small.png";
+import Image from "next/image";
+import JLIconSmall from "../../public/JL_Icon_Small.png";
 import { useMenuClicked } from "@/context/menu-context";
 
 const ResponsiveHeader = () => {
@@ -14,15 +15,15 @@ const ResponsiveHeader = () => {
   return (
     <header className="header-container">
       <div>
-        <div>
+        <div className="grid-container">
           <div>
             <div className="header-hero-container">
               <a href="/">
-                {/* <Image
+                <Image
                   className="header-hero-image"
                   alt="header hero image"
                   src={JLIconSmall}
-                ></Image> */}
+                ></Image>
               </a>
             </div>
           </div>

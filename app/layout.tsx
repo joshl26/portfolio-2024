@@ -9,7 +9,7 @@ import ResponsiveMenu from "./ui/ResponsiveMenu";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Josh Lehman Portfolio",
+  title: "J  Lehman | Digital Crfatsman",
   description: "Created with NextJS and Typescript",
 };
 

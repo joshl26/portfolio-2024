@@ -1,3 +1,16 @@
+.title-container {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 5.75rem);
+}
+
+.text-based-title {
+  font-size: clamp(1.5rem, 0.822rem + 3.3898vw, 3.875rem);
+  color: var(--bg-color-light);
+}
+
 .title-accent {
   color: beige;
   font-family: lucitana;
