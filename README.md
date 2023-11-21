@@ -68,7 +68,7 @@ npm install
 ## Usage
 
 ```sh
-npm run start
+npm run dev
 ```
 
 ## Run tests
