@@ -24,6 +24,7 @@ const ResponsiveHeader = () => {
                   alt="header hero image"
                   src={JLIconSmall}
                   quality={100}
+                  priority
                 ></Image>
               </a>
             </div>

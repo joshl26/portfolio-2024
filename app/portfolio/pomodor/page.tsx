@@ -27,6 +27,7 @@ const PortfolioPomodor = () => {
             className="portfolio-hero"
             alt="two iphones leaning against pottery"
             src={VerticalVases}
+            priority
           />
         </motion.div>
       </section>

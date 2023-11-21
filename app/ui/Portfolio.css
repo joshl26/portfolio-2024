@@ -58,6 +58,7 @@
 .portfolio-screen {
   background-repeat: no-repeat;
   background-size: contain;
+  height: auto;
   width: 100%;
   border-radius: 0.75rem;
 }
