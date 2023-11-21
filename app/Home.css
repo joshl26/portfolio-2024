@@ -1,0 +1,63 @@
+.title-accent {
+  color: beige;
+  font-family: lucitana;
+  font-size: clamp(2rem, 0.9295rem + 5.3524vw, 5.75rem);
+}
+
+.title-year {
+  font-size: clamp(1.3125rem, 1.0449rem + 1.3381vw, 2.25rem);
+}
+
+.showcased-work {
+  border-top: 0.0625rem solid #c6c0c4;
+}
+
+.showcased-h2 {
+  font-size: clamp(1.5rem, 1.0092rem + 2.454vw, 4rem);
+  font-style: normal;
+  text-transform: uppercase;
+  font-family: lucitana;
+  font-weight: 200;
+}
+
+.showcased-h3 {
+  font-size: 2rem;
+  font-style: normal;
+  text-transform: uppercase;
+  font-family: raleway;
+  font-weight: 300;
+}
+
+.showcase-card-container {
+  width: 100%;
+  border-radius: 0.75rem;
+}
+
+.showcase-border-top {
+  border-top: 0.0625rem solid #c6c0c4;
+}
+
+.showcased-work-link {
+  font-size: clamp(1.875rem, 1.7523rem + 0.6135vw, 2.5rem);
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+  rotate: 45deg;
+  transition: 0.5s;
+}
+
+.showcased-work-link:hover {
+  rotate: 90deg;
+  transition: 0.5s;
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .margin-top {
+    margin-top: 1.5rem;
+  }
+}

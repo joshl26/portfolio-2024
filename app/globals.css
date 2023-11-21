@@ -3,22 +3,68 @@
 @tailwind utilities; */
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --bg-color-dark: color(display-p3 0.13 0.13 0.13 / 1);
+  --bg-color-light: #ececec;
+  --color-one: #3d5a80;
+  --color-two: #98c1d9;
+  --color-three: #e0fbfc;
+  --color-four: #ee6c4d;
+  --color-five: #293241;
+  --button-color-light: #ececec;
+  --button-color-dark: #ececec;
+  --button-color-hover: #293241;
+}
+/* --bg-color-dark: color(display-p3 1 0 0.331); */
+#root {
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  color: var(--bg-color-light);
+  background-color: var(--bg-color-dark);
+  padding: 0 0.625rem;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-end-rgb));
+  overflow-x: hidden;
+}
+
+html,
+html a {
+  -webkit-font-smoothing: antialiased !important;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004) !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+.font-light {
+  color: var(--bg-color-dark);
+  -webkit-text-fill-color: var(--bg-color-dark);
+}
+
+.font-dark {
+  color: var(--bg-color-light);
+  -webkit-text-fill-color: var(--bg-color-light);
+}
+
+p,
+h3,
+h4 {
+  font-family: "Lusitana";
+}
+
+h1,
+h2 {
+  font-family: "Raleway";
+}
+a {
+  color: var(--bg-color-light) !important;
+  text-decoration: none !important;
 }
 
 .scroll-container {
@@ -70,6 +116,8 @@ body {
 }
 
 .main-container {
+  background-color: var(--bg-color-dark);
+
   display: flex;
   flex-direction: column;
   max-width: 120rem;

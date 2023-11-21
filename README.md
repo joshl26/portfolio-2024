@@ -52,8 +52,6 @@ This portfolio site was created to showcase the programming abilities of Josh Le
 
 ### ✨ [Live Site](https://joshlehman.ca)
 
-> <p>Hosted with GoDaddy</p>
-
 ## Prerequisites
 
 - npm >=8.0.0

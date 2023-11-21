@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaArrowCircleUp } from "react-icons/fa";
+import "./Home.css";
 
 export default function Home() {
   return (

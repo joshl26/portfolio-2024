@@ -20,8 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div id="root"></div>
+      <body className={`${inter.className} + main-container`}>
         <MenuContextProvider>
           <ResponsiveHeader />
           <ResponsiveMenu />
