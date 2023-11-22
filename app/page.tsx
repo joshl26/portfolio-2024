@@ -35,8 +35,9 @@ export default function Home() {
                 <CldImage
                   className="showcase-card-container"
                   alt="electronics inventory hero image"
-                  width="600"
-                  height="600"
+                  width="1000"
+                  height="1000"
+                  sizes="100vw"
                   preserveTransformations
                   src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
                 />
@@ -59,8 +60,9 @@ export default function Home() {
                 <CldImage
                   className="showcase-card-container"
                   alt="pomodoro timer hero"
-                  width="600"
-                  height="600"
+                  width="1000"
+                  height="1000"
+                  sizes="100vw"
                   preserveTransformations
                   src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
                 />
@@ -86,8 +88,9 @@ export default function Home() {
                 <CldImage
                   className="showcase-card-container"
                   alt="3d portfolio hero"
-                  width="600"
-                  height="600"
+                  width="1000"
+                  height="1000"
+                  sizes="100vw"
                   preserveTransformations
                   src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
                 />
@@ -111,8 +114,9 @@ export default function Home() {
                 <CldImage
                   className="showcase-card-container"
                   alt="outdoorsy app hero"
-                  width="600"
-                  height="600"
+                  width="1000"
+                  height="1000"
+                  sizes="100vw"
                   preserveTransformations
                   src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
                 />

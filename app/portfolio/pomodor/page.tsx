@@ -23,8 +23,9 @@ const PortfolioPomodor = () => {
           <CldImage
             className="portfolio-hero"
             alt="two iphones leaning against pottery"
-            width="600"
-            height="600"
+            width="1000"
+            height="1000"
+            sizes="100vw"
             preserveTransformations
             src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Iphone_horizontal_and_vertical_pomo_vases_ng2hpt.png"
           />
@@ -287,8 +288,9 @@ const PortfolioPomodor = () => {
           <CldImage
             className="portfolio-screen"
             alt="iphone in vertical position"
-            width="600"
-            height="600"
+            width="1000"
+            height="1000"
+            sizes="100vw"
             preserveTransformations
             src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Iphone_vertical_pomo_vases_dvoqbs.png"
           />
@@ -308,8 +310,9 @@ const PortfolioPomodor = () => {
           <CldImage
             className="portfolio-screen"
             alt="iphone laying on the ground"
-            width="600"
-            height="600"
+            width="1000"
+            height="1000"
+            sizes="100vw"
             preserveTransformations
             src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
           />

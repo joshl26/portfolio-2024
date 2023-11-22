@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import RoundButton from "@/app/ui/RoundButton";
 import "@/app/ui/Portfolio.css";
+import { CldImage } from "next-cloudinary";
 
 const PortfolioOutdoorsy = () => {
   return (
@@ -19,12 +20,14 @@ const PortfolioOutdoorsy = () => {
             },
           }}
         >
-          <Image
+          <CldImage
             className="showcase-card-container"
             alt="outdoorsy app hero"
-            src={DesertHorizontal}
-            placeholder="blur"
-            quality={100}
+            width="1000"
+            height="1000"
+            sizes="100vw"
+            preserveTransformations
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
           />
         </motion.div>
       </section>
@@ -285,12 +288,14 @@ const PortfolioOutdoorsy = () => {
             },
           }}
         >
-          <Image
+          <CldImage
             className="portfolio-screen"
             alt="tablets among the rocks"
-            src={DesertHorizontalOne}
-            placeholder="blur"
-            quality={100}
+            width="1000"
+            height="1000"
+            sizes="100vw"
+            preserveTransformations
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_1_nbm9mz.png"
           />
         </motion.div>
         <div className="spacer"></div>
@@ -304,12 +309,14 @@ const PortfolioOutdoorsy = () => {
             },
           }}
         >
-          <Image
-            className="portfolio-screen"
-            alt="tablet among the rocks"
-            src={DesertHorizontal}
-            placeholder="blur"
-            quality={100}
+          <CldImage
+            className="showcase-card-container"
+            alt="outdoorsy app hero"
+            width="1000"
+            height="1000"
+            sizes="100vw"
+            preserveTransformations
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
           />
         </motion.div>
         <div className="spacer"></div>
