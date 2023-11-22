@@ -4,8 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import RoundButton from "../../ui/RoundButton";
 import "../../ui/Portfolio.css";
-import ModernDesk from "public/Iphone_3dportfolio_modern_desktop.png";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 
 const PortfolioThreeJS = () => {
   return (
@@ -21,12 +20,14 @@ const PortfolioThreeJS = () => {
             },
           }}
         >
-          <Image
+          <CldImage
             className="portfolio-screen"
             alt="iphone laying on desk"
-            src={ModernDesk}
-            placeholder="blur"
-            quality={100}
+            width="1000"
+            height="1000"
+            sizes="100vw"
+            preserveTransformations
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
           />
         </motion.div>
       </section>
@@ -299,12 +300,14 @@ const PortfolioThreeJS = () => {
             },
           }}
         >
-          <Image
+          <CldImage
             className="portfolio-screen"
             alt="iphone laying on desk"
-            src={ModernDesk}
-            placeholder="blur"
-            quality={100}
+            width="1000"
+            height="1000"
+            sizes="100vw"
+            preserveTransformations
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
           />
         </motion.div>
         <div className="spacer"></div>

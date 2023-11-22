@@ -2,11 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import RoundButton from "../../ui/RoundButton";
-import "../../ui/Portfolio.css";
-import ElInApple from "public/Laptop_apple_electronics_inventory_golden.png";
-import ElInLaptop from "public/Laptop_apple_electronics_inventory.png";
-import Image from "next/image";
+import RoundButton from "@/app/ui/RoundButton";
+import "@/app/ui/Portfolio.css";
+import { CldImage } from "next-cloudinary";
 
 const PortfolioElectronicInv = () => {
   return (
@@ -22,12 +20,14 @@ const PortfolioElectronicInv = () => {
             },
           }}
         >
-          <Image
-            alt="laptop on a gold platform"
-            className="portfolio-hero"
-            src={ElInApple}
-            placeholder="blur"
-            quality={100}
+          <CldImage
+            className="showcase-card-container"
+            alt="outdoorsy app hero"
+            width="1000"
+            height="1000"
+            sizes="100vw"
+            preserveTransformations
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
           />
         </motion.div>
       </section>
@@ -317,12 +317,14 @@ const PortfolioElectronicInv = () => {
             },
           }}
         >
-          <Image
+          <CldImage
+            className="showcase-card-container"
             alt="laptop in a modern office"
-            className="portfolio-screen"
-            src={ElInLaptop}
-            placeholder="blur"
-            quality={100}
+            width="1000"
+            height="1000"
+            sizes="100vw"
+            preserveTransformations
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_a1gelp.png"
           />
         </motion.div>
         <div className="spacer"></div>
@@ -336,12 +338,14 @@ const PortfolioElectronicInv = () => {
             },
           }}
         >
-          <Image
+          <CldImage
+            className="showcase-card-container"
             alt="laptop on a gold platform"
-            className="portfolio-screen"
-            src={ElInApple}
-            placeholder="blur"
-            quality={100}
+            width="1000"
+            height="1000"
+            sizes="100vw"
+            preserveTransformations
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
           />
         </motion.div>
         <div className="spacer"></div>
