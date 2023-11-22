@@ -14,7 +14,7 @@
   </a>
 </p>
 
-This portfolio site was created to showcase the programming abilities of Josh Lehman. It was designed and coded from scratch utilizing the latest tech in React and ThreeJS.
+This portfolio site was created to showcase the programming abilities of Josh Lehman. It was designed and coded from scratch utilizing TypeScript and NextJS.
 
 ## Technologies Utilized
 
