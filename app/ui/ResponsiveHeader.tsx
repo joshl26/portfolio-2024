@@ -22,6 +22,7 @@ const ResponsiveHeader = () => {
                   alt="header hero image"
                   width="600"
                   height="600"
+                  priority={true}
                   preserveTransformations
                   src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/JL_Icon_Small_kzcjux.svg"
                 />
