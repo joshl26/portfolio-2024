@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "export PORT=3050 && next dev",
+    "dev-windows": "set PORT=3050 && next dev",
     "build": "next build",
-    "start": "export PORT=3050 && next start",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
