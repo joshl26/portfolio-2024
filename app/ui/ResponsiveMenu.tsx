@@ -2,9 +2,8 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-
-import "./ResponsiveMenu.css";
 import { useMenuClicked } from "@/context/menu-context";
+import "@/app/ui/ResponsiveMenu.css";
 
 const ResponsiveMenu = () => {
   const { menuClicked, toggleMenuClicked } = useMenuClicked();

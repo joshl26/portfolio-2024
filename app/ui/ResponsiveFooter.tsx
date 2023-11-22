@@ -1,5 +1,4 @@
-// import { div, div } from "react-bootstrap";
-import "./ResponsiveFooter.css";
+import "@/app/ui/ResponsiveFooter.css";
 import { FaLinkedinIn, FaGithub, FaYoutubeSquare } from "react-icons/fa";
 
 const ResponsiveFooter = () => {

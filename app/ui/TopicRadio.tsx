@@ -1,6 +1,6 @@
 import { useState } from "react";
 // import { ButtonGroup, Col, Stack, ToggleButton } from "react-bootstrap";
-import "./TopicRadio.css";
+import "@/app/ui/TopicRadio.css";
 
 const TopicRadio = () => {
   const [radioValue, setRadioValue] = useState("Comment");

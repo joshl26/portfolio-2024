@@ -1,11 +1,9 @@
 "use client";
 
 import React from "react";
-// import { div, Image, Row } from "react-bootstrap";
-import "./ResponsiveHeader.css";
-import Image from "next/image";
-import JLIconSmall from "../../public/JL_Icon_Small.png";
+import "@/app/ui/ResponsiveHeader.css";
 import { useMenuClicked } from "@/context/menu-context";
+import { CldImage } from "next-cloudinary";
 
 const ResponsiveHeader = () => {
   const { menuClicked, toggleMenuClicked } = useMenuClicked();
@@ -19,13 +17,14 @@ const ResponsiveHeader = () => {
           <div>
             <div className="header-hero-container">
               <a href="/">
-                <Image
+                <CldImage
                   className="header-hero-image"
                   alt="header hero image"
-                  src={JLIconSmall}
-                  quality={100}
-                  priority
-                ></Image>
+                  width="600"
+                  height="600"
+                  preserveTransformations
+                  src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/JL_Icon_Small_kzcjux.svg"
+                />
               </a>
             </div>
           </div>

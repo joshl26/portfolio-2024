@@ -2,12 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import RoundButton from "../../ui/RoundButton";
-import "../../ui/Portfolio.css";
-import LeavesShade from "public/Iphone_leaves_shade_pomo.png";
-import VerticalVases from "public/Iphone_horizontal_and_vertical_pomo_vases.png";
-import VerticalModern from "public/Iphone_vertical_modern_office_pomo.png";
-import Image from "next/image";
+import RoundButton from "@/app/ui/RoundButton";
+import "@/app/ui/Portfolio.css";
+import { CldImage } from "next-cloudinary";
 
 const PortfolioPomodor = () => {
   return (
@@ -23,11 +20,13 @@ const PortfolioPomodor = () => {
             },
           }}
         >
-          <Image
+          <CldImage
             className="portfolio-hero"
             alt="two iphones leaning against pottery"
-            src={VerticalVases}
-            priority
+            width="600"
+            height="600"
+            preserveTransformations
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Iphone_horizontal_and_vertical_pomo_vases_ng2hpt.png"
           />
         </motion.div>
       </section>
@@ -285,30 +284,15 @@ const PortfolioPomodor = () => {
             },
           }}
         >
-          <Image
+          <CldImage
             className="portfolio-screen"
             alt="iphone in vertical position"
-            src={VerticalModern}
+            width="600"
+            height="600"
+            preserveTransformations
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Iphone_vertical_pomo_vases_dvoqbs.png"
           />
         </motion.div>
-
-        {/* <div className="spacer"></div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: {
-              duration: 0.75,
-              delay: 0.5,
-            },
-          }}
-        >
-          {/* <Image
-            className="portfolio-screen"
-            alt="iphone in vertical position"
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384654/PortfolioSite/Iphone_vertical_pomo_vases_dvoqbs.png"
-          /> 
-        </motion.div> */}
 
         <div className="spacer"></div>
         <motion.div
@@ -321,10 +305,13 @@ const PortfolioPomodor = () => {
             },
           }}
         >
-          <Image
+          <CldImage
             className="portfolio-screen"
             alt="iphone laying on the ground"
-            src={LeavesShade}
+            width="600"
+            height="600"
+            preserveTransformations
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
           />
         </motion.div>
         <div className="spacer"></div>

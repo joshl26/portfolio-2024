@@ -2,12 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import RoundButton from "../../ui/RoundButton";
-import "../../ui/Portfolio.css";
-import Image from "next/image";
-
-import DesertHorizontal from "public/Itab_outdoorsy_desert_horizontal.png";
-import DesertHorizontalOne from "public/Itab_outdoorsy_desert_horizontal_1.png";
+import RoundButton from "@/app/ui/RoundButton";
+import "@/app/ui/Portfolio.css";
 
 const PortfolioOutdoorsy = () => {
   return (

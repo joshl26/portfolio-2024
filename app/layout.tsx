@@ -1,10 +1,10 @@
-import MenuContextProvider from "@/context/menu-context";
 import type { Metadata } from "next";
 import { Lusitana, Raleway, Nunito, Cabin, Noto_Sans } from "next/font/google";
-import "./globals.css";
 import ResponsiveFooter from "@/app/ui/ResponsiveFooter";
 import ResponsiveHeader from "@/app/ui/ResponsiveHeader";
-import ResponsiveMenu from "./ui/ResponsiveMenu";
+import ResponsiveMenu from "@/app/ui/ResponsiveMenu";
+import MenuContextProvider from "@/context/menu-context";
+import "@/app/globals.css";
 
 const noto_sans = Noto_Sans({
   subsets: ["latin"],
@@ -51,6 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+        suppressHydrationWarning={true}
         className={`${lusitana.variable} ${raleway.variable} ${nunito.variable} ${cabin.variable} ${noto_sans.variable} antialiased
           main-container`}
       >

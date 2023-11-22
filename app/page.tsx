@@ -1,11 +1,9 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
 import { FaArrowCircleUp } from "react-icons/fa";
-import ElInApple from "public/Laptop_apple_electronics_inventory_golden.png";
-import ModernDesk from "public/Iphone_3dportfolio_modern_desktop.png";
-import LeavesShade from "public/Iphone_leaves_shade_pomo.png";
-import DesertHorizontal from "public/Itab_outdoorsy_desert_horizontal.png";
-import "./Home.css";
+import { CldImage } from "next-cloudinary";
+import "@/app/Home.css";
 
 export default function Home() {
   return (
@@ -34,12 +32,13 @@ export default function Home() {
           <div className="intro-grid">
             <div className="intro-container">
               <Link href={"/portfolio/el-in"}>
-                <Image
+                <CldImage
                   className="showcase-card-container"
-                  alt="electronics inventory hero"
-                  src={ElInApple}
-                  placeholder="blur"
-                  quality={100}
+                  alt="electronics inventory hero image"
+                  width="600"
+                  height="600"
+                  preserveTransformations
+                  src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
                 />
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />
@@ -57,12 +56,13 @@ export default function Home() {
             </div>
             <div className="intro-container">
               <Link href={"/portfolio/pomodor"}>
-                <Image
+                <CldImage
                   className="showcase-card-container"
                   alt="pomodoro timer hero"
-                  src={LeavesShade}
-                  placeholder="blur"
-                  quality={100}
+                  width="600"
+                  height="600"
+                  preserveTransformations
+                  src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
                 />
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />
@@ -83,12 +83,13 @@ export default function Home() {
           <div className="intro-grid">
             <div className="intro-container">
               <Link href={"/portfolio/3dportfolio"}>
-                <Image
+                <CldImage
                   className="showcase-card-container"
                   alt="3d portfolio hero"
-                  src={ModernDesk}
-                  placeholder="blur"
-                  quality={100}
+                  width="600"
+                  height="600"
+                  preserveTransformations
+                  src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
                 />
 
                 <div className="spacer-small"></div>
@@ -107,13 +108,15 @@ export default function Home() {
             </div>
             <div className="intro-container">
               <Link href={"/portfolio/outdoorsy"}>
-                <Image
+                <CldImage
                   className="showcase-card-container"
                   alt="outdoorsy app hero"
-                  src={DesertHorizontal}
-                  placeholder="blur"
-                  quality={100}
+                  width="600"
+                  height="600"
+                  preserveTransformations
+                  src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
                 />
+
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />
                 <div className="spacer-small"></div>
