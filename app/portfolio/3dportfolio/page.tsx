@@ -54,7 +54,7 @@ const PortfolioThreeJS = () => {
           </span>
           <span>
             <RoundButton
-              href={"/portfolio/experimental"}
+              href={"/experimental"}
               buttonText={"LIVE SITE"}
               buttonClass={"round-button"}
               rel=""
