@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowCircleUp } from "react-icons/fa";
-import "./Home.css";
 import ElInApple from "public/Laptop_apple_electronics_inventory_golden.png";
 import ModernDesk from "public/Iphone_3dportfolio_modern_desktop.png";
 import LeavesShade from "public/Iphone_leaves_shade_pomo.png";
 import DesertHorizontal from "public/Itab_outdoorsy_desert_horizontal.png";
+import "./Home.css";
 
 export default function Home() {
   return (
