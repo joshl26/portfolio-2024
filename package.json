@@ -6,7 +6,8 @@
     "dev": "export PORT=3050 && next dev",
     "dev-windows": "set PORT=3050 && next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "export PORT=3050 && next start",
+    "start-windows": "set PORT=3050 && next dev",
     "lint": "next lint"
   },
   "dependencies": {
