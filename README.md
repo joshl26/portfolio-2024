@@ -20,22 +20,19 @@ This portfolio site was created to showcase the programming abilities of Josh Le
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![React.js](https://img.shields.io/badge/react.js-%23404d59.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23323330.svg?style=for-the-badge&logo=typescript&logoColor=%23F7DF1E)
+![ReactJS](https://img.shields.io/badge/reactjs-%23404d59.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![NextJS](https://img.shields.io/badge/nextjs-6DA55F?style=for-the-badge&logo=vercel&logoColor=white)
 
 > HTML5 - A markup language for creating web pages and web applications.
 
 > CSS3 - used for describing the presentation of a document written in a markup language.
 
-> Bootstrap - A free and open-source front-end web framework for designing websites and web applications quickly.
+> TypesScript - is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
 
-> Node.js - Open-source, cross-platform JavaScript run-time environment for executing JavaScript code server-side.
+> ReactJS - For building reactive/responsive web applications.
 
-> React.js - For building reactive/responsive web applications.
-
-> Render.com - Cloud platform as a service used as a web application deployment model.
+> NextJS - enables you to create full-stack Web applications by extending the latest React features, and integrating powerful Rust-based JavaScript tooling for the fastest builds.
 
 ## Screenshots
 
@@ -67,12 +64,6 @@ npm install
 
 ```sh
 npm run dev
-```
-
-## Run tests
-
-```sh
-npm run test
 ```
 
 ## Author
