@@ -2,9 +2,7 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-ARG CLOUDINARY_CLOUD_NAME=""
-
-
+ARG CLOUDINARY_CLOUD_NAME=something
 
 COPY package*.json ./
 RUN npm install
