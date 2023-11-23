@@ -1,9 +1,13 @@
 FROM node:18-alpine
 
 WORKDIR /app
+
+ARG NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+ENV NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="dv6keahg3"
+
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN CLOUDINARY_CLOUD_NAME=something npm run build
+RUN npm run build
 EXPOSE 3050
 CMD npm run start
