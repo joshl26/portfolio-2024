@@ -195,10 +195,18 @@ const PortfolioPomodor = () => {
           <div className="spacer-small"></div>
 
           <p className="portfolio-p">
-            This project was started in winter 2023 as an introduction to
-            ReactJS. The goal was to explore basic and advanced topics such as
-            prop drilling, React Router, responsive UI/UX design, and state
-            management with Redux.
+            During the winter of 2023, I undertook a project that aimed to
+            introduce myself to the world of ReactJS. The project helped me gain
+            a deeper understanding of various concepts, including both basic and
+            advanced topics. Some of the concepts I learned about included prop
+            drilling, which involves passing data from one component to another,
+            React Router, which enables the creation of multi-page applications,
+            responsive UI/UX design, which ensures that the user interface and
+            experience are optimized across different devices, and state
+            management with Redux, which enables the management of complex
+            application states. The project provided an excellent opportunity
+            for me to learn valuable skills that I can use in my future
+            endeavors.
           </p>
         </section>
       </motion.div>
@@ -216,9 +224,17 @@ const PortfolioPomodor = () => {
         <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DESIGN INTENT</h2>
           <p className="portfolio-p">
-            The idea with this project was to loosely replicate the UI/UX of the
-            famous pomofocus app and make several improvements over their
-            version.
+            The main objective of this project was to create a user interface
+            and experience that is similar to the popular pomofocus app, while
+            also enhancing its functionality. I aimed to provide users with a
+            more efficient, organized, and visually appealing approach to time
+            management. Throughout the development process, I carefully analyzed
+            the features of the original app and made necessary improvements to
+            enhance user experience. I focused on implementing user-friendly
+            features and eliminating any complexities that might hinder
+            productivity. The final product is a fully-functional time
+            management tool that is user-friendly, visually appealing, and
+            designed to help users stay focused and productive.
           </p>
         </section>
       </motion.div>

@@ -364,10 +364,11 @@ const Portfolio = () => {
             >
               <h3 className="showcased-h3">outdoorsy</h3>
               <p className="showcased-p">
-                Outdoorsy is a full-stack website project where logged in users
-                can create and review campsites, canoe routes, hiking trails,
-                etc. Its a community for outdoor enthusiasts to connect, share
-                experiences and plan new ones!
+                Outdoorsy is a comprehensive website project designed to cater
+                to the needs of outdoor enthusiasts. The website serves as a
+                platform where users can create and review various outdoor
+                activities such as campsites, canoe routes, hiking trails, and
+                many more.
               </p>
               <div>
                 <div>

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import React from "react";
@@ -201,16 +202,18 @@ const PortfolioElectronicInv = () => {
           </div>
           <div className="spacer-small"></div>
           <p className="portfolio-p">
-            Electronics Inventory (Ei) is a Full featured inventory management
-            and control system designed for small and large businesses alike.
-            Whether you are starting a small business, or maybe you are a home
-            hoobbyist who needs a better way to organize. Or mayve you have an
-            international conglomerate of corporations to manage...Ei can help!
-            Our software is easy to set up and also has the flexibility to scale
-            for international corporate environments. Cloud-based architecture
-            under the hood assures you can see your electronics inventory levels
-            from any device, anywhere in the world... anytime! Put the power of
-            EI to work in your business. Ask about our free 30 day demo.
+            Are you struggling to manage your electronics inventory and worried
+            that it might hinder your business growth? Look no further than
+            Electronics Inventory (Ei) - a cutting-edge inventory management
+            system designed for businesses of all sizes. Ei's software is
+            user-friendly, feature-rich, and cloud-based, making it easy to
+            manage your inventory levels from anywhere in the world, on any
+            device. Our system is easy to set up, and has the flexibility to
+            handle the most complex inventory management needs of large and
+            international corporations. With a free 30-day demo available, we
+            are confident that Ei will exceed your expectations and help take
+            your business to the next level. So why wait? Put the power of Ei to
+            work for your business today!
           </p>
         </section>
       </motion.div>
@@ -227,18 +230,18 @@ const PortfolioElectronicInv = () => {
         <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DESIGN INTENT</h2>
           <p className="portfolio-p">
-            My passion in programming is to design humanistic software. So with
-            EI I knew the idea was to design inventory managment software that
-            people would WANT to USE, as opposed to HAVING to USE. This meant
-            being able to deliver several key performance indicators (KPI)
-            regarding the lifecycle of the electronics inventory within your
-            organization in an efficient manner. The uniquely organic design and
-            layout of our app allows the free flow of information, which has
-            been shown to improve the overall efficiency in biological
-            organisms. We treat your business like a biolical organism, that
-            needs care and sustanence. Thats where you and Ei come in! See why
-            we are different from the traditional inventory management systems
-            you have used ine the past.
+            I am extremely passionate about designing software programs that put
+            humans first, and with EI, we have created inventory management
+            software that people actually want to use, not just have to use. We
+            are proud to deliver several key performance indicators (KPIs)
+            related to the lifecycle of electronics inventory within your
+            organization in the most efficient manner possible. Our app has a
+            uniquely organic design and layout that allows for the free flow of
+            information, improving overall efficiency, just like how it works in
+            biological organisms. We treat your business like a biological
+            organism, which requires proper care and sustenance. With EI, we are
+            confident that we are different from traditional inventory
+            management systems you may have used in the past.
           </p>
         </section>
       </motion.div>

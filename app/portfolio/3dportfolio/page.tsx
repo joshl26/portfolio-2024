@@ -86,6 +86,27 @@ const PortfolioThreeJS = () => {
       >
         <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DETAILS</h2>
+          <p className="portfolio-p">
+            For my 2023 portfolio site, I decided to create a website using
+            mainly ThreeJS and Blender. The website is three-dimensional and
+            offers an immersive experience for users who want to explore my
+            portfolio. I had a lot of fun learning new technologies to complete
+            this project, and I am excited to share it with you. However, I must
+            admit that I faced some challenges while working on the project.
+            Responsive styling within the 3D environment proved to be difficult,
+            and I realized that it might not be the best approach for all users.
+            As a result, I decided to switch back to a more traditional
+            portfolio layout that offers better user accessibility across
+            different devices, especially older browsers. Although I had to
+            sacrifice some of the immersive experience, I believe that it was
+            the right choice to ensure that all users can access my portfolio
+            without any issues. Despite the challenges, I am proud of what I
+            achieved with this project, and I believe that this type of
+            technology has a bright future ahead. In fact, I see potential
+            applications for this technology in augmented reality and other
+            areas. Overall, I would encourage you to check out my experimental
+            portfolio website and let me know what you think!
+          </p>
           <div style={{ justifyContent: "space-between", display: "flex" }}>
             <span>
               <h4>Winter 2022-Fall 2023</h4>
@@ -206,15 +227,21 @@ const PortfolioThreeJS = () => {
         <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DESIGN INTENT</h2>
           <p className="portfolio-p">
-            An experimental three dimensional portfolio site created with
-            ThreeJS and Blender. Give it a try! I had alot of fun learning new
-            technologies to complete this. In the end the limitations of
-            responsive styling within this 3d environment meant I had to switch
-            back to a more traditional portfolio website layout to offer
-            improved user accessibility over different devices, specifically
-            older browsers. Still it was a FUN experiment and I do see
-            applications for this type of tech in the future (i.e. Augmented
-            Reality) Reality.
+            The portfolio website was conceived with the primary objective of
+            exhibiting my abilities as a developer and designer. To achieve this
+            goal, I carefully curated a collection of my best work in web
+            development and design, and presented it on the site in an
+            aesthetically pleasing and user-friendly format. In addition to the
+            web development and design work, I also decided to showcase my
+            proficiency in 3D modeling by incorporating a series of high-quality
+            3D models into the portfolio. The 3D models were created using
+            Blender, a powerful and versatile 3D modeling software that allowed
+            me to create intricate and realistic models with ease. Overall, the
+            inclusion of 3D models in the portfolio website not only enhanced
+            the visual appeal of the site, but also showcased my technical
+            skills and attention to detail.e intent of the portfolio site was to
+            showcase my skills as a developer and a designer. The 3D models were
+            created by using blender.
           </p>
         </section>
       </motion.div>

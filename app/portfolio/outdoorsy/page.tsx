@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import React from "react";
@@ -193,10 +194,20 @@ const PortfolioOutdoorsy = () => {
           </div>
           <div className="spacer-small"></div>
           <p className="portfolio-p">
-            Outdoorsy is a full-stack website project where logged in users can
-            create and review campsites, canoe routes, hiking trails, etc. Its a
-            community for outdoor enthusiasts to connect, share experiences and
-            plan new ones!
+            Outdoorsy is a comprehensive website project designed to cater to
+            the needs of outdoor enthusiasts. The website serves as a platform
+            where users can create and review various outdoor activities such as
+            campsites, canoe routes, hiking trails, and many more. Once
+            registered and logged in, users can access different features that
+            enable them to connect with other outdoor enthusiasts, share their
+            experiences, and plan new ones. The platform ensures that outdoor
+            enthusiasts have a place to connect with like-minded individuals and
+            share their love for outdoor activities. With Outdoorsy, outdoor
+            enthusiasts can discover new outdoor destinations, plan and organize
+            their next adventure, and share their experiences with the
+            community. The website is an excellent resource for anyone looking
+            to experience the great outdoors and connect with other outdoor
+            enthusiasts.
           </p>
         </section>
       </motion.div>
@@ -213,10 +224,21 @@ const PortfolioOutdoorsy = () => {
         <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DESIGN INTENT</h2>
           <p className="portfolio-p">
-            The intent with this application is to allow outdoors enthusiasts to
-            have a place to share ideas, experiences and trip plans. I wanted
-            the user interface to feel very natural, like being in the woods..
-            Or on a lake for instance.
+            As an avid outdoors enthusiast, I understand the importance of
+            having a reliable platform to connect with other like-minded
+            individuals who share my passion for nature. With this application,
+            you can effortlessly exchange ideas, share your experiences, and
+            plan your next adventure with others who appreciate the great
+            outdoors. The user interface of this application has been designed
+            to replicate the natural environment as closely as possible,
+            providing you with a seamless and intuitive experience that feels
+            like being in the woods or on a lake. The goal is to make the
+            application feel like a virtual extension of the great outdoors
+            itself. Whether you're a seasoned backpacker or a beginner hiker,
+            this application is perfect for anyone who wants to connect with
+            others who share their passion for nature. So come explore with us
+            and discover new adventures together. Let me know if you need any
+            further assistance with this.
           </p>
         </section>
       </motion.div>
