@@ -42,7 +42,7 @@ const ResponsiveMenu = () => {
           rel="noreferrer"
           target="_blank"
           onClick={() => toggleMenuClicked()}
-          href="https://drive.google.com/file/d/1zPQ_i4jfnUcPgrqQ_EfHCEHXGyEiQUFX/view?usp=sharing"
+          href="https://drive.google.com/file/d/1HHADY94BHA4waDwAbuJj_T8yuvSHCu1r/view?usp=sharing"
         >
           <h3 className="responsive-menu-header">Resume</h3>
         </a>
