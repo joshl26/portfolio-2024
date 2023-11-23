@@ -24,7 +24,7 @@ const ResponsiveHeader = () => {
                   height="600"
                   priority={true}
                   preserveTransformations
-                  src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/JL_Icon_Small_kzcjux.svg"
+                  src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/JL_Icon_Small_kzcjux.svg"
                 />
               </a>
             </div>

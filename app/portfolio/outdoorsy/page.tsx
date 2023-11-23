@@ -27,7 +27,7 @@ const PortfolioOutdoorsy = () => {
             height="1000"
             sizes="100vw"
             preserveTransformations
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
           />
         </motion.div>
       </section>
@@ -295,7 +295,7 @@ const PortfolioOutdoorsy = () => {
             height="1000"
             sizes="100vw"
             preserveTransformations
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_1_nbm9mz.png"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_1_nbm9mz.png"
           />
         </motion.div>
         <div className="spacer"></div>
@@ -316,7 +316,7 @@ const PortfolioOutdoorsy = () => {
             height="1000"
             sizes="100vw"
             preserveTransformations
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
           />
         </motion.div>
         <div className="spacer"></div>

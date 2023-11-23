@@ -23,11 +23,11 @@ const PortfolioElectronicInv = () => {
           <CldImage
             className="showcase-card-container"
             alt="outdoorsy app hero"
-            width="1000"
-            height="1000"
+            width="2000"
+            height="2000"
             sizes="100vw"
             preserveTransformations
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/c_crop,w_1250/q_auto/f_auto/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
           />
         </motion.div>
       </section>
@@ -202,11 +202,15 @@ const PortfolioElectronicInv = () => {
           <div className="spacer-small"></div>
           <p className="portfolio-p">
             Electronics Inventory (Ei) is a Full featured inventory management
-            and control system designed for small and large businesses alike!
-            Easy to set up and get started, also has the flexibility to scale
-            for corporate environments. Cloud-based architecture under the hood
-            assures you can see your inventory levels from any device, anywhere
-            in the world!
+            and control system designed for small and large businesses alike.
+            Whether you are starting a small business, or maybe you are a home
+            hoobbyist who needs a better way to organize. Or mayve you have an
+            international conglomerate of corporations to manage...Ei can help!
+            Our software is easy to set up and also has the flexibility to scale
+            for international corporate environments. Cloud-based architecture
+            under the hood assures you can see your electronics inventory levels
+            from any device, anywhere in the world... anytime! Put the power of
+            EI to work in your business. Ask about our free 30 day demo.
           </p>
         </section>
       </motion.div>
@@ -223,11 +227,18 @@ const PortfolioElectronicInv = () => {
         <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DESIGN INTENT</h2>
           <p className="portfolio-p">
-            The intent with this application was to deliver key business metrics
-            regarding the lifecycle of electronics inventory within your
-            organization. The organic layout of the app allows the free flow of
-            information, which improves overall efiicinecy of your business. Try
-            a demo to see!
+            My passion in programming is to design humanistic software. So with
+            EI I knew the idea was to design inventory managment software that
+            people would WANT to USE, as opposed to HAVING to USE. This meant
+            being able to deliver several key performance indicators (KPI)
+            regarding the lifecycle of the electronics inventory within your
+            organization in an efficient manner. The uniquely organic design and
+            layout of our app allows the free flow of information, which has
+            been shown to improve the overall efficiency in biological
+            organisms. We treat your business like a biolical organism, that
+            needs care and sustanence. Thats where you and Ei come in! See why
+            we are different from the traditional inventory management systems
+            you have used ine the past.
           </p>
         </section>
       </motion.div>
@@ -324,7 +335,7 @@ const PortfolioElectronicInv = () => {
             height="1000"
             sizes="100vw"
             preserveTransformations
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_a1gelp.png"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_a1gelp.png"
           />
         </motion.div>
         <div className="spacer"></div>
@@ -345,7 +356,7 @@ const PortfolioElectronicInv = () => {
             height="1000"
             sizes="100vw"
             preserveTransformations
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/c_crop,w_1250/q_auto/f_auto/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
           />
         </motion.div>
         <div className="spacer"></div>

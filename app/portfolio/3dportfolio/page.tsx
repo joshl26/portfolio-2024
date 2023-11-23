@@ -27,7 +27,7 @@ const PortfolioThreeJS = () => {
             height="1000"
             sizes="100vw"
             preserveTransformations
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
+            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
           />
         </motion.div>
       </section>
@@ -307,7 +307,7 @@ const PortfolioThreeJS = () => {
             height="1000"
             sizes="100vw"
             preserveTransformations
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/v1697384652/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
+            src="https://res.cloudinary.com/dv6keahg3/image/q_auto/f_auto/upload/v1697384652/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
           />
         </motion.div>
         <div className="spacer"></div>
