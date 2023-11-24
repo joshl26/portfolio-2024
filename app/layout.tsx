@@ -5,6 +5,7 @@ import ResponsiveHeader from "@/app/ui/ResponsiveHeader";
 import ResponsiveMenu from "@/app/ui/ResponsiveMenu";
 import MenuContextProvider from "@/context/menu-context";
 import "@/app/globals.css";
+import CursorContainer from "./CursorContainer";
 
 const noto_sans = Noto_Sans({
   subsets: ["latin"],
@@ -52,15 +53,18 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning={true}
-        className={`${lusitana.variable} ${raleway.variable} ${nunito.variable} ${cabin.variable} ${noto_sans.variable} antialiased
-          main-container`}
+        className={`${lusitana.variable} ${raleway.variable} ${nunito.variable} ${cabin.variable} ${noto_sans.variable} antialiased`}
       >
-        <MenuContextProvider>
-          <ResponsiveHeader />
-          <ResponsiveMenu />
-          {children}
-          <ResponsiveFooter />
-        </MenuContextProvider>
+        <CursorContainer>
+          <MenuContextProvider>
+            <div style={{ maxWidth: "1600px", margin: "0 auto" }}>
+              <ResponsiveHeader />
+              <ResponsiveMenu />
+              {children}
+              <ResponsiveFooter />
+            </div>
+          </MenuContextProvider>
+        </CursorContainer>
       </body>
     </html>
   );
