@@ -2,8 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import RoundButton from "../../ui/RoundButton";
-import "../../ui/Portfolio.css";
+import RoundButton from "@/app/ui/RoundButton";
+import "@/app/ui/Portfolio.css";
 import { CldImage } from "next-cloudinary";
 
 const PortfolioThreeJS = () => {
