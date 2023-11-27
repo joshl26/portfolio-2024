@@ -139,12 +139,15 @@ a {
 }
 
 .contact-text-area {
-  width: 250px;
-  height: 100px;
+  max-width: 600px;
+  width: 100%;
+  height: 150px;
+  font-size: 1.5rem;
 }
 
 .input {
-  width: 250px;
+  max-width: 600px;
+  width: 100%;
 }
 
 .submit-btn-col {
@@ -155,10 +158,31 @@ a {
   height: 0.25vh;
 }
 
+.interface-label {
+  font-size: 1.75rem;
+}
+
+.input {
+  font-size: 1.5rem;
+}
+
+.contact-title {
+  font-size: clamp(1.5rem, 1.2115rem + 1.5385vw, 2.75rem);
+}
+
+.contact-header {
+  font-size: clamp(1.5rem, 0.9231rem + 3.0769vw, 4rem);
+}
+
 .email-sent {
   color: yellow;
 }
 
 .email-confirmation {
   color: green;
+}
+
+.form-container {
+  margin: 0 auto;
+  max-width: 800px;
 }
