@@ -28,21 +28,20 @@ const About = () => {
             Currently, I am a Freelance Software Engineer at my company
             Blackrock Design Haus, where I design, develop and maintain web
             applications using some of the latest technologies including:
-            NextJS, React, CSSModules OR Tailwind, TypeScript, PostgresSQL,
-            MongoDB and AWS to name a few.
+            NextJS, React, CSSModules, Tailwind, TypeScript, PostgreSQL, MongoDB
+            and AWS just to name a few.
           </p>
-
           <p className="portfolio-p">
             I enjoy meeting and collaborating with new people who also love to
             design and implement user-friendly and functional interfaces,
             systems and devices that meet or exceed the needs and expectations
-            of my client.
+            of our clients.
           </p>
-
           <p className="portfolio-p">
             My goal is to continue learning and pushing the boundaries of
             software engineering and development.Whether it be on the world wide
-            web, in a financial institution, blockchain research or Ai.
+            web, in a financial institution, blockchain research, manufacturing
+            or even Ai.
           </p>
           <p className="portfolio-p">
             Software engineering is a passion of mine, and I look forward to

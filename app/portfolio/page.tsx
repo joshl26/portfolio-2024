@@ -60,8 +60,8 @@ const Portfolio = () => {
                 efficiently organizes electronic lab inventory for both small
                 businesses and individuals alike. The backend API has been fully
                 documented and tested using OpenAPI and Swagger. Electronics
-                Inventory web-app is available on on any device from desktop pc
-                to the smallest handheld. Manage your electronics inventory from
+                Inventory web-app is available on any device from desktop pc to
+                the smallest handheld. Manage your electronics inventory from
                 anywhere!
               </p>
               <div className="spacer-small"></div>
@@ -368,7 +368,7 @@ const Portfolio = () => {
                 to the needs of outdoor enthusiasts. The website serves as a
                 platform where users can create and review various outdoor
                 activities such as campsites, canoe routes, hiking trails, and
-                many more.
+                much more.
               </p>
               <div>
                 <div>

@@ -86,30 +86,9 @@ const PortfolioThreeJS = () => {
       >
         <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DETAILS</h2>
-          <p className="portfolio-p">
-            For my 2023 portfolio site, I decided to create a website using
-            mainly ThreeJS and Blender. The website is three-dimensional and
-            offers an immersive experience for users who want to explore my
-            portfolio. I had a lot of fun learning new technologies to complete
-            this project, and I am excited to share it with you. However, I must
-            admit that I faced some challenges while working on the project.
-            Responsive styling within the 3D environment proved to be difficult,
-            and I realized that it might not be the best approach for all users.
-            As a result, I decided to switch back to a more traditional
-            portfolio layout that offers better user accessibility across
-            different devices, especially older browsers. Although I had to
-            sacrifice some of the immersive experience, I believe that it was
-            the right choice to ensure that all users can access my portfolio
-            without any issues. Despite the challenges, I am proud of what I
-            achieved with this project, and I believe that this type of
-            technology has a bright future ahead. In fact, I see potential
-            applications for this technology in augmented reality and other
-            areas. Overall, I would encourage you to check out my experimental
-            portfolio website and let me know what you think!
-          </p>
           <div style={{ justifyContent: "space-between", display: "flex" }}>
             <span>
-              <h4>Winter 2022-Fall 2023</h4>
+              <h4>Winter 2022-Late Summer 2023</h4>
             </span>
             <span>
               <h4>Personal Development Project</h4>
@@ -211,7 +190,29 @@ const PortfolioThreeJS = () => {
               </span>
             </span>
           </div>
-          <p className="portfolio-p"></p>
+          <div className="spacer-small"></div>
+
+          <p className="portfolio-p">
+            For my 2023 portfolio site, I decided to create a website using
+            mainly ThreeJS and Blender. The website is three-dimensional and
+            offers an immersive experience for users who want to explore my
+            portfolio. I had a lot of fun learning new technologies to complete
+            this project, and I am excited to share it with you. However, I must
+            admit that I faced some challenges while working on the project.
+            Responsive styling within the 3D environment proved to be difficult,
+            and I realized that it might not be the best approach for all users.
+            As a result, I decided to switch back to a more traditional
+            portfolio layout that offers better user accessibility across
+            different devices, especially older browsers. Although I had to
+            sacrifice some of the immersive experience, I believe that it was
+            the right choice to ensure that all users can access my portfolio
+            without any issues. Despite the challenges, I am proud of what I
+            achieved with this project, and I believe that this type of
+            technology has a bright future ahead. In fact, I see potential
+            applications for this technology in augmented reality and other
+            areas. Overall, I would encourage you to check out my experimental
+            portfolio website and let me know what you think!
+          </p>
         </section>
       </motion.div>
       <motion.div
