@@ -189,12 +189,6 @@ const ContactSection = () => {
                           />
                         </div>
                       </div>
-                      {/* <div>
-                      <label htmlFor="topic" className="interface-label">
-                        Topic
-                      </label>
-                      {/* <TopicRadio disabled={true} /> 
-                    </div> */}
                       <div>
                         <div>
                           <label htmlFor="message" className="interface-label">
