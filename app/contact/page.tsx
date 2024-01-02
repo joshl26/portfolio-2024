@@ -2,25 +2,25 @@
 
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import TopicRadio from "../ui/TopicRadio";
+// import TopicRadio from "../ui/TopicRadio";
 import CalendlyEmbed from "../ui/CalendlyEmbed";
 import "../globals.css";
 import "../ui/Portfolio.css";
 
-const EMAIL_JS_SERVICEID = "service_45dcwgn";
-const EMAIL_JS_TEMPLATEID = "template_n48n2mb";
-const EMAIL_JS_PUBLIC_KEY = "87SpQ-1mR0MN2Rug9";
-
 const ContactSection = () => {
+  const EMAIL_JS_SERVICEID: any = process.env.NEXT_PUBLIC_EMAIL_JS_SERVICEID;
+  const EMAIL_JS_TEMPLATEID: any = process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATEID;
+  const EMAIL_JS_PUBLIC_KEY: any = process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY;
+
   const [emailSent, setEmailSent] = useState(false);
   const [confirmReceipt, setConfirmReceipt] = useState(false);
   const [emailError, setEmailError] = useState(false);
-  const [topic, setTopic] = useState("Comment");
+  // const [topic, setTopic] = useState("Comment");
 
-  const onTopicChanged = (e: any) => {
-    setTopic(e.target.innerHTML);
-    console.log(topic);
-  };
+  // const onTopicChanged = (e: any) => {
+  //   setTopic(e.target.innerHTML);
+  //   console.log(topic);
+  // };
 
   const form: any = useRef();
 
