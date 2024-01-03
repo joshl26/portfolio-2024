@@ -70,7 +70,7 @@ npm install or yarn
 ```
 
 ```sh
-rename .env.local.template to .env.local and replace the environment key values with your own. You will need both an emailjs and a cloudinary acount and the appropriate public keys.
+rename .env.local.template to .env.local and replace the environment key values with your own. You will need both an emailjs and a cloudinary account and the appropriate public keys.
 ```
 
 
