@@ -36,14 +36,23 @@ This portfolio site was created to showcase the programming abilities of Josh Le
 
 ## Screenshots
 
-> Loading Page
-> ![Home](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2024.png)
+> Home Page
+> ![Home Page 1](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2024-1.png)
 
-> Landing Page
-> ![About](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2024-1.png)
+> ![Home Page 2](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2024-2.png)
 
-> 3D Animated Experience as you scroll
-> ![Scroll Effect](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2024-2.png)
+> ![Home Page 3](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2024-3.png)
+
+> About Page
+> ![Avout Page](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2024-4.png)
+
+> Project Page
+> ![Project Page](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2024-5.png)
+
+> Contact Page
+> ![Contact Page 1](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2024-6.png)
+
+> ![Contact Page 2](https://raw.githubusercontent.com/joshl26/joshl26/main/assets/portfolio-2024-7.png)
 
 ## Demo
 
@@ -57,13 +66,18 @@ This portfolio site was created to showcase the programming abilities of Josh Le
 ## Install
 
 ```sh
-npm install
+npm install or yarn
 ```
+
+```sh
+rename .env.local.template to .env.local and replace the environment key values with your own. You will need bot an emailjs and a cloudinary acount and the appropriate public keys.
+```
+
 
 ## Usage
 
 ```sh
-npm run dev
+npm run dev or yarn dev
 ```
 
 ## Author
