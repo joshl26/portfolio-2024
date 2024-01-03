@@ -33,7 +33,6 @@ const Portfolio = () => {
                   width="2000"
                   height="2000"
                   sizes="100vw"
-                  preserveTransformations
                   src="v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
                 />
                 <div className="spacer-small"></div>
@@ -145,8 +144,7 @@ const Portfolio = () => {
                   width="1000"
                   height="1000"
                   sizes="100vw"
-                  preserveTransformations
-                  src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
+                  src="v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
                 />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
@@ -241,8 +239,7 @@ const Portfolio = () => {
                   width="1000"
                   height="1000"
                   sizes="100vw"
-                  preserveTransformations
-                  src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
+                  src="v1697384652/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
                 />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
@@ -341,8 +338,7 @@ const Portfolio = () => {
                   width="1000"
                   height="1000"
                   sizes="100vw"
-                  preserveTransformations
-                  src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
+                  src="v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
                 />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
