@@ -27,8 +27,7 @@ const PortfolioElectronicInv = () => {
             width="2000"
             height="2000"
             sizes="100vw"
-            preserveTransformations
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/c_crop,w_1250/q_auto/f_auto/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
+            src="v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
           />
         </motion.div>
       </section>
@@ -337,8 +336,7 @@ const PortfolioElectronicInv = () => {
             width="1000"
             height="1000"
             sizes="100vw"
-            preserveTransformations
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_a1gelp.png"
+            src="v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_a1gelp.png"
           />
         </motion.div>
         <div className="spacer"></div>
@@ -358,8 +356,7 @@ const PortfolioElectronicInv = () => {
             width="1000"
             height="1000"
             sizes="100vw"
-            preserveTransformations
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/c_crop,w_1250/q_auto/f_auto/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
+            src="v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
           />
         </motion.div>
         <div className="spacer"></div>

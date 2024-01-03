@@ -26,8 +26,7 @@ const PortfolioPomodor = () => {
             width="1000"
             height="1000"
             sizes="100vw"
-            preserveTransformations
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Iphone_horizontal_and_vertical_pomo_vases_ng2hpt.png"
+            src="v1697384652/PortfolioSite/Iphone_horizontal_and_vertical_pomo_vases_ng2hpt.png"
           />
         </motion.div>
       </section>
@@ -307,8 +306,7 @@ const PortfolioPomodor = () => {
             width="1000"
             height="1000"
             sizes="100vw"
-            preserveTransformations
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/Iphone_vertical_pomo_vases_dvoqbs.png"
+            src="v1697384652/PortfolioSite/Iphone_vertical_pomo_vases_dvoqbs.png"
           />
         </motion.div>
 
@@ -329,8 +327,7 @@ const PortfolioPomodor = () => {
             width="1000"
             height="1000"
             sizes="100vw"
-            preserveTransformations
-            src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/w_1000/v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
+            src="v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
           />
         </motion.div>
         <div className="spacer"></div>

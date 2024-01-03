@@ -34,7 +34,7 @@ const Portfolio = () => {
                   height="2000"
                   sizes="100vw"
                   preserveTransformations
-                  src="https://res.cloudinary.com/dv6keahg3/image/upload/c_crop,w_1250/q_auto/f_auto/v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
+                  src="v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
                 />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
