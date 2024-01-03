@@ -1,5 +1,6 @@
 .responsive-menu-section {
-  position: relative;
+  top: 0px;
+  position: absolute;
   background-color: var(--bg-color-dark);
   z-index: 1000;
   height: 100vh;

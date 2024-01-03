@@ -1,9 +1,13 @@
 .title-container {
+  z-index: 0;
+  position: relative;
   text-align: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
   height: calc(100vh - 5.75rem);
+  max-width: 1600px;
+  margin: auto;
 }
 
 .text-based-title {
@@ -23,6 +27,9 @@
 
 .showcased-work {
   border-top: 0.0625rem solid #c6c0c4;
+  z-index: 1;
+  position: relative;
+  background: var(--bg-color-dark);
 }
 
 .showcased-h2 {
