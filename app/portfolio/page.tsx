@@ -27,7 +27,7 @@ const Portfolio = () => {
                 },
               }}
             >
-              <Link as="image" href={"/portfolio/ecommerce/beanbag-coffee-co"}>
+              <Link href={"/portfolio/ecommerce/beanbag-coffee-co"}>
                 <CldImage
                   className="showcase-card-container"
                   alt="beanbag coffee co. hero"
@@ -134,7 +134,7 @@ const Portfolio = () => {
                 },
               }}
             >
-              <Link as="image" href={"/portfolio/el-in"}>
+              <Link href={"/portfolio/el-in"}>
                 <CldImage
                   className="showcase-card-container"
                   alt="electronics inventory hero image"
@@ -244,7 +244,7 @@ const Portfolio = () => {
                 },
               }}
             >
-              <Link as="image" href={"/portfolio/outdoorsy"}>
+              <Link href={"/portfolio/outdoorsy"}>
                 <CldImage
                   className="showcase-card-container"
                   alt="outdoorsy app hero"
@@ -341,7 +341,7 @@ const Portfolio = () => {
                 },
               }}
             >
-              <Link as="image" href={"/portfolio/3dportfolio"}>
+              <Link href={"/portfolio/3dportfolio"}>
                 <CldImage
                   className="showcase-card-container"
                   alt="3d portfolio hero"
@@ -441,7 +441,7 @@ const Portfolio = () => {
                 },
               }}
             >
-              <Link as="image" href={"/portfolio/pomodor"}>
+              <Link href={"/portfolio/pomodor"}>
                 <CldImage
                   className="showcase-card-container"
                   alt="pomodoro timer hero"
