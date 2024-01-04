@@ -41,6 +41,8 @@ export default function Home() {
                   height="1000"
                   sizes="100vw"
                   src="v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
+                  placeholder="blur"
+                  blurDataURL="v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
                 />
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />
@@ -65,6 +67,8 @@ export default function Home() {
                   height="1000"
                   sizes="100vw"
                   src="v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
+                  placeholder="blur"
+                  blurDataURL="v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
                 />
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />
@@ -92,6 +96,8 @@ export default function Home() {
                   height="1000"
                   sizes="100vw"
                   src="v1697384652/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
+                  placeholder="blur"
+                  blurDataURL="v1697384652/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
                 />
 
                 <div className="spacer-small"></div>
@@ -117,6 +123,8 @@ export default function Home() {
                   height="1000"
                   sizes="100vw"
                   src="v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
+                  placeholder="blur"
+                  blurDataURL="v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
                 />
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />
