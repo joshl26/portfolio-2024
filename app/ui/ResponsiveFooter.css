@@ -1,6 +1,6 @@
 .responsive-footer {
   background: var(--bg-color-dark);
-  z-index: 10;
+  z-index: 1;
   position: relative;
 }
 
@@ -12,7 +12,7 @@
 .footer-container {
   width: 50%;
   margin: 0 auto;
-  z-index: 10;
+  z-index: 1;
   position: relative;
 }
 

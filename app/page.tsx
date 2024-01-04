@@ -33,7 +33,7 @@ export default function Home() {
           </Link>
           <div className="intro-grid">
             <div className="intro-container">
-              <Link href={"/portfolio/el-in"}>
+              <Link as="image" href={"/portfolio/el-in"}>
                 <CldImage
                   className="showcase-card-container"
                   alt="electronics inventory hero image"
@@ -57,7 +57,7 @@ export default function Home() {
               </Link>
             </div>
             <div className="intro-container">
-              <Link href={"/portfolio/pomodor"}>
+              <Link as="image" href={"/portfolio/pomodor"}>
                 <CldImage
                   className="showcase-card-container"
                   alt="pomodoro timer hero"
@@ -84,7 +84,7 @@ export default function Home() {
           <div className="spacer-small"></div>
           <div className="intro-grid">
             <div className="intro-container">
-              <Link href={"/portfolio/3dportfolio"}>
+              <Link as="image" href={"/portfolio/3dportfolio"}>
                 <CldImage
                   className="showcase-card-container"
                   alt="3d portfolio hero"
@@ -109,7 +109,7 @@ export default function Home() {
               </Link>
             </div>
             <div className="intro-container">
-              <Link href={"/portfolio/outdoorsy"}>
+              <Link as="image" href={"/portfolio/outdoorsy"}>
                 <CldImage
                   className="showcase-card-container"
                   alt="outdoorsy app hero"
