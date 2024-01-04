@@ -21,6 +21,7 @@ export default function Home() {
       <section className="showcased-work">
         <div style={{ maxWidth: "1600px", margin: "auto" }}>
           <Link href={"/portfolio"}>
+            <div className="spacer-small" />
             <div className="intro-row">
               <div>
                 <h2 className="showcased-h2">SHOWCASED WORK</h2>
@@ -30,6 +31,7 @@ export default function Home() {
                 <FaArrowCircleUp className="showcased-work-link" />
               </div>
             </div>
+            <div className="spacer-small" />
           </Link>
           <div className="intro-grid">
             <div className="intro-container">
