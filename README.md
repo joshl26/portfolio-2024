@@ -76,6 +76,12 @@ rename .env.local.template to .env.local and replace the environment key values 
 
 ## Usage
 
+In Windows:
+```sh
+npm run dev-windows or yarn dev-windows
+```
+
+In Linux/Docker:
 ```sh
 npm run dev or yarn dev
 ```
