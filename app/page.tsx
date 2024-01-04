@@ -33,7 +33,35 @@ export default function Home() {
           </Link>
           <div className="intro-grid">
             <div className="intro-container">
-              <Link as="image" href={"/portfolio/el-in"}>
+              <Link href={"/portfolio/ecommerce/beanbag-coffee-co"}>
+                <CldImage
+                  className="showcase-card-container"
+                  alt="beanbag coffee co. hero"
+                  width="1000"
+                  height="1000"
+                  sizes="100vw"
+                  src="v1704379963/PortfolioSite/beanbag-coffee-2a_ocgeuz.png"
+                  placeholder="blur"
+                  blurDataURL="v1704379963/PortfolioSite/beanbag-coffee-2a_ocgeuz.png"
+                />
+
+                <div className="spacer-small"></div>
+                <div className="showcase-border-top" />
+                <div className="spacer-small"></div>
+                <div className="intro-row">
+                  <div className="intro-col">
+                    <h3 className="showcased-h3">Beanbag Coffee Co.</h3>
+                  </div>
+                  <div className="text-right intro-col">
+                    <FaArrowCircleUp className="showcased-work-link" />
+                  </div>
+                  <div className="spacer-small"></div>
+                </div>
+              </Link>
+            </div>
+
+            <div className="intro-container">
+              <Link href={"/portfolio/el-in"}>
                 <CldImage
                   className="showcase-card-container"
                   alt="electronics inventory hero image"
@@ -58,64 +86,11 @@ export default function Home() {
                 </div>
               </Link>
             </div>
-            <div className="intro-container">
-              <Link as="image" href={"/portfolio/pomodor"}>
-                <CldImage
-                  className="showcase-card-container"
-                  alt="pomodoro timer hero"
-                  width="1000"
-                  height="1000"
-                  sizes="100vw"
-                  src="v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
-                  placeholder="blur"
-                  blurDataURL="v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
-                />
-                <div className="spacer-small"></div>
-                <div className="showcase-border-top" />
-                <div className="spacer-small"></div>
-                <div className="intro-row">
-                  <div className="intro-col">
-                    <h3 className="showcased-h3">POMODOR TIMER</h3>
-                  </div>
-                  <div className="text-right intro-col">
-                    <FaArrowCircleUp className="showcased-work-link" />
-                  </div>
-                  <div className="spacer-small"></div>
-                </div>
-              </Link>
-            </div>
           </div>
           <div className="spacer-small"></div>
           <div className="intro-grid">
             <div className="intro-container">
-              <Link as="image" href={"/portfolio/3dportfolio"}>
-                <CldImage
-                  className="showcase-card-container"
-                  alt="3d portfolio hero"
-                  width="1000"
-                  height="1000"
-                  sizes="100vw"
-                  src="v1697384652/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
-                  placeholder="blur"
-                  blurDataURL="v1697384652/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
-                />
-
-                <div className="spacer-small"></div>
-                <div className="showcase-border-top" />
-                <div className="spacer-small"></div>
-                <div className="intro-row">
-                  <div className="intro-col">
-                    <h3 className="showcased-h3">3D PORTFOLIO</h3>
-                  </div>
-                  <div className="text-right intro-col">
-                    <FaArrowCircleUp className="showcased-work-link" />
-                  </div>
-                  <div className="spacer-small"></div>
-                </div>
-              </Link>
-            </div>
-            <div className="intro-container">
-              <Link as="image" href={"/portfolio/outdoorsy"}>
+              <Link href={"/portfolio/outdoorsy"}>
                 <CldImage
                   className="showcase-card-container"
                   alt="outdoorsy app hero"
@@ -134,6 +109,32 @@ export default function Home() {
                     <h3 className="showcased-h3">OUTDOORSY</h3>
                   </div>
                   <div className="text-right row-col">
+                    <FaArrowCircleUp className="showcased-work-link" />
+                  </div>
+                  <div className="spacer-small"></div>
+                </div>
+              </Link>
+            </div>
+            <div className="intro-container">
+              <Link href={"/portfolio/pomodor"}>
+                <CldImage
+                  className="showcase-card-container"
+                  alt="pomodoro timer hero"
+                  width="1000"
+                  height="1000"
+                  sizes="100vw"
+                  src="v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
+                  placeholder="blur"
+                  blurDataURL="v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
+                />
+                <div className="spacer-small"></div>
+                <div className="showcase-border-top" />
+                <div className="spacer-small"></div>
+                <div className="intro-row">
+                  <div className="intro-col">
+                    <h3 className="showcased-h3">POMODOR TIMER</h3>
+                  </div>
+                  <div className="text-right intro-col">
                     <FaArrowCircleUp className="showcased-work-link" />
                   </div>
                   <div className="spacer-small"></div>

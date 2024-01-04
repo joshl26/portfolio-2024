@@ -13,7 +13,115 @@ const Portfolio = () => {
       <section className="portfolio-section">
         <h1 className="portfolio-h1">Portfolio</h1>
       </section>
+
       <section className="projects-section">
+        <div className="portfolio-grid">
+          <div className="portfolio-container">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                  delay: 0,
+                },
+              }}
+            >
+              <Link as="image" href={"/portfolio/ecommerce/beanbag-coffee-co"}>
+                <CldImage
+                  className="showcase-card-container"
+                  alt="beanbag coffee co. hero"
+                  width="1000"
+                  height="1000"
+                  sizes="100vw"
+                  src="v1704379963/PortfolioSite/beanbag-coffee-2a_ocgeuz.png"
+                />
+                <div className="spacer-small"></div>
+                <div className="spacer-small"></div>
+              </Link>
+              <div className="spacer"></div>
+            </motion.div>
+          </div>
+          <div className="portfolio-container">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                  delay: 0,
+                },
+              }}
+              className="showcase-border-top"
+            >
+              <h3 className="showcased-h3">Beanbag Coffee Co.</h3>
+              <p className="showcased-p">
+                Beanbag Coffee Co. is a headless e-commerce solution that
+                provides a flexible framework for building custom e-commerce
+                platforms. It offers features such as GraphQL API, server-side
+                rendering, payment integrations, multi-currency support, and
+                many others. The Beanbag Coffee Co. e-commerce project is a
+                fully functional online store that allows customers to browse
+                and purchase a variety of coffee products ranging from whole
+                beans to ground coffee. The website is designed to be
+                user-friendly and visually appealing, providing customers with
+                an enjoyable shopping experience. The project uses MedusaJS as
+                its core framework combined with other technologies such as
+                NextJS for front-end development, Node.js for server-side
+                rendering and PostgreSQL for the DB. This stack was chosen
+                because it enables fast development of scalable applications
+                while also offering performance benefits.
+              </p>
+              <div>
+                <div>
+                  <ul className="showcased-list">
+                    <li>TYPESCRIPT</li>
+                    <li>TAILWINDCSS</li>
+                    <li>POSTGRESQL</li>
+                    <li>HEADLESS DESIGN</li>
+                    <li>REDIS</li>
+                  </ul>
+                </div>
+                <div>
+                  <ul className="showcased-list">
+                    <li>FRONTEND DESIGN</li>
+                    <li>NEXTJS</li>
+                    <li>BABEL</li>
+                    <li>WEBPACK</li>
+                    <li>GIT</li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <RoundButton
+                  href={"https://github.com/joshl26/nextjs-medusa-beanbag"}
+                  buttonClass={"round-button"}
+                  buttonText={"CODE"}
+                  target=""
+                  rel=""
+                />
+                <RoundButton
+                  buttonClass={"round-button"}
+                  buttonText={"LIVE SITE"}
+                  href={"https://storefront-git-main-joshl26.vercel.app/"}
+                  target=""
+                  rel=""
+                />
+                <Link href={"/portfolio/ecommerce/beanbag-coffee-co"}>
+                  <RoundButton
+                    buttonClass={"round-button"}
+                    buttonText={"SEE MORE"}
+                    target=""
+                    rel=""
+                    href=""
+                  />
+                </Link>
+              </div>
+              <div className="spacer"></div>
+            </motion.div>
+          </div>
+        </div>
+
         <div className="portfolio-grid">
           <div className="portfolio-container">
             <motion.div
@@ -124,7 +232,6 @@ const Portfolio = () => {
             </motion.div>
           </div>
         </div>
-        <div className="spacer-small"></div>
         <div className="portfolio-grid">
           <div className="portfolio-container">
             <motion.div
@@ -137,14 +244,14 @@ const Portfolio = () => {
                 },
               }}
             >
-              <Link as="image" href={"/portfolio/pomodor"}>
+              <Link as="image" href={"/portfolio/outdoorsy"}>
                 <CldImage
                   className="showcase-card-container"
-                  alt="pomodoro timer hero"
+                  alt="outdoorsy app hero"
                   width="1000"
                   height="1000"
                   sizes="100vw"
-                  src="v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
+                  src="v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
                 />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
@@ -164,27 +271,29 @@ const Portfolio = () => {
               }}
               className="showcase-border-top"
             >
-              <h3 className="showcased-h3">Pomodor Timer</h3>
+              <h3 className="showcased-h3">outdoorsy</h3>
               <p className="showcased-p">
-                This project was started in winter 2023 as an introduction to
-                ReactJS. The goal was to explore basic and advanced topics such
-                as prop drilling, React Router, responsive UI/UX design, and
-                state management with Redux.
+                Outdoorsy is a comprehensive website project designed to cater
+                to the needs of outdoor enthusiasts. The website serves as a
+                platform where users can create and review various outdoor
+                activities such as campsites, canoe routes, hiking trails, and
+                much more.
               </p>
               <div>
                 <div>
                   <ul className="showcased-list">
                     <li>JAVASCRIPT</li>
-                    <li>BOOTSTRAP</li>
+                    <li>CSS3</li>
                     <li>HTML5</li>
-                    <li>REACT</li>
-                    <li>REDUX</li>
+                    <li>WIREFRAMING</li>
+                    <li>UI/UX DESIGN</li>
                   </ul>
                 </div>
                 <div>
                   <ul className="showcased-list">
-                    <li>UI/UX DESIGN</li>
-
+                    <li>BACKEND DESIGN</li>
+                    <li>EXPRESS</li>
+                    <li>REST API</li>
                     <li>BABEL</li>
                     <li>WEBPACK</li>
                     <li>GIT</li>
@@ -193,20 +302,20 @@ const Portfolio = () => {
               </div>
               <div>
                 <RoundButton
+                  href={"https://github.com/joshl26/Outdoorsy"}
                   buttonClass={"round-button"}
                   buttonText={"CODE"}
-                  href={"https://github.com/joshl26/pomodoro-app"}
                   target=""
                   rel=""
                 />
                 <RoundButton
+                  href={"https://outdors.ca"}
                   buttonClass={"round-button"}
                   buttonText={"LIVE SITE"}
-                  href={"https://joshlehman.ca/pomodor"}
                   target=""
                   rel=""
                 />
-                <Link href={"/portfolio/pomodor"}>
+                <Link href={"/portfolio/outdoorsy"}>
                   <RoundButton
                     buttonClass={"round-button"}
                     buttonText={"SEE MORE"}
@@ -319,6 +428,7 @@ const Portfolio = () => {
             </motion.div>
           </div>
         </div>
+
         <div className="portfolio-grid">
           <div className="portfolio-container">
             <motion.div
@@ -331,14 +441,14 @@ const Portfolio = () => {
                 },
               }}
             >
-              <Link as="image" href={"/portfolio/outdoorsy"}>
+              <Link as="image" href={"/portfolio/pomodor"}>
                 <CldImage
                   className="showcase-card-container"
-                  alt="outdoorsy app hero"
+                  alt="pomodoro timer hero"
                   width="1000"
                   height="1000"
                   sizes="100vw"
-                  src="v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
+                  src="v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
                 />
                 <div className="spacer-small"></div>
                 <div className="spacer-small"></div>
@@ -358,29 +468,27 @@ const Portfolio = () => {
               }}
               className="showcase-border-top"
             >
-              <h3 className="showcased-h3">outdoorsy</h3>
+              <h3 className="showcased-h3">Pomodor Timer</h3>
               <p className="showcased-p">
-                Outdoorsy is a comprehensive website project designed to cater
-                to the needs of outdoor enthusiasts. The website serves as a
-                platform where users can create and review various outdoor
-                activities such as campsites, canoe routes, hiking trails, and
-                much more.
+                This project was started in winter 2023 as an introduction to
+                ReactJS. The goal was to explore basic and advanced topics such
+                as prop drilling, React Router, responsive UI/UX design, and
+                state management with Redux.
               </p>
               <div>
                 <div>
                   <ul className="showcased-list">
                     <li>JAVASCRIPT</li>
-                    <li>CSS3</li>
+                    <li>BOOTSTRAP</li>
                     <li>HTML5</li>
-                    <li>WIREFRAMING</li>
-                    <li>UI/UX DESIGN</li>
+                    <li>REACT</li>
+                    <li>REDUX</li>
                   </ul>
                 </div>
                 <div>
                   <ul className="showcased-list">
-                    <li>BACKEND DESIGN</li>
-                    <li>EXPRESS</li>
-                    <li>REST API</li>
+                    <li>UI/UX DESIGN</li>
+
                     <li>BABEL</li>
                     <li>WEBPACK</li>
                     <li>GIT</li>
@@ -389,20 +497,20 @@ const Portfolio = () => {
               </div>
               <div>
                 <RoundButton
-                  href={"https://github.com/joshl26/Outdoorsy"}
                   buttonClass={"round-button"}
                   buttonText={"CODE"}
+                  href={"https://github.com/joshl26/pomodoro-app"}
                   target=""
                   rel=""
                 />
                 <RoundButton
-                  href={"https://outdors.ca"}
                   buttonClass={"round-button"}
                   buttonText={"LIVE SITE"}
+                  href={"https://joshlehman.ca/pomodor"}
                   target=""
                   rel=""
                 />
-                <Link href={"/portfolio/outdoorsy"}>
+                <Link href={"/portfolio/pomodor"}>
                   <RoundButton
                     buttonClass={"round-button"}
                     buttonText={"SEE MORE"}
@@ -416,7 +524,6 @@ const Portfolio = () => {
             </motion.div>
           </div>
         </div>
-        <div className="spacer-small"></div>
       </section>
     </div>
   );
