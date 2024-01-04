@@ -119,6 +119,12 @@ function Scene(props: any) {
         <Connector position={[10, 10, 5]}>
           <Model>
             <MeshTransmissionMaterial
+              temporalDistortion={0}
+              distortionScale={0}
+              transmissionSampler={false}
+              backside={false}
+              backsideThickness={0}
+              backsideResolution={0}
               clearcoat={1}
               thickness={0.1}
               anisotropicBlur={0.1}
@@ -176,9 +182,9 @@ function Connector({
   r = THREE.MathUtils.randFloatSpread,
   accent,
   ...props
-}) {
-  const api = useRef();
-  const pos = useMemo(() => position || [r(10), r(10), r(10)], []);
+}: any) {
+  const api = useRef<any>(null);
+  const pos = useMemo(() => position || [r(10), r(10), r(10)], [position, r]);
   useFrame((state, delta) => {
     delta = Math.min(0.1, delta);
     api.current?.applyImpulse(
@@ -206,7 +212,7 @@ function Connector({
 }
 
 function Pointer({ vec = new THREE.Vector3() }) {
-  const ref = useRef();
+  const ref = useRef<any>(null);
   useFrame(({ mouse, viewport }) => {
     ref.current?.setNextKinematicTranslation(
       vec.set(
@@ -227,10 +233,9 @@ function Pointer({ vec = new THREE.Vector3() }) {
     </RigidBody>
   );
 }
-
-function Model({ children, color = "white", roughness = 0, ...props }) {
-  const ref = useRef();
-  const { nodes, materials } = useGLTF("/c-transformed.glb");
+function Model({ children, color = "white", roughness = 0, ...props }: any) {
+  const ref = useRef<any>(null);
+  const { nodes, materials }: any = useGLTF("/c-transformed.glb");
   useFrame((state, delta) => {
     easing.dampC(ref.current.material.color, color, 0.2, delta);
   });
@@ -253,29 +258,3 @@ function Model({ children, color = "white", roughness = 0, ...props }) {
 }
 
 export default NotFound;
-
-// <div
-//   style={{
-//     width: "100vw ",
-//     height: "70vh",
-//     textAlign: "center",
-//     display: "flex",
-//     alignItems: "center",
-//   }}
-// >
-//   <div
-//     style={{
-//       width: "100vw ",
-//       display: "flex",
-//       flexDirection: "column",
-//     }}
-//   >
-//     <h2 style={{ fontSize: "2.5rem" }}>Page Not Found</h2>
-//     <div className="spacer"></div>
-//     <p style={{ fontSize: "1.5rem" }}>Could not find requested resource</p>
-//     <div className="spacer"></div>
-//     <Link style={{ fontSize: "1.5rem" }} href="/">
-//       Return Home
-//     </Link>
-//   </div>
-// </div>

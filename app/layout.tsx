@@ -44,6 +44,7 @@ export const metadata: Metadata = {
   description: "Created with NextJS and Typescript",
 };
 
+
 export default function RootLayout({
   children,
 }: {

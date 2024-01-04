@@ -88,17 +88,19 @@ const BeanbagCoffeCo = () => {
           <h2 className="portfolio-h2">DETAILS</h2>
           <div style={{ justifyContent: "space-between", display: "flex" }}>
             <span>
-              <h4>SPRING 2023-CURRENT</h4>
+              <h4>December 2023 - January 2024</h4>
             </span>
             <span>
-              <h4>COMMMERCIAL PRODUCT</h4>
+              <h4>E-COMMERCE SITE</h4>
             </span>
           </div>
+          <div className="spacer-small"></div>
+
           <div style={{ justifyContent: "space-between", display: "flex" }}>
             <span>
               <span>
                 <RoundButton
-                  buttonText={"JAVASCRIPT"}
+                  buttonText={"TYPESCRIPT"}
                   buttonClass={"round-button"}
                   rel=""
                   target=""
@@ -107,7 +109,7 @@ const BeanbagCoffeCo = () => {
               </span>
               <span>
                 <RoundButton
-                  buttonText={"CSS3"}
+                  buttonText={"TAILWINDCSS"}
                   buttonClass={"round-button"}
                   rel=""
                   target=""
@@ -116,7 +118,7 @@ const BeanbagCoffeCo = () => {
               </span>
               <span>
                 <RoundButton
-                  buttonText={"HTML5"}
+                  buttonText={"POSTGRESQL"}
                   buttonClass={"round-button"}
                   rel=""
                   target=""
@@ -125,7 +127,7 @@ const BeanbagCoffeCo = () => {
               </span>
               <span>
                 <RoundButton
-                  buttonText={"WIREFRAMING"}
+                  buttonText={"FIGMA LAYOUT"}
                   buttonClass={"round-button"}
                   rel=""
                   target=""
@@ -134,7 +136,7 @@ const BeanbagCoffeCo = () => {
               </span>
               <span>
                 <RoundButton
-                  buttonText={"UI/UX DESIGN"}
+                  buttonText={"HEADLESS DESIGN"}
                   buttonClass={"round-button"}
                   rel=""
                   target=""
@@ -145,7 +147,7 @@ const BeanbagCoffeCo = () => {
             <span>
               <span>
                 <RoundButton
-                  buttonText={"REACT"}
+                  buttonText={"NEXTJS"}
                   buttonClass={"round-button"}
                   rel=""
                   target=""
@@ -154,7 +156,7 @@ const BeanbagCoffeCo = () => {
               </span>
               <span>
                 <RoundButton
-                  buttonText={"REDUX"}
+                  buttonText={"REDIS"}
                   buttonClass={"round-button"}
                   rel=""
                   target=""
@@ -163,7 +165,7 @@ const BeanbagCoffeCo = () => {
               </span>
               <span>
                 <RoundButton
-                  buttonText={"OPENAPI"}
+                  buttonText={"MEDUSAJS"}
                   buttonClass={"round-button"}
                   rel=""
                   target=""
@@ -218,6 +220,8 @@ const BeanbagCoffeCo = () => {
           </p>
         </section>
       </motion.div>
+      <div className="spacer-small"></div>
+
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{
@@ -229,6 +233,8 @@ const BeanbagCoffeCo = () => {
         }}
       >
         <section className="portfolio-main-section">
+          <div className="spacer-small"></div>
+
           <h2 className="portfolio-h2">DESIGN INTENT</h2>
           <div className="portfolio-p">
             <ul>
@@ -236,12 +242,11 @@ const BeanbagCoffeCo = () => {
                 Product Catalog Management - The first step in setting up an
                 e-commerce platform is creating a product catalog that includes
                 all the available products or services offered by the company.
-                Using MedusaJS's GraphQL API, developers can easily create
-                product schemas for various types of products such as whole bean
-                bags or ground coffee packs.
+                Using MedusaJS's GraphQL API, I was easily able to create
+                product schemas for various types of products such as drinks of
+                various sizes.
                 <div className="spacer-small"></div>
               </li>
-
               <li>
                 User Authentication - To ensure security and personalized
                 shopping experiences, user authentication is implemented using
@@ -249,14 +254,12 @@ const BeanbagCoffeCo = () => {
                 in securely to access their profile data and order history.
                 <div className="spacer-small"></div>
               </li>
-
               <li>
                 Shopping Cart - Customers can add products to their shopping
                 cart while browsing through the website and have the option to
                 edit or remove items before proceeding to checkout.
                 <div className="spacer-small"></div>
               </li>
-
               <li>
                 Checkout Process - The checkout process is a crucial part of any
                 e-commerce platform, and MedusaJS makes it easy to integrate
@@ -264,7 +267,6 @@ const BeanbagCoffeCo = () => {
                 payment option and complete their purchase securely.
                 <div className="spacer-small"></div>
               </li>
-
               <li>
                 Multi-Currency Support - As Beanbag Coffee Co. targets customers
                 globally, the project includes multi-currency support using
@@ -272,7 +274,6 @@ const BeanbagCoffeCo = () => {
                 from different countries to view prices in their local currency.
                 <div className="spacer-small"></div>
               </li>
-
               <li>
                 Order Management - All orders are managed through the Medusa
                 dashboard where admins can track order status, manage inventory
@@ -310,6 +311,8 @@ const BeanbagCoffeCo = () => {
           </div>
         </section>
       </motion.div>
+      <div className="spacer-small"></div>
+
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{
@@ -321,6 +324,8 @@ const BeanbagCoffeCo = () => {
         }}
       >
         <section className="portfolio-main-section">
+          <div className="spacer-small"></div>
+
           <h2 className="portfolio-h2">FONT TYPES</h2>
           <div
             style={{
@@ -384,6 +389,7 @@ const BeanbagCoffeCo = () => {
             },
           }}
         >
+          <div className="spacer-small"></div>
           <h2 className="portfolio-h2">SCREENS</h2>
         </motion.div>
         <motion.div

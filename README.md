@@ -73,17 +73,40 @@ npm install or yarn
 rename .env.local.template to .env.local and replace the environment key values with your own. You will need both an emailjs and a cloudinary account and the appropriate public keys.
 ```
 
-
 ## Usage
 
-In Windows:
+Development Mode -
+
+Start in Windows:
+
 ```sh
 npm run dev-windows or yarn dev-windows
 ```
 
-In Linux/Docker:
+Start in Linux/Docker:
+
 ```sh
 npm run dev or yarn dev
+```
+
+Production Mode -
+
+Build:
+
+```sh
+npm run build or yarn build
+```
+
+Start in Windows:
+
+```sh
+npm run start-windows or yarn start-windows
+```
+
+Start in Linux/Docker:
+
+```sh
+npm run start or yarn start
 ```
 
 ## Author
@@ -92,7 +115,7 @@ npm run dev or yarn dev
 
 ## Portfolio
 
-- https://joshlehman.ca
+- <https://joshlehman.ca>
 
 ## Github
 

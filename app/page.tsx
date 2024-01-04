@@ -6,6 +6,31 @@ import { CldImage } from "next-cloudinary";
 import "@/app/Home.css";
 import ThreeScene from "./ui/ThreeScene";
 
+console.log("_________________*  *__________________");
+console.log("________________*    *________________");
+console.log("_______________*      *_______________");
+console.log("______________*        *______________");
+console.log("_____________*          *_____________");
+console.log("____________*            *____________");
+console.log("************              ************");
+console.log("*             **    **               *");
+console.log("__*           **    **             *__");
+console.log("____*         **    **           *____");
+console.log("______*                        *______");
+console.log("________*                    *________");
+console.log("________*                    *________");
+console.log("______ *         *  *         *_______");
+console.log("______*         *    *         *______");
+console.log("_____*         *      *         *_____");
+console.log("____*         *        *         *____");
+console.log("____**********__________**********____");
+
+console.log("Thanks for visiting my portfolio site!");
+console.log(
+  "You can find me on Linked: https://www.linkedin.com/in/joshrlehman/"
+);
+console.log("Or contact me by email here: joshlehman.dev@gmail.com");
+
 export default function Home() {
   return (
     <div>
