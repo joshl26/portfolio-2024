@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaArrowCircleUp } from "react-icons/fa";
 import { CldImage } from "next-cloudinary";
 import "@/app/Home.css";
-import ThreeScene from "./ThreeScene";
+import ThreeScene from "./ui/ThreeScene";
 
 export default function Home() {
   return (
