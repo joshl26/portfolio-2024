@@ -11,14 +11,16 @@ export const metadata = {
 
 export default function GuestbookPage() {
   return (
-    <section>
-      <h1 className="font-medium text-2xl mb-8 tracking-tighter">
-        sign my guestbook
-      </h1>
-      <Suspense>
-        <GuestbookForm />
-        <GuestbookEntries />
-      </Suspense>
+    <section className="w-screen h-[70vh]">
+      <div className="m-auto md:w-[500px] p-6">
+        <h1 className="text-[2.5rem] mb-8 tracking-tighter">
+          Sign my interactive guestbook
+        </h1>
+        <Suspense>
+          <GuestbookForm />
+          <GuestbookEntries />
+        </Suspense>
+      </div>
     </section>
   );
 }
