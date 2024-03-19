@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useRef } from 'react';
-import { saveGuestbookEntry } from '../db/actions';
-import { useFormStatus } from 'react-dom';
+import { useRef } from "react";
+import { saveGuestbookEntry } from "../db/actions";
+import { useFormStatus } from "react-dom";
 
 export default function Form() {
   const formRef = useRef<HTMLFormElement>(null);

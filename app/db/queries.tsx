@@ -3,7 +3,6 @@
 // import { auth, youtube } from "@googleapis/youtube";
 import { conn } from "./postgres";
 
-// import { sql } from "./postgres";
 import {
   unstable_cache as cache,
   unstable_noStore as noStore,
