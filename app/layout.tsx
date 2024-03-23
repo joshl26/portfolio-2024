@@ -6,6 +6,7 @@ import ResponsiveMenu from "@/app/ui/ResponsiveMenu";
 import MenuContextProvider from "@/context/menu-context";
 import "@/app/globals.css";
 import CursorContainer from "./CursorContainer";
+import { SandpackCSS } from "./blog/[slug]/sandpack";
 
 const noto_sans = Noto_Sans({
   subsets: ["latin"],
@@ -39,11 +40,46 @@ const raleway = Raleway({
   weight: ["300", "400"],
 });
 
-export const metadata: Metadata = {
-  title: "Josh Lehman | Digital Craftsman",
-  description: "Created with NextJS and Typescript",
-};
+// export const metadata: Metadata = {
+//   title: "Josh Lehman | Digital Craftsman",
+//   description: "Created with NextJS and Typescript",
+// };
 
+export const metadata: Metadata = {
+  metadataBase: new URL("https://joshlehman.ca"),
+  title: {
+    default: "Joshua Lehman",
+    template: "%s | Joshua Lehman",
+  },
+  description: "Digital Craftsman",
+  openGraph: {
+    title: "Joshua Lehman",
+    description: "Digital Craftsman",
+    url: "https://joshlehman.ca",
+    siteName: "Joshua Lehman",
+    locale: "en_CA",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    title: "Joshua Lehman",
+    card: "summary_large_image",
+  },
+  verification: {
+    // google: "eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw",
+    // yandex: "14d2e73487fa6c71",
+  },
+};
 
 export default function RootLayout({
   children,
@@ -52,6 +88,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <SandpackCSS />
+      </head>
       <body
         suppressHydrationWarning={true}
         className={`${lusitana.variable} ${raleway.variable} ${nunito.variable} ${cabin.variable} ${noto_sans.variable} antialiased`}
