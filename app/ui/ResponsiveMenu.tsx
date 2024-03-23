@@ -36,17 +36,19 @@ const ResponsiveMenu = () => {
             <Link onClick={() => toggleMenuClicked()} href="/about">
               <h3 className="responsive-menu-header">About</h3>
             </Link>
-            <Link onClick={() => toggleMenuClicked()} href="/portfolio">
-              <h3 className="responsive-menu-header">Portfolio</h3>
+            <Link onClick={() => toggleMenuClicked()} href="/blog">
+              <h3 className="responsive-menu-header">Blog</h3>
             </Link>
           </div>
           <div className="flex flex-col">
-            {" "}
             <Link onClick={() => toggleMenuClicked()} href="/contact">
               <h3 className="responsive-menu-header">Contact</h3>
             </Link>
             <Link onClick={() => toggleMenuClicked()} href="/guestbook">
               <h3 className="responsive-menu-header">Guestbook</h3>
+            </Link>
+            <Link onClick={() => toggleMenuClicked()} href="/portfolio">
+              <h3 className="responsive-menu-header">Portfolio</h3>
             </Link>
           </div>
         </div>

@@ -51,7 +51,7 @@ export async function getViewsCount(): Promise<
   try {
     const query = `SELECT slug, count FROM views`;
     const views = await conn.query(query);
-    return views;
+    return views.rows;
   } catch (error: any) {
     console.error("Database Error:", error);
     // throw new Error("Failed to fetch resume templates.");
