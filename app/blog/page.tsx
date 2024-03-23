@@ -37,7 +37,7 @@ export default function BlogPage() {
                 {post.metadata.title}
               </p>
               <Suspense fallback={<p className="h-6" />}>
-                <Views slug={post.slug} />
+                {/* <Views slug={post.slug} /> */}
               </Suspense>
             </div>
           </Link>
