@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { Sandpack } from '@codesandbox/sandpack-react';
+import { Sandpack } from "@codesandbox/sandpack-react";
 import {
   HTML,
   CSS,
@@ -9,8 +9,8 @@ import {
   stylexApp,
   stylexViteConfig,
   stylexTokens,
-} from './sandpack-files';
-import React, { Suspense } from 'react';
+} from "./sandpack-files";
+import React, { Suspense } from "react";
 
 class ErrorBoundary extends React.Component<
   { fallback: React.ReactNode; children?: React.ReactNode },
@@ -21,7 +21,7 @@ class ErrorBoundary extends React.Component<
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error: any) {
     return { hasError: true };
   }
 
@@ -41,34 +41,34 @@ class ErrorBoundary extends React.Component<
 export function LiveCode({ example }: { example: string }) {
   let files;
 
-  if (example === 'html') {
+  if (example === "html") {
     files = {
-      '/styles.css': {
+      "/styles.css": {
         code: CSS,
         active: true,
       },
-      '/index.html': HTML,
+      "/index.html": HTML,
     };
-  } else if (example === 'tailwind') {
+  } else if (example === "tailwind") {
     files = {
-      '/index.html': Tailwind,
+      "/index.html": Tailwind,
     };
-  } else if (example === 'stylex') {
+  } else if (example === "stylex") {
     return (
       <Suspense fallback={null}>
         <ErrorBoundary
-          fallback={'Oops, there was an error loading the CodeSandbox'}
+          fallback={"Oops, there was an error loading the CodeSandbox"}
         >
           <Sandpack
             theme="auto"
             files={{
-              'App.tsx': {
+              "App.tsx": {
                 code: stylexApp,
                 active: true,
               },
-              '/tokens.stylex.js': stylexTokens,
-              '/vite.config.ts': stylexViteConfig,
-              '/index.html': {
+              "/tokens.stylex.js": stylexTokens,
+              "/vite.config.ts": stylexViteConfig,
+              "/index.html": {
                 code: stylexIndex,
                 hidden: true,
               },
@@ -76,10 +76,10 @@ export function LiveCode({ example }: { example: string }) {
             template="vite-react-ts"
             customSetup={{
               dependencies: {
-                '@stylexjs/stylex': '^0.3.0',
+                "@stylexjs/stylex": "^0.3.0",
               },
               devDependencies: {
-                'vite-plugin-stylex-dev': 'latest',
+                "vite-plugin-stylex-dev": "latest",
               },
             }}
           />
@@ -91,7 +91,7 @@ export function LiveCode({ example }: { example: string }) {
   return (
     <Suspense fallback={null}>
       <ErrorBoundary
-        fallback={'Oops, there was an error loading the CodeSandbox.'}
+        fallback={"Oops, there was an error loading the CodeSandbox."}
       >
         <Sandpack theme="auto" template="static" files={files} />
       </ErrorBoundary>
