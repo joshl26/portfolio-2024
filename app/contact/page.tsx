@@ -2,7 +2,6 @@
 
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-// import TopicRadio from "../ui/TopicRadio";
 import CalendlyEmbed from "../ui/CalendlyEmbed";
 import "../globals.css";
 import "../ui/Portfolio.css";
@@ -15,12 +14,6 @@ const ContactSection = () => {
   const [emailSent, setEmailSent] = useState(false);
   const [confirmReceipt, setConfirmReceipt] = useState(false);
   const [emailError, setEmailError] = useState(false);
-  // const [topic, setTopic] = useState("Comment");
-
-  // const onTopicChanged = (e: any) => {
-  //   setTopic(e.target.innerHTML);
-  //   console.log(topic);
-  // };
 
   const form: any = useRef();
 
@@ -123,18 +116,6 @@ const ContactSection = () => {
                         </div>
                         <div className="interface-spacer-xsmall"></div>
                       </div>
-                      {/* <div>
-                      <label htmlFor="topic" className="interface-label">
-                        Choose a Topic
-                      </label>
-                    </div>
-                    <div>
-                      {/* <TopicRadio
-                      colorMode={correctedColorMode}
-                      onTopicChanged={onTopicChanged}
-                    /> 
-                    </div> */}
-
                       <div>
                         <div className="interface-spacer-xsmall"></div>
                         <div>
