@@ -130,20 +130,21 @@ function slugify(str: any) {
 }
 
 function createHeading(level: any) {
+  // eslint-disable-next-line react/display-name
   return ({ children }: { children: any }) => {
     let slug = slugify(children);
-    // return React.createElement(
-    //   `h${level}`,
-    //   { id: slug },
-    //   [
-    //     React.createElement("a", {
-    //       href: `#${slug}`,
-    //       key: `link-${slug}`,
-    //       className: "anchor",
-    //     }),
-    //   ],
-    //   children
-    // );
+    return React.createElement(
+      `h${level}`,
+      { id: slug },
+      [
+        React.createElement("a", {
+          href: `#${slug}`,
+          key: `link-${slug}`,
+          className: "anchor",
+        }),
+      ],
+      children
+    );
   };
 }
 
