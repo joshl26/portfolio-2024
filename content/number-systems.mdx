@@ -1,0 +1,121 @@
+---
+title: "Binary, Decimal and Hexadecimal Numbering"
+publishedAt: "2024-04-06"
+summary: "Notes on the use of positional numbering systems in CS."
+---
+
+# Binary, Decimal and Hexadecimal Numbering in Computer Science
+
+- General Formula
+- Binary numbering (Base 2)
+- Decimal numbering (Base 10)
+- Hexadecimal numbering (Base 16)
+
+![Positional Numeral Sysytem](https://upload.wikimedia.org/wikipedia/commons/4/4c/Decimal_digit.png)
+
+## How do we define a positional numeral system?
+
+In a base b numeral system, b symbols represent the first b natural numbers, 
+including zero. The value of each symbol is determined by its position, 
+with the last symbol having its own value, and each symbol to the left being 
+multiplied by b.
+
+## General Formula
+
+In general, if b is the base, one writes a number in the numeral system of base
+ b by expressing it in the form:
+  
+ aⁿbⁿ + aⁿ − 1bⁿ − 1 + aⁿ − 2bⁿ − 2 + ... + a⁰b⁰
+
+ and then writing the enumerated digits aⁿaⁿ − 1aⁿ − 2 ... a⁰ in descending order. 
+  
+ The digits are natural numbers between 0 and b − 1, inclusive.
+
+## Binary Numbers (Base 2)
+
+![Positional Numeral Sysytem](https://upload.wikimedia.org/wikipedia/commons/7/75/Binary_counter.gif)
+
+Binary numbers are expressed in the base-2 numeral system using only 
+"0" and "1". Each digit is called a bit. This system is used by modern 
+computers for its simplicity and noise immunity in digital electronic 
+circuitry. As computer scientists, we shoudl have a solid understanding
+that this is the numbering system that computer hardware (i.e. RAM memory) 
+uses under the hood at the root level, so to speak. You can think of it 
+like this, an electrical switch (aka a transistor) can only ever be ON or OFF, 
+or in other words 1 or 0.
+
+### Example
+
+<Callout emoji="💡">
+  In the binary numbering system the number 1234 can be represented as
+  
+   <br/>
+
+   1 0 0 1 1 0 1 0 0 1 
+   
+   <br/>
+
+  (1×2¹⁰) + (0×2⁹) + (0×2⁸) + (1×2⁷) + (1×2⁶) + (0×2⁵) + (1×2⁴) + (0×2³) + (0×2²) + (1×2¹)
+
+   <br/>
+
+  1024 + 0 + 0 + 128 + 64 + 0 + 16 + 0 + 0 + 2 = 1234
+
+  <br/>
+  where 2⁰ = 1.
+</Callout>
+
+## Decimal Numbers (Base 10)
+
+The decimal numeral system, which is also known as the base-ten 
+positional numeral system or denary, is the most commonly used 
+system for representing both integer and non-integer numbers. 
+It is an expansion of the Hindu-Arabic numeral system to include 
+decimal fractions. The notation used for numbers in the decimal 
+system is called decimal notation.
+
+### Example
+
+<Callout emoji="💡">
+  In the decimal system the number 1234 is represented as:
+  <br/>
+  (1×10³) + (2×10²) + (3×10¹) + (4×10⁰)
+  <br/>
+  where 10⁰ = 1.
+</Callout>
+
+## Hexadecimal Numbers (Base 16)
+
+The hexadecimal numeral system is a method of representing numbers using a base 
+of sixteen, commonly used in mathematics and computing. Unlike the decimal system, 
+which uses ten symbols to represent values from zero to nine, hexadecimal uses 
+sixteen symbols, including "0" to "9" for values zero to nine, and "A" to "F" 
+(or "a" to "f") for values ten to fifteen.
+
+### Example
+
+<Callout emoji="💡">
+  In the hexadecimal system the number 1234 is represented as:
+  <br/>
+
+  4 D 2 
+  <br/>
+  (4×16²) + (13×16¹) + (2×16⁰)
+  <br/>
+  1024 + 208 + 2 = 1234 
+
+  <br/>
+  where 16⁰ = 1.
+</Callout>
+
+## Where do we go from here?
+
+  In a future blog I may discuss how these numbering systems can be 
+  utilized bby programmers in computer science.
+
+  Thanks for reading!
+
+
+---
+<br/>
+

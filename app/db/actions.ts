@@ -2,7 +2,6 @@
 
 import { auth } from "@/app/auth";
 import { type Session } from "next-auth";
-// import { sql } from './postgres';
 import { conn } from "./postgres";
 import { revalidatePath, unstable_noStore as noStore } from "next/cache";
 
