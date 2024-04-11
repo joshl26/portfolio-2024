@@ -7,7 +7,7 @@ export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
   const postTitle = searchParams.get("title");
   const font = fetch(
-    new URL("../../public/fonts/kaisei-tokumin-bold.ttf", import.meta.url)
+    new URL("../../public/fonts/Raleway-Bold.ttf", import.meta.url)
   ).then((res) => res.arrayBuffer());
   const fontData = await font;
 
@@ -21,8 +21,8 @@ export async function GET(req: NextRequest) {
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "center",
-          backgroundColor: "black"
-          // backgroundImage: 'url(https://leerob.io/og-bg.png)',
+          backgroundColor: "black",
+          backgroundImage: `${process.env.DEPLOYMENT_URL}/og-bg.png`,
         }}
       >
         <div
@@ -31,7 +31,7 @@ export async function GET(req: NextRequest) {
             marginRight: 190,
             display: "flex",
             fontSize: 130,
-            fontFamily: "Kaisei Tokumin",
+            fontFamily: "Raleway-Bold",
             letterSpacing: "-0.05em",
             fontStyle: "normal",
             color: "white",
@@ -48,7 +48,7 @@ export async function GET(req: NextRequest) {
       height: 1080,
       fonts: [
         {
-          name: "Kaisei Tokumin",
+          name: "Raleway-Bold",
           data: fontData,
           style: "normal",
         },
