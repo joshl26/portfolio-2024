@@ -2,7 +2,7 @@ import { getBlogPosts } from "@/app/db/blog";
 
 export default async function sitemap() {
   let blogs = getBlogPosts().map((post) => ({
-    url: `https://joshlehman.ca/blog/${post.slug}`,
+    url: `${process.env.DEPLOYMENT_URL}/blog/${post.slug}`,
     lastModified: post.metadata.publishedAt,
   }));
 
@@ -14,7 +14,7 @@ export default async function sitemap() {
     "/guestbook",
     "/portfolio",
   ].map((route) => ({
-    url: `https://joshlehman.ca${route}`,
+    url: `${process.env.DEPLOYMENT_URL}/${route}`,
     lastModified: new Date().toISOString().split("T")[0],
   }));
 

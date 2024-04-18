@@ -5,7 +5,7 @@ export default function robots() {
         userAgent: "*",
       },
     ],
-    sitemap: "https://joshlehman.ca/sitemap.xml",
-    host: "https://joshlehman.ca",
+    sitemap: `${process.env.DEPLOYMENT_URL}/sitemap.xml`,
+    host: `${process.env.DEPLOYMENT_URL}`,
   };
 }

@@ -5,9 +5,9 @@ import RoundButton from "../ui/RoundButton";
 
 const About = () => {
   return (
-    <main className="main-container">
-      <section className="portfolio-section">
-        <h1 className="portfolio-h1">ABOUT</h1>
+    <main className="">
+      <section className="w-full h-min-[90vh]">
+        <h1 className="">ABOUT</h1>
       </section>
 
       <section className="portfolio-main-section">
