@@ -1,16 +1,18 @@
 import React from "react";
-// import { div, Row } from "react-bootstrap";
 import "../ui/Portfolio.css";
 import RoundButton from "../ui/RoundButton";
 
 const About = () => {
   return (
-    <main className="">
-      <section className="w-full h-min-[90vh]">
-        <h1 className="">ABOUT</h1>
+    <main className="max-w-screen-xl m-auto px-4 xl:px-0">
+      <section className="flex flex-row  h-full w-full min-h-[85vh]">
+        <div className="m-auto">
+          <h1 className="flex portfolio-h1 h-full w-full  items-center ">
+            ABOUT
+          </h1>
+        </div>
       </section>
-
-      <section className="portfolio-main-section">
+      <section className="portfolio-main-section ">
         <div className="spacer-small"></div>
         <div>
           <p className="portfolio-p">

@@ -93,11 +93,11 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning={true}
-        className={`${lusitana.variable} ${raleway.variable} ${nunito.variable} ${cabin.variable} ${noto_sans.variable} antialiased`}
+        className={`${lusitana.variable} ${raleway.variable} ${nunito.variable} ${cabin.variable} ${noto_sans.variable} antialiased w-full h-full`}
       >
         <CursorContainer>
           <MenuContextProvider>
-            <div style={{ margin: "0 auto", width: "100%" }}>
+            <div className="w-full m-auto">
               <ResponsiveHeader />
               <ResponsiveMenu />
               {children}
