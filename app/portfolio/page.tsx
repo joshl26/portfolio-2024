@@ -13,8 +13,7 @@ const Portfolio = () => {
       <section className="portfolio-section">
         <h1 className="portfolio-h1">Portfolio</h1>
       </section>
-
-      <section className="projects-section">
+      <section className="max-w-screen-xl m-auto">
         <div className="portfolio-grid">
           <div className="portfolio-container">
             <motion.div
@@ -29,8 +28,247 @@ const Portfolio = () => {
             >
               <Link href={"/portfolio/ecommerce/beanbag-coffee-co"}>
                 <CldImage
+                  className="showcase-card-container mt-2 mb-8"
+                  alt="resume wrangler hero"
+                  width="1000"
+                  height="1000"
+                  sizes="100vw"
+                  src="v1713540526/PortfolioSite/Resume_Wrangler_Landing_Page_1_n2arsw.png"
+                />
+                <CldImage
+                  className="showcase-card-container hidden md:block my-8"
+                  alt="resume wrangler hero"
+                  width="1000"
+                  height="1000"
+                  sizes="100vw"
+                  src="v1713540526/PortfolioSite/Resume_Wrangler_Landing_Page_1_n2arsw.png"
+                />
+                <CldImage
+                  className="showcase-card-container hidden md:block my-8"
+                  alt="resume wrangler hero"
+                  width="1000"
+                  height="1000"
+                  sizes="100vw"
+                  src="v1713540526/PortfolioSite/Resume_Wrangler_Landing_Page_1_n2arsw.png"
+                />
+              </Link>
+            </motion.div>
+          </div>
+          <div className="portfolio-container">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                  delay: 0,
+                },
+              }}
+              className="showcase-border-top"
+            >
+              <h3 className="showcased-h3">Résumé Wrangler</h3>
+              <p className="showcased-p">
+                Beanbag Coffee Co. is a headless e-commerce solution that
+                provides a flexible framework for building custom e-commerce
+                platforms. It offers features such as GraphQL API, server-side
+                rendering, payment integrations, multi-currency support, and
+                many others. The Beanbag Coffee Co. e-commerce project is a
+                fully functional online store that allows customers to browse
+                and purchase a variety of coffee products ranging from whole
+                beans to ground coffee. The website is designed to be
+                user-friendly and visually appealing, providing customers with
+                an enjoyable shopping experience. The project uses MedusaJS as
+                its core framework combined with other technologies such as
+                NextJS for front-end development, Node.js for server-side
+                rendering and PostgreSQL for the DB. This stack was chosen
+                because it enables fast development of scalable applications
+                while also offering performance benefits.
+              </p>
+              <div>
+                <div>
+                  <ul className="showcased-list">
+                    <li>TYPESCRIPT</li>
+                    <li>TAILWINDCSS</li>
+                    <li>POSTGRESQL</li>
+                    <li>HEADLESS DESIGN</li>
+                    <li>REDIS</li>
+                  </ul>
+                </div>
+                <div>
+                  <ul className="showcased-list">
+                    <li>FRONTEND DESIGN</li>
+                    <li>NEXTJS</li>
+                    <li>BABEL</li>
+                    <li>WEBPACK</li>
+                    <li>GIT</li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <RoundButton
+                  href={"https://github.com/joshl26/nextjs-medusa-beanbag"}
+                  buttonClass={"round-button"}
+                  buttonText={"CODE"}
+                  target=""
+                  rel=""
+                />
+                <RoundButton
+                  buttonClass={"round-button"}
+                  buttonText={"LIVE SITE"}
+                  href={"https://storefront-git-main-joshl26.vercel.app/"}
+                  target=""
+                  rel=""
+                />
+                <Link href={"/portfolio/ecommerce/beanbag-coffee-co"}>
+                  <RoundButton
+                    buttonClass={"round-button"}
+                    buttonText={"SEE MORE"}
+                    target=""
+                    rel=""
+                    href=""
+                  />
+                </Link>
+              </div>
+              <div className="spacer"></div>
+            </motion.div>
+          </div>
+        </div>
+        <div className="portfolio-grid">
+          <div className="portfolio-container">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                  delay: 0,
+                },
+              }}
+            >
+              <Link href={"/portfolio/ecommerce/cleaner-by-design"}>
+                <CldImage
+                  className="showcase-card-container mt-2 mb-0 sm:mb-8"
+                  alt="cleaner by design hero"
+                  width="1000"
+                  height="1000"
+                  sizes="100vw"
+                  src="v1713542395/PortfolioSite/CleanerByDesign_Landing_Page_1_npsuin.png"
+                />
+                <CldImage
+                  className="showcase-card-container my-8 hidden md:block"
+                  alt="cleaner by design hero"
+                  width="1000"
+                  height="1000"
+                  sizes="100vw"
+                  src="v1713542395/PortfolioSite/CleanerByDesign_Landing_Page_1_npsuin.png"
+                />
+                <CldImage
+                  className="showcase-card-container my-8 hidden md:block"
+                  alt="cleaner by design hero"
+                  width="1000"
+                  height="1000"
+                  sizes="100vw"
+                  src="v1713542395/PortfolioSite/CleanerByDesign_Landing_Page_1_npsuin.png"
+                />
+              </Link>
+            </motion.div>
+          </div>
+          <div className="portfolio-container">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                  delay: 0,
+                },
+              }}
+              className="showcase-border-top"
+            >
+              <h3 className="showcased-h3">Cleaner By Design</h3>
+              <p className="showcased-p">
+                Beanbag Coffee Co. is a headless e-commerce solution that
+                provides a flexible framework for building custom e-commerce
+                platforms. It offers features such as GraphQL API, server-side
+                rendering, payment integrations, multi-currency support, and
+                many others. The Beanbag Coffee Co. e-commerce project is a
+                fully functional online store that allows customers to browse
+                and purchase a variety of coffee products ranging from whole
+                beans to ground coffee. The website is designed to be
+                user-friendly and visually appealing, providing customers with
+                an enjoyable shopping experience. The project uses MedusaJS as
+                its core framework combined with other technologies such as
+                NextJS for front-end development, Node.js for server-side
+                rendering and PostgreSQL for the DB. This stack was chosen
+                because it enables fast development of scalable applications
+                while also offering performance benefits.
+              </p>
+              <div>
+                <div>
+                  <ul className="showcased-list">
+                    <li>TYPESCRIPT</li>
+                    <li>TAILWINDCSS</li>
+                    <li>POSTGRESQL</li>
+                    <li>HEADLESS DESIGN</li>
+                    <li>REDIS</li>
+                  </ul>
+                </div>
+                <div>
+                  <ul className="showcased-list">
+                    <li>FRONTEND DESIGN</li>
+                    <li>NEXTJS</li>
+                    <li>BABEL</li>
+                    <li>WEBPACK</li>
+                    <li>GIT</li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <RoundButton
+                  href={"https://github.com/joshl26/nextjs-medusa-beanbag"}
+                  buttonClass={"round-button"}
+                  buttonText={"CODE"}
+                  target=""
+                  rel=""
+                />
+                <RoundButton
+                  buttonClass={"round-button"}
+                  buttonText={"LIVE SITE"}
+                  href={"https://storefront-git-main-joshl26.vercel.app/"}
+                  target=""
+                  rel=""
+                />
+                <Link href={"/portfolio/ecommerce/beanbag-coffee-co"}>
+                  <RoundButton
+                    buttonClass={"round-button"}
+                    buttonText={"SEE MORE"}
+                    target=""
+                    rel=""
+                    href=""
+                  />
+                </Link>
+              </div>
+              <div className="spacer"></div>
+            </motion.div>
+          </div>
+        </div>
+
+        <div className="portfolio-grid">
+          <div className="portfolio-container">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: {
+                  duration: 0.5,
+                  delay: 0,
+                },
+              }}
+            >
+              <Link href={"/portfolio/ecommerce/cleaner-by-design"}>
+                <CldImage
                   className="showcase-card-container"
-                  alt="beanbag coffee co. hero"
+                  alt="cleaner by design hero"
                   width="1000"
                   height="1000"
                   sizes="100vw"
@@ -121,7 +359,6 @@ const Portfolio = () => {
             </motion.div>
           </div>
         </div>
-
         <div className="portfolio-grid">
           <div className="portfolio-container">
             <motion.div
@@ -428,7 +665,6 @@ const Portfolio = () => {
             </motion.div>
           </div>
         </div>
-
         <div className="portfolio-grid">
           <div className="portfolio-container">
             <motion.div
