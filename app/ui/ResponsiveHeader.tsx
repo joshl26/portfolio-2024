@@ -11,7 +11,7 @@ const ResponsiveHeader = () => {
   var hamburgerMenuStyle = menuClicked ? "is-active" : "";
 
   return (
-    <header className="max-w-screen-xl m-auto h-auto px-2 lg:px-0">
+    <header className="max-w-screen-xl m-auto h-auto px-1">
       <div className="flex flex-row justify-between align-middle items-center">
         <div className="flex flex-col">
           <div className="header-hero-container">

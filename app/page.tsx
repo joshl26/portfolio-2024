@@ -35,24 +35,23 @@ export default function Home() {
   return (
     <div>
       <ThreeScene />
-      <section className="title-container">
+      <section className="title-container px-2">
         <h1 className="text-based-title">
           CREATING <span className="title-accent">PRAGMATIC </span>&
           <span className="title-accent"> THOUGHTFUL</span> SOFTWARE
           <br />
-          <span className="title-year">-SINCE 2021-</span>
+          <span className="title-year">-CIRCA 2021-</span>
         </h1>
       </section>
       <section className="showcased-work">
-        <div style={{ maxWidth: "1600px", margin: "auto" }}>
+        <div className="max-w-screen-xl" style={{ margin: "auto" }}>
           <Link href={"/portfolio"}>
             <div className="spacer-small" />
-            <div className="intro-row">
+            <div className="flex flex-row justify-between px-4 items-center h-full">
               <div>
                 <h2 className="showcased-h2">SHOWCASED WORK</h2>
               </div>
               <div className="text-right">
-                <div className="spacer-xsmall"></div>
                 <FaArrowCircleUp className="showcased-work-link" />
               </div>
             </div>
@@ -75,14 +74,13 @@ export default function Home() {
                 <div className="spacer-small"></div>
                 <div className="showcase-border-top" />
                 <div className="spacer-small"></div>
-                <div className="intro-row">
-                  <div className="intro-col">
+                <div className="flex flex-row justify-between">
+                  <div className="flex-col">
                     <h3 className="showcased-h3">Beanbag Coffee Co.</h3>
                   </div>
-                  <div className="text-right intro-col">
+                  <div className="flex-col w-auto">
                     <FaArrowCircleUp className="showcased-work-link" />
                   </div>
-                  <div className="spacer-small"></div>
                 </div>
               </Link>
             </div>

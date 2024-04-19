@@ -14,9 +14,9 @@ export default function BlogPage() {
 
   return (
     <main className="main-container">
-      <section className="flex flex-col w-[1000px] mx-auto">
+      <section className="flex flex-col w-[1000px] min-h-[90vh] mx-auto px-4 xl:px-0">
         <h1 className="font-medium text-2xl mb-8 tracking-tighter">
-          read my blog
+          Read my blog
         </h1>
         {allBlogs
           .sort((a, b) => {

@@ -6,6 +6,8 @@
 }
 
 .header-hero-container {
+  z-index: 1;
+
   height: 50px;
   width: auto;
   padding: 0.75rem;

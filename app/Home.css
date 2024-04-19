@@ -60,8 +60,6 @@
 
 .showcased-work-link {
   font-size: clamp(1.875rem, 1.7523rem + 0.6135vw, 2.5rem);
-  width: auto;
-  margin: 0 auto;
   text-align: center;
   rotate: 45deg;
   transition: 0.5s;
