@@ -115,67 +115,51 @@ const About = () => {
               </li>
             </ul>
             <section className="flex flex-row flex-wrap pt-4 h-full justify-start gap-4">
-              <div
-                className={"py-2 px-4 rounded-full text-center border m-auto"}
-              >
+              <div className="py-2 px-4 rounded-full text-center border m-auto ">
                 <p>HTML5</p>
               </div>
-              <div
-                className={"py-2 px-4 rounded-full text-center border m-auto"}
-              >
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
                 <p>CSS3</p>
               </div>
-              <div
-                className={"py-2 px-4 rounded-full text-center border m-auto"}
-              >
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
                 <p>JAVASCRIPT</p>
               </div>
-              <div
-                className={"py-2 px-4 rounded-full text-center border m-auto"}
-              >
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
                 <p>REACT</p>
               </div>
-              <div
-                className={"py-2 px-4 rounded-full text-center border m-auto"}
-              >
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
                 <p>MYSQL</p>
               </div>
-              <div
-                className={"py-2 px-4 rounded-full text-center border m-auto"}
-              >
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
                 <p>AWS</p>
               </div>
-              <div
-                className={"py-2 px-4 rounded-full text-center border m-auto"}
-              >
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
                 <p>C++</p>
               </div>
-              <div
-                className={"py-2 px-4 rounded-full text-center border m-auto"}
-              >
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
                 <p>UI/UX DESIGN</p>
               </div>
-              <div
-                className={"py-2 px-4 rounded-full text-center border m-auto"}
-              >
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
                 <p>SEO</p>
               </div>
-              <div
-                className={"py-2 px-4 rounded-full text-center border m-auto"}
-              >
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
                 <p>SECURITY</p>
               </div>
-              <div
-                className={"py-2 px-4 rounded-full text-center border m-auto"}
-              >
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
                 <p>DATABASE DESIGN</p>
               </div>
             </section>
           </div>
           <div className="flex flex-col p-6 border rounded-lg shadow-2xl shadow-blue-500/20">
-            <h2 className="">SOFTWARE DEVELOPER (LISP)/GRAPHIC DESIGNER</h2>
-            <h4 className="portfolio-about-h4">MAR 2018 - FEB 2022</h4>
-            <ul className="portfolio-about-list">
+            <h2 className="text-center text-2xl">
+              SOFTWARE DEVELOPER (LISP)/GRAPHIC DESIGNER
+            </h2>
+            <div className="w-full flex m-4">
+              <h4 className="py-2 px-4 rounded-full text-center border m-auto">
+                MAR 2018 - FEB 2022
+              </h4>
+            </div>
+            <ul className="portfolio-about-list list-disc ml-4">
               <li>
                 Created custom AutoCAD LISP routines to take CAD drawings from
                 Autodesk Inventor and convert them to native AutoCAD 2000 file
@@ -211,82 +195,46 @@ const About = () => {
                 layers to match Cousins Engineering Standards.
               </li>
             </ul>
-            <div>
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"AUTOCAD"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"LISP"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"TYPESCRIPT"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"HMI"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"ADOBE"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"PHOTOSHOP"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"ILLUSTRATOR"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"JQUERY"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"LOGO DESIGN"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-            </div>
+            <section className="flex flex-row flex-wrap pt-4 h-full justify-start gap-4">
+              <div className="py-2 px-4 rounded-full text-center border m-auto ">
+                <p>AUTOCAD</p>
+              </div>
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
+                <p>LISP</p>
+              </div>
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
+                <p>TYPESCRIPT</p>
+              </div>
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
+                <p>HMI</p>
+              </div>
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
+                <p>ADOBE</p>
+              </div>
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
+                <p>PHOTOSHOP</p>
+              </div>
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
+                <p>ILLUSTRATOR</p>
+              </div>
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
+                <p>JQUERY</p>
+              </div>
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
+                <p>LOGO DESIGN</p>
+              </div>
+            </section>
           </div>
           <div className="flex flex-col p-6 border rounded-lg shadow-2xl shadow-blue-500/20">
-            <RoundButton
-              buttonClass={"round-button"}
-              buttonText={"JUNIOR SOFTWARE DEV/WEBSITE DESIGNER/SQL ADMIN"}
-              href={""}
-              target={""}
-              rel={""}
-            />
-            <h4 className="portfolio-about-h4">OCT 2006 - FEB 2018</h4>
-            <ul className="portfolio-about-list">
+            <h2 className="text-center text-2xl">
+              JUNIOR SOFTWARE DEV/WEBSITE DESIGNER/SQL ADMIN
+            </h2>
+            <div className="w-full flex m-4">
+              <h4 className="py-2 px-4 rounded-full text-center border m-auto">
+                OCT 2006 - FEB 2018
+              </h4>
+            </div>
+            <ul className="portfolio-about-list list-disc ml-4">
               <li>
                 Coded custom SQL queries/views/detailed cost reports using
                 Crystal in conjunction with INFOR VISUAL Manufacturing CRM SQL
@@ -318,85 +266,35 @@ const About = () => {
                 Foundation.
               </li>
             </ul>
-            <div>
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"SQL SERVER"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"ODBC"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"CRYSTAL REPORTS"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"INFOR VISUAL"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"WORDPRESS"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"VISUAL BASIC"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"API"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"ADOBE"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"PHOTOSHOP"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"ILLUSTRATOR"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-              <RoundButton
-                buttonClass={"round-button"}
-                buttonText={"INDESIGN"}
-                href={""}
-                target={""}
-                rel={""}
-              />
-            </div>
+            <section className="flex flex-row flex-wrap pt-4 h-full justify-start gap-4">
+              <div className="py-2 px-4 rounded-full text-center border m-auto ">
+                <p>SQL SERVER</p>
+              </div>
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
+                <p>ODBC</p>
+              </div>
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
+                <p>CRYSTAL REPORTS</p>
+              </div>
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
+                <p>INFOR VISUAL</p>
+              </div>
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
+                <p>VISUAL BASIC</p>
+              </div>
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
+                <p>API</p>
+              </div>
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
+                <p>ADOBE</p>
+              </div>
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
+                <p>PHOTOSHOP</p>
+              </div>
+              <div className="py-2 px-4 rounded-full text-center border m-auto">
+                <p>INDESIGN</p>
+              </div>
+            </section>
           </div>
         </div>
       </section>
