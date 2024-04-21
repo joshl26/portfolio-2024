@@ -91,7 +91,7 @@ const OutdoorsySection = () => {
               <h4>SPRING 2023-CURRENT</h4>
             </span>
             <span>
-              <h4>COMMMERCIAL PRODUCT</h4>
+              <h4>COMMERCIAL PRODUCT</h4>
             </span>
           </div>
           <div style={{ justifyContent: "space-between", display: "flex" }}>

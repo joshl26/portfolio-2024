@@ -22,7 +22,7 @@ const PomodorSection = () => {
         >
           <CldImage
             className="portfolio-hero"
-            alt="two iphones leaning against pottery"
+            alt="two iphone's leaning against pottery"
             width="1000"
             height="1000"
             sizes="100vw"

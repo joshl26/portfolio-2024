@@ -600,7 +600,7 @@ const PortfolioSection = () => {
             <h3 className="showcased-h3">3D Portfolio</h3>
             <p className="showcased-p">
               An experimental three dimensional portfolio site created with
-              ThreeJS and Blender. I had alot of fun learning new technologies
+              ThreeJS and Blender. I had a lot of fun learning new technologies
               to complete this project. In the end the limitations of responsive
               styling within this 3d environment meant I had to switch back to a
               more traditional portfolio website layout to offer improved user
