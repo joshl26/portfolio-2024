@@ -15,9 +15,14 @@ const CalendlyEmbed = ({ url }) => {
 
   return (
     <div
-      className="calendly-inline-widget"
+      className="calendly-inline-widget rounded flex"
       data-url={url}
-      style={{ height: "700px", width: "100%", overflow: "hidden" }}
+      style={{
+        margin: "auto",
+        height: "925px",
+        width: "100%",
+        overflow: "hidden",
+      }}
     ></div>
   );
 };

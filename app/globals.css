@@ -112,17 +112,19 @@ a {
   height: fit-content !important;
   border-radius: 25px;
   padding: 10px 20px 10px 20px;
-  transition: 0.5s;
+  transition: 0.5s ease-in;
+  background-color: rgba(255, 166, 0, 0.716);
+  border: rgba(255, 166, 0, 0.716) solid 2px;
 }
 
 .round-button:hover {
   height: fit-content !important;
   border-radius: 25px;
-  background-color: var(--bg-color-dark);
-  border-color: beige;
-  color: beige;
+  background-color: var(--bg-color-light);
+  border: rgba(255, 166, 0, 0.716) solid 2px;
+  color: black;
   padding: 10px 20px 10px 20px;
-  transition: 0.5s;
+  transition: 0.5s ease-out;
 }
 
 .main-container {
