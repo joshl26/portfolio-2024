@@ -48,8 +48,8 @@ const raleway = Raleway({
 export const metadata: Metadata = {
   metadataBase: new URL("https://joshlehman.ca"),
   title: {
-    default: "Joshua Lehman",
-    template: "%s | Joshua Lehman",
+    default: "Joshua Lehman | Digital Craftsman",
+    template: "Joshua Lehman | %s",
   },
   description: "Digital Craftsman",
   openGraph: {

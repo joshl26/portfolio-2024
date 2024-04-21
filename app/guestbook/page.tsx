@@ -6,7 +6,7 @@ import Form from "./form";
 
 export const metadata = {
   title: "Guestbook",
-  description: "Sign my guestbook and leave your mark.",
+  description: "Sign my guestbook and leave your signature.",
 };
 
 export default function GuestbookPage() {

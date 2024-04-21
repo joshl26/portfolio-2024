@@ -2,6 +2,11 @@
 import React from "react";
 import "../ui/Portfolio.css";
 
+export const metadata = {
+  title: "About",
+  description: "A little about myself.",
+};
+
 const About = () => {
   return (
     <main className="max-w-screen-xl m-auto px-4 xl:px-0">
