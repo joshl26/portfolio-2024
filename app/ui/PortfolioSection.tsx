@@ -112,7 +112,7 @@ const PortfolioSection = () => {
                 target=""
                 rel=""
               />
-              <Link href={"/portfolio/ecommerce/beanbag-coffee-co"}>
+              <Link href={"/portfolio/resume-wrangler"}>
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"SEE MORE"}
@@ -219,7 +219,7 @@ const PortfolioSection = () => {
             </div>
             <div className="flex flex-row justify-around my-8">
               <RoundButton
-                href={"https://github.com/joshl26/nextjs-medusa-beanbag"}
+                href={"https://github.com/joshl26/medusa-cleanerbydesign"}
                 buttonClass={"round-button"}
                 buttonText={"CODE"}
                 target=""
@@ -228,11 +228,11 @@ const PortfolioSection = () => {
               <RoundButton
                 buttonClass={"round-button"}
                 buttonText={"LIVE SITE"}
-                href={"https://storefront-git-main-joshl26.vercel.app/"}
+                href={"https://cleanerbydesign.store/"}
                 target=""
                 rel=""
               />
-              <Link href={"/portfolio/ecommerce/beanbag-coffee-co"}>
+              <Link href={"/portfolio/ecommerce/cleaner-by-design"}>
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"SEE MORE"}

@@ -4,7 +4,7 @@ import PortfolioSection from "../ui/PortfolioSection";
 
 export const metadata = {
   title: "Portfolio",
-  description: "Peruse my latest creations in the portfolio gallery.",
+  description: "Peruse some of my latest creations in the portfolio gallery.",
 };
 
 const Portfolio = () => {
