@@ -37,7 +37,7 @@ const PortfolioSection = () => {
                 width="1000"
                 height="1000"
                 sizes="100vw"
-                src="v1713540526/PortfolioSite/Resume_Wrangler_Landing_Page_1_n2arsw.png"
+                src="v1713749845/ResumeWrangler/Resume_Wrangler_Dashboard_Page_1_lghqt5.png"
               />
             </Link>
           </motion.div>
@@ -63,45 +63,21 @@ const PortfolioSection = () => {
               information and automatically generate tailored resumes and cover
               letters based on specific job descriptions.
             </p>
-            <div className="mt-8">
+            <div className="mt-6">
               <div>
                 <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
-                  <li className="flex items-center rounded-full border p-2">
-                    TYPESCRIPT
-                  </li>
-                  <li className="flex items-center rounded-full border p-2">
-                    TAILWINDCSS
-                  </li>
-                  <li className="flex items-center rounded-full border p-2">
-                    POSTGRESQL
-                  </li>
-                  <li className="flex items-center rounded-full border p-2">
-                    REACTJS
-                  </li>
-                  <li className="flex items-center rounded-full border p-2">
-                    TESTING
-                  </li>
-                  <li className="flex items-center rounded-full border p-2">
-                    BACKEND DESIGN
-                  </li>
-                  <li className="flex items-center rounded-full border p-2">
-                    FRONTEND DESIGN
-                  </li>
-                  <li className="flex items-center rounded-full border p-2">
-                    NEXTJS
-                  </li>
-                  <li className="flex items-center rounded-full border p-2">
-                    BABEL
-                  </li>
-                  <li className="flex items-center rounded-full border p-2">
-                    WEBPACK
-                  </li>
-                  <li className="flex items-center rounded-full border p-2">
-                    GIT
-                  </li>
-                  <li className="flex items-center rounded-full border p-2">
-                    CI/CD
-                  </li>
+                  <li className="showcased-btn">TYPESCRIPT</li>
+                  <li className="showcased-btn">TAILWINDCSS</li>
+                  <li className="showcased-btn">POSTGRESQL</li>
+                  <li className="showcased-btn">REACTJS</li>
+                  <li className="showcased-btn">TESTING</li>
+                  <li className="showcased-btn">BACKEND DESIGN</li>
+                  <li className="showcased-btn">FRONTEND DESIGN</li>
+                  <li className="showcased-btn">NEXTJS</li>
+                  <li className="showcased-btn">BABEL</li>
+                  <li className="showcased-btn">WEBPACK</li>
+                  <li className="showcased-btn">GIT</li>
+                  <li className="showcased-btn">CI/CD</li>
                 </ul>
               </div>
             </div>
@@ -134,9 +110,11 @@ const PortfolioSection = () => {
           </motion.div>
         </div>
       </div>
+      <div className="border-t-[1px] mb-8 mt-2"></div>
       <div className="portfolio-grid">
         <div className="portfolio-container">
           <motion.div
+            className="showcase-border-top"
             initial={{ opacity: 0 }}
             whileInView={{
               opacity: 1,
@@ -174,6 +152,7 @@ const PortfolioSection = () => {
             </Link>
           </motion.div>
         </div>
+
         <div className="portfolio-container">
           <motion.div
             initial={{ opacity: 0 }}
@@ -184,7 +163,6 @@ const PortfolioSection = () => {
                 delay: 0,
               },
             }}
-            className="showcase-border-top"
           >
             <h3 className="showcased-h3">Cleaner By Design</h3>
             <p className="showcased-p">
@@ -203,27 +181,23 @@ const PortfolioSection = () => {
               chosen because it enables fast development of scalable
               applications while also offering performance benefits.
             </p>
-            <div>
+            <div className="mt-6">
               <div>
-                <ul className="showcased-list">
-                  <li>TYPESCRIPT</li>
-                  <li>TAILWINDCSS</li>
-                  <li>POSTGRESQL</li>
-                  <li>HEADLESS DESIGN</li>
-                  <li>REDIS</li>
-                </ul>
-              </div>
-              <div>
-                <ul className="showcased-list">
-                  <li>FRONTEND DESIGN</li>
-                  <li>NEXTJS</li>
-                  <li>BABEL</li>
-                  <li>WEBPACK</li>
-                  <li>GIT</li>
+                <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
+                  <li className="showcased-btn">TYPESCRIPT</li>
+                  <li className="showcased-btn">TAILWINDCSS</li>
+                  <li className="showcased-btn">POSTGRESQL</li>
+                  <li className="showcased-btn">HEADLESS DESIGN</li>
+                  <li className="showcased-btn">REDIS</li>
+                  <li className="showcased-btn">FRONTEND DESIGN</li>
+                  <li className="showcased-btn">NEXTJS</li>
+                  <li className="showcased-btn">BABEL</li>
+                  <li className="showcased-btn">WEBPACK</li>
+                  <li className="showcased-btn">GIT</li>
                 </ul>
               </div>
             </div>
-            <div>
+            <div className="flex flex-row justify-around mt-8">
               <RoundButton
                 href={"https://github.com/joshl26/nextjs-medusa-beanbag"}
                 buttonClass={"round-button"}

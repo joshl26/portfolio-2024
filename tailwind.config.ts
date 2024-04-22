@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
+
 import typography from "@tailwindcss/typography";
+const plugin = require("tailwindcss/plugin");
 
 const config: Config = {
   content: [
@@ -30,6 +32,23 @@ const config: Config = {
   future: {
     hoverOnlyWhenSupported: true,
   },
-  plugins: [typography],
+  plugins: [
+    typography,
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/container-queries"),
+    plugin(function ({ addComponents }: any) {
+      addComponents({
+        ".showcased-btn": {
+          display: "flex",
+          alignItems: "center",
+          borderRadius: "9999px",
+          borderWidth: "1px",
+          padding: "0.5rem",
+        },
+      });
+    }),
+  ],
 };
 export default config;
