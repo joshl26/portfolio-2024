@@ -9,7 +9,7 @@ import RoundButton from "@/app/ui/RoundButton";
 
 const PortfolioSection = () => {
   return (
-    <section className="">
+    <section className="mb-20">
       <div className="portfolio-grid">
         <div className="portfolio-container">
           <motion.div
@@ -39,6 +39,14 @@ const PortfolioSection = () => {
                 sizes="100vw"
                 src="v1713749845/ResumeWrangler/Resume_Wrangler_Dashboard_Page_1_lghqt5.png"
               />
+              <CldImage
+                className="showcase-card-container hidden md:block my-8"
+                alt="resume wrangler hero"
+                width="1000"
+                height="1000"
+                sizes="100vw"
+                src="v1713749853/ResumeWrangler/Resume_Wrangler_Resume_Styling_Page_1_guydrc.png"
+              />
             </Link>
           </motion.div>
         </div>
@@ -56,12 +64,20 @@ const PortfolioSection = () => {
           >
             <h3 className="showcased-h3">Résumé Wrangler</h3>
             <p className="showcased-p">
-              Resume Wrangler is a dynamic and innovative resume and cover
-              letter customization tool aimed at revolutionizing how jobseekers
-              prepare their application materials. This web application provides
-              an intuitive platform where users can input their professional
-              information and automatically generate tailored resumes and cover
-              letters based on specific job descriptions.
+              Resume Wrangler is an innovative and dynamic tool created to
+              redefine the way job seekers prepare their application documents.
+              This web-based application features an intuitive platform that
+              users can leverage to input their professional details, which are
+              then used to automatically generate customized resumes and cover
+              letters specific to varying job descriptions.
+            </p>
+            <p className="showcased-p">
+              The goal of Resume Wrangler is not just about transformation, but
+              also about empowerment. Job applicants can seamlessly navigate
+              through the process of customizing their applications. A feature
+              previously seen as daunting becomes, a convenient online resource
+              for success. The Wrangler brings a progressive change in the world
+              of career development, by providing a user-friendly interface.
             </p>
             <div className="mt-6">
               <div>
@@ -81,7 +97,7 @@ const PortfolioSection = () => {
                 </ul>
               </div>
             </div>
-            <div className="flex flex-row justify-around mt-8">
+            <div className="flex flex-row justify-around my-8">
               <RoundButton
                 href={"https://github.com/joshl26/nextjs-medusa-beanbag"}
                 buttonClass={"round-button"}
@@ -106,11 +122,10 @@ const PortfolioSection = () => {
                 />
               </Link>
             </div>
-            <div className="spacer"></div>
           </motion.div>
         </div>
       </div>
-      <div className="border-t-[1px] mb-8 mt-2"></div>
+      <div className="border-t-[1px] mb-8 mt-2" />
       <div className="portfolio-grid">
         <div className="portfolio-container">
           <motion.div
@@ -139,7 +154,7 @@ const PortfolioSection = () => {
                 width="1000"
                 height="1000"
                 sizes="100vw"
-                src="v1713542395/PortfolioSite/CleanerByDesign_Landing_Page_1_npsuin.png"
+                src="v1713545937/PortfolioSite/CleanerByDesign_Product_Page_1_saw9xt.png"
               />
               <CldImage
                 className="showcase-card-container my-8 hidden md:block"
@@ -147,7 +162,7 @@ const PortfolioSection = () => {
                 width="1000"
                 height="1000"
                 sizes="100vw"
-                src="v1713542395/PortfolioSite/CleanerByDesign_Landing_Page_1_npsuin.png"
+                src="v1713545943/PortfolioSite/CleanerByDesign_Checkout_Page_1_fcqqge.png"
               />
             </Link>
           </motion.div>
@@ -166,20 +181,25 @@ const PortfolioSection = () => {
           >
             <h3 className="showcased-h3">Cleaner By Design</h3>
             <p className="showcased-p">
-              Beanbag Coffee Co. is a headless e-commerce solution that provides
-              a flexible framework for building custom e-commerce platforms. It
-              offers features such as GraphQL API, server-side rendering,
-              payment integrations, multi-currency support, and many others. The
-              Beanbag Coffee Co. e-commerce project is a fully functional online
-              store that allows customers to browse and purchase a variety of
-              coffee products ranging from whole beans to ground coffee. The
-              website is designed to be user-friendly and visually appealing,
-              providing customers with an enjoyable shopping experience. The
-              project uses MedusaJS as its core framework combined with other
-              technologies such as NextJS for front-end development, Node.js for
-              server-side rendering and PostgreSQL for the DB. This stack was
-              chosen because it enables fast development of scalable
-              applications while also offering performance benefits.
+              Cleaner By Design is an e-commerce web application designed to
+              provide a seamless online shopping experience. This platform
+              specializes in offering eco-friendly and sustainable home
+              organization products, catering to a niche market of
+              environmentally conscious consumers. Built using Next.js,
+              PostgreSQL, and TypeScript, the project not only highlights
+              technical proficiency but also demonstrates a commitment to
+              modern, scalable web technologies aligned with innovative business
+              practices.
+            </p>
+            <p className="showcased-p">
+              The inclusion of eco-friendly products geared towards
+              sustainability gives Cleaner By Design a unique edge by meeting
+              the demand for environmentally conscious solutions within the home
+              organization sector. The choice of Next.js as the front-end
+              framework showcases a forward-thinking approach to development
+              while PostgreSQL ensures robust database management. Additionally,
+              leveraging TypeScript enhances code quality and maintainability
+              throughout the project.
             </p>
             <div className="mt-6">
               <div>
@@ -197,7 +217,7 @@ const PortfolioSection = () => {
                 </ul>
               </div>
             </div>
-            <div className="flex flex-row justify-around mt-8">
+            <div className="flex flex-row justify-around my-8">
               <RoundButton
                 href={"https://github.com/joshl26/nextjs-medusa-beanbag"}
                 buttonClass={"round-button"}
@@ -222,10 +242,10 @@ const PortfolioSection = () => {
                 />
               </Link>
             </div>
-            <div className="spacer"></div>
           </motion.div>
         </div>
       </div>
+      <div className="border-t-[1px] mb-8 mt-2"></div>
       <div className="portfolio-grid">
         <div className="portfolio-container">
           <motion.div
@@ -240,17 +260,30 @@ const PortfolioSection = () => {
           >
             <Link href={"/portfolio/ecommerce/cleaner-by-design"}>
               <CldImage
-                className="showcase-card-container"
+                className="showcase-card-container mt-3 mb-8"
                 alt="cleaner by design hero"
                 width="1000"
                 height="1000"
                 sizes="100vw"
-                src="v1704379963/PortfolioSite/beanbag-coffee-2a_ocgeuz.png"
+                src="v1704378328/PortfolioSite/beanbag-coffee-1a_qo9kef.png"
               />
-              <div className="spacer-small"></div>
-              <div className="spacer-small"></div>
+              <CldImage
+                className="showcase-card-container my-8"
+                alt="cleaner by design hero"
+                width="1000"
+                height="1000"
+                sizes="100vw"
+                src="v1704378329/PortfolioSite/beanbag-coffee-1_fw4uz2.png"
+              />
+              <CldImage
+                className="showcase-card-container my-8"
+                alt="cleaner by design hero"
+                width="1000"
+                height="1000"
+                sizes="100vw"
+                src="v1704378329/PortfolioSite/beanbag-coffee-2_rghloq.png"
+              />
             </Link>
-            <div className="spacer"></div>
           </motion.div>
         </div>
         <div className="portfolio-container">
@@ -267,42 +300,34 @@ const PortfolioSection = () => {
           >
             <h3 className="showcased-h3">Beanbag Coffee Co.</h3>
             <p className="showcased-p">
-              Beanbag Coffee Co. is a headless e-commerce solution that provides
-              a flexible framework for building custom e-commerce platforms. It
-              offers features such as GraphQL API, server-side rendering,
-              payment integrations, multi-currency support, and many others. The
-              Beanbag Coffee Co. e-commerce project is a fully functional online
-              store that allows customers to browse and purchase a variety of
-              coffee products ranging from whole beans to ground coffee. The
-              website is designed to be user-friendly and visually appealing,
-              providing customers with an enjoyable shopping experience. The
-              project uses MedusaJS as its core framework combined with other
-              technologies such as NextJS for front-end development, Node.js for
-              server-side rendering and PostgreSQL for the DB. This stack was
-              chosen because it enables fast development of scalable
-              applications while also offering performance benefits.
+              The Beanbag Coffee Co. e-commerce project is a fully functional
+              online store that allows customers to browse and purchase a
+              variety of coffee products ranging from whole beans to ground
+              coffee. The website is designed to be user-friendly and visually
+              appealing, providing customers with an enjoyable shopping
+              experience. The project uses MedusaJS as its core framework
+              combined with other technologies such as NextJS for front-end
+              development, Node.js for server-side rendering and PostgreSQL for
+              the DB. This stack was chosen because it enables fast development
+              of scalable applications while also offering performance benefits.
             </p>
-            <div>
+            <div className="mt-6">
               <div>
-                <ul className="showcased-list">
-                  <li>TYPESCRIPT</li>
-                  <li>TAILWINDCSS</li>
-                  <li>POSTGRESQL</li>
-                  <li>HEADLESS DESIGN</li>
-                  <li>REDIS</li>
-                </ul>
-              </div>
-              <div>
-                <ul className="showcased-list">
-                  <li>FRONTEND DESIGN</li>
-                  <li>NEXTJS</li>
-                  <li>BABEL</li>
-                  <li>WEBPACK</li>
-                  <li>GIT</li>
+                <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
+                  <li className="showcased-btn">TYPESCRIPT</li>
+                  <li className="showcased-btn">TAILWINDCSS</li>
+                  <li className="showcased-btn">POSTGRESQL</li>
+                  <li className="showcased-btn">HEADLESS DESIGN</li>
+                  <li className="showcased-btn">REDIS</li>
+                  <li className="showcased-btn">FRONTEND DESIGN</li>
+                  <li className="showcased-btn">NEXTJS</li>
+                  <li className="showcased-btn">BABEL</li>
+                  <li className="showcased-btn">WEBPACK</li>
+                  <li className="showcased-btn">GIT</li>
                 </ul>
               </div>
             </div>
-            <div>
+            <div className="flex flex-row justify-around my-8">
               <RoundButton
                 href={"https://github.com/joshl26/nextjs-medusa-beanbag"}
                 buttonClass={"round-button"}
@@ -327,10 +352,10 @@ const PortfolioSection = () => {
                 />
               </Link>
             </div>
-            <div className="spacer"></div>
           </motion.div>
         </div>
       </div>
+      <div className="border-t-[1px] mb-8 mt-2"></div>
       <div className="portfolio-grid">
         <div className="portfolio-container">
           <motion.div
@@ -352,10 +377,7 @@ const PortfolioSection = () => {
                 sizes="100vw"
                 src="v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
               />
-              <div className="spacer-small"></div>
-              <div className="spacer-small"></div>
             </Link>
-            <div className="spacer"></div>
           </motion.div>
         </div>
         <div className="portfolio-container">
@@ -380,33 +402,27 @@ const PortfolioSection = () => {
               the smallest handheld. Manage your electronics inventory from
               anywhere!
             </p>
-            <div className="spacer-small"></div>
-            <div>
+            <div className="mt-6">
               <div>
-                <ul className="showcased-list">
-                  <li>JAVASCRIPT</li>
-                  <li>CSS3</li>
-                  <li>HTML5</li>
-                  <li>WIREFRAMING</li>
-                  <li>UI/UX DESIGN</li>
-                  <li>REACT</li>
-                  <li>REDUX</li>
-                </ul>
-              </div>
-              <div>
-                <ul className="showcased-list">
-                  <li>OPENAPI</li>
-                  <li>BACKEND DESIGN</li>
-                  <li>EXPRESS</li>
-                  <li>REST API</li>
-                  <li>BABEL</li>
-                  <li>WEBPACK</li>
-                  <li>GIT</li>
+                <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
+                  <li className="showcased-btn">JAVASCRIPT</li>
+                  <li className="showcased-btn">CSS3</li>
+                  <li className="showcased-btn">HTML5</li>
+                  <li className="showcased-btn">WIREFRAMING</li>
+                  <li className="showcased-btn">UI/UX DESIGN</li>
+                  <li className="showcased-btn">REACT</li>
+                  <li className="showcased-btn">REDUX</li>
+                  <li className="showcased-btn">OPENAPI</li>
+                  <li className="showcased-btn">BACKEND DESIGN</li>
+                  <li className="showcased-btn">EXPRESS</li>
+                  <li className="showcased-btn">REST API</li>
+                  <li className="showcased-btn">BABEL</li>
+                  <li className="showcased-btn">WEBPACK</li>
+                  <li className="showcased-btn">GIT</li>
                 </ul>
               </div>
             </div>
-            <div className="spacer-small"></div>
-            <div>
+            <div className="my-8">
               <RoundButton
                 buttonClass={"round-button"}
                 buttonText={"FRONTEND CODE"}
@@ -441,6 +457,7 @@ const PortfolioSection = () => {
           </motion.div>
         </div>
       </div>
+      <div className="border-t-[1px] mb-8 mt-2" />
       <div className="portfolio-grid">
         <div className="portfolio-container">
           <motion.div
@@ -462,10 +479,7 @@ const PortfolioSection = () => {
                 sizes="100vw"
                 src="v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
               />
-              <div className="spacer-small"></div>
-              <div className="spacer-small"></div>
             </Link>
-            <div className="spacer"></div>
           </motion.div>
         </div>
         <div className="portfolio-container">
@@ -487,28 +501,24 @@ const PortfolioSection = () => {
               where users can create and review various outdoor activities such
               as campsites, canoe routes, hiking trails, and much more.
             </p>
-            <div>
+            <div className="mt-6">
               <div>
-                <ul className="showcased-list">
-                  <li>JAVASCRIPT</li>
-                  <li>CSS3</li>
-                  <li>HTML5</li>
-                  <li>WIREFRAMING</li>
-                  <li>UI/UX DESIGN</li>
-                </ul>
-              </div>
-              <div>
-                <ul className="showcased-list">
-                  <li>BACKEND DESIGN</li>
-                  <li>EXPRESS</li>
-                  <li>REST API</li>
-                  <li>BABEL</li>
-                  <li>WEBPACK</li>
-                  <li>GIT</li>
+                <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
+                  <li className="showcased-btn">JAVASCRIPT</li>
+                  <li className="showcased-btn">CSS3</li>
+                  <li className="showcased-btn">HTML5</li>
+                  <li className="showcased-btn">WIREFRAMING</li>
+                  <li className="showcased-btn">UI/UX DESIGN</li>
+                  <li className="showcased-btn">BACKEND DESIGN</li>
+                  <li className="showcased-btn">EXPRESS</li>
+                  <li className="showcased-btn">REST API</li>
+                  <li className="showcased-btn">BABEL</li>
+                  <li className="showcased-btn">WEBPACK</li>
+                  <li className="showcased-btn">GIT</li>
                 </ul>
               </div>
             </div>
-            <div>
+            <div className="flex flex-row justify-around my-8">
               <RoundButton
                 href={"https://github.com/joshl26/Outdoorsy"}
                 buttonClass={"round-button"}
@@ -533,10 +543,10 @@ const PortfolioSection = () => {
                 />
               </Link>
             </div>
-            <div className="spacer"></div>
           </motion.div>
         </div>
       </div>
+      <div className="border-t-[1px] mb-8 mt-2"></div>
       <div className="portfolio-grid">
         <div className="portfolio-container">
           <motion.div
@@ -558,10 +568,7 @@ const PortfolioSection = () => {
                 sizes="100vw"
                 src="v1697384652/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
               />
-              <div className="spacer-small"></div>
-              <div className="spacer-small"></div>
             </Link>
-            <div className="spacer"></div>
           </motion.div>
         </div>
         <div className="portfolio-container">
@@ -587,26 +594,22 @@ const PortfolioSection = () => {
               Still it was a FUN experiment and I do see applications for this
               type of tech in the future with AR (i.e. Augmented Reality).
             </p>
-            <div>
+            <div className="mt-6">
               <div>
-                <ul className="showcased-list">
-                  <li>JAVASCRIPT</li>
-                  <li>CSS3</li>
-                  <li>HTML5</li>
-                  <li>REACT</li>
-                  <li>REDUX</li>
-                </ul>
-              </div>
-              <div>
-                <ul className="showcased-list">
-                  <li>FRONTEND DESIGN</li>
-                  <li>BABEL</li>
-                  <li>WEBPACK</li>
-                  <li>GIT</li>
+                <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
+                  <li className="showcased-btn">JAVASCRIPT</li>
+                  <li className="showcased-btn">CSS3</li>
+                  <li className="showcased-btn">HTML5</li>
+                  <li className="showcased-btn">REACT</li>
+                  <li className="showcased-btn">REDUX</li>
+                  <li className="showcased-btn">FRONTEND DESIGN</li>
+                  <li className="showcased-btn">BABEL</li>
+                  <li className="showcased-btn">WEBPACK</li>
+                  <li className="showcased-btn">GIT</li>
                 </ul>
               </div>
             </div>
-            <div>
+            <div className="flex flex-row justify-around my-8">
               <RoundButton
                 href={"https://github.com/joshl26/portfolio-2023"}
                 buttonClass={"round-button"}
@@ -631,10 +634,10 @@ const PortfolioSection = () => {
                 />
               </Link>
             </div>
-            <div className="spacer"></div>
           </motion.div>
         </div>
       </div>
+      <div className="border-t-[1px] mb-8 mt-2"></div>
       <div className="portfolio-grid">
         <div className="portfolio-container">
           <motion.div
@@ -656,10 +659,7 @@ const PortfolioSection = () => {
                 sizes="100vw"
                 src="v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
               />
-              <div className="spacer-small"></div>
-              <div className="spacer-small"></div>
             </Link>
-            <div className="spacer"></div>
           </motion.div>
         </div>
         <div className="portfolio-container">
@@ -683,25 +683,20 @@ const PortfolioSection = () => {
             </p>
             <div>
               <div>
-                <ul className="showcased-list">
-                  <li>JAVASCRIPT</li>
-                  <li>BOOTSTRAP</li>
-                  <li>HTML5</li>
-                  <li>REACT</li>
-                  <li>REDUX</li>
-                </ul>
-              </div>
-              <div>
-                <ul className="showcased-list">
-                  <li>UI/UX DESIGN</li>
-
-                  <li>BABEL</li>
-                  <li>WEBPACK</li>
-                  <li>GIT</li>
+                <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
+                  <li className="showcased-btn">JAVASCRIPT</li>
+                  <li className="showcased-btn">BOOTSTRAP</li>
+                  <li className="showcased-btn">HTML5</li>
+                  <li className="showcased-btn">REACT</li>
+                  <li className="showcased-btn">REDUX</li>
+                  <li className="showcased-btn">UI/UX DESIGN</li>
+                  <li className="showcased-btn">BABEL</li>
+                  <li className="showcased-btn">WEBPACK</li>
+                  <li className="showcased-btn">GIT</li>
                 </ul>
               </div>
             </div>
-            <div>
+            <div className="flex flex-row justify-around my-8">
               <RoundButton
                 buttonClass={"round-button"}
                 buttonText={"CODE"}
@@ -726,7 +721,6 @@ const PortfolioSection = () => {
                 />
               </Link>
             </div>
-            <div className="spacer"></div>
           </motion.div>
         </div>
       </div>

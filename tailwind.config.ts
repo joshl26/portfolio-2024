@@ -46,6 +46,17 @@ const config: Config = {
           borderRadius: "9999px",
           borderWidth: "1px",
           padding: "0.5rem",
+          transition: "0.5s ease-out",
+        },
+        ".showcased-btn:hover": {
+          display: "flex",
+          alignItems: "center",
+          borderRadius: "9999px",
+          borderWidth: "1px",
+          padding: "0.5rem",
+          backgroundColor: "white",
+          color: "black",
+          transition: "0.5s ease-in",
         },
       });
     }),
