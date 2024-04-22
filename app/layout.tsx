@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import { Lusitana, Raleway, Nunito, Cabin, Noto_Sans } from "next/font/google";
+import {
+  Lusitana,
+  Raleway,
+  Nunito,
+  Cabin,
+  Noto_Sans,
+  Roboto,
+} from "next/font/google";
 import ResponsiveFooter from "@/app/ui/ResponsiveFooter";
 import ResponsiveHeader from "@/app/ui/ResponsiveHeader";
 import ResponsiveMenu from "@/app/ui/ResponsiveMenu";
@@ -38,6 +45,14 @@ const raleway = Raleway({
   subsets: ["latin"],
   variable: "--font-raleway",
   weight: ["300", "400"],
+});
+
+const roboto = Roboto({
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {
@@ -88,7 +103,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning={true}
-        className={`${lusitana.variable} ${raleway.variable} ${nunito.variable} ${cabin.variable} ${noto_sans.variable} antialiased w-full h-full`}
+        className={`${lusitana.variable} ${raleway.variable} ${nunito.variable} ${cabin.variable} ${noto_sans.variable} ${roboto.variable} antialiased w-full h-full`}
       >
         <CursorContainer>
           <MenuContextProvider>

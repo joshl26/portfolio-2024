@@ -18,6 +18,7 @@ const config: Config = {
         cabin: ["var(--font-cabin)"],
         nunito: ["var(--font-nunito)"],
         lusitana: ["var(--font-lusitana)"],
+        roboto: ["var(--font-roboto)"],
       },
       typography: {
         quoteless: {

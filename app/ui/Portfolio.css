@@ -88,6 +88,12 @@
   font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
 }
 
+.portfolio-font-roboto {
+  text-transform: uppercase;
+  font-family: var(--font-roboto);
+  font-size: clamp(1.5rem, -2.1319rem + 18.1595vw, 20rem);
+}
+
 .portfolio-font-rale {
   text-transform: uppercase;
   font-family: var(--font-raleway);
