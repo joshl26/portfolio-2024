@@ -39,10 +39,10 @@
 }
 
 .showcased-list {
-  padding-left: 1rem;
-  font-size: 1.25rem;
+  /* padding-left: 1rem; */
+  /* font-size: 1.25rem; */
   font-family: var(--font-raleway);
-  font-weight: 300;
+  /* font-weight: 300; */
 }
 
 .portfolio-about-list {

@@ -9,7 +9,7 @@ import RoundButton from "@/app/ui/RoundButton";
 
 const PortfolioSection = () => {
   return (
-    <section className="max-w-screen-xl m-auto">
+    <section className="">
       <div className="portfolio-grid">
         <div className="portfolio-container">
           <motion.div
@@ -22,17 +22,9 @@ const PortfolioSection = () => {
               },
             }}
           >
-            <Link href={"/portfolio/ecommerce/beanbag-coffee-co"}>
+            <Link href={"/portfolio/resume-wrangler"}>
               <CldImage
-                className="showcase-card-container mt-2 mb-8"
-                alt="resume wrangler hero"
-                width="1000"
-                height="1000"
-                sizes="100vw"
-                src="v1713540526/PortfolioSite/Resume_Wrangler_Landing_Page_1_n2arsw.png"
-              />
-              <CldImage
-                className="showcase-card-container hidden md:block my-8"
+                className="showcase-card-container mt-8 mb-8"
                 alt="resume wrangler hero"
                 width="1000"
                 height="1000"
@@ -50,7 +42,7 @@ const PortfolioSection = () => {
             </Link>
           </motion.div>
         </div>
-        <div className="portfolio-container">
+        <div className="portfolio-container mt-6">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{
@@ -64,42 +56,56 @@ const PortfolioSection = () => {
           >
             <h3 className="showcased-h3">Résumé Wrangler</h3>
             <p className="showcased-p">
-              Beanbag Coffee Co. is a headless e-commerce solution that provides
-              a flexible framework for building custom e-commerce platforms. It
-              offers features such as GraphQL API, server-side rendering,
-              payment integrations, multi-currency support, and many others. The
-              Beanbag Coffee Co. e-commerce project is a fully functional online
-              store that allows customers to browse and purchase a variety of
-              coffee products ranging from whole beans to ground coffee. The
-              website is designed to be user-friendly and visually appealing,
-              providing customers with an enjoyable shopping experience. The
-              project uses MedusaJS as its core framework combined with other
-              technologies such as NextJS for front-end development, Node.js for
-              server-side rendering and PostgreSQL for the DB. This stack was
-              chosen because it enables fast development of scalable
-              applications while also offering performance benefits.
+              Resume Wrangler is a dynamic and innovative resume and cover
+              letter customization tool aimed at revolutionizing how jobseekers
+              prepare their application materials. This web application provides
+              an intuitive platform where users can input their professional
+              information and automatically generate tailored resumes and cover
+              letters based on specific job descriptions.
             </p>
-            <div>
+            <div className="mt-8">
               <div>
-                <ul className="showcased-list">
-                  <li>TYPESCRIPT</li>
-                  <li>TAILWINDCSS</li>
-                  <li>POSTGRESQL</li>
-                  <li>HEADLESS DESIGN</li>
-                  <li>REDIS</li>
-                </ul>
-              </div>
-              <div>
-                <ul className="showcased-list">
-                  <li>FRONTEND DESIGN</li>
-                  <li>NEXTJS</li>
-                  <li>BABEL</li>
-                  <li>WEBPACK</li>
-                  <li>GIT</li>
+                <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
+                  <li className="flex items-center rounded-full border p-2">
+                    TYPESCRIPT
+                  </li>
+                  <li className="flex items-center rounded-full border p-2">
+                    TAILWINDCSS
+                  </li>
+                  <li className="flex items-center rounded-full border p-2">
+                    POSTGRESQL
+                  </li>
+                  <li className="flex items-center rounded-full border p-2">
+                    REACTJS
+                  </li>
+                  <li className="flex items-center rounded-full border p-2">
+                    TESTING
+                  </li>
+                  <li className="flex items-center rounded-full border p-2">
+                    BACKEND DESIGN
+                  </li>
+                  <li className="flex items-center rounded-full border p-2">
+                    FRONTEND DESIGN
+                  </li>
+                  <li className="flex items-center rounded-full border p-2">
+                    NEXTJS
+                  </li>
+                  <li className="flex items-center rounded-full border p-2">
+                    BABEL
+                  </li>
+                  <li className="flex items-center rounded-full border p-2">
+                    WEBPACK
+                  </li>
+                  <li className="flex items-center rounded-full border p-2">
+                    GIT
+                  </li>
+                  <li className="flex items-center rounded-full border p-2">
+                    CI/CD
+                  </li>
                 </ul>
               </div>
             </div>
-            <div>
+            <div className="flex flex-row justify-around mt-8">
               <RoundButton
                 href={"https://github.com/joshl26/nextjs-medusa-beanbag"}
                 buttonClass={"round-button"}
@@ -246,7 +252,6 @@ const PortfolioSection = () => {
           </motion.div>
         </div>
       </div>
-
       <div className="portfolio-grid">
         <div className="portfolio-container">
           <motion.div

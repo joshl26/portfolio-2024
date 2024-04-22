@@ -6,7 +6,8 @@ import { CldImage } from "next-cloudinary";
 import "@/app/Home.css";
 import ThreeScene from "./ui/ThreeScene";
 
-console.log("_________________*  *__________________");
+console.log("__________________**__________________");
+console.log("_________________*  *_________________");
 console.log("________________*    *________________");
 console.log("_______________*      *_______________");
 console.log("______________*        *______________");

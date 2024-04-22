@@ -12,6 +12,10 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-geist-sans)"],
         mono: ["var(--font-geist-mono)"],
+        raleway: ["var(--font-raleway)"],
+        cabin: ["var(--font-cabin)"],
+        nunito: ["var(--font-nunito)"],
+        lusitana: ["var(--font-lusitana)"],
       },
       typography: {
         quoteless: {

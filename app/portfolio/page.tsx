@@ -4,17 +4,19 @@ import PortfolioSection from "../ui/PortfolioSection";
 
 export const metadata = {
   title: "Portfolio",
-  description: "Peruse my latest creations. Behold the portfolio gallery.",
+  description: "Peruse my latest creations in the portfolio gallery.",
 };
 
 const Portfolio = () => {
   return (
-    <div>
+    <main className="max-w-screen-xl m-auto">
       <section className="portfolio-section">
         <h1 className="portfolio-h1">Portfolio</h1>
       </section>
-      <PortfolioSection />
-    </div>
+      <section className="portfolio-main-section">
+        <PortfolioSection />
+      </section>
+    </main>
   );
 };
 

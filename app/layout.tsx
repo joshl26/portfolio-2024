@@ -40,11 +40,6 @@ const raleway = Raleway({
   weight: ["300", "400"],
 });
 
-// export const metadata: Metadata = {
-//   title: "Josh Lehman | Digital Craftsman",
-//   description: "Created with NextJS and Typescript",
-// };
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://joshlehman.ca"),
   title: {
@@ -56,7 +51,7 @@ export const metadata: Metadata = {
     title: "Joshua Lehman",
     description: "Digital Craftsman",
     url: "https://joshlehman.ca",
-    siteName: "Joshua Lehman",
+    siteName: "Joshua Lehman | Digital Craftsman",
     locale: "en_CA",
     type: "website",
   },

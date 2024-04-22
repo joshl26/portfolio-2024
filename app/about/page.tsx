@@ -61,7 +61,7 @@ const About = () => {
           <h2 className="portfolio-h2 mt-4 mb-10">ENGINEERING EXPERIENCE</h2>
         </div>
         <div className="flex flex-col gap-24">
-          <div className="flex flex-col p-6 border rounded-lg shadow-2xl shadow-blue-500/20">
+          <div className="flex flex-col p-6 border rounded-lg shadow-2xl shadow-blue-500/20 bg-slate-900">
             <h2 className="text-center text-2xl">
               LEAD SOFTWARE DEVELOPER/ENGINEERING MANAGER
             </h2>
@@ -154,7 +154,7 @@ const About = () => {
               </div>
             </section>
           </div>
-          <div className="flex flex-col p-6 border rounded-lg shadow-2xl shadow-blue-500/20">
+          <div className="flex flex-col p-6 border rounded-lg shadow-2xl shadow-blue-500/20 bg-slate-900">
             <h2 className="text-center text-2xl">
               SOFTWARE DEVELOPER (LISP)/GRAPHIC DESIGNER
             </h2>
@@ -229,7 +229,7 @@ const About = () => {
               </div>
             </section>
           </div>
-          <div className="flex flex-col p-6 border rounded-lg shadow-2xl shadow-blue-500/20">
+          <div className="flex flex-col p-6 border rounded-lg shadow-2xl shadow-blue-500/20 bg-slate-900">
             <h2 className="text-center text-2xl">
               JUNIOR SOFTWARE DEV/WEBSITE DESIGNER/SQL ADMIN
             </h2>
