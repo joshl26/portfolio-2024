@@ -9,9 +9,9 @@ import RoundButton from "@/app/ui/RoundButton";
 
 const PortfolioSection = () => {
   return (
-    <section className="mb-20">
+    <section className="mb-10">
       <div className="portfolio-grid">
-        <div className="portfolio-container">
+        <div className="portfolio-container mt-2">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{
@@ -24,7 +24,7 @@ const PortfolioSection = () => {
           >
             <Link href={"/portfolio/resume-wrangler"}>
               <CldImage
-                className="showcase-card-container mt-8 mb-8"
+                className="showcase-card-container mt-8 xl:mb-8"
                 alt="resume wrangler hero"
                 width="1000"
                 height="1000"
@@ -40,7 +40,7 @@ const PortfolioSection = () => {
                 src="v1713749845/ResumeWrangler/Resume_Wrangler_Dashboard_Page_1_lghqt5.png"
               />
               <CldImage
-                className="showcase-card-container hidden md:block my-8"
+                className="showcase-card-container hidden md:block xl:my-8"
                 alt="resume wrangler hero"
                 width="1000"
                 height="1000"
@@ -50,7 +50,7 @@ const PortfolioSection = () => {
             </Link>
           </motion.div>
         </div>
-        <div className="portfolio-container mt-6">
+        <div className="portfolio-container xl:mt-8">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{
@@ -60,7 +60,6 @@ const PortfolioSection = () => {
                 delay: 0,
               },
             }}
-            className="showcase-border-top"
           >
             <h3 className="showcased-h3">Résumé Wrangler</h3>
             <p className="showcased-p">
@@ -79,7 +78,7 @@ const PortfolioSection = () => {
               for success. The Wrangler brings a progressive change in the world
               of career development, by providing a user-friendly interface.
             </p>
-            <div className="mt-6">
+            <div className="my-8">
               <div>
                 <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
                   <li className="showcased-btn">TYPESCRIPT</li>
@@ -129,7 +128,6 @@ const PortfolioSection = () => {
       <div className="portfolio-grid">
         <div className="portfolio-container">
           <motion.div
-            className="showcase-border-top"
             initial={{ opacity: 0 }}
             whileInView={{
               opacity: 1,
@@ -200,7 +198,7 @@ const PortfolioSection = () => {
               leveraging TypeScript enhances code quality and maintainability
               throughout the project.
             </p>
-            <div className="mt-6">
+            <div className="my-8">
               <div>
                 <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
                   <li className="showcased-btn">TYPESCRIPT</li>
@@ -267,7 +265,7 @@ const PortfolioSection = () => {
                 src="v1704378328/PortfolioSite/beanbag-coffee-1a_qo9kef.png"
               />
               <CldImage
-                className="showcase-card-container my-8"
+                className="showcase-card-container hidden md:block my-8"
                 alt="cleaner by design hero"
                 width="1000"
                 height="1000"
@@ -275,7 +273,7 @@ const PortfolioSection = () => {
                 src="v1704378329/PortfolioSite/beanbag-coffee-1_fw4uz2.png"
               />
               <CldImage
-                className="showcase-card-container my-8"
+                className="showcase-card-container hidden md:block xl:my-8"
                 alt="cleaner by design hero"
                 width="1000"
                 height="1000"
@@ -295,7 +293,6 @@ const PortfolioSection = () => {
                 delay: 0,
               },
             }}
-            className="showcase-border-top"
           >
             <h3 className="showcased-h3">Beanbag Coffee Co.</h3>
             <p className="showcased-p">
@@ -310,7 +307,7 @@ const PortfolioSection = () => {
               the DB. This stack was chosen because it enables fast development
               of scalable applications while also offering performance benefits.
             </p>
-            <div className="mt-6">
+            <div className="my-8">
               <div>
                 <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
                   <li className="showcased-btn">TYPESCRIPT</li>
@@ -354,9 +351,9 @@ const PortfolioSection = () => {
           </motion.div>
         </div>
       </div>
-      <div className="border-t-[1px] mb-8 mt-2"></div>
+      <div className="border-t-[1px] mb-8 mt-2" />
       <div className="portfolio-grid">
-        <div className="portfolio-container">
+        <div className="portfolio-container mt-2">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{
@@ -389,7 +386,6 @@ const PortfolioSection = () => {
                 delay: 0,
               },
             }}
-            className="showcase-border-top"
           >
             <h3 className="showcased-h3">Electronics Inventory</h3>
             <p className="showcased-p">
@@ -401,7 +397,7 @@ const PortfolioSection = () => {
               the smallest handheld. Manage your electronics inventory from
               anywhere!
             </p>
-            <div className="mt-6">
+            <div className="my-8">
               <div>
                 <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
                   <li className="showcased-btn">JAVASCRIPT</li>
@@ -458,7 +454,7 @@ const PortfolioSection = () => {
       </div>
       <div className="border-t-[1px] mb-8 mt-2" />
       <div className="portfolio-grid">
-        <div className="portfolio-container">
+        <div className="portfolio-container mt-2 mb-8">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{
@@ -491,16 +487,15 @@ const PortfolioSection = () => {
                 delay: 0,
               },
             }}
-            className="showcase-border-top"
           >
-            <h3 className="showcased-h3">outdoorsy</h3>
+            <h3 className="showcased-h3">Outdoorsy</h3>
             <p className="showcased-p">
               Outdoorsy is a comprehensive website project designed to cater to
               the needs of outdoor enthusiasts. The website serves as a platform
               where users can create and review various outdoor activities such
               as campsites, canoe routes, hiking trails, and much more.
             </p>
-            <div className="mt-6">
+            <div className="my-8">
               <div>
                 <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
                   <li className="showcased-btn">JAVASCRIPT</li>
@@ -547,7 +542,7 @@ const PortfolioSection = () => {
       </div>
       <div className="border-t-[1px] mb-8 mt-2"></div>
       <div className="portfolio-grid">
-        <div className="portfolio-container">
+        <div className="portfolio-container mt-2">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{
@@ -580,7 +575,6 @@ const PortfolioSection = () => {
                 delay: 0,
               },
             }}
-            className="showcase-border-top"
           >
             <h3 className="showcased-h3">3D Portfolio</h3>
             <p className="showcased-p">
@@ -593,7 +587,7 @@ const PortfolioSection = () => {
               Still it was a FUN experiment and I do see applications for this
               type of tech in the future with AR (i.e. Augmented Reality).
             </p>
-            <div className="mt-6">
+            <div className="my-8">
               <div>
                 <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
                   <li className="showcased-btn">JAVASCRIPT</li>
@@ -638,7 +632,7 @@ const PortfolioSection = () => {
       </div>
       <div className="border-t-[1px] mb-8 mt-2"></div>
       <div className="portfolio-grid">
-        <div className="portfolio-container">
+        <div className="portfolio-container mt-2">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{
@@ -671,7 +665,6 @@ const PortfolioSection = () => {
                 delay: 0,
               },
             }}
-            className="showcase-border-top"
           >
             <h3 className="showcased-h3">Pomodor Timer</h3>
             <p className="showcased-p">
@@ -681,7 +674,7 @@ const PortfolioSection = () => {
               management with Redux.
             </p>
             <div>
-              <div>
+              <div className="my-8">
                 <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
                   <li className="showcased-btn">JAVASCRIPT</li>
                   <li className="showcased-btn">BOOTSTRAP</li>
