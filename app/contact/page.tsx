@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function Contact() {
   return (
-    <main className="main-container">
+    <main className="px-3">
       <section className="portfolio-section">
         <h1 className="portfolio-h1">CONTACT</h1>
       </section>

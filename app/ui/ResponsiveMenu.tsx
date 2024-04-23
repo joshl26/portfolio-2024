@@ -27,30 +27,27 @@ const ResponsiveMenu = () => {
       exit={{ opacity: 0, x: "-25%" }}
       className="responsive-menu-section"
     >
-      <div className="responsive-menu-container py-32">
-        <div className="flex flex-row flex-wrap justify-around align-middle">
-          <div className="flex flex-col text-center ">
-            <Link onClick={() => toggleMenuClicked()} href="/">
-              <h3 className="responsive-menu-header text-center">Home</h3>
-            </Link>
-            <Link onClick={() => toggleMenuClicked()} href="/about">
-              <h3 className="responsive-menu-header">About</h3>
-            </Link>
-            <Link onClick={() => toggleMenuClicked()} href="/blog">
-              <h3 className="responsive-menu-header">Blog</h3>
-            </Link>
-          </div>
-          <div className="flex flex-col">
-            <Link onClick={() => toggleMenuClicked()} href="/contact">
-              <h3 className="responsive-menu-header">Contact</h3>
-            </Link>
-            <Link onClick={() => toggleMenuClicked()} href="/guestbook">
-              <h3 className="responsive-menu-header">Guestbook</h3>
-            </Link>
-            <Link onClick={() => toggleMenuClicked()} href="/portfolio">
-              <h3 className="responsive-menu-header">Portfolio</h3>
-            </Link>
-          </div>
+      <div className="responsive-menu-container max-w-screen-xl m-auto py-32">
+        <div className="flex flex-col xl:flex-row flex-wrap gap-x-32 justify-around align-middle">
+          <Link onClick={() => toggleMenuClicked()} href="/">
+            <h3 className="responsive-menu-header text-center">Home</h3>
+          </Link>
+          <Link onClick={() => toggleMenuClicked()} href="/about">
+            <h3 className="responsive-menu-header">About</h3>
+          </Link>
+          <Link onClick={() => toggleMenuClicked()} href="/blog">
+            <h3 className="responsive-menu-header">Blog</h3>
+          </Link>
+
+          <Link onClick={() => toggleMenuClicked()} href="/contact">
+            <h3 className="responsive-menu-header">Contact</h3>
+          </Link>
+          <Link onClick={() => toggleMenuClicked()} href="/guestbook">
+            <h3 className="responsive-menu-header">Guestbook</h3>
+          </Link>
+          <Link onClick={() => toggleMenuClicked()} href="/portfolio">
+            <h3 className="responsive-menu-header">Portfolio</h3>
+          </Link>
         </div>
 
         {/* <a

@@ -41,7 +41,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="portfolio-main-section max-w-screen-xl w-full m-auto">
+    <section className="portfolio-main-section max-w-screen-xl  w-full m-auto">
       <div className="portfolio-contact-container ">
         <div>
           <div>
