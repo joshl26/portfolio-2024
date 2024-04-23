@@ -203,7 +203,7 @@ const ResumeWranglerSection = () => {
       >
         <section className="portfolio-main-section py-6">
           <h2 className="portfolio-h2">KEY FEATURES</h2>
-          <ul className="list-disc list-inside">
+          <ul className="list-disc list-inside xl:list-outside">
             <li className="portfolio-p">
               Customization Engine: Utilizes complex matching algorithms to
               ensure that pertinent details are emphasized in response to
@@ -250,7 +250,7 @@ const ResumeWranglerSection = () => {
       >
         <section className="portfolio-main-section py-6">
           <h2 className="portfolio-h2">Tools & Technologies Used</h2>
-          <ul className="list-disc list-inside">
+          <ul className="list-disc list-inside xl:list-outside">
             <li className="portfolio-p">
               Frontend Development: Utilized ReactJS and Next.js for their
               superior handling of stateful interactions and responsive design
@@ -329,7 +329,7 @@ const ResumeWranglerSection = () => {
             }}
           >
             <span>
-              <h1 className="portfolio-font-lusi">LUSITANA</h1>
+              <h1 className="portfolio-font-lusi">LUSI</h1>
             </span>
             <div className="portfolio-li">
               <span>Weight</span>
@@ -354,7 +354,7 @@ const ResumeWranglerSection = () => {
             }}
           >
             <span>
-              <h1 className="portfolio-font-roboto">ROBOTO</h1>
+              <h1 className="portfolio-font-roboto">ROBO</h1>
             </span>
             <div className="portfolio-li">
               <span>Weight</span>

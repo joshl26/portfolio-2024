@@ -99,7 +99,7 @@ const PortfolioSection = () => {
             </div>
             <div className="flex flex-row justify-around my-8">
               <RoundButton
-                href={"https://github.com/joshl26/nextjs-medusa-beanbag"}
+                href={"https://github.com/joshl26/resume-wrangler"}
                 buttonClass={"round-button"}
                 buttonText={"CODE"}
                 target=""
@@ -108,7 +108,7 @@ const PortfolioSection = () => {
               <RoundButton
                 buttonClass={"round-button"}
                 buttonText={"LIVE SITE"}
-                href={"https://storefront-git-main-joshl26.vercel.app/"}
+                href={"https://resume-wrangler.vercel.app/"}
                 target=""
                 rel=""
               />
@@ -258,7 +258,7 @@ const PortfolioSection = () => {
               },
             }}
           >
-            <Link href={"/portfolio/ecommerce/cleaner-by-design"}>
+            <Link href={"/portfolio/ecommerce/beanbag-coffee-co"}>
               <CldImage
                 className="showcase-card-container mt-3 mb-8"
                 alt="cleaner by design hero"
@@ -392,7 +392,7 @@ const PortfolioSection = () => {
             }}
             className="showcase-border-top"
           >
-            <h3 className="showcased-h3">electronics inventory</h3>
+            <h3 className="showcased-h3">Electronics Inventory</h3>
             <p className="showcased-p">
               Electronics Inventory is a cutting-edge web based app that
               efficiently organizes electronic lab inventory for both small
@@ -422,7 +422,7 @@ const PortfolioSection = () => {
                 </ul>
               </div>
             </div>
-            <div className="my-8">
+            <div className="my-8 flex flex-row flex-wrap gap-3 justify-around">
               <RoundButton
                 buttonClass={"round-button"}
                 buttonText={"FRONTEND CODE"}

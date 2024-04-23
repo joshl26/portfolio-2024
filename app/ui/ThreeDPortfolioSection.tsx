@@ -7,7 +7,7 @@ import { CldImage } from "next-cloudinary";
 
 const ThreeDPortfolioSection = () => {
   return (
-    <section>
+    <section className="my-8">
       <section>
         <motion.div
           initial={{ opacity: 0 }}
@@ -29,7 +29,6 @@ const ThreeDPortfolioSection = () => {
           />
         </motion.div>
       </section>
-      <div className="spacer-small"></div>
       <section>
         <motion.div
           initial={{ opacity: 0 }}
@@ -40,38 +39,31 @@ const ThreeDPortfolioSection = () => {
               delay: 0.5,
             },
           }}
-          style={{ justifyContent: "space-between", display: "flex" }}
+          className="flex flex-row justify-around my-8"
         >
-          <span>
-            <RoundButton
-              href={"https://github.com/joshl26/portfolio-2023"}
-              buttonText={"GIT"}
-              buttonClass={"round-button"}
-              rel=""
-              target=""
-            />
-          </span>
-          <span>
-            <RoundButton
-              href={"/experimental"}
-              buttonText={"LIVE SITE"}
-              buttonClass={"round-button"}
-              rel=""
-              target=""
-            />
-          </span>
-          <span>
-            <RoundButton
-              buttonText={"UI/UX"}
-              buttonClass={"round-button"}
-              rel=""
-              target=""
-              href=""
-            />
-          </span>
+          <RoundButton
+            href={"https://github.com/joshl26/portfolio-2023"}
+            buttonText={"GIT"}
+            buttonClass={"round-button"}
+            rel=""
+            target=""
+          />
+          <RoundButton
+            href={"/experimental"}
+            buttonText={"LIVE SITE"}
+            buttonClass={"round-button"}
+            rel=""
+            target=""
+          />
+          <RoundButton
+            buttonText={"UI/UX"}
+            buttonClass={"round-button"}
+            rel=""
+            target=""
+            href=""
+          />
         </motion.div>
       </section>
-      <div className="spacer-small"></div>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{
@@ -82,114 +74,84 @@ const ThreeDPortfolioSection = () => {
           },
         }}
       >
-        <section className="portfolio-main-section">
+        <section className="portfolio-main-section mb-8">
           <h2 className="portfolio-h2">DETAILS</h2>
-          <div style={{ justifyContent: "space-between", display: "flex" }}>
-            <span>
-              <h4>Winter 2022-Late Summer 2023</h4>
-            </span>
-            <span>
-              <h4>Personal Development Project</h4>
-            </span>
+          <div className="flex flex-row justify-between">
+            <h4>Winter 2022-Late Summer 2023</h4>
+            <h4>Previous Portfolio Site</h4>
           </div>
-          <div style={{ justifyContent: "space-between", display: "flex" }}>
-            <span>
-              <span>
-                <RoundButton
-                  buttonText={"JAVASCRIPT"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"CSS3"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"HTML5"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"WIREFRAMING"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"UI/UX DESIGN"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-            </span>
-            <span>
-              <span>
-                <RoundButton
-                  buttonText={"REACT"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"REDUX"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"BABEL"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"WEBPACK"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"GIT"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-            </span>
+          <div className="flex flex-row justify-between my-8">
+            <RoundButton
+              buttonText={"JAVASCRIPT"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"CSS3"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"HTML5"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"WIREFRAMING"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"UI/UX DESIGN"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"REACT"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"REDUX"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"BABEL"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"WEBPACK"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"GIT"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
           </div>
-          <div className="spacer-small"></div>
-
           <p className="portfolio-p">
             For my 2023 portfolio site, I decided to create a website using
             mainly ThreeJS and Blender. The website is three-dimensional and
@@ -223,7 +185,7 @@ const ThreeDPortfolioSection = () => {
           },
         }}
       >
-        <section className="portfolio-main-section">
+        <section className="portfolio-main-section mb-8">
           <h2 className="portfolio-h2">DESIGN INTENT</h2>
           <p className="portfolio-p">
             The portfolio website was conceived with the primary objective of
@@ -335,7 +297,6 @@ const ThreeDPortfolioSection = () => {
             src="v1697384654/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
           />
         </motion.div>
-        <div className="spacer"></div>
       </section>
     </section>
   );
