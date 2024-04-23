@@ -76,12 +76,12 @@ const BeanbagCoffeeSection = () => {
         }}
       >
         <section className="portfolio-main-section">
-          <h2 className="portfolio-h2">DETAILS</h2>
-          <div className="flex flex-row justify-between">
+          <h2 className="portfolio-h2 mb-8">DETAILS</h2>
+          <div className="flex flex-row justify-between gap-x-3">
             <h4>December 2023 - January 2024</h4>
-            <h4>E-COMMERCE SITE</h4>
+            <h4 className="xl:text-left text-right">E-COMMERCE SITE</h4>
           </div>
-          <div className="flex flex-row flex-wrap justify-between my-8">
+          <div className="flex flex-row flex-wrap gap-3 justify-start my-8">
             <RoundButton
               buttonText={"TYPESCRIPT"}
               buttonClass={"showcased-btn"}

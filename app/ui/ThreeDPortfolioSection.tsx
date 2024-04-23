@@ -7,7 +7,7 @@ import { CldImage } from "next-cloudinary";
 
 const ThreeDPortfolioSection = () => {
   return (
-    <section className="my-8">
+    <section className="my-8 px-3">
       <section>
         <motion.div
           initial={{ opacity: 0 }}
@@ -75,12 +75,14 @@ const ThreeDPortfolioSection = () => {
         }}
       >
         <section className="portfolio-main-section mb-8">
-          <h2 className="portfolio-h2">DETAILS</h2>
-          <div className="flex flex-row justify-between">
-            <h4>Winter 2022-Late Summer 2023</h4>
-            <h4>Previous Portfolio Site</h4>
+          <h2 className="portfolio-h2 mb-4">DETAILS</h2>
+          <div className="flex flex-row justify-between gap-3">
+            <h4 className="w-1/2">Winter 2022 - Late Summer 2023</h4>
+            <h4 className="w-1/2 xl:text-left text-right">
+              Previous Portfolio Site
+            </h4>
           </div>
-          <div className="flex flex-row justify-between my-8">
+          <div className="flex flex-row flex-wrap justify-between gap-y-3 my-8">
             <RoundButton
               buttonText={"JAVASCRIPT"}
               buttonClass={"showcased-btn"}
@@ -216,7 +218,7 @@ const ThreeDPortfolioSection = () => {
           },
         }}
       >
-        <section className="portfolio-main-section">
+        <section className="portfolio-main-section mb-8">
           <h2 className="portfolio-h2">FONT TYPES</h2>
           <div
             style={{
@@ -289,7 +291,7 @@ const ThreeDPortfolioSection = () => {
           }}
         >
           <CldImage
-            className="portfolio-screen"
+            className="portfolio-screen my-8"
             alt="iphone laying on desk"
             width="1000"
             height="1000"

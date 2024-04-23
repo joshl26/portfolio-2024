@@ -9,7 +9,7 @@ export const metadata = {
 
 const Portfolio = () => {
   return (
-    <main className="max-w-screen-xl m-auto">
+    <main className="max-w-screen-xl m-auto px-3">
       <section className="portfolio-section">
         <h1 className="portfolio-h1">Portfolio</h1>
       </section>

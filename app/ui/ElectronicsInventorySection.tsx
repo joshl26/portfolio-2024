@@ -8,7 +8,7 @@ import { CldImage } from "next-cloudinary";
 
 const ElectronicsInventorySection = () => {
   return (
-    <section>
+    <section className="px-3">
       <section>
         <motion.div
           initial={{ opacity: 0 }}
@@ -76,12 +76,12 @@ const ElectronicsInventorySection = () => {
         }}
       >
         <section className="portfolio-main-section">
-          <h2 className="portfolio-h2">DETAILS</h2>
+          <h2 className="portfolio-h2 mb-8">DETAILS</h2>
           <div className="flex flex-row justify-between">
             <h4>SPRING 2023-CURRENT</h4>
-            <h4>COMMMERCIAL PRODUCT</h4>
+            <h4 className="xl:text-left text-right">COMMMERCIAL PRODUCT</h4>
           </div>
-          <div className="flex flex-row flex-wrap gap-3 justify-between my-8">
+          <div className="flex flex-row flex-wrap gap-y-3 justify-between my-8">
             <RoundButton
               buttonText={"JAVASCRIPT"}
               buttonClass={"showcased-btn"}

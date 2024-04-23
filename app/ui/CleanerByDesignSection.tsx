@@ -40,7 +40,7 @@ const CleanerByDesignSection = () => {
               delay: 0.5,
             },
           }}
-          className="flex flex-row just justify-around my-8"
+          className="flex flex-row just justify-around gap-y-3 my-8"
         >
           <RoundButton
             href={"https://github.com/joshl26/nextjs-medusa-beanbag"}
@@ -77,9 +77,9 @@ const CleanerByDesignSection = () => {
       >
         <section className="portfolio-main-section mb-8">
           <h2 className="portfolio-h2">DETAILS</h2>
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row gap-x-3 justify-between">
             <h4>December 2023 - January 2024</h4>
-            <h4>E-COMMERCE SITE</h4>
+            <h4 className="xl:text-left text-right">E-COMMERCE SITE</h4>
           </div>
           <div className="flex flex-row flex-wrap justify-between gap-3 my-8">
             <RoundButton

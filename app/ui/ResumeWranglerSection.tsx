@@ -8,7 +8,7 @@ import { CldImage } from "next-cloudinary";
 
 const ResumeWranglerSection = () => {
   return (
-    <div className="max-w-screen-xl m-auto mt-6 mb-10">
+    <div className="mt-6 mb-10 px-3">
       <section>
         <motion.div
           initial={{ opacity: 0 }}
@@ -76,16 +76,12 @@ const ResumeWranglerSection = () => {
         }}
       >
         <section className="portfolio-main-section pb-6">
-          <h2 className="portfolio-h2 mt-6">DETAILS</h2>
-          <div style={{ justifyContent: "space-between", display: "flex" }}>
-            <span>
-              <h4>SPRING 2023-CURRENT</h4>
-            </span>
-            <span>
-              <h4>COMMERCIAL PRODUCT</h4>
-            </span>
+          <h2 className="portfolio-h2 mb-6">DETAILS</h2>
+          <div className="flex flex-row justify-between">
+            <h4>SPRING 2023-CURRENT</h4>
+            <h4 className="xl:text-left text-right">COMMERCIAL PRODUCT</h4>
           </div>
-          <div className="flex flex-row justify-between py-8">
+          <div className="flex flex-row flex-wrap gap-y-3 justify-between py-8">
             <RoundButton
               buttonText={"JAVASCRIPT"}
               buttonClass={"showcased-btn"}
@@ -201,7 +197,7 @@ const ResumeWranglerSection = () => {
           },
         }}
       >
-        <section className="portfolio-main-section py-6">
+        <section className="portfolio-main-section mb-8">
           <h2 className="portfolio-h2">KEY FEATURES</h2>
           <ul className="list-disc list-inside xl:list-outside">
             <li className="portfolio-p">
@@ -248,7 +244,7 @@ const ResumeWranglerSection = () => {
           },
         }}
       >
-        <section className="portfolio-main-section py-6">
+        <section className="portfolio-main-section mb-8">
           <h2 className="portfolio-h2">Tools & Technologies Used</h2>
           <ul className="list-disc list-inside xl:list-outside">
             <li className="portfolio-p">
@@ -284,7 +280,7 @@ const ResumeWranglerSection = () => {
           },
         }}
       >
-        <section className="portfolio-main-section py-6">
+        <section className="portfolio-main-section mb-8">
           <h2 className="portfolio-h2">Challenges Faced</h2>
           <p className="showcased-p">
             Developing a seamless interface between the frontend inputs and
@@ -319,7 +315,7 @@ const ResumeWranglerSection = () => {
           },
         }}
       >
-        <section className="portfolio-main-section py-6">
+        <section className="portfolio-main-section mb-8">
           <h2 className="portfolio-h2">FONT TYPES</h2>
           <div
             style={{
@@ -383,7 +379,7 @@ const ResumeWranglerSection = () => {
             },
           }}
         >
-          <h2 className="portfolio-h2 mt-8 mb-8">SCREENS</h2>
+          <h2 className="portfolio-h2 mb-8">SCREENS</h2>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}

@@ -97,7 +97,7 @@ const PortfolioSection = () => {
                 </ul>
               </div>
             </div>
-            <div className="flex flex-row justify-around my-8">
+            <div className="flex flex-row flex-wrap gap-3 justify-around my-8">
               <RoundButton
                 href={"https://github.com/joshl26/resume-wrangler"}
                 buttonClass={"round-button"}
@@ -167,7 +167,6 @@ const PortfolioSection = () => {
             </Link>
           </motion.div>
         </div>
-
         <div className="portfolio-container">
           <motion.div
             initial={{ opacity: 0 }}
@@ -217,7 +216,7 @@ const PortfolioSection = () => {
                 </ul>
               </div>
             </div>
-            <div className="flex flex-row justify-around my-8">
+            <div className="flex flex-row flex-wrap gap-3 justify-around my-8">
               <RoundButton
                 href={"https://github.com/joshl26/medusa-cleanerbydesign"}
                 buttonClass={"round-button"}
@@ -327,7 +326,7 @@ const PortfolioSection = () => {
                 </ul>
               </div>
             </div>
-            <div className="flex flex-row justify-around my-8">
+            <div className="flex flex-row flex-wrap gap-3 justify-around my-8">
               <RoundButton
                 href={"https://github.com/joshl26/nextjs-medusa-beanbag"}
                 buttonClass={"round-button"}
@@ -518,7 +517,7 @@ const PortfolioSection = () => {
                 </ul>
               </div>
             </div>
-            <div className="flex flex-row justify-around my-8">
+            <div className="flex flex-row flex-wrap gap-3 justify-around my-8">
               <RoundButton
                 href={"https://github.com/joshl26/Outdoorsy"}
                 buttonClass={"round-button"}
@@ -609,7 +608,7 @@ const PortfolioSection = () => {
                 </ul>
               </div>
             </div>
-            <div className="flex flex-row justify-around my-8">
+            <div className="flex flex-row flex-wrap gap-3 justify-around my-8">
               <RoundButton
                 href={"https://github.com/joshl26/portfolio-2023"}
                 buttonClass={"round-button"}
@@ -696,7 +695,7 @@ const PortfolioSection = () => {
                 </ul>
               </div>
             </div>
-            <div className="flex flex-row justify-around my-8">
+            <div className="flex flex-row flex-wrap gap-3 justify-around my-8">
               <RoundButton
                 buttonClass={"round-button"}
                 buttonText={"CODE"}

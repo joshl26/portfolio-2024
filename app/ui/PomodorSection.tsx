@@ -8,7 +8,7 @@ import { CldImage } from "next-cloudinary";
 
 const PomodorSection = () => {
   return (
-    <section>
+    <section className="px-3">
       <section>
         <motion.div
           initial={{ opacity: 0 }}
@@ -30,7 +30,6 @@ const PomodorSection = () => {
           />
         </motion.div>
       </section>
-      <div className="spacer-small"></div>
       <section>
         <motion.div
           initial={{ opacity: 0 }}
@@ -41,38 +40,31 @@ const PomodorSection = () => {
               delay: 0.5,
             },
           }}
-          style={{ justifyContent: "space-between", display: "flex" }}
+          className="flex flex-row justify-around my-8"
         >
-          <span>
-            <RoundButton
-              href={"https://github.com/joshl26/pomodoro-app"}
-              buttonText={"GIT"}
-              buttonClass={"round-button"}
-              rel=""
-              target=""
-            />
-          </span>
-          <span>
-            <RoundButton
-              href={"https://joshlehman.ca/pomodor"}
-              buttonText={"LIVE SITE"}
-              buttonClass={"round-button"}
-              rel=""
-              target=""
-            />
-          </span>
-          <span>
-            <RoundButton
-              buttonText={"UI/UX"}
-              buttonClass={"round-button"}
-              rel=""
-              target=""
-              href=""
-            />
-          </span>
+          <RoundButton
+            href={"https://github.com/joshl26/pomodoro-app"}
+            buttonText={"GIT"}
+            buttonClass={"round-button"}
+            rel=""
+            target="_blank"
+          />
+          <RoundButton
+            href={"https://joshlehman.ca/pomodor"}
+            buttonText={"LIVE SITE"}
+            buttonClass={"round-button"}
+            rel=""
+            target="_blank"
+          />
+          <RoundButton
+            buttonText={"UI/UX"}
+            buttonClass={"round-button"}
+            rel=""
+            target=""
+            href=""
+          />
         </motion.div>
       </section>
-      <div className="spacer-small"></div>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{
@@ -85,114 +77,85 @@ const PomodorSection = () => {
       >
         <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DETAILS</h2>
-          <div style={{ justifyContent: "space-between", display: "flex" }}>
-            <span>
-              <h4>Winter 2022-Fall 2023</h4>
-            </span>
-            <span>
-              <h4>Personal Development Project</h4>
-            </span>
+          <div className="flex flex-row justify-between">
+            <h4>Winter 2022-Fall 2023</h4>
+            <h4 className="xl:text-left text-right">
+              Personal Development Project
+            </h4>
           </div>
-          <div style={{ justifyContent: "space-between", display: "flex" }}>
-            <span>
-              <span>
-                <RoundButton
-                  buttonText={"JAVASCRIPT"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"CSS3"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"HTML5"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"WIREFRAMING"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"UI/UX DESIGN"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-            </span>
-            <span>
-              <span>
-                <RoundButton
-                  buttonText={"REACT"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"REDUX"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-
-              <span>
-                <RoundButton
-                  buttonText={"BABEL"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"WEBPACK"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"GIT"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-            </span>
+          <div className="flex flex-row flex-wrap justify-between my-8">
+            <RoundButton
+              buttonText={"JAVASCRIPT"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"CSS3"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"HTML5"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"WIREFRAMING"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"UI/UX DESIGN"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"REACT"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"REDUX"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"BABEL"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"WEBPACK"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"GIT"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
           </div>
-          <div className="spacer-small"></div>
-
-          <p className="portfolio-p">
+          <p className="portfolio-p mb-8">
             During the winter of 2023, I undertook a project that aimed to
             introduce myself to the world of ReactJS. The project helped me gain
             a deeper understanding of various concepts, including both basic and
@@ -220,7 +183,7 @@ const PomodorSection = () => {
       >
         <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DESIGN INTENT</h2>
-          <p className="portfolio-p">
+          <p className="portfolio-p mb-8">
             The main objective of this project was to create a user interface
             and experience that is similar to the popular pomofocus app, while
             also enhancing its functionality. I aimed to provide users with a
@@ -245,7 +208,7 @@ const PomodorSection = () => {
           },
         }}
       >
-        <section className="portfolio-main-section">
+        <section className="portfolio-main-section mb-8">
           <h2 className="portfolio-h2">FONT TYPES</h2>
           <div
             style={{
@@ -286,7 +249,6 @@ const PomodorSection = () => {
         >
           <h2 className="portfolio-h2">SCREENS</h2>
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
@@ -298,7 +260,7 @@ const PomodorSection = () => {
           }}
         >
           <CldImage
-            className="portfolio-screen"
+            className="portfolio-screen my-8"
             alt="iphone in vertical position"
             width="1000"
             height="1000"
@@ -306,8 +268,6 @@ const PomodorSection = () => {
             src="v1697384652/PortfolioSite/Iphone_vertical_pomo_vases_dvoqbs.png"
           />
         </motion.div>
-
-        <div className="spacer"></div>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
@@ -319,7 +279,7 @@ const PomodorSection = () => {
           }}
         >
           <CldImage
-            className="portfolio-screen"
+            className="portfolio-screen my-8"
             alt="iphone laying on the ground"
             width="1000"
             height="1000"
@@ -327,7 +287,6 @@ const PomodorSection = () => {
             src="v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
           />
         </motion.div>
-        <div className="spacer"></div>
       </section>
     </section>
   );

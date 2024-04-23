@@ -9,7 +9,7 @@ export const metadata = {
 
 const PortfolioPomodor = () => {
   return (
-    <main className="main-container">
+    <main className="max-w-screen-xl m-auto my-8">
       <PomodorSection />
     </main>
   );
