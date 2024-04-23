@@ -9,7 +9,6 @@ import { CldImage } from "next-cloudinary";
 const OutdoorsySection = () => {
   return (
     <div>
-      {" "}
       <section>
         <motion.div
           initial={{ opacity: 0 }}
@@ -31,7 +30,6 @@ const OutdoorsySection = () => {
           />
         </motion.div>
       </section>
-      <div className="spacer-small"></div>
       <section>
         <motion.div
           initial={{ opacity: 0 }}
@@ -42,38 +40,31 @@ const OutdoorsySection = () => {
               delay: 0.5,
             },
           }}
-          style={{ justifyContent: "space-between", display: "flex" }}
+          className="flex flex-row justify-around my-8"
         >
-          <span>
-            <RoundButton
-              href={"https://github.com/joshl26/Outdoorsy"}
-              buttonText={"GIT"}
-              buttonClass={"round-button"}
-              rel=""
-              target=""
-            />
-          </span>
-          <span>
-            <RoundButton
-              buttonText={"LIVE SITE"}
-              buttonClass={"round-button"}
-              href={"https://outdors.ca"}
-              rel=""
-              target=""
-            />
-          </span>
-          <span>
-            <RoundButton
-              buttonText={"UI/UX"}
-              buttonClass={"round-button"}
-              rel=""
-              target=""
-              href=""
-            />
-          </span>
+          <RoundButton
+            href={"https://github.com/joshl26/Outdoorsy"}
+            buttonText={"GIT"}
+            buttonClass={"round-button"}
+            rel=""
+            target="_blank"
+          />
+          <RoundButton
+            buttonText={"LIVE SITE"}
+            buttonClass={"round-button"}
+            href={"https://outdors.ca"}
+            rel=""
+            target="_blank"
+          />
+          <RoundButton
+            buttonText={"UI/UX"}
+            buttonClass={"round-button"}
+            rel=""
+            target=""
+            href=""
+          />
         </motion.div>
       </section>
-      <div className="spacer-small"></div>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{
@@ -191,7 +182,6 @@ const OutdoorsySection = () => {
               </span>
             </span>
           </div>
-          <div className="spacer-small"></div>
           <p className="portfolio-p">
             Outdoorsy is a comprehensive website project designed to cater to
             the needs of outdoor enthusiasts. The website serves as a platform
@@ -318,7 +308,6 @@ const OutdoorsySection = () => {
             src="v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_1_nbm9mz.png"
           />
         </motion.div>
-        <div className="spacer"></div>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
@@ -338,7 +327,6 @@ const OutdoorsySection = () => {
             src="PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
           />
         </motion.div>
-        <div className="spacer"></div>
       </section>
     </div>
   );

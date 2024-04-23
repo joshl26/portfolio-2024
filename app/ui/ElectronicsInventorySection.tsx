@@ -9,7 +9,6 @@ import { CldImage } from "next-cloudinary";
 const ElectronicsInventorySection = () => {
   return (
     <section>
-      {" "}
       <section>
         <motion.div
           initial={{ opacity: 0 }}
@@ -31,7 +30,6 @@ const ElectronicsInventorySection = () => {
           />
         </motion.div>
       </section>
-      <div className="spacer-small"></div>
       <section>
         <motion.div
           initial={{ opacity: 0 }}
@@ -42,38 +40,31 @@ const ElectronicsInventorySection = () => {
               delay: 0.5,
             },
           }}
-          style={{ justifyContent: "space-between", display: "flex" }}
+          className="flex flex-row justify-around my-8"
         >
-          <span>
-            <RoundButton
-              href={"https://github.com/joshl26/electronics-inventory-frontend"}
-              buttonText={"GIT"}
-              buttonClass={"round-button"}
-              rel=""
-              target=""
-            />
-          </span>
-          <span>
-            <RoundButton
-              buttonText={"LIVE SITE"}
-              buttonClass={"round-button"}
-              href={"https://el-in.ca"}
-              rel=""
-              target=""
-            />
-          </span>
-          <span>
-            <RoundButton
-              buttonText={"UI/UX"}
-              buttonClass={"round-button"}
-              rel=""
-              target=""
-              href=""
-            />
-          </span>
+          <RoundButton
+            href={"https://github.com/joshl26/electronics-inventory-frontend"}
+            buttonText={"GIT"}
+            buttonClass={"round-button"}
+            rel=""
+            target="_blank"
+          />
+          <RoundButton
+            buttonText={"LIVE SITE"}
+            buttonClass={"round-button"}
+            href={"https://el-in.ca"}
+            rel=""
+            target="_blank"
+          />
+          <RoundButton
+            buttonText={"UI/UX"}
+            buttonClass={"round-button"}
+            rel=""
+            target=""
+            href=""
+          />
         </motion.div>
       </section>
-      <div className="spacer-small"></div>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{
@@ -86,121 +77,90 @@ const ElectronicsInventorySection = () => {
       >
         <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DETAILS</h2>
-          <div style={{ justifyContent: "space-between", display: "flex" }}>
-            <span>
-              <h4>SPRING 2023-CURRENT</h4>
-            </span>
-            <span>
-              <h4>COMMMERCIAL PRODUCT</h4>
-            </span>
+          <div className="flex flex-row justify-between">
+            <h4>SPRING 2023-CURRENT</h4>
+            <h4>COMMMERCIAL PRODUCT</h4>
           </div>
-          <div style={{ justifyContent: "space-between", display: "flex" }}>
-            <span>
-              <span>
-                <RoundButton
-                  buttonText={"JAVASCRIPT"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"CSS3"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"HTML5"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"WIREFRAMING"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"UI/UX DESIGN"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-            </span>
-            <span>
-              <span>
-                <RoundButton
-                  buttonText={"REACT"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"REDUX"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"OPENAPI"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"BABEL"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"WEBPACK"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-              <span>
-                <RoundButton
-                  buttonText={"GIT"}
-                  buttonClass={"round-button"}
-                  rel=""
-                  target=""
-                  href=""
-                />
-              </span>
-            </span>
+          <div className="flex flex-row flex-wrap gap-3 justify-between my-8">
+            <RoundButton
+              buttonText={"JAVASCRIPT"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"CSS3"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"HTML5"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"WIREFRAMING"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"UI/UX DESIGN"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"REACT"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"REDUX"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"OPENAPI"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"BABEL"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"WEBPACK"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
+            <RoundButton
+              buttonText={"GIT"}
+              buttonClass={"showcased-btn"}
+              rel=""
+              target=""
+              href=""
+            />
           </div>
-          <div className="spacer-small"></div>
-          <p className="portfolio-p">
+          <p className="portfolio-p mb-8">
             Are you struggling to manage your electronics inventory and worried
             that it might hinder your business growth? Look no further than
             Electronics Inventory (Ei) - a cutting-edge inventory management
@@ -226,9 +186,9 @@ const ElectronicsInventorySection = () => {
           },
         }}
       >
-        <section className="portfolio-main-section">
+        <section className="portfolio-main-section mb-8">
           <h2 className="portfolio-h2">DESIGN INTENT</h2>
-          <p className="portfolio-p">
+          <p className="portfolio-p ">
             I am extremely passionate about designing software programs that put
             humans first, and with EI, we have created inventory management
             software that people actually want to use, not just have to use. We
@@ -254,7 +214,7 @@ const ElectronicsInventorySection = () => {
           },
         }}
       >
-        <section className="portfolio-main-section">
+        <section className="portfolio-main-section mb-8">
           <h2 className="portfolio-h2">FONT TYPES</h2>
           <div
             style={{
@@ -331,7 +291,7 @@ const ElectronicsInventorySection = () => {
           }}
         >
           <CldImage
-            className="showcase-card-container"
+            className="showcase-card-container my-8"
             alt="laptop in a modern office"
             width="1000"
             height="1000"
@@ -339,7 +299,6 @@ const ElectronicsInventorySection = () => {
             src="v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_a1gelp.png"
           />
         </motion.div>
-        <div className="spacer"></div>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
@@ -351,7 +310,7 @@ const ElectronicsInventorySection = () => {
           }}
         >
           <CldImage
-            className="showcase-card-container"
+            className="showcase-card-container my-8"
             alt="laptop on a gold platform"
             width="1000"
             height="1000"
@@ -359,7 +318,6 @@ const ElectronicsInventorySection = () => {
             src="v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
           />
         </motion.div>
-        <div className="spacer"></div>
       </section>
     </section>
   );

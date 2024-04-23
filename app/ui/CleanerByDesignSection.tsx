@@ -47,20 +47,20 @@ const CleanerByDesignSection = () => {
             buttonText={"GIT"}
             buttonClass={"round-button"}
             rel=""
-            target=""
+            target="_blank"
           />
           <RoundButton
             buttonText={"LIVE SITE"}
             buttonClass={"round-button"}
             href={"https://storefront-git-main-joshl26.vercel.app/"}
             rel=""
-            target=""
+            target="_blank"
           />
           <RoundButton
             buttonText={"UI/UX"}
             buttonClass={"round-button"}
             rel=""
-            target=""
+            target="_blank"
             href="https://www.figma.com/file/of2oaPSPrse9hSU35jkvlB/Beanbag?type=design&node-id=0%3A1&mode=design&t=twYXNZu70vXFLblW-1"
           />
         </motion.div>

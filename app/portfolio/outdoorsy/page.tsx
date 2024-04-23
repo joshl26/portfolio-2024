@@ -9,7 +9,7 @@ export const metadata = {
 
 const PortfolioOutdoorsy = () => {
   return (
-    <main className="main-container">
+    <main className="max-w-screen-xl m-auto my-8">
       <OutdoorsySection />
     </main>
   );

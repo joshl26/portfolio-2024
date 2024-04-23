@@ -102,14 +102,14 @@ const PortfolioSection = () => {
                 href={"https://github.com/joshl26/resume-wrangler"}
                 buttonClass={"round-button"}
                 buttonText={"CODE"}
-                target=""
+                target="_blank"
                 rel=""
               />
               <RoundButton
                 buttonClass={"round-button"}
                 buttonText={"LIVE SITE"}
                 href={"https://resume-wrangler.vercel.app/"}
-                target=""
+                target="_blank"
                 rel=""
               />
               <Link href={"/portfolio/resume-wrangler"}>
@@ -222,14 +222,14 @@ const PortfolioSection = () => {
                 href={"https://github.com/joshl26/medusa-cleanerbydesign"}
                 buttonClass={"round-button"}
                 buttonText={"CODE"}
-                target=""
+                target="_blank"
                 rel=""
               />
               <RoundButton
                 buttonClass={"round-button"}
                 buttonText={"LIVE SITE"}
                 href={"https://cleanerbydesign.store/"}
-                target=""
+                target="_blank"
                 rel=""
               />
               <Link href={"/portfolio/ecommerce/cleaner-by-design"}>
@@ -332,14 +332,14 @@ const PortfolioSection = () => {
                 href={"https://github.com/joshl26/nextjs-medusa-beanbag"}
                 buttonClass={"round-button"}
                 buttonText={"CODE"}
-                target=""
+                target="_blank"
                 rel=""
               />
               <RoundButton
                 buttonClass={"round-button"}
                 buttonText={"LIVE SITE"}
                 href={"https://storefront-git-main-joshl26.vercel.app/"}
-                target=""
+                target="_blank"
                 rel=""
               />
               <Link href={"/portfolio/ecommerce/beanbag-coffee-co"}>
@@ -427,21 +427,21 @@ const PortfolioSection = () => {
                 buttonClass={"round-button"}
                 buttonText={"FRONTEND CODE"}
                 href="https://github.com/joshl26/electronics-inventory-frontend"
-                target=""
+                target="_blank"
                 rel=""
               />
               <RoundButton
                 buttonClass={"round-button"}
                 buttonText={"BACKEND CODE"}
                 href="https://github.com/joshl26/electronics-inventory-backend"
-                target=""
+                target="_blank"
                 rel=""
               />
               <RoundButton
                 buttonClass={"round-button"}
                 buttonText={"LIVE SITE"}
                 href="https://el-in.ca/"
-                target=""
+                target="_blank"
                 rel=""
               />
               <Link href={"/portfolio/el-in/"}>
@@ -523,14 +523,14 @@ const PortfolioSection = () => {
                 href={"https://github.com/joshl26/Outdoorsy"}
                 buttonClass={"round-button"}
                 buttonText={"CODE"}
-                target=""
+                target="_blank"
                 rel=""
               />
               <RoundButton
                 href={"https://outdors.ca"}
                 buttonClass={"round-button"}
                 buttonText={"LIVE SITE"}
-                target=""
+                target="_blank"
                 rel=""
               />
               <Link href={"/portfolio/outdoorsy"}>
@@ -614,7 +614,7 @@ const PortfolioSection = () => {
                 href={"https://github.com/joshl26/portfolio-2023"}
                 buttonClass={"round-button"}
                 buttonText={"CODE"}
-                target=""
+                target="_blank"
                 rel=""
               />
               <RoundButton
@@ -701,14 +701,14 @@ const PortfolioSection = () => {
                 buttonClass={"round-button"}
                 buttonText={"CODE"}
                 href={"https://github.com/joshl26/pomodoro-app"}
-                target=""
+                target="_blank"
                 rel=""
               />
               <RoundButton
                 buttonClass={"round-button"}
                 buttonText={"LIVE SITE"}
                 href={"https://joshlehman.ca/pomodor"}
-                target=""
+                target="_blank"
                 rel=""
               />
               <Link href={"/portfolio/pomodor"}>

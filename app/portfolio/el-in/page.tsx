@@ -10,7 +10,7 @@ export const metadata = {
 
 const Page = () => {
   return (
-    <main className="main-container">
+    <main className="max-w-screen-xl m-auto my-8">
       <ElectronicsInventorySection />
     </main>
   );
