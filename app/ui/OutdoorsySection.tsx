@@ -78,7 +78,7 @@ const OutdoorsySection = () => {
         <section className="portfolio-main-section">
           <h2 className="portfolio-h2 mb-4">DETAILS</h2>
           <div className="flex flex-row justify-between">
-            <h4>SPRING 2023-CURRENT</h4>
+            <h4>Spring 2023 - Summer 2023</h4>
             <h4 className="xl:text-left text-right">COMMERCIAL PRODUCT</h4>
           </div>
           <div className="flex flex-row flex-wrap justify-between gap-y-3 my-8">

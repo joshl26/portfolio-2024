@@ -43,7 +43,7 @@ const CleanerByDesignSection = () => {
           className="flex flex-row just justify-around gap-y-3 my-8"
         >
           <RoundButton
-            href={"https://github.com/joshl26/nextjs-medusa-beanbag"}
+            href={"https://github.com/joshl26/medusa-cleanerbydesign"}
             buttonText={"GIT"}
             buttonClass={"round-button"}
             rel=""
@@ -52,7 +52,7 @@ const CleanerByDesignSection = () => {
           <RoundButton
             buttonText={"LIVE SITE"}
             buttonClass={"round-button"}
-            href={"https://storefront-git-main-joshl26.vercel.app/"}
+            href={"https://cleanerbydesign.store/"}
             rel=""
             target="_blank"
           />
@@ -61,7 +61,7 @@ const CleanerByDesignSection = () => {
             buttonClass={"round-button"}
             rel=""
             target="_blank"
-            href="https://www.figma.com/file/of2oaPSPrse9hSU35jkvlB/Beanbag?type=design&node-id=0%3A1&mode=design&t=twYXNZu70vXFLblW-1"
+            href=""
           />
         </motion.div>
       </section>
