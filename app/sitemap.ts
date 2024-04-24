@@ -1,6 +1,7 @@
 import { getBlogPosts } from "@/app/db/blog";
+import { MetadataRoute } from "next";
 
-export default async function sitemap() {
+export default function sitemap(): MetadataRoute.Sitemap {
   let blogs = getBlogPosts().map((post) => ({
     url: `${process.env.DEPLOYMENT_URL}/blog/${post.slug}`,
     lastModified: post.metadata.publishedAt,
