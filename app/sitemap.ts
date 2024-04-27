@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   let routes = [
-    "",
+    "/",
     "/about",
     "/blog",
     "/contact",
@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/portfolio/resume-wrangler",
     "/portfolio/3dportfolio",
   ].map((route) => ({
-    url: `${process.env.DEPLOYMENT_URL}/${route}`,
+    url: `${process.env.DEPLOYMENT_URL}${route}`,
     lastModified: new Date().toISOString().split("T")[0],
   }));
 

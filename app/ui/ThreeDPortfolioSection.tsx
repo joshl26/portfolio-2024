@@ -49,7 +49,7 @@ const ThreeDPortfolioSection = () => {
             target=""
           />
           <RoundButton
-            href={"/experimental"}
+            href={"https://joshlehman.ca/experimental"}
             buttonText={"LIVE SITE"}
             buttonClass={"round-button"}
             rel=""
