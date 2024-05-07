@@ -161,22 +161,14 @@ const CleanerByDesignSection = () => {
             />
           </div>
           <p className="portfolio-p">
-            Beanbag Coffee Co. is a headless e-commerce solution that provides a
-            flexible framework for building custom e-commerce platforms. It
-            offers features such as GraphQL API, server-side rendering, payment
-            integrations, multi-currency support, and many others. The Beanbag
-            Coffee Co. e-commerce project is a fully functional online store
-            that allows customers to browse and purchase a variety of coffee
-            products ranging from whole beans to ground coffee. The website is
-            designed to be user-friendly and visually appealing, providing
-            customers with an enjoyable shopping experience.
-          </p>
-          <p className="portfolio-p">
-            This project uses MedusaJS as its core framework combined with other
-            technologies such as NextJS for front-end development, Node.js for
-            server-side rendering and PostgreSQL for the DB. This stack was
-            chosen because it enables fast development of scalable applications
-            while also offering performance benefits.
+            Cleaner By Design is an e-commerce web application designed to
+            provide a seamless online shopping experience. This platform
+            specializes in offering eco-friendly and sustainable home
+            organization products, catering to a niche market of environmentally
+            conscious consumers. Built using Next.js, PostgreSQL, and
+            TypeScript, the project not only highlights technical proficiency
+            but also demonstrates a commitment to modern, scalable web
+            technologies aligned with innovative business practices.
           </p>
         </section>
       </motion.div>
@@ -194,40 +186,23 @@ const CleanerByDesignSection = () => {
           <h2 className="portfolio-h2">DESIGN INTENT</h2>
           <ul className="list-disc list-inside xl:list-outside">
             <li className="portfolio-p">
-              Product Catalog Management - The first step in setting up an
-              e-commerce platform is creating a product catalog that includes
-              all the available products or services offered by the company.
-              Using MedusaJS's GraphQL API, I was easily able to create product
-              schemas for various types of products such as drinks of various
-              sizes.
+              Sustainable Product Catalog: A detailed catalog showcasing modern
+              eco-friendly home organization solutions that are better for both
+              the consumer and the planet.
             </li>
             <li className="portfolio-p">
-              User Authentication - To ensure security and personalized shopping
-              experiences, user authentication is implemented using JWT (JSON
-              Web Token). This allows users to create accounts, log in securely
-              to access their profile data and order history.
+              Secure Checkout Process: Integrated secure payment systems
+              ensuring user security during transactions.
+            </li>
+            <li className="portfolio-p">Multi currency support</li>
+            <li className="portfolio-p">
+              User Profile Management: Allows users to create profiles where
+              they can track orders, save favorite products, and manage payment
+              methods securely.
             </li>
             <li className="portfolio-p">
-              Shopping Cart - Customers can add products to their shopping cart
-              while browsing through the website and have the option to edit or
-              remove items before proceeding to checkout.
-            </li>
-            <li className="portfolio-p">
-              Checkout Process - The checkout process is a crucial part of any
-              e-commerce platform, and MedusaJS makes it easy to integrate
-              different payment gateways. Customers can choose their preferred
-              payment option and complete their purchase securely.
-            </li>
-            <li className="portfolio-p">
-              Multi-Currency Support - As Beanbag Coffee Co. targets customers
-              globally, the project includes multi-currency support using
-              MedusaJS's currency conversion feature. This allows customers from
-              different countries to view prices in their local currency.
-            </li>
-            <li className="portfolio-p">
-              Order Management - All orders are managed through the Medusa
-              dashboard where admins can track order status, manage inventory
-              levels, and process refunds if needed.
+              Responsive Design: Adjustable UI components optimized for various
+              devices enhancing usability across different platforms.
             </li>
           </ul>
         </section>
@@ -243,31 +218,47 @@ const CleanerByDesignSection = () => {
         }}
       >
         <section className="portfolio-main-section mb-8">
-          <h2 className="portfolio-h2">CHALLENGES OVERCOME</h2>
+          <h2 className="portfolio-h2">CHALLENGES</h2>
           <div>
             <p className="portfolio-p">
-              One major challenge while building this project was integrating
-              the GraphQL API with React for seamless data communication between
-              the front-end and back-end. However, with thorough documentation
-              provided by MedusaJS and its active community support, this was
-              overcome successfully.
+              One major challenge was integrating real-time data updates
+              frequently seen in stock levels or prices without performance
+              penalties on user experiences – solved by efficiently structuring
+              database calls through advanced SQL scripts paired effectively
+              within our Redux state management flows implemented via hooks
+              provided by Next.js framework itself.
+            </p>
+          </div>
+        </section>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+          transition: {
+            duration: 0.75,
+            delay: 0.25,
+          },
+        }}
+      >
+        <section className="portfolio-main-section mb-8">
+          <h2 className="portfolio-h2">SOLUTIONS</h2>
+          <div>
+            <p className="portfolio-p">
+              Platform Migration: Migrated existing product listings and
+              customer data from old systems to leverage Medusa’s headless
+              architecture.
             </p>
             <p className="portfolio-p">
-              Another challenge was implementing server-side rendering for
-              improved performance and SEO optimization. With MedusaJS's
-              built-in server-side rendering capabilities powered by Next.js,
-              this could be achieved seamlessly without much effort.
+              Customized Shopping Features: Developed interactive UI
+              enhancements using React on top of the headless commerce
+              functionality provided by Medusa.
             </p>
             <p className="portfolio-p">
-              In conclusion, the Beanbag Coffee Co. e-commerce project using
-              MedusaJS showcases the flexibility and power of this headless
-              e-commerce solution. It offers all the necessary features to
-              create a fully functional online store while providing developers
-              with enough room for customization and personalization according
-              to business needs. This project serves as an example of how
-              businesses can leverage modern technologies such as MedusaJS to
-              provide unique and personalized shopping experiences for their
-              customers.
+              Secure Payment Gateway Integration: Ensured secure transactions
+              with integrated payment options optimized for speed and protection
+              against fraud.
             </p>
           </div>
         </section>
@@ -293,7 +284,7 @@ const CleanerByDesignSection = () => {
             }}
           >
             <span>
-              <h1 className="portfolio-font-nunito">NUNITO</h1>
+              <h1 className="portfolio-font-roboto">ROBOTO</h1>
             </span>
             <div className="portfolio-li">
               <span>Weight</span>
@@ -306,7 +297,7 @@ const CleanerByDesignSection = () => {
               >
                 <li>200</li>
                 <li>300</li>
-                <li>500</li>
+                <li>700</li>
               </ul>
             </div>
           </div>
@@ -317,7 +308,7 @@ const CleanerByDesignSection = () => {
               alignItems: "flex-end",
             }}
           >
-            <span className="portfolio-font-cabin">CABIN</span>
+            <span className="portfolio-font-ubuntu">UBUNTU</span>
             <div className="portfolio-li">
               <span>Weight</span>
               <ul
@@ -328,7 +319,6 @@ const CleanerByDesignSection = () => {
                 }}
               >
                 <li>400</li>
-                <li>500</li>
                 <li>600</li>
                 <li>700</li>
               </ul>

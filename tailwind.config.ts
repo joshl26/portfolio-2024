@@ -19,6 +19,7 @@ const config: Config = {
         nunito: ["var(--font-nunito)"],
         lusitana: ["var(--font-lusitana)"],
         roboto: ["var(--font-roboto)"],
+        ubuntu: ["var(--font-ubuntu)"],
       },
       typography: {
         quoteless: {

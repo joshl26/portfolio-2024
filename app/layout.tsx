@@ -6,6 +6,7 @@ import {
   Cabin,
   Noto_Sans,
   Roboto,
+  Ubuntu,
 } from "next/font/google";
 import ResponsiveFooter from "@/app/ui/ResponsiveFooter";
 import ResponsiveHeader from "@/app/ui/ResponsiveHeader";
@@ -53,6 +54,14 @@ const roboto = Roboto({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-roboto",
+});
+
+const ubuntu = Ubuntu({
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-ubuntu",
 });
 
 export const metadata: Metadata = {
