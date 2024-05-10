@@ -5,7 +5,6 @@ import { FaArrowCircleUp } from "react-icons/fa";
 import "@/app/Home.css";
 import ThreeScene from "./ui/ThreeScene";
 import IntroWorkCard from "./ui/IntroWorkCard";
-import ThreeFiberScene from "./ui/Test";
 
 console.log("__________________**__________________");
 console.log("_________________*  *_________________");

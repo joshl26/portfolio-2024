@@ -8,12 +8,7 @@ import { OrbitControls } from "@react-three/drei";
 // r150
 // THREE.ColorManagement.enabled = true;
 
-let camera = new THREE.PerspectiveCamera(
-  15,
-  window.innerWidth / window.innerHeight,
-  1,
-  500
-);
+let camera = new THREE.PerspectiveCamera(15, undefined, 1, 500);
 let [px, py, pz] = [0, 7, 14];
 let [rx, ry, rz] = [0, 0, 0];
 camera.position.set(px, py, pz);
