@@ -108,7 +108,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-row ">
-            <h2 className="title-year m-auto"> - CIRCA 2021 - </h2>
+            <h2 className="title-year m-auto"> - CIRCA 2018 - </h2>
           </div>
         </div>
       </section>
