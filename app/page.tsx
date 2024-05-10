@@ -83,7 +83,7 @@ export default function Home() {
     <div>
       <ThreeScene />
       {/* <ThreeFiberScene /> */}
-      {/* <section className="title-container px-2">
+      <section className="title-container px-2">
         <div className="flex flex-col max-w-screen-xl m-auto">
           <div className="flex flex-row flex-wrap ">
             <div className="flex flex-col">
@@ -133,7 +133,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }
