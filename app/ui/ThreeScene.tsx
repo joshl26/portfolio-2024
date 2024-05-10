@@ -1,14 +1,20 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import css from "./ThreeScene.module.css";
 import * as THREE from "three";
 import { BoxGeometry, Color, MeshBasicMaterial } from "three";
+import { OrbitControls } from "@react-three/drei";
 
 // r150
-THREE.ColorManagement.enabled = true;
+// THREE.ColorManagement.enabled = true;
 
-let camera = new THREE.PerspectiveCamera(90, 1.25, 0.1, 1000);
-let [px, py, pz] = [0, 5, 25];
+let camera = new THREE.PerspectiveCamera(
+  15,
+  window.innerWidth / window.innerHeight,
+  1,
+  500
+);
+let [px, py, pz] = [0, 7, 14];
 let [rx, ry, rz] = [0, 0, 0];
 camera.position.set(px, py, pz);
 camera.rotation.set(rx, ry, rz);
@@ -18,13 +24,13 @@ camera.rotation.set(rx, ry, rz);
 //const box = new THREE.BoxGeometry(1, 1, 1);
 
 //RANDOM Function
-function mathRandom(num = 20) {
+function mathRandom(num = 5) {
   var numValue = -Math.random() * num + Math.random() * num;
   return numValue;
 }
 
 function CityScene({
-  count = 1000,
+  count = 100,
   temp = new THREE.Object3D(),
   color = 0x000000,
 }) {
@@ -35,12 +41,37 @@ function CityScene({
   useEffect(() => {
     // Set positions
     for (let i = 0; i < count; i++) {
-      temp.position.set(Math.round(mathRandom()), 0, Math.round(mathRandom()));
-      temp.scale.set(1, Math.round(mathRandom()), 1);
+      const maxHeight = 4;
+      const minHeight = 1;
+
+      let height = Math.min(
+        Math.max(
+          Math.abs(Math.round(0.1 + Math.abs(mathRandom(8)))),
+          minHeight
+        ),
+        maxHeight
+      );
+      var cubeWidth = 0.8;
+      temp.position.set(
+        Math.round(mathRandom()),
+        height / 2,
+        Math.round(mathRandom())
+      );
+      temp.castShadow = true;
+      temp.receiveShadow = true;
+      // temp.rotateY(0.1 + Math.abs(mathRandom(8)));
+      // temp.rotation.set();
+      temp.scale.set(
+        cubeWidth + mathRandom(1 - cubeWidth),
+        height,
+        cubeWidth + mathRandom(1 - cubeWidth)
+      );
       temp.updateMatrix();
-      myMesh.current.setMatrixAt(i + Math.round(mathRandom(0.5)), temp.matrix);
+      myMesh.current.setMatrixAt(i, temp.matrix);
+      console.log(Math.abs(Math.round(mathRandom())));
     }
     // Update the instance
+    myMesh.antialiased;
     myMesh.current.instanceMatrix.needsUpdate = true;
   }, [count, temp]);
 
@@ -59,7 +90,7 @@ function CityScene({
   function setTintColor() {
     if (setTintNum) {
       setTintNum = false;
-      var setColor = 0xbbbbbb;
+      var setColor = 0x000000;
     } else {
       setTintNum = true;
       var setColor = 0x000000;
@@ -70,13 +101,8 @@ function CityScene({
 
   //   return <mesh material={red} geometry={box} ref={myMesh} />;
   return (
-    <mesh receiveShadow>
-      <instancedMesh
-        receiveShadow
-        castShadow
-        ref={myMesh}
-        args={[undefined, undefined, count]}
-      >
+    <mesh receiveShadow castShadow>
+      <instancedMesh ref={myMesh} args={[undefined, undefined, count]}>
         <boxGeometry />
         <meshStandardMaterial
           flatShading={false}
@@ -91,9 +117,16 @@ function CityScene({
       {/* <mesh ref={myMesh2}>
         <gridHelper args={[50, 50, 0xff0000, "gray"]} />
       </mesh> */}
-      <mesh receiveShadow position={[0, -1, 0]} ref={myMesh3}>
-        <boxGeometry args={[200, 1, 200]} />
-        <meshBasicMaterial color={color} />
+      <mesh position={[0, 0, 0]} ref={myMesh3}>
+        <boxGeometry args={[200, 0, 200]} />
+        <meshStandardMaterial
+          metalness={1.0}
+          opacity={0.9}
+          transparent={false}
+          roughness={0.3}
+          color={setTintColor()}
+          side={THREE.DoubleSide}
+        />
       </mesh>
     </mesh>
   );
@@ -105,14 +138,27 @@ const ThreeScene: React.FC = () => {
 
   return (
     <div id="canvas-container" className={css.scene}>
-      <Canvas camera={camera}>
+      <Canvas dpr={[1, 2]} camera={camera}>
         <color attach="background" args={[bgColor.r, bgColor.g, bgColor.b]} />
-        <ambientLight color={ambientColor} intensity={100} />
-        <spotLight color={ambientColor} />
-        {/* <directionalLight color="green" position={[0, 0, 5]} /> */}
-        {/* <pointLight color={bgColor} intensity={200} position={[10, 10, 10]} /> */}
+        <ambientLight color={ambientColor} intensity={5} />
+        <spotLight
+          penumbra={0.1}
+          color={ambientColor}
+          castShadow={true}
+          position={[5, 5, 5]}
+          rotation={[(45 * Math.PI) / 180, 0, (-45 * Math.PI) / 180]}
+        />
+        <OrbitControls maxPolarAngle={Math.PI / 2.5} minPolarAngle={0} />
+        <pointLight
+          castShadow
+          color={0xffffff}
+          intensity={5}
+          position={[0, 6, 0]}
+        />
         <fog attach="fog" color={bgColor} near={10} far={16} />
-        <CityScene />
+        <Suspense fallback={false}>
+          <CityScene />
+        </Suspense>
       </Canvas>
     </div>
   );
