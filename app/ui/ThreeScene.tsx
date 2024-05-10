@@ -23,7 +23,11 @@ function mathRandom(num = 20) {
   return numValue;
 }
 
-function CityScene({ count = 1000, temp = new THREE.Object3D() }) {
+function CityScene({
+  count = 1000,
+  temp = new THREE.Object3D(),
+  color = 0x000000,
+}) {
   let myMesh: any = React.useRef();
   let myMesh2: any = React.useRef();
   let myMesh3: any = React.useRef();
@@ -34,63 +38,80 @@ function CityScene({ count = 1000, temp = new THREE.Object3D() }) {
       temp.position.set(Math.round(mathRandom()), 0, Math.round(mathRandom()));
       temp.scale.set(1, Math.round(mathRandom()), 1);
       temp.updateMatrix();
-      myMesh.current.setMatrixAt(i, temp.matrix);
+      myMesh.current.setMatrixAt(i + Math.round(mathRandom(0.5)), temp.matrix);
     }
     // Update the instance
     myMesh.current.instanceMatrix.needsUpdate = true;
   }, [count, temp]);
 
-  const boxColor = new Color(0x000000);
-  //const boxColor = new Color("darkgray");
+  // const boxColor = new Color(0xff1bbb);
+  const boxColor = new Color("darkgray");
 
   useFrame(({ clock }) => {
     const a = clock.getElapsedTime();
     myMesh.current.rotation.y = a * 0.0625;
-    myMesh2.current.rotation.y = a * 0.0625;
+    // myMesh2.current.rotation.y = a * 0.0625;
     myMesh3.current.rotation.y = a * 0.0625;
   });
+
+  var setTintNum = true;
+
+  function setTintColor() {
+    if (setTintNum) {
+      setTintNum = false;
+      var setColor = 0xbbbbbb;
+    } else {
+      setTintNum = true;
+      var setColor = 0x000000;
+    }
+    // setColor = 0x000000;
+    return setColor;
+  }
 
   //   return <mesh material={red} geometry={box} ref={myMesh} />;
   return (
     <mesh receiveShadow>
       <instancedMesh
+        receiveShadow
         castShadow
         ref={myMesh}
         args={[undefined, undefined, count]}
       >
-        <boxGeometry attach="geometry" />
-        <meshPhongMaterial
-          specular={1}
-          opacity={0.5}
-          attach="material"
-          shininess={2}
+        <boxGeometry />
+        <meshStandardMaterial
+          flatShading={false}
+          metalness={1.0}
+          opacity={0.9}
+          transparent={true}
+          roughness={0.3}
           side={THREE.DoubleSide}
-          color={boxColor}
+          color={setTintColor()}
         />
       </instancedMesh>
-      <mesh ref={myMesh2}>
-        {/* <gridHelper args={[50, 50, 0xff0000, "gray"]} /> */}
-      </mesh>
+      {/* <mesh ref={myMesh2}>
+        <gridHelper args={[50, 50, 0xff0000, "gray"]} />
+      </mesh> */}
       <mesh receiveShadow position={[0, -1, 0]} ref={myMesh3}>
         <boxGeometry args={[200, 1, 200]} />
-        <meshBasicMaterial color={boxColor} />
+        <meshBasicMaterial color={color} />
       </mesh>
     </mesh>
   );
 }
 
 const ThreeScene: React.FC = () => {
-  const bgColor = new Color(0xff6f00);
-  const ambientColor = new Color(0xffffff);
+  const bgColor = new Color(0xf02050);
+  const ambientColor = new Color(0x404040);
 
   return (
     <div id="canvas-container" className={css.scene}>
       <Canvas camera={camera}>
         <color attach="background" args={[bgColor.r, bgColor.g, bgColor.b]} />
-        <ambientLight color={bgColor} intensity={10} />
-        <directionalLight color="red" position={[0, 0, 5]} />
-        <pointLight color={bgColor} intensity={200} position={[10, 10, 10]} />
-        <fog attach="fog" color={bgColor} near={5} far={20} />
+        <ambientLight color={ambientColor} intensity={100} />
+        <spotLight color={ambientColor} />
+        {/* <directionalLight color="green" position={[0, 0, 5]} /> */}
+        {/* <pointLight color={bgColor} intensity={200} position={[10, 10, 10]} /> */}
+        <fog attach="fog" color={bgColor} near={10} far={16} />
         <CityScene />
       </Canvas>
     </div>

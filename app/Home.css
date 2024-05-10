@@ -15,14 +15,31 @@
   color: var(--bg-color-light);
 }
 
-.title-accent {
+.title-main {
   color: beige;
-  font-family: var(--font-lusitana);
+  font-family: var(--font-ubuntu);
   font-size: clamp(2rem, 0.9295rem + 5.3524vw, 5.75rem);
+}
+
+.title-accent {
+  font-family: var(--font-roboto);
+  color: beige;
+  font-size: clamp(1.5rem, 0.822rem + 3.3898vw, 3.875rem);
+  font-stretch: expanded;
+  font-weight: 300;
+}
+
+.title {
+  color: beige;
+  font-family: var(--font-roboto);
+  font-size: clamp(2rem, 0.9295rem + 5.3524vw, 5.75rem);
+  font-weight: 100;
 }
 
 .title-year {
   font-size: clamp(1.3125rem, 1.0449rem + 1.3381vw, 2.25rem);
+  font-family: var(--font-roboto);
+  font-weight: 100;
 }
 
 .showcased-work {

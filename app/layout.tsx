@@ -44,12 +44,14 @@ const lusitana = Lusitana({
 });
 const raleway = Raleway({
   subsets: ["latin"],
+  style: ["normal", "italic"],
   variable: "--font-raleway",
-  weight: ["300", "400"],
+  display: "swap",
+  weight: ["100", "400"],
 });
 
 const roboto = Roboto({
-  weight: ["400", "700"],
+  weight: ["100", "300", "400", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
@@ -117,10 +119,10 @@ export default function RootLayout({
         <CursorContainer>
           <MenuContextProvider>
             <div className="w-full m-auto">
-              <ResponsiveHeader />
-              <ResponsiveMenu />
+              {/* <ResponsiveHeader />
+              <ResponsiveMenu /> */}
               {children}
-              <ResponsiveFooter />
+              {/* <ResponsiveFooter /> */}
             </div>
           </MenuContextProvider>
         </CursorContainer>

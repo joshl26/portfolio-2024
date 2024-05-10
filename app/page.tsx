@@ -5,6 +5,7 @@ import { FaArrowCircleUp } from "react-icons/fa";
 import "@/app/Home.css";
 import ThreeScene from "./ui/ThreeScene";
 import IntroWorkCard from "./ui/IntroWorkCard";
+import ThreeFiberScene from "./ui/Test";
 
 console.log("__________________**__________________");
 console.log("_________________*  *_________________");
@@ -81,13 +82,36 @@ export default function Home() {
   return (
     <div>
       <ThreeScene />
-      <section className="title-container px-2">
-        <h1 className="text-based-title">
-          CREATING <span className="title-accent">PRAGMATIC </span>&
-          <span className="title-accent"> THOUGHTFUL</span> SOFTWARE
-          <br />
-          <span className="title-year"> -CIRCA 2021- </span>
-        </h1>
+      {/* <ThreeFiberScene /> */}
+      {/* <section className="title-container px-2">
+        <div className="flex flex-col max-w-screen-xl m-auto">
+          <div className="flex flex-row flex-wrap ">
+            <div className="flex flex-col">
+              <div className="flex flex-col md:flex-row md:justify-around flex-wrap">
+                <div className="flex flex-col pt-1">
+                  <h2 className="title-accent m-auto">CREATING</h2>
+                </div>
+                <div className="flex flex-col justify-end">
+                  <h3 className="title-main px-6">PRAGMATIC</h3>
+                </div>
+                <div className="flex flex-col pt-1">
+                  <h3 className="title-accent m-auto">&</h3>
+                </div>
+              </div>
+              <div className="flex flex-col md:flex-row md:justify-around flex-wrap">
+                <div className="flex flex-col">
+                  <h2 className="title-main px-6">THOUGHTFUL</h2>
+                </div>
+                <div className="flex flex-col pt-1">
+                  <h2 className="title-accent m-auto">SOFTWARE</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-row ">
+            <h2 className="title-year m-auto"> - CIRCA 2021 - </h2>
+          </div>
+        </div>
       </section>
       <section className="showcased-work">
         <div className="max-w-screen-xl m-auto">
@@ -109,7 +133,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
