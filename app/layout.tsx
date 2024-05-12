@@ -119,10 +119,10 @@ export default function RootLayout({
         <CursorContainer>
           <MenuContextProvider>
             <div className="w-full m-auto">
-              <ResponsiveHeader />
-              <ResponsiveMenu />
+              {/* <ResponsiveHeader />
+              <ResponsiveMenu /> */}
               {children}
-              <ResponsiveFooter />
+              {/* <ResponsiveFooter /> */}
             </div>
           </MenuContextProvider>
         </CursorContainer>

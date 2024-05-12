@@ -5,6 +5,8 @@ import { FaArrowCircleUp } from "react-icons/fa";
 import "@/app/Home.css";
 import ThreeScene from "./ui/ThreeScene";
 import IntroWorkCard from "./ui/IntroWorkCard";
+import TestScene, { SpaceDust } from "./ui/TestScene";
+import { Canvas, extend } from "@react-three/fiber";
 
 console.log("__________________**__________________");
 console.log("_________________*  *_________________");
@@ -80,9 +82,10 @@ export default function Home() {
 
   return (
     <div>
-      <ThreeScene />
+      <TestScene />
+      {/* <ThreeScene /> */}
       {/* <ThreeFiberScene /> */}
-      <section className="title-container px-2">
+      {/* <section className="title-container px-2">
         <div className="flex flex-col max-w-screen-xl m-auto">
           <div className="flex flex-row flex-wrap ">
             <div className="flex flex-col">
@@ -132,7 +135,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

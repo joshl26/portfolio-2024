@@ -1,5 +1,5 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense, useEffect, useRef } from "react";
 import css from "./ThreeScene.module.css";
 import * as THREE from "three";
 import { BoxGeometry, Color, MeshBasicMaterial } from "three";
@@ -7,12 +7,6 @@ import { OrbitControls } from "@react-three/drei";
 
 // r150
 // THREE.ColorManagement.enabled = true;
-
-let camera = new THREE.PerspectiveCamera(15, undefined, 1, 500);
-let [px, py, pz] = [0, 7, 14];
-let [rx, ry, rz] = [0, 0, 0];
-camera.position.set(px, py, pz);
-camera.rotation.set(rx, ry, rz);
 
 //const red = new THREE.MeshLambertMaterial({ color: "darkgray" });
 // const sphere = new THREE.SphereGeometry(1, 28, 28);
@@ -28,10 +22,13 @@ function CityScene({
   count = 100,
   temp = new THREE.Object3D(),
   color = 0x000000,
+  container,
 }) {
   let myMesh: any = React.useRef();
   let myMesh2: any = React.useRef();
   let myMesh3: any = React.useRef();
+
+  console.log(container);
 
   useEffect(() => {
     // Set positions
@@ -63,7 +60,7 @@ function CityScene({
       );
       temp.updateMatrix();
       myMesh.current.setMatrixAt(i, temp.matrix);
-      console.log(Math.abs(Math.round(mathRandom())));
+      // console.log(Math.abs(Math.round(mathRandom())));
     }
     // Update the instance
     myMesh.antialiased;
@@ -131,8 +128,16 @@ const ThreeScene: React.FC = () => {
   const bgColor = new Color(0xf02050);
   const ambientColor = new Color(0x404040);
 
+  const myContainer = useRef(null);
+
+  let camera = new THREE.PerspectiveCamera(15, undefined, 1, 500);
+  let [px, py, pz] = [0, 7, 14];
+  let [rx, ry, rz] = [0, 0, 0];
+  camera.position.set(px, py, pz);
+  camera.rotation.set(rx, ry, rz);
+
   return (
-    <div id="canvas-container" className={css.scene}>
+    <div id="canvas-container" ref={myContainer} className={css.scene}>
       <Canvas dpr={[1, 2]} camera={camera}>
         <color attach="background" args={[bgColor.r, bgColor.g, bgColor.b]} />
         <ambientLight color={ambientColor} intensity={5} />
@@ -152,7 +157,7 @@ const ThreeScene: React.FC = () => {
         />
         <fog attach="fog" color={bgColor} near={10} far={16} />
         <Suspense fallback={false}>
-          <CityScene />
+          <CityScene container={myContainer} />
         </Suspense>
       </Canvas>
     </div>
