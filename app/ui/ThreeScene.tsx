@@ -164,7 +164,7 @@ const ThreeScene: React.FC = () => {
         <Suspense fallback={false}>
           <CityScene
             container={myContainer}
-            count={0}
+            count={50}
             temp={new THREE.Object3D()}
             color={new Color()}
           />
