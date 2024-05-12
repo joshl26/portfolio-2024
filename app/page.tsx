@@ -5,7 +5,7 @@ import { FaArrowCircleUp } from "react-icons/fa";
 import "@/app/Home.css";
 import ThreeScene from "./ui/ThreeScene";
 import IntroWorkCard from "./ui/IntroWorkCard";
-import TestScene, { SpaceDust } from "./ui/TestScene";
+import TestScene from "./ui/TestScene";
 import { Canvas, extend } from "@react-three/fiber";
 
 console.log("__________________**__________________");
@@ -82,18 +82,18 @@ export default function Home() {
 
   return (
     <div>
-      <TestScene />
-      {/* <ThreeScene /> */}
+      {/* <TestScene /> */}
+      <ThreeScene />
       {/* <ThreeFiberScene /> */}
-      {/* <section className="title-container px-2">
+      <section className="title-container">
         <div className="flex flex-col max-w-screen-xl m-auto">
           <div className="flex flex-row flex-wrap ">
             <div className="flex flex-col">
-              <div className="flex flex-col md:flex-row md:justify-around flex-wrap">
+              <div className="flex flex-col md:flex-row md:justify-around flex-wrap m-auto">
                 <div className="flex flex-col pt-1">
                   <h2 className="title-accent m-auto">CREATING</h2>
                 </div>
-                <div className="flex flex-col justify-end">
+                <div className="flex md:flex-row md:justify-around flex-wrap">
                   <h3 className="title-main px-6">PRAGMATIC</h3>
                 </div>
                 <div className="flex flex-col pt-1">
@@ -127,7 +127,6 @@ export default function Home() {
                 <FaArrowCircleUp className="showcased-work-link" />
               </div>
             </div>
-            <div className="showcase-border-top mb-10" />
           </Link>
           <div className="intro-grid">
             {workCardData.map((workCard) => (
@@ -135,7 +134,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }

@@ -61,7 +61,7 @@ const ResumeWranglerSection = () => {
             buttonClass={"round-button"}
             rel=""
             target=""
-            href=""
+            href="_blank"
           />
         </motion.div>
       </section>
@@ -76,12 +76,16 @@ const ResumeWranglerSection = () => {
         }}
       >
         <section className="portfolio-main-section pb-6">
-          <h2 className="portfolio-h2 mb-6">DETAILS</h2>
+          <h2 className="portfolio-h2 mb-6">PROJECT DETAILS</h2>
           <div className="flex flex-row justify-between">
-            <h4>Spring 2023 - Current</h4>
-            <h4 className="xl:text-left text-right">COMMERCIAL PRODUCT</h4>
+            <h4 className="font-raleway font-medium text-xl">
+              SPRING 2023 - CURRENT
+            </h4>
+            <h4 className="xl:text-left text-right font-raleway font-medium text-xl">
+              COMMERCIAL PRODUCT
+            </h4>
           </div>
-          <div className="flex flex-row flex-wrap gap-y-3 justify-between py-8">
+          <div className="flex flex-row flex-wrap gap-y-3 justify-between py-8 font-ayer tracking-wider">
             <RoundButton
               buttonText={"JAVASCRIPT"}
               buttonClass={"showcased-btn"}
@@ -162,7 +166,7 @@ const ResumeWranglerSection = () => {
               href=""
             />
           </div>
-          <p className="portfolio-p">
+          <p className="showcased-p">
             Resume Wrangler is a dynamic and innovative resume and cover letter
             customization tool aimed at revolutionizing how job seekers prepare
             their application materials. This web application provides an
@@ -170,7 +174,7 @@ const ResumeWranglerSection = () => {
             information and automatically generate tailored resumes and cover
             letters based on specific job descriptions.
           </p>
-          <p className="portfolio-p">
+          <p className="showcased-p">
             Users can easily input their professional information into the
             system, which then processes this data using advanced algorithms to
             generate tailored resumes and cover letters specifically designed
@@ -178,7 +182,7 @@ const ResumeWranglerSection = () => {
             application process but also significantly enhances the relevance
             and appeal of the application documents to prospective employers
           </p>
-          <p className="portfolio-p">
+          <p className="showcased-p">
             The project's core functionality revolves around parsing user data
             and aligning it seamlessly with the qualifications sought by
             employers. It incorporates smart algorithms that highlight the most
@@ -200,33 +204,33 @@ const ResumeWranglerSection = () => {
         <section className="portfolio-main-section mb-8">
           <h2 className="portfolio-h2">KEY FEATURES</h2>
           <ul className="list-disc list-inside xl:list-outside">
-            <li className="portfolio-p">
+            <li className="showcased-p">
               Customization Engine: Utilizes complex matching algorithms to
               ensure that pertinent details are emphasized in response to
               different job postings.
             </li>
-            <li className="portfolio-p">
+            <li className="showcased-p">
               Interactive User Interface: Offers a clean, responsive design for
               easy navigation through various functionalities.
             </li>
-            <li className="portfolio-p">
+            <li className="showcased-p">
               Data Security: Implement secure login mechanisms and encrypted
               personal data storage.
             </li>
-            <li className="portfolio-p">
+            <li className="showcased-p">
               Direct Integration with Job Boards: Fetches live data from popular
               hiring platforms for accurate tailoring of documents.
             </li>
-            <li className="portfolio-p">
+            <li className="showcased-p">
               User-Friendly Interface: Ensures simple navigation and interaction
               across various functionalities within the platform.
             </li>
-            <li className="portfolio-p">
+            <li className="showcased-p">
               Dynamic Customization Capabilities: Uses bespoke algorithms to
               match users' profiles with suitable job descriptions, emphasizing
               necessary skills and experiences.
             </li>
-            <li className="portfolio-p">
+            <li className="showcased-p">
               Data Security Measures: Incorporates high-level security protocols
               to protect user data throughout their interaction with the
               service.
@@ -247,22 +251,22 @@ const ResumeWranglerSection = () => {
         <section className="portfolio-main-section mb-8">
           <h2 className="portfolio-h2">Tools & Technologies Used</h2>
           <ul className="list-disc list-inside xl:list-outside">
-            <li className="portfolio-p">
+            <li className="showcased-p">
               Frontend Development: Utilized ReactJS and Next.js for their
               superior handling of stateful interactions and responsive design
               capabilities, enhancing user experience.
             </li>
-            <li className="portfolio-p">
+            <li className="showcased-p">
               Backend Development: Leveraged Node.js along with the Express
               framework, providing a robust backend structure capable of
               efficiently managing multiple user requests simultaneously.
             </li>
-            <li className="portfolio-p">
+            <li className="showcased-p">
               Database Management: MongoDB was chosen for its flexible
               document-oriented model, facilitating smooth storage, retrieval,
               and manipulation of various types of personal user data.
             </li>
-            <li className="portfolio-p">
+            <li className="showcased-p">
               CI/CD: The entire workflow from coding to deployment has been
               managed through Git. Highlights can be viewed on GitHub at [Resume
               Wrangler Repository](https://github.com/joshl26/resume-wrangler).

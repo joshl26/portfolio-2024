@@ -1,5 +1,5 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import React, { Suspense, useEffect, useRef } from "react";
+import React, { RefObject, Suspense, useEffect, useRef } from "react";
 import css from "./ThreeScene.module.css";
 import * as THREE from "three";
 import { BoxGeometry, Color, MeshBasicMaterial } from "three";
@@ -21,8 +21,13 @@ function mathRandom(num = 5) {
 function CityScene({
   count = 100,
   temp = new THREE.Object3D(),
-  color = 0x000000,
+  color = new THREE.Color(0x000000),
   container,
+}: {
+  count: number;
+  container: any;
+  temp: THREE.Object3D;
+  color: THREE.Color;
 }) {
   let myMesh: any = React.useRef();
   let myMesh2: any = React.useRef();
@@ -128,7 +133,7 @@ const ThreeScene: React.FC = () => {
   const bgColor = new Color(0xf02050);
   const ambientColor = new Color(0x404040);
 
-  const myContainer = useRef(null);
+  const myContainer = useRef<HTMLDivElement>(null);
 
   let camera = new THREE.PerspectiveCamera(15, undefined, 1, 500);
   let [px, py, pz] = [0, 7, 14];
@@ -138,7 +143,7 @@ const ThreeScene: React.FC = () => {
 
   return (
     <div id="canvas-container" ref={myContainer} className={css.scene}>
-      <Canvas dpr={[1, 2]} camera={camera}>
+      <Canvas gl={{ antialias: true }} dpr={[1, 2]} camera={camera}>
         <color attach="background" args={[bgColor.r, bgColor.g, bgColor.b]} />
         <ambientLight color={ambientColor} intensity={5} />
         <spotLight

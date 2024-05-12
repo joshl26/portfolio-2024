@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React from "react";
 
 const RoundButton = ({
@@ -15,7 +16,11 @@ const RoundButton = ({
 }) => {
   return href !== "" ? (
     <a rel={rel} target={target} href={href}>
-      <button className={buttonClass}>{buttonText}</button>
+      <button
+        className={clsx(buttonClass, "font-ayer tracking-wider text-[1.25rem]")}
+      >
+        {buttonText}
+      </button>
     </a>
   ) : (
     <button className={buttonClass}>{buttonText}</button>

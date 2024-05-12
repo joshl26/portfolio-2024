@@ -27,8 +27,8 @@ const ResponsiveMenu = () => {
       exit={{ opacity: 0, x: "-25%" }}
       className="responsive-menu-section"
     >
-      <div className="responsive-menu-container max-w-screen-xl m-auto py-32">
-        <div className="flex flex-col xl:flex-row flex-wrap gap-x-32 justify-around align-middle">
+      <div className="responsive-menu-container max-w-screen-xl m-auto pt-20 px-10 md:py-32">
+        <div className="flex flex-col lg:flex-row flex-wrap gap-x-12 justify-around align-middle">
           <Link onClick={() => toggleMenuClicked()} href="/">
             <h3 className="responsive-menu-header text-center">Home</h3>
           </Link>
@@ -38,7 +38,6 @@ const ResponsiveMenu = () => {
           <Link onClick={() => toggleMenuClicked()} href="/blog">
             <h3 className="responsive-menu-header">Blog</h3>
           </Link>
-
           <Link onClick={() => toggleMenuClicked()} href="/contact">
             <h3 className="responsive-menu-header">Contact</h3>
           </Link>

@@ -19,6 +19,8 @@
   /* width: fit-content; */
   /* margin-left: 4rem; */
   transition: 1s;
+  font-family: Ayer Poster Medium;
+  letter-spacing: 0.05em;
 }
 
 .responsive-menu-header:hover {

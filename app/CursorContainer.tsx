@@ -8,6 +8,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 import useMousePosition from "./hooks/useMousePosition";
+import clsx from "clsx";
 
 type CursorContainerProps = {
   children: React.ReactNode;
@@ -23,7 +24,7 @@ export default function CursorContainer({ children }: CursorContainerProps) {
   return (
     <main className="main-container">
       <motion.div
-        className={styles.mask}
+        className={clsx(styles.mask, "bg-yellow-700 opacity-75")}
         animate={{
           WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`,
 

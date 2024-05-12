@@ -62,7 +62,7 @@ html a {
   -webkit-text-fill-color: var(--bg-color-light);
 }
 
-p,
+/* p,
 h3,
 h4 {
   font-family: var(--font-lusitana);
@@ -71,7 +71,7 @@ h4 {
 h1,
 h2 {
   font-family: var(--font-raleway);
-}
+} */
 a {
   color: var(--bg-color-light) !important;
   text-decoration: none !important;
@@ -266,12 +266,6 @@ a {
   @apply m-0;
 }
 
-.prose h2,
-h3,
-h4 {
-  @apply font-medium tracking-tighter !important;
-}
-
 .prose strong {
   @apply font-medium;
 }
@@ -317,4 +311,10 @@ table {
 
 .title {
   text-wrap: balance;
+}
+
+@font-face {
+  font-family: "Ayer Poster Medium";
+  src: url("../public/fonts/AyerPoster-Medium.woff2") format("woff");
+  font-style: normal;
 }

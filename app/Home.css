@@ -17,16 +17,18 @@
 
 .title-main {
   color: beige;
-  font-family: var(--font-ubuntu);
-  font-size: clamp(2rem, 0.9295rem + 5.3524vw, 5.75rem);
+  font-family: Ayer Poster Medium;
+  font-size: clamp(5rem, 4.1818rem + 4.3636vw, 8rem);
+  letter-spacing: 0.05em;
 }
 
 .title-accent {
   font-family: var(--font-roboto);
   color: beige;
-  font-size: clamp(1.5rem, 0.822rem + 3.3898vw, 3.875rem);
+  font-size: clamp(3rem, 0.822rem + 3.3898vw, 5rem);
   font-stretch: expanded;
   font-weight: 300;
+  letter-spacing: 0.05em;
 }
 
 .title {
@@ -53,8 +55,9 @@
   font-size: clamp(1.5rem, 1.0092rem + 2.454vw, 4rem);
   font-style: normal;
   text-transform: uppercase;
-  font-family: var(--font-lusitana);
+  font-family: Ayer Poster Medium;
   font-weight: 400;
+  letter-spacing: 0.05em;
 }
 
 .showcased-h3 {

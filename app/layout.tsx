@@ -118,11 +118,11 @@ export default function RootLayout({
       >
         <CursorContainer>
           <MenuContextProvider>
-            <div className="w-full m-auto">
-              {/* <ResponsiveHeader />
-              <ResponsiveMenu /> */}
+            <div className="w-full overflow-x-hidden m-auto">
+              <ResponsiveHeader />
+              <ResponsiveMenu />
               {children}
-              {/* <ResponsiveFooter /> */}
+              <ResponsiveFooter />
             </div>
           </MenuContextProvider>
         </CursorContainer>

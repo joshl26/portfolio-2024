@@ -1,112 +1,119 @@
 import * as THREE from "three";
-import React, { useRef, useMemo, Suspense } from "react";
+import React, { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import Random from "canvas-sketch-util/random";
 import css from "./ThreeScene.module.css";
-import { OrbitControls } from "@react-three/drei";
+import {
+  Bvh,
+  Environment,
+  Instance,
+  OrbitControls,
+  Instances,
+  useGLTF,
+  Stats,
+} from "@react-three/drei";
+import { useControls } from "leva";
+import { GLTF } from "three-stdlib";
 
-export function SpaceDust({ count }: { count: number }) {
-  const mesh = useRef<THREE.InstancedMesh>(null);
-  const light = useRef<THREE.PointLight>(null);
+const randomVector = (r: number) => [
+  r / 2 - Math.random() * r,
+  r / 2 - Math.random() * r,
+  r / 2 - Math.random() * r,
+];
+const randomEuler = () => [
+  Math.random() * Math.PI,
+  Math.random() * Math.PI,
+  Math.random() * Math.PI,
+];
+const data = Array.from({ length: 1000 }, (r: number = 10) => ({
+  random: Math.random(),
+  position: randomVector(r),
+  rotation: randomEuler(),
+}));
 
-  // Generate some random positions, speed factors and timings
-  const particles = useMemo(() => {
-    const temp = [];
-    for (let i = 0; i < count; i++) {
-      const time = Random.range(0, 100);
-      const factor = Random.range(20, 120);
-      const speed = Random.range(0.01, 0.015) / 2;
-      const x = Random.range(-50, 50);
-      const y = Random.range(-50, 50);
-      const z = Random.range(-50, 50);
-
-      temp.push({ time, factor, speed, x, y, z });
-    }
-
-    console.log(temp);
-
-    return temp;
-  }, [count]);
-
-  const dummy = useMemo(() => new THREE.Object3D(), []);
-
-  useFrame(() => {
-    // Run through the randomized data to calculate some movement
-
-    particles.forEach((particle, index) => {
-      let { factor, speed, x, y, z } = particle;
-
-      // Update the particle time
-      const t = (particle.time += speed);
-
-      // Update the particle position based on the time
-      // This is mostly random trigonometry functions to oscillate around the (x, y, z) point
-      dummy.position.set(
-        x + Math.cos((t / 10) * factor) + (Math.sin(t * 1) * factor) / 10,
-        y + Math.sin((t / 10) * factor) + (Math.cos(t * 2) * factor) / 10,
-        z + Math.cos((t / 10) * factor) + (Math.sin(t * 3) * factor) / 10
-      );
-
-      // Derive an oscillating value which will be used
-      // for the particle size and rotation
-      const s = Math.cos(t);
-      dummy.scale.set(s, s, s);
-      dummy.rotation.set(s * 100, s * 100, s * 100);
-      dummy.updateMatrix();
-
-      // And apply the matrix to the instanced item
-
-      mesh?.current?.setMatrixAt(index, dummy.matrix);
-    });
-    if (mesh.current !== null) {
-      mesh.current.instanceMatrix.needsUpdate = true;
-    }
-
-    // console.log(mesh.current);
+export default function TestScene() {
+  const { range } = useControls({
+    range: { value: 100, min: 0, max: 300, step: 10 },
   });
 
   return (
-    <>
-      <pointLight ref={light} distance={40} intensity={8} color="lightblue" />
-      <instancedMesh ref={mesh} args={[undefined, undefined, count]}>
-        <bufferGeometry args={[0.2, 0]} />
-        <meshPhongMaterial color={"#FFFFFF"} />
-      </instancedMesh>
-    </>
-  );
-}
-
-const TestScene = () => {
-  const myContainer = useRef(null);
-
-  let camera = new THREE.PerspectiveCamera(15, 1, 1, 500);
-
-  return (
-    <div id="canvas-container" ref={myContainer} className={css.scene}>
-      <Canvas dpr={[1, 2]} camera={camera}>
-        <color attach="background" args={[0xbbbbbb]} />
-        {/* <ambientLight color={0xffffff} intensity={5} />
-        <spotLight
-          penumbra={0.1}
-          color={0xffffff}
-          castShadow={true}
-          position={[5, 5, 5]}
-          rotation={[(45 * Math.PI) / 180, 0, (-45 * Math.PI) / 180]}
-        />
-        <OrbitControls maxPolarAngle={Math.PI / 2.5} minPolarAngle={0} />
-        <pointLight
-          castShadow
-          color={0xffffff}
-          intensity={5}
-          position={[0, 6, 0]}
-        />
-        <fog attach="fog" color={0xbbbfff} near={10} far={16} /> */}
-        <Suspense fallback={false}>
-          <SpaceDust count={10000} />
-        </Suspense>
+    <div id="canvas-container" className={css.scene}>
+      <Stats />
+      <Canvas camera={{ position: [0, 0, 20], fov: 50 }}>
+        {/* <ambientLight intensity={0.5 * Math.PI} /> */}
+        <directionalLight intensity={0.3} position={[5, 25, 20]} />
+        <Bvh firstHitOnly>
+          <Shoes data={data} range={range} />
+        </Bvh>
+        <Environment preset="city" />
+        <OrbitControls autoRotate autoRotateSpeed={1} />
       </Canvas>
     </div>
   );
+}
+
+type GLTFResult = GLTF & {
+  nodes: {
+    connector: THREE.Mesh;
+  };
+  materials: {
+    base: THREE.MeshStandardMaterial;
+  };
 };
 
-export default TestScene;
+//TODO create interface for data
+function Shoes({ data, range }: { data: any; range: number }) {
+  const { nodes, materials } = useGLTF("/c-transformed.glb") as GLTFResult;
+
+  return (
+    <Instances
+      range={range}
+      material={materials.base}
+      geometry={nodes.connector.geometry}
+    >
+      {data.map((props: any, i: number) => (
+        <Shoe key={i} {...props} />
+      ))}
+    </Instances>
+  );
+}
+
+function Shoe({
+  random,
+  color = new THREE.Color(),
+  ...props
+}: {
+  random: number;
+  color: THREE.Color;
+}) {
+  const ref: any = useRef(null);
+  const [hovered, setHover] = useState(false);
+  useFrame((state) => {
+    const t = state.clock.getElapsedTime() + random * 10000;
+
+    if (ref.current !== null) {
+      ref.current.rotation.set(
+        Math.cos(t / 4) / 2,
+        Math.sin(t / 4) / 2,
+        Math.cos(t / 1.5) / 2
+      );
+      ref.current.position.y = Math.sin(t / 1.5) / 2;
+      ref.current.scale.x =
+        ref.current.scale.y =
+        ref.current.scale.z =
+          THREE.MathUtils.lerp(ref.current.scale.z, hovered ? 1.4 : 1, 0.1);
+      ref.current.color.lerp(
+        color.set(hovered ? "red" : "white"),
+        hovered ? 1 : 0.1
+      );
+    }
+  });
+  return (
+    <group {...props}>
+      <Instance
+        ref={ref}
+        onPointerOver={(e) => (e.stopPropagation(), setHover(true))}
+        onPointerOut={(e) => setHover(false)}
+      />
+    </group>
+  );
+}
