@@ -78,8 +78,8 @@ const PomodorSection = () => {
         <section className="portfolio-main-section">
           <h2 className="portfolio-h2">DETAILS</h2>
           <div className="flex flex-row justify-between">
-            <h4>Winter 2022 - Fall 2023</h4>
-            <h4 className="xl:text-left text-right">
+            <h4 className="portfolio-h4">Winter 2022 - Fall 2023</h4>
+            <h4 className="xl:text-left text-right portfolio-h4">
               Personal Development Project
             </h4>
           </div>

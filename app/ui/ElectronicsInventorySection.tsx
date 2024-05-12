@@ -78,8 +78,10 @@ const ElectronicsInventorySection = () => {
         <section className="portfolio-main-section">
           <h2 className="portfolio-h2 mb-8">DETAILS</h2>
           <div className="flex flex-row justify-between">
-            <h4>Spring 2023 - Fall 2023</h4>
-            <h4 className="xl:text-left text-right">COMMMERCIAL PRODUCT</h4>
+            <h4 className="portfolio-h4">Spring 2023 - Fall 2023</h4>
+            <h4 className="xl:text-left text-right portfolio-h4">
+              COMMMERCIAL PRODUCT
+            </h4>
           </div>
           <div className="flex flex-row flex-wrap gap-y-3 justify-between my-8">
             <RoundButton

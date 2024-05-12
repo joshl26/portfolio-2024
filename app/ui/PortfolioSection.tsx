@@ -115,9 +115,9 @@ const PortfolioSection = () => {
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"SEE MORE"}
-                  target=""
+                  target="_blank"
                   rel=""
-                  href=""
+                  href={""}
                 />
               </Link>
             </div>

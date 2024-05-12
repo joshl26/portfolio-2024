@@ -23,7 +23,11 @@ const RoundButton = ({
       </button>
     </a>
   ) : (
-    <button className={buttonClass}>{buttonText}</button>
+    <button
+      className={clsx(buttonClass, "font-ayer tracking-wider text-[1.25rem]")}
+    >
+      {buttonText}
+    </button>
   );
 };
 

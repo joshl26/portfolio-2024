@@ -77,8 +77,8 @@ const ThreeDPortfolioSection = () => {
         <section className="portfolio-main-section mb-8">
           <h2 className="portfolio-h2 mb-4">DETAILS</h2>
           <div className="flex flex-row justify-between gap-3">
-            <h4 className="w-1/2">Winter 2022 - Winter 2023</h4>
-            <h4 className="w-1/2 xl:text-left text-right">
+            <h4 className="w-1/2 portfolio-h4">Winter 2022 - Winter 2023</h4>
+            <h4 className="w-1/2 xl:text-left text-right portfolio-h4">
               Previous Portfolio Site
             </h4>
           </div>
