@@ -19,9 +19,9 @@ function mathRandom(num = 5) {
 }
 
 function CityScene({
-  count = 100,
-  temp = new THREE.Object3D(),
-  color = new THREE.Color(0x000000),
+  count,
+  temp,
+  color,
   container,
 }: {
   count: number;
@@ -162,7 +162,12 @@ const ThreeScene: React.FC = () => {
         />
         <fog attach="fog" color={bgColor} near={10} far={16} />
         <Suspense fallback={false}>
-          <CityScene container={myContainer} />
+          <CityScene
+            container={myContainer}
+            count={0}
+            temp={new THREE.Object3D()}
+            color={new Color()}
+          />
         </Suspense>
       </Canvas>
     </div>
