@@ -4,9 +4,10 @@ import css from "./ThreeScene.module.css";
 import * as THREE from "three";
 import { BoxGeometry, Color, MeshBasicMaterial } from "three";
 import { OrbitControls } from "@react-three/drei";
+import gsap, { Power1 } from "gsap";
 
 // r150
-// THREE.ColorManagement.enabled = true;
+THREE.ColorManagement.enabled = true;
 
 //const red = new THREE.MeshLambertMaterial({ color: "darkgray" });
 // const sphere = new THREE.SphereGeometry(1, 28, 28);
@@ -56,6 +57,9 @@ function CityScene({
       );
       temp.castShadow = true;
       temp.receiveShadow = true;
+
+      temp.scale.y = 0.1 + Math.abs(mathRandom());
+
       // temp.rotateY(0.1 + Math.abs(mathRandom(8)));
       // temp.rotation.set();
       temp.scale.set(
@@ -77,9 +81,10 @@ function CityScene({
 
   useFrame(({ clock }) => {
     const a = clock.getElapsedTime();
-    myMesh.current.rotation.y = a * 0.0625;
+    myMesh.current.rotation.y = a * 0.125;
     // myMesh2.current.rotation.y = a * 0.0625;
-    myMesh3.current.rotation.y = a * 0.0625;
+    myMesh3.current.rotation.y = a * 0.125;
+    myMesh.current.scale.y = Math.abs(Math.sin(a));
   });
 
   var setTintNum = true;
