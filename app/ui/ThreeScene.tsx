@@ -42,6 +42,11 @@ function CityScene({
       const maxHeight = 4;
       const minHeight = 1;
 
+      const angle = Math.random() * Math.PI * 2;
+      const radius = 1.25 + Math.random() * 3;
+      const x = Math.sin(angle) * radius;
+      const z = Math.cos(angle) * radius;
+
       let height = Math.min(
         Math.max(
           Math.abs(Math.round(0.1 + Math.abs(mathRandom(8)))),
@@ -50,11 +55,7 @@ function CityScene({
         maxHeight
       );
       var cubeWidth = 0.8;
-      temp.position.set(
-        Math.round(mathRandom()),
-        height / 2,
-        Math.round(mathRandom())
-      );
+      temp.position.set(x, height / 2, z);
       temp.castShadow = true;
       temp.receiveShadow = true;
 

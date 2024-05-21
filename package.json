@@ -13,7 +13,7 @@
   "dependencies": {
     "@codesandbox/sandpack-react": "2.12.0",
     "@emailjs/browser": "^3.11.0",
-    "@react-three/drei": "^9.92.7",
+    "@react-three/drei": "^9.105.6",
     "@react-three/fiber": "^8.15.13",
     "@react-three/postprocessing": "^2.15.11",
     "@react-three/rapier": "^1.2.1",
@@ -42,7 +42,7 @@
     "sharp": "^0.32.6",
     "sugar-high": "^0.6.0",
     "swr": "^2.2.4",
-    "three": "^0.160.0"
+    "three": "^0.164.1"
   },
   "devDependencies": {
     "@types/node": "^20",
