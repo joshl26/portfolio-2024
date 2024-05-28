@@ -26,7 +26,7 @@ const NyeMfgSection = () => {
             width="1000"
             height="1000"
             sizes="100vw"
-            src="v1713749846/ResumeWrangler/Resume_Wrangler_Landing_Page_1_dyjemr.png"
+            src="v1716856540/PortfolioSite/Untitled_ixlgk5.png"
           />
         </motion.div>
       </section>
@@ -78,9 +78,9 @@ const NyeMfgSection = () => {
         <section className="portfolio-main-section pb-6">
           <h2 className="portfolio-h2 mb-6">PROJECT DETAILS</h2>
           <div className="flex flex-row justify-between">
-            <h4 className="portfolio-h4">SPRING 2023 - CURRENT</h4>
+            <h4 className="portfolio-h4">SUMMER 2017 - WINTER 2018</h4>
             <h4 className="xl:text-left text-right portfolio-h4">
-              COMMERCIAL PRODUCT
+              COMMERCIAL WEBSITE
             </h4>
           </div>
           <div className="flex flex-row flex-wrap gap-y-3 justify-between py-8 font-ayer tracking-wider">
@@ -123,73 +123,17 @@ const NyeMfgSection = () => {
               target=""
               href=""
             />
-
-            <RoundButton
-              buttonText={"REACT"}
-              buttonClass={"showcased-btn"}
-              rel=""
-              target=""
-              href=""
-            />
-
-            <RoundButton
-              buttonText={"REDUX"}
-              buttonClass={"showcased-btn"}
-              rel=""
-              target=""
-              href=""
-            />
-
-            <RoundButton
-              buttonText={"BABEL"}
-              buttonClass={"showcased-btn"}
-              rel=""
-              target=""
-              href=""
-            />
-
-            <RoundButton
-              buttonText={"WEBPACK"}
-              buttonClass={"showcased-btn"}
-              rel=""
-              target=""
-              href=""
-            />
-
-            <RoundButton
-              buttonText={"GIT"}
-              buttonClass={"showcased-btn"}
-              rel=""
-              target=""
-              href=""
-            />
           </div>
           <p className="portfolio-p">
-            Resume Wrangler is a dynamic and innovative resume and cover letter
-            customization tool aimed at revolutionizing how job seekers prepare
-            their application materials. This web application provides an
-            intuitive platform where users can input their professional
-            information and automatically generate tailored resumes and cover
-            letters based on specific job descriptions.
-          </p>
-          <p className="portfolio-p">
-            Users can easily input their professional information into the
-            system, which then processes this data using advanced algorithms to
-            generate tailored resumes and cover letters specifically designed
-            for individual job postings. This not only simplifies the
-            application process but also significantly enhances the relevance
-            and appeal of the application documents to prospective employers
-          </p>
-          <p className="portfolio-p">
-            The project's core functionality revolves around parsing user data
-            and aligning it seamlessly with the qualifications sought by
-            employers. It incorporates smart algorithms that highlight the most
-            relevant experiences, skills, and achievements – optimizing each
-            application to stand out amidst competitive job markets.
+            Nye Manufacturing Ltd. is a family owned metal fabricating business
+            with a primary focus on custom attachments. Founded in 1952 by Jack
+            Nye, our company offers expertise developed through more than 70
+            years of building, modifying and repairing heavy equipment of all
+            types. Put our expertise to work for you.
           </p>
         </section>
       </motion.div>
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         whileInView={{
           opacity: 1,
@@ -369,7 +313,7 @@ const NyeMfgSection = () => {
             </div>
           </div>
         </section>
-      </motion.div>
+      </motion.div> */}
       <section className="portfolio-main-section">
         <motion.div
           initial={{ opacity: 0 }}
@@ -395,11 +339,11 @@ const NyeMfgSection = () => {
         >
           <CldImage
             className="showcase-card-container"
-            alt="outdoorsy app hero"
+            alt="nye mfg hero"
             width="1000"
             height="1000"
             sizes="100vw"
-            src="v1713749853/ResumeWrangler/Resume_Wrangler_Resume_Styling_Page_1_guydrc.png"
+            src="v1716856540/PortfolioSite/Untitled_ixlgk5.png"
           />
         </motion.div>
 
@@ -415,11 +359,11 @@ const NyeMfgSection = () => {
         >
           <CldImage
             className="portfolio-screen my-8"
-            alt="tablets among the rocks"
+            alt="blackrock3d"
             width="1000"
             height="1000"
             sizes="100vw"
-            src="v1713749846/ResumeWrangler/Resume_Wrangler_Landing_Page_1_dyjemr.png"
+            src="v1716860325/PortfolioSite/Untitled_n8zknn.png"
           />
         </motion.div>
         <motion.div
@@ -434,11 +378,11 @@ const NyeMfgSection = () => {
         >
           <CldImage
             className="showcase-card-container my-8"
-            alt="outdoorsy app hero"
+            alt="blackrock3d"
             width="1000"
             height="1000"
             sizes="100vw"
-            src="v1713749846/ResumeWrangler/Resume_Wrangler_Landing_Page_2_r6z3vy.png"
+            src="v1716860411/PortfolioSite/Untitled_rqsduq.png"
           />
         </motion.div>
         <motion.div
@@ -453,11 +397,11 @@ const NyeMfgSection = () => {
         >
           <CldImage
             className="showcase-card-container my-8"
-            alt="outdoorsy app hero"
+            alt="blackrock3d"
             width="1000"
             height="1000"
             sizes="100vw"
-            src="v1713749848/ResumeWrangler/Resume_Wrangler_Landing_Page_3_w7w9wg.png"
+            src="v1716860519/PortfolioSite/Untitled_xtddcq.png"
           />
         </motion.div>
         <motion.div
@@ -472,11 +416,11 @@ const NyeMfgSection = () => {
         >
           <CldImage
             className="showcase-card-container my-8"
-            alt="outdoorsy app hero"
+            alt="blackrock3d"
             width="1000"
             height="1000"
             sizes="100vw"
-            src="v1713749848/ResumeWrangler/Resume_Wrangler_Landing_Page_4_lumjsw.png"
+            src="v1716860670/PortfolioSite/Untitled_i32dvq.png"
           />
         </motion.div>
         <motion.div
@@ -491,68 +435,11 @@ const NyeMfgSection = () => {
         >
           <CldImage
             className="showcase-card-container my-8"
-            alt="outdoorsy app hero"
+            alt="blackrock3d"
             width="1000"
             height="1000"
             sizes="100vw"
-            src="v1713749849/ResumeWrangler/Resume_Wrangler_Landing_Page_5_uchzhv.png"
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: {
-              duration: 0.75,
-              delay: 0.5,
-            },
-          }}
-        >
-          <CldImage
-            className="showcase-card-container my-8"
-            alt="outdoorsy app hero"
-            width="1000"
-            height="1000"
-            sizes="100vw"
-            src="v1713749851/ResumeWrangler/Resume_Wrangler_Register_Page_1_jfwacl.png"
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: {
-              duration: 0.75,
-              delay: 0.5,
-            },
-          }}
-        >
-          <CldImage
-            className="showcase-card-container my-8"
-            alt="outdoorsy app hero"
-            width="1000"
-            height="1000"
-            sizes="100vw"
-            src="v1713749850/ResumeWrangler/Resume_Wrangler_Login_Page_1_yiy86v.png"
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: {
-              duration: 0.75,
-              delay: 0.5,
-            },
-          }}
-        >
-          <CldImage
-            className="showcase-card-container my-8"
-            alt="outdoorsy app hero"
-            width="1000"
-            height="1000"
-            sizes="100vw"
-            src="v1713749845/ResumeWrangler/Resume_Wrangler_Education_Page_1_e5jpw3.png"
+            src="v1716860717/PortfolioSite/Untitled_i6uel7.png"
           />
         </motion.div>
       </section>
