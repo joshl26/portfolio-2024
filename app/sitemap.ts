@@ -21,6 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "portfolio/pomodor",
     "portfolio/resume-wrangler",
     "portfolio/3dportfolio",
+    "portfolio/blackrock-3d",
+    "portfolio/nyemfg",
   ].map((route) => ({
     url: `${process.env.DEPLOYMENT_URL}/${route}`,
     lastModified: new Date().toISOString().split("T")[0],

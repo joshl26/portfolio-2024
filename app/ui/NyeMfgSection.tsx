@@ -43,7 +43,7 @@ const NyeMfgSection = () => {
           className="flex flex-row justify-around py-10"
         >
           <RoundButton
-            href={"https://github.com/joshl26/resume-wrangler"}
+            href={""}
             buttonText={"GIT"}
             buttonClass={"round-button"}
             rel=""
@@ -52,7 +52,7 @@ const NyeMfgSection = () => {
           <RoundButton
             buttonText={"LIVE SITE"}
             buttonClass={"round-button"}
-            href={"https://resume-wrangler.vercel.app/"}
+            href={"https://nyemanufacturing.com/"}
             rel=""
             target="_blank"
           />
