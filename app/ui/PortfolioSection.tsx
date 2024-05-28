@@ -716,6 +716,158 @@ const PortfolioSection = () => {
           </motion.div>
         </div>
       </div>
+      <div className="border-t-[1px] mb-8 mt-2"></div>
+      <div className="portfolio-grid">
+        <div className="portfolio-container mt-2">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                duration: 0.5,
+                delay: 0,
+              },
+            }}
+          >
+            <Link href={"/portfolio/blackrock-3d"}>
+              <CldImage
+                className="showcase-card-container"
+                alt="nye mfg hero"
+                width="1000"
+                height="1000"
+                sizes="100vw"
+                src="v1716859619/PortfolioSite/Untitled_n2iqdo.png"
+              />
+            </Link>
+          </motion.div>
+        </div>
+        <div className="portfolio-container">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                duration: 0.5,
+                delay: 0,
+              },
+            }}
+          >
+            <h3 className="showcased-h3">BlackRock3D</h3>
+            <p className="showcased-p">
+              BlackRock3D is a wordpress site that was designed by Joshua Lehman
+              in 2018 to showcase his skills in Engineering. This turned out to
+              be the final catalyst in making me want to switch careers into
+              software engineering.
+            </p>
+            <div>
+              <div className="my-8">
+                <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
+                  <li className="showcased-btn">JAVASCRIPT</li>
+                  <li className="showcased-btn">WORDPRESS</li>
+                  <li className="showcased-btn">HTML5</li>
+                  <li className="showcased-btn">REACT</li>
+                  <li className="showcased-btn">UI/UX DESIGN</li>
+                </ul>
+              </div>
+            </div>
+            <div className="flex flex-row flex-wrap gap-3 justify-around my-8">
+              <RoundButton
+                buttonClass={"round-button"}
+                buttonText={"LIVE SITE"}
+                href={"https://blackrock3d.ca/"}
+                target="_blank"
+                rel=""
+              />
+              <Link href={"/portfolio/blackrock-3d"}>
+                <RoundButton
+                  buttonClass={"round-button"}
+                  buttonText={"SEE MORE"}
+                  href=""
+                  target=""
+                  rel=""
+                />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      <div className="border-t-[1px] mb-8 mt-2"></div>
+      <div className="portfolio-grid">
+        <div className="portfolio-container mt-2">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                duration: 0.5,
+                delay: 0,
+              },
+            }}
+          >
+            <Link href={"/portfolio/nyemfg"}>
+              <CldImage
+                className="showcase-card-container"
+                alt="nye mfg hero"
+                width="1000"
+                height="1000"
+                sizes="100vw"
+                src="v1716856540/PortfolioSite/Untitled_ixlgk5.png"
+              />
+            </Link>
+          </motion.div>
+        </div>
+        <div className="portfolio-container">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                duration: 0.5,
+                delay: 0,
+              },
+            }}
+          >
+            <h3 className="showcased-h3">Nye Manufacturing Ltd.</h3>
+            <p className="showcased-p">
+              Nye Manufacturing Ltd. is a family owned metal fabricating
+              business with a primary focus on custom attachments. Founded in
+              1952 by Jack Nye, our company offers expertise developed through
+              more than 70 years of building, modifying and repairing heavy
+              equipment of all types. Put our expertise to work for you.
+            </p>
+            <div>
+              <div className="my-8">
+                <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
+                  <li className="showcased-btn">JAVASCRIPT</li>
+                  <li className="showcased-btn">WORDPRESS</li>
+                  <li className="showcased-btn">HTML5</li>
+                  <li className="showcased-btn">REACT</li>
+                  <li className="showcased-btn">UI/UX DESIGN</li>
+                </ul>
+              </div>
+            </div>
+            <div className="flex flex-row flex-wrap gap-3 justify-around my-8">
+              <RoundButton
+                buttonClass={"round-button"}
+                buttonText={"LIVE SITE"}
+                href={"https://nyemanufacturing.com/"}
+                target="_blank"
+                rel=""
+              />
+              <Link href={"/portfolio/nyemfg"}>
+                <RoundButton
+                  buttonClass={"round-button"}
+                  buttonText={"SEE MORE"}
+                  href=""
+                  target=""
+                  rel=""
+                />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </div>
     </section>
   );
 };

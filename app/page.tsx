@@ -78,6 +78,18 @@ export default function Home() {
         "v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png",
       projectTitle: "POMODOR TIMER",
     },
+    {
+      id: "7",
+      href: "/portfolio/blackrock-3d",
+      cloudinaryPublicUrl: "v1688839247/PortfolioSite/blackrock_zgussj.png",
+      projectTitle: "Blackrock 3D Wordpress",
+    },
+    {
+      id: "8",
+      href: "/portfolio/nyemfg",
+      cloudinaryPublicUrl: "v1716856540/PortfolioSite/Untitled_ixlgk5.png",
+      projectTitle: "Nye Manufacturing",
+    },
   ];
 
   return (
