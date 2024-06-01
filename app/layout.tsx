@@ -111,6 +111,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <SandpackCSS />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2880932731702994"
+          crossOrigin="anonymous"
+        ></script>
       </head>
       <body
         suppressHydrationWarning={true}
