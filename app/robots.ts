@@ -3,8 +3,10 @@ export default function robots() {
     rules: [
       {
         userAgent: "*",
+        allow: "/",
       },
     ],
+
     sitemap: `${process.env.DEPLOYMENT_URL}/sitemap.xml`,
     host: `${process.env.DEPLOYMENT_URL}`,
   };
