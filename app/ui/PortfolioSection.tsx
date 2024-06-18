@@ -613,7 +613,7 @@ const PortfolioSection = () => {
               <RoundButton
                 buttonClass={"round-button"}
                 buttonText={"LIVE SITE"}
-                href={"/portfolio/experimental"}
+                href={"/experimental"}
                 target=""
                 rel=""
               />
