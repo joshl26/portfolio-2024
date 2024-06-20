@@ -49,13 +49,13 @@ const ElectronicsInventorySection = () => {
             rel=""
             target="_blank"
           />
-          {/* <RoundButton
+          <RoundButton
             buttonText={"LIVE SITE"}
             buttonClass={"round-button"}
-            href={"https://el-in.ca"}
+            href={"https://joshlehman.ca/elin"}
             rel=""
             target="_blank"
-          /> */}
+          />
           <RoundButton
             buttonText={"UI/UX"}
             buttonClass={"round-button"}

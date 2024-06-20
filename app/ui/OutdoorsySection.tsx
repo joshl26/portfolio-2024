@@ -52,7 +52,7 @@ const OutdoorsySection = () => {
           <RoundButton
             buttonText={"LIVE SITE"}
             buttonClass={"round-button"}
-            href={"https://outdors.ca"}
+            href={"https://joshlehman.ca/outdoorsy"}
             rel=""
             target="_blank"
           />

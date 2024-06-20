@@ -435,7 +435,7 @@ const PortfolioSection = () => {
               <RoundButton
                 buttonClass={"round-button"}
                 buttonText={"LIVE SITE"}
-                href="https://el-in.ca/"
+                href="https://joshlehman.ca/elin"
                 target="_blank"
                 rel=""
               />
@@ -521,7 +521,7 @@ const PortfolioSection = () => {
                 rel=""
               />
               <RoundButton
-                href={"https://outdors.ca"}
+                href={"https://joshlehman.ca/outdoorsy"}
                 buttonClass={"round-button"}
                 buttonText={"LIVE SITE"}
                 target="_blank"
