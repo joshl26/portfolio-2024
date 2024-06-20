@@ -52,7 +52,7 @@ const ElectronicsInventorySection = () => {
           <RoundButton
             buttonText={"LIVE SITE"}
             buttonClass={"round-button"}
-            href={"https://joshlehman.ca/elin"}
+            href={"https://electronics-inventory-client.onrender.com/"}
             rel=""
             target="_blank"
           />

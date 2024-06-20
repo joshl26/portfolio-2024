@@ -435,7 +435,7 @@ const PortfolioSection = () => {
               <RoundButton
                 buttonClass={"round-button"}
                 buttonText={"LIVE SITE"}
-                href="https://joshlehman.ca/elin"
+                href="https://electronics-inventory-client.onrender.com/"
                 target="_blank"
                 rel=""
               />
