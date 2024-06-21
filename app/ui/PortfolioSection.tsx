@@ -29,6 +29,120 @@ const PortfolioSection = () => {
                 width="1000"
                 height="1000"
                 sizes="100vw"
+                src="v1718930369/PortfolioSite/lucha-tacos-screen_1_o70hjo.png"
+              />
+              <CldImage
+                className="showcase-card-container hidden md:block my-8"
+                alt="resume wrangler hero"
+                width="1000"
+                height="1000"
+                sizes="100vw"
+                src="v1718930369/PortfolioSite/lucha-tacos-screen_2_kdh3wm.png"
+              />
+              <CldImage
+                className="showcase-card-container hidden md:block xl:my-8"
+                alt="resume wrangler hero"
+                width="1000"
+                height="1000"
+                sizes="100vw"
+                src="v1718930368/PortfolioSite/lucha-tacos-screen_4_dwtqru.png"
+              />
+            </Link>
+          </motion.div>
+        </div>
+        <div className="portfolio-container xl:mt-8">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                duration: 0.5,
+                delay: 0,
+              },
+            }}
+          >
+            <h3 className="showcased-h3">Lucha Tacos</h3>
+            <p className="showcased-p">
+              Bring the dynamic and lively flavors of Mexico to your dining
+              experience, infusing it with an extra element of excitement. Our
+              tacos embody the spirit of masked wrestlers in the ring - brimming
+              with robust combinations of freshly sourced ingredients and rich,
+              savory seasonings that are certain to leave your taste buds
+              clamoring for an encore. Step right up and feast your eyes on our
+              tantalizing tacos that are akin to masked wrestlers in the ring,
+              each one bursting with a powerful medley of the freshest
+              ingredients and the most mouthwatering seasonings.
+            </p>
+            <p className="showcased-p">
+              Lucha Tacos brings the bold and vibrant flavors of Mexico to your
+              plate with a twist of excitement. Our tacos are like masked
+              wrestlers in the ring - packed with powerful combinations of fresh
+              ingredients and savory seasonings that will have your taste buds
+              cheering for more. Our menu is prepared with the same level of
+              enthusiasm and dedication as the luchadores from the bygone days
+              when wrestling was a grand spectacle of passion and skill.
+            </p>
+            <div className="my-8">
+              <div>
+                <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
+                  <li className="showcased-btn">JAVASCRIPT</li>
+                  <li className="showcased-btn">TAILWINDCSS</li>
+                  <li className="showcased-btn">BABEL</li>
+                  <li className="showcased-btn">WEBPACK</li>
+                  <li className="showcased-btn">GIT</li>
+                  <li className="showcased-btn">CI/CD</li>
+                </ul>
+              </div>
+            </div>
+            <div className="flex flex-row flex-wrap gap-3 justify-around my-8">
+              <RoundButton
+                href={"https://github.com/joshl26/lucha-tacos"}
+                buttonClass={"round-button"}
+                buttonText={"CODE"}
+                target="_blank"
+                rel=""
+              />
+              <RoundButton
+                buttonClass={"round-button"}
+                buttonText={"LIVE SITE"}
+                href={"https://lucha-tacos.vercel.app/"}
+                target="_blank"
+                rel=""
+              />
+              <Link href={"/portfolio/lucha-tacos"}>
+                <RoundButton
+                  buttonClass={"round-button"}
+                  buttonText={"SEE MORE"}
+                  target="_blank"
+                  rel=""
+                  href={""}
+                />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+      <div className="border-t-[1px] mb-8 mt-2" />
+
+      <div className="portfolio-grid">
+        <div className="portfolio-container mt-2">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                duration: 0.5,
+                delay: 0,
+              },
+            }}
+          >
+            <Link href={"/portfolio/resume-wrangler"}>
+              <CldImage
+                className="showcase-card-container mt-8 xl:mb-8"
+                alt="resume wrangler hero"
+                width="1000"
+                height="1000"
+                sizes="100vw"
                 src="v1713540526/PortfolioSite/Resume_Wrangler_Landing_Page_1_n2arsw.png"
               />
               <CldImage
