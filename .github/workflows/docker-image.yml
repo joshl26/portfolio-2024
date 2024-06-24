@@ -7,6 +7,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+      - name: set env secret
+        run: echo "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}" >> $GITHUB_ENV
       - name: build
         run: |
           docker build . -t joshlehmandev/portfolio-2024:latest
