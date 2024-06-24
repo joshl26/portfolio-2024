@@ -200,7 +200,7 @@ const LuchaTacosSection = () => {
             <li className="portfolio-p">
               Data Security Measures: Incorporates high-level security protocols
               to protect user data throughout their interaction with the
-              service.
+              service. test
             </li>
           </ul>
         </section>
