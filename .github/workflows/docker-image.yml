@@ -7,8 +7,13 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-      - name: set env secret
-        run: echo "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}" >> $GITHUB_ENV
+      - name: Make envfile
+        uses: SpicyPizza/create-envfile@v2.0
+        with:
+          envkey_NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ secrets.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME }}
+          file_name: .env
+          fail_on_empty: false
+          sort_keys: false
       - name: build
         run: |
           docker build . -t joshlehmandev/portfolio-2024:latest
