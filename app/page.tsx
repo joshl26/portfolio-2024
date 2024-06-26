@@ -105,7 +105,7 @@ export default function Home() {
       <ThreeScene />
       {/* <ThreeFiberScene /> */}
       <section className="title-container">
-        {/* <div className="flex flex-col max-w-screen-xl m-auto">
+        <div className="flex flex-col max-w-screen-xl m-auto">
           <div className="flex flex-row flex-wrap ">
             <div className="flex flex-col">
               <div className="flex flex-col md:flex-row md:justify-around flex-wrap m-auto">
@@ -132,7 +132,7 @@ export default function Home() {
           <div className="flex flex-row ">
             <h2 className="title-year m-auto"> - CIRCA 2018 - </h2>
           </div>
-        </div> */}
+        </div>
       </section>
       <section className="showcased-work">
         <div className="max-w-screen-xl m-auto">
