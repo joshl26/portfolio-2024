@@ -1,0 +1,135 @@
+---
+title: "Use of Hexadecimal Numbers in Computer Science"
+publishedAt: "2024-06-26"
+summary: "Discussion on the benefits/uses of hexadecimal number systems in computer science."
+---
+
+# Use of Hexadecimal Numbers in Computer Science
+
+
+## How do we define a hexadecimal number system?
+
+The hexadecimal numeral system is a method of representing numbers using a base 
+of sixteen. Unlike the decimal system, which uses ten symbols to represent values 
+from zero to nine, hexadecimal uses sixteen symbols, including "0" to "9" for 
+values zero to nine, and "A" to "F" (or "a" to "f") for values ten to fifteen.
+
+### Example
+
+<Callout emoji="💡">
+
+In the hexadecimal system the number 1234 is represented as:
+
+<br/>
+
+4 D 2
+
+<br/>
+
+(4x16²) + (13x16¹) + (2x16⁰)
+
+<br/>
+
+1024 + 208 + 2 = 1234
+
+<br/>
+
+Where 16⁰ = 1.
+
+</Callout>
+
+
+## Why do we use hexadecimal number systems?
+
+![Why use Hexadecimals](/images/use-of-hexadecimal-numbers-in-cs/1.webp)
+
+To answer this question we need to look at how data is stored in a
+computers memory.
+
+## How is data stored in a computers memory?
+
+Binary numbers (base-2), which computers fundamentally use, tend to be long 
+and cumbersome. Hexadecimal (base-16) numbers are much shorter, making them 
+easier to read and write. Each hex digit represents four binary digits (bits), 
+so a single byte (8 bits) can be represented by just two hex digits.
+
+## Ok, so we can use hexadecimal numbers to simplify working with memory. 
+## What else can we do with them? 
+
+### Human Readability
+
+Hexadecimal numbers are easier for humans to read and interpret than binary 
+numbers. Many computer scientists and engineers find it simpler to work with 
+smaller hex numbers compared to lengthy binary strings.
+
+### Eliminating Redundancy
+
+Hexadecimal offers a high-density representation of data. For example, while 
+a 32-bit binary number requires 32 digits to write out, the same number can 
+be represented by just 8 hex digits, thus saving space and reducing the potential 
+for errors when reading or transcribing.
+
+### Memory Address
+
+Memory addresses in computing are typically long binary numbers, but representing 
+these in hex simplifies their notation. This is particularly useful in debugging, 
+where memory locations and contents are commonly displayed.
+
+### Easy Conversion to Binary
+
+Converting between binary and hexadecimal is straightforward. Each hex digit 
+corresponds directly to a four-bit binary sequence, making the conversion process 
+simple and fast. For example, the binary sequence 1010 1100 can be quickly converted 
+to the hex value AC.
+
+### Intuitive Mapping to a Byte in Memory
+
+![Mapping to Byte](/images/use-of-hexadecimal-numbers-in-cs/2.jfif)
+
+Given that hexadecimal digits map neatly to four-bit nibbles (a half-byte), hexadecimals 
+align perfectly with the byte-oriented architecture of modern computers. This alignment 
+facilitates various low-level programming tasks, such as setting flags and manipulating 
+memory.
+
+### Standardization
+
+Hexadecimal numbers have become a standard way to denote binary data in documentation, 
+programming, and networking. For instance, color codes in web design, machine code for 
+microprocessors, and IP addresses in certain contexts use hex notation, making it a 
+universally understood format among professionals.
+
+#### RGB Color Codes Example 
+
+![RGB](/images/use-of-hexadecimal-numbers-in-cs/3.jpg)
+
+#### Machine Code Example 
+
+![Machine Code](/images/use-of-hexadecimal-numbers-in-cs/4.png)
+
+### Debugging and Diagnostics
+
+Tools like debuggers and hex editors display data in hexadecimal format because it allows 
+developers to quickly recognize patterns, offsets, and memory addresses. This is particularly 
+useful when dealing with low-level system data or interfacing directly with hardware.
+
+### Checksum and Hash Functions
+
+Algorithms that produce checksums, hashes, and cryptographic keys often output results in 
+hexadecimal format for more compact and readable representations. This is practical for 
+ensuring data integrity and security.
+
+### Historical contexts
+
+Historically, hexadecimal has been used in various programming languages and platforms 
+(such as assembly languages and older mainframe systems) due to its efficiency and effectiveness. 
+This legacy continues to influence its ongoing usage in modern computing.
+
+## Summary
+
+In summary, the hexadecimal number system strikes a balance between the binary system used 
+internally by computers and the need for a more compact, readable, and manipulable format 
+for humans. Its ease of conversion, alignment with the binary system, and widespread adoption 
+make it indispensable in computer science.
+
+## Future blog ideas
+

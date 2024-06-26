@@ -312,9 +312,3 @@ table {
 .title {
   text-wrap: balance;
 }
-
-@font-face {
-  font-family: "Ayer Poster Medium";
-  src: url("../public/fonts/AyerPoster-Medium.woff2") format("woff");
-  font-style: normal;
-}
