@@ -13,8 +13,6 @@ export const metadata = {
 export default function BlogPage() {
   let allBlogs = getBlogPosts();
 
-  console.log(allBlogs);
-
   return (
     <main className="max-w-screen-xl m-auto px-4 xl:px-0">
       <section className=" flex flex-row  h-full w-full min-h-[85vh]">
