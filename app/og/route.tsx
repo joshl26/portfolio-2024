@@ -22,7 +22,7 @@ export async function GET(req: NextRequest) {
           alignItems: "flex-start",
           justifyContent: "center",
           backgroundColor: "black",
-          backgroundImage: "url(/og-bg.png)",
+          backgroundImage: "url(https://joshlehman.ca/og-bg.png)",
         }}
       >
         <div
