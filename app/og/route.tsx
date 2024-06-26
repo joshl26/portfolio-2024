@@ -6,10 +6,22 @@ export const runtime = "edge";
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
   const postTitle = searchParams.get("title");
-  const font = fetch(
+  const postDate = searchParams.get("date");
+
+  const fontOne = fetch(
     new URL("../../public/fonts/Raleway-Bold.ttf", import.meta.url)
   ).then((res) => res.arrayBuffer());
-  const fontData = await font;
+  const fontOneData = await fontOne;
+
+  const fontTwo = fetch(
+    new URL("../../public/fonts/Roboto-Light.ttf", import.meta.url)
+  ).then((res) => res.arrayBuffer());
+  const fontTwoData = await fontTwo;
+
+  const fontThree = fetch(
+    new URL("../../public/fonts/Roboto-MediumItalic.ttf", import.meta.url)
+  ).then((res) => res.arrayBuffer());
+  const fontThreeData = await fontThree;
 
   return new ImageResponse(
     (
@@ -18,11 +30,9 @@ export async function GET(req: NextRequest) {
           height: "100%",
           width: "100%",
           display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-start",
-          justifyContent: "center",
           backgroundColor: "black",
-          backgroundImage: "url(https://joshlehman.ca/og-bg.png)",
+          backgroundImage: `url(${process.env.DEPLOYMENT_URL}/og-bg.png)`,
+          backgroundSize: "1920px 1080px",
         }}
       >
         <div
@@ -30,16 +40,33 @@ export async function GET(req: NextRequest) {
             marginLeft: 190,
             marginRight: 190,
             display: "flex",
-            fontSize: 130,
+            flexDirection: "column",
+            fontSize: "5rem",
             fontFamily: "Raleway-Bold",
-            letterSpacing: "-0.05em",
             fontStyle: "normal",
             color: "white",
-            lineHeight: "120px",
-            whiteSpace: "pre-wrap",
           }}
         >
-          {postTitle}
+          <h5
+            style={{ fontFamily: "Roboto-Medium-Italic", fontStyle: "italic" }}
+          >
+            Josh Lehman's Blog
+          </h5>
+          <p
+            style={{
+              fontSize: "3rem",
+              fontFamily: "Roboto-Light",
+              fontStyle: "normal",
+              letterSpacing: "0.75rem",
+              lineHeight: "0.5rem",
+              height: "5px",
+            }}
+          >
+            {postDate}
+          </p>
+          <h1 style={{ lineHeight: "5rem", height: "5px", marginTop: "0" }}>
+            {postTitle}
+          </h1>
         </div>
       </div>
     ),
@@ -49,8 +76,18 @@ export async function GET(req: NextRequest) {
       fonts: [
         {
           name: "Raleway-Bold",
-          data: fontData,
+          data: fontOneData,
           style: "normal",
+        },
+        {
+          name: "Roboto-Light",
+          data: fontTwoData,
+          style: "normal",
+        },
+        {
+          name: "Roboto-Medium-Italic",
+          data: fontThreeData,
+          style: "italic",
         },
       ],
     }
