@@ -31,7 +31,7 @@ export default async function GuestbookPage() {
 async function GuestbookForm() {
   const session = await getServerSession(options);
 
-  console.log(session);
+  // console.log(session);
 
   // let session = await auth();
 
