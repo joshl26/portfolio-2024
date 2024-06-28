@@ -10,6 +10,7 @@ jobs:
       - name: Make envfile
         uses: SpicyPizza/create-envfile@v2.0
         with:
+          envkey_NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
           envkey_NEXT_PUBLIC_EMAIL_JS_SERVICEID: ${{ secrets.NEXT_PUBLIC_EMAIL_JS_SERVICEID }}
           envkey_NEXT_PUBLIC_EMAIL_JS_TEMPLATEID: ${{ secrets.NEXT_PUBLIC_EMAIL_JS_TEMPLATEID }}
           envkey_NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY: ${{ secrets.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY }}
