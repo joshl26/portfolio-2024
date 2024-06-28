@@ -21,8 +21,8 @@ jobs:
           envkey_POSTGRES_DB_DATABASE: ${{ secrets.POSTGRES_DB_DATABASE }}
           envkey_AUTH_SECRET: ${{ secrets.AUTH_SECRET }}
           envkey_NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
-          envkey_OAUTH_CLIENT_KEY: ${{ secrets.OAUTH_CLIENT_KEY }}
-          envkey_OAUTH_CLIENT_SECRET: ${{ secrets.OAUTH_CLIENT_SECRET }}
+          envkey_OAUTH_ID: ${{ secrets.OAUTH_ID }}
+          envkey_OAUTH_SECRET: ${{ secrets.OAUTH_SECRET }}
           envkey_AUTH_REDIRECT_PROXY_URL: ${{ secrets.AUTH_REDIRECT_PROXY_URL }}
           envkey_DEPLOYMENT_URL: ${{ secrets.DEPLOYMENT_URL }}
           file_name: .env
