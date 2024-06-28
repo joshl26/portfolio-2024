@@ -31,6 +31,6 @@
     ".next/types/**/*.ts",
     "app/contact/api/route.js",
     "tailwind.config.ts"
-  ],
+, "app/auth.tsnotused"  ],
   "exclude": ["node_modules"]
 }

@@ -1,15 +1,18 @@
-import { auth } from "@/app/auth";
+// import { auth } from "@/app/auth";
 import { getGuestbookEntries } from "@/app/db/queries";
 import { SignIn, SignOut } from "./buttons";
 import { Suspense } from "react";
 import Form from "./form";
+import Link from "next/link";
+import { options } from "../api/auth/[...nextauth]/options";
+import { getServerSession } from "next-auth/next";
 
 export const metadata = {
   title: "Guestbook",
   description: "Sign my guestbook and leave your signature.",
 };
 
-export default function GuestbookPage() {
+export default async function GuestbookPage() {
   return (
     <section className="w-screen min-h-[80vh]">
       <div className="m-auto md:w-[500px] p-6">
@@ -26,7 +29,11 @@ export default function GuestbookPage() {
 }
 
 async function GuestbookForm() {
-  let session = await auth();
+  const session = await getServerSession(options);
+
+  console.log(session);
+
+  // let session = await auth();
 
   return session?.user ? (
     <>
@@ -36,6 +43,8 @@ async function GuestbookForm() {
   ) : (
     <SignIn />
   );
+
+  // return <Link href="/api/auth/signin">Sign In</Link>;
 }
 
 async function GuestbookEntries() {
