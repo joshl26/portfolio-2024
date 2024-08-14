@@ -113,7 +113,7 @@ export default function Home() {
                   <h2 className="title-accent m-auto">CREATING</h2>
                 </div>
                 <div className="flex md:flex-row md:justify-around flex-wrap">
-                  <h3 className="title-main px-6">PRAGMATIC</h3>
+                  <h3 className="title-main px-6 m-auto">PRAGMATIC</h3>
                 </div>
                 <div className="flex flex-col pt-1">
                   <h3 className="title-accent m-auto">&</h3>
