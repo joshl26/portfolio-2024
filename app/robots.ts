@@ -6,7 +6,6 @@ export default function robots() {
         allow: "/",
       },
     ],
-
     sitemap: `${process.env.DEPLOYMENT_URL}/sitemap.xml`,
     host: `${process.env.DEPLOYMENT_URL}`,
   };
