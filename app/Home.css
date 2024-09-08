@@ -6,6 +6,7 @@
   display: flex;
   height: calc(100vh - 5.75rem);
   max-width: 1100px;
+  width: 100%;
   margin: auto;
 }
 
@@ -17,14 +18,14 @@
 .title-main {
   color: beige;
   font-family: Ayer Poster Medium;
-  font-size: clamp(1rem, -0.1071rem + 8.8571vw, 8.75rem);
+  font-size: clamp(2rem, 1.1176rem + 5.6471vw, 5rem);
   letter-spacing: 0.05em;
 }
 
 .title-accent {
   font-family: var(--font-roboto);
   color: beige;
-  font-size: clamp(2rem, 1.6607rem + 2.7143vw, 4.375rem);
+  font-size: 2rem;
   font-stretch: expanded;
   font-weight: 300;
   letter-spacing: 0.05em;
