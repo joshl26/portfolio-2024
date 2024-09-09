@@ -102,7 +102,7 @@ export default function Blog({ params }: { params: any }) {
   return (
     <main className="main-container">
       <section className="mx-auto">
-        <script
+        {/* <script
           type="application/ld+json"
           suppressHydrationWarning
           dangerouslySetInnerHTML={{
@@ -123,7 +123,7 @@ export default function Blog({ params }: { params: any }) {
               },
             }),
           }}
-        />
+        /> */}
         <h1 className="font-medium tracking-tighter max-w-[650px]">
           {post.metadata.title}
         </h1>
