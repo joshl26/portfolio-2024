@@ -1,6 +1,7 @@
 import { getBlogPosts } from "@/app/db/blog";
 import { MetadataRoute } from "next";
 
+// test
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const response = await getBlogPosts();
   let blogs = response.map((post) => ({
