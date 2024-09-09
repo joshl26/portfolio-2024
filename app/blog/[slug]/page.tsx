@@ -8,8 +8,6 @@ import ViewCounter from "../view-counter";
 import { increment } from "@/app/db/actions";
 import { unstable_noStore as noStore } from "next/cache";
 
-export const dynamic = "force-static";
-
 export async function generateStaticParams() {
   const posts = getBlogPosts();
   return posts.map(({ slug }) => slug);
@@ -93,7 +91,7 @@ async function formatDate(date: string) {
   return `${fullDate} (${formattedDate})`;
 }
 
-export default async function Blog({ params }: { params: any }) {
+export default function Blog({ params }: { params: any }) {
   const response = getBlogPosts();
   let post = response.find((post) => post.slug === params.slug);
 
