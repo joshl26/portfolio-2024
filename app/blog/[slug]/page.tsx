@@ -8,6 +8,11 @@ import ViewCounter from "../view-counter";
 import { increment } from "@/app/db/actions";
 import { unstable_noStore as noStore } from "next/cache";
 
+export async function generateStaticParams() {
+  const posts = getBlogPosts();
+  return posts.map(({ slug }) => slug);
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -15,7 +20,7 @@ export async function generateMetadata({
 }): Promise<Metadata | undefined> {
   let post = getBlogPosts().find((post) => post.slug === params.slug);
   if (!post) {
-    return;
+    notFound();
   }
 
   let {

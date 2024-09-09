@@ -10,6 +10,16 @@ export const metadata = {
   description: "Read my thoughts on software development, design, and more.",
 };
 
+export async function generateStaticParams() {
+  const blogResponse = getBlogPosts();
+  const blogs = blogResponse.map(({ slug }) => slug);
+
+  // const viewsResponse = await getViewsCount();
+  // const viewCounts = viewsResponse.map(({ slug }) => slug);
+
+  return blogs;
+}
+
 export default function BlogPage() {
   let allBlogs = getBlogPosts();
 
@@ -51,7 +61,7 @@ export default function BlogPage() {
                   {post.metadata.title}
                 </p>
                 <Suspense fallback={<p className="h-6" />}>
-                  <Views slug={post.slug} />
+                  {/* <Views slug={post.slug} /> */}
                 </Suspense>
               </div>
             </Link>
@@ -61,8 +71,8 @@ export default function BlogPage() {
   );
 }
 
-async function Views({ slug }: { slug: string }) {
-  let views = await getViewsCount();
+// async function Views({ slug }: { slug: string }) {
+//   let views = await getViewsCount();
 
-  return <ViewCounter allViews={views} slug={slug} />;
-}
+//   return <ViewCounter allViews={views} slug={slug} />;
+// }
