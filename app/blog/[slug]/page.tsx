@@ -6,10 +6,12 @@ import { getViewsCount } from "@/app/db/queries";
 import { getBlogPosts } from "@/app/db/blog";
 import ViewCounter from "../view-counter";
 import { increment } from "@/app/db/actions";
-// import { unstable_noStore as noStore } from "next/cache";
+import { unstable_noStore as noStore } from "next/cache";
+
+export const dynamic = "force-static";
 
 export async function generateStaticParams() {
-  const posts = await getBlogPosts();
+  const posts = getBlogPosts();
   return posts.map(({ slug }) => slug);
 }
 
@@ -18,7 +20,7 @@ export async function generateMetadata({
 }: {
   params: any;
 }): Promise<Metadata | undefined> {
-  const response = await getBlogPosts();
+  const response = getBlogPosts();
   let post = response.find((post) => post.slug === params.slug);
   if (!post) {
     notFound();
@@ -58,8 +60,8 @@ export async function generateMetadata({
   };
 }
 
-function formatDate(date: string) {
-  // noStore();
+async function formatDate(date: string) {
+  noStore();
   let currentDate = new Date();
   if (!date.includes("T")) {
     date = `${date}T00:00:00`;
@@ -92,7 +94,7 @@ function formatDate(date: string) {
 }
 
 export default async function Blog({ params }: { params: any }) {
-  const response = await getBlogPosts();
+  const response = getBlogPosts();
   let post = response.find((post) => post.slug === params.slug);
 
   if (!post) {

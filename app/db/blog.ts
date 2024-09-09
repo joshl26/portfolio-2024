@@ -56,6 +56,6 @@ function getMDXData(dir: any) {
   });
 }
 
-export async function getBlogPosts() {
+export function getBlogPosts() {
   return getMDXData(path.join(process.cwd(), "content"));
 }
