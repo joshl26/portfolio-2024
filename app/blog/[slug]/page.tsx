@@ -9,7 +9,7 @@ import { increment } from "@/app/db/actions";
 import { unstable_noStore as noStore } from "next/cache";
 
 export async function generateStaticParams() {
-  const posts = getBlogPosts();
+  const posts = await getBlogPosts();
   return posts.map(({ slug }) => slug);
 }
 
@@ -18,7 +18,8 @@ export async function generateMetadata({
 }: {
   params: any;
 }): Promise<Metadata | undefined> {
-  let post = getBlogPosts().find((post) => post.slug === params.slug);
+  const response = await getBlogPosts();
+  let post = response.find((post) => post.slug === params.slug);
   if (!post) {
     notFound();
   }
@@ -90,8 +91,9 @@ function formatDate(date: string) {
   return `${fullDate} (${formattedDate})`;
 }
 
-export default function Blog({ params }: { params: any }) {
-  let post = getBlogPosts().find((post) => post.slug === params.slug);
+export default async function Blog({ params }: { params: any }) {
+  const response = await getBlogPosts();
+  let post = response.find((post) => post.slug === params.slug);
 
   if (!post) {
     notFound();

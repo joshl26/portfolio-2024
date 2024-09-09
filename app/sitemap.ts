@@ -1,14 +1,14 @@
 import { getBlogPosts } from "@/app/db/blog";
 import { MetadataRoute } from "next";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  let blogs = getBlogPosts().map((post) => ({
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const response = await getBlogPosts();
+  let blogs = response.map((post) => ({
     url: `${process.env.DEPLOYMENT_URL}/blog/${post.slug}`,
     lastModified: post.metadata.publishedAt,
   }));
 
   let routes = [
-    "",
     "about",
     "blog",
     "contact",
