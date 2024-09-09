@@ -8,20 +8,14 @@ import ViewCounter from "../view-counter";
 import { increment } from "@/app/db/actions";
 import { unstable_noStore as noStore } from "next/cache";
 
-// export async function generateStaticParams() {
-//   const posts = getBlogPosts();
-//   return posts.map(({ slug }) => slug);
-// }
-
 export async function generateMetadata({
   params,
 }: {
   params: any;
 }): Promise<Metadata | undefined> {
-  const response = getBlogPosts();
-  let post = response.find((post) => post.slug === params.slug);
+  let post = getBlogPosts().find((post) => post.slug === params.slug);
   if (!post) {
-    notFound();
+    return;
   }
 
   let {
@@ -92,8 +86,7 @@ function formatDate(date: string) {
 }
 
 export default function Blog({ params }: { params: any }) {
-  const response = getBlogPosts();
-  let post = response.find((post) => post.slug === params.slug);
+  let post = getBlogPosts().find((post) => post.slug === params.slug);
 
   if (!post) {
     notFound();
