@@ -58,7 +58,7 @@ export async function generateMetadata({
   };
 }
 
-async function formatDate(date: string) {
+function formatDate(date: string) {
   noStore();
   let currentDate = new Date();
   if (!date.includes("T")) {
