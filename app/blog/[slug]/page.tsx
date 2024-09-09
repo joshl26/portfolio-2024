@@ -6,7 +6,7 @@ import { getViewsCount } from "@/app/db/queries";
 import { getBlogPosts } from "@/app/db/blog";
 import ViewCounter from "../view-counter";
 import { increment } from "@/app/db/actions";
-import { unstable_noStore as noStore } from "next/cache";
+// import { unstable_noStore as noStore } from "next/cache";
 
 export async function generateStaticParams() {
   const posts = await getBlogPosts();
@@ -59,7 +59,7 @@ export async function generateMetadata({
 }
 
 function formatDate(date: string) {
-  noStore();
+  // noStore();
   let currentDate = new Date();
   if (!date.includes("T")) {
     date = `${date}T00:00:00`;
