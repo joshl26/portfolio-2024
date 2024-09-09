@@ -8,10 +8,10 @@ import ViewCounter from "../view-counter";
 import { increment } from "@/app/db/actions";
 import { unstable_noStore as noStore } from "next/cache";
 
-export async function generateStaticParams() {
-  const posts = getBlogPosts();
-  return posts.map(({ slug }) => slug);
-}
+// export async function generateStaticParams() {
+//   const posts = getBlogPosts();
+//   return posts.map(({ slug }) => slug);
+// }
 
 export async function generateMetadata({
   params,
@@ -102,7 +102,7 @@ export default function Blog({ params }: { params: any }) {
   return (
     <main className="main-container">
       <section className="mx-auto">
-        {/* <script
+        <script
           type="application/ld+json"
           suppressHydrationWarning
           dangerouslySetInnerHTML={{
@@ -123,7 +123,7 @@ export default function Blog({ params }: { params: any }) {
               },
             }),
           }}
-        /> */}
+        />
         <h1 className="font-medium tracking-tighter max-w-[650px]">
           {post.metadata.title}
         </h1>
