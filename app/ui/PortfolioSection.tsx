@@ -22,10 +22,10 @@ const PortfolioSection = () => {
               },
             }}
           >
-            <Link href={"/portfolio/resume-wrangler"}>
+            <Link href={"/portfolio/lucha-tacos"}>
               <CldImage
                 className="showcase-card-container mt-8 xl:mb-8"
-                alt="resume wrangler hero"
+                alt="lucha tacos hero"
                 width="1000"
                 height="1000"
                 sizes="100vw"
@@ -33,7 +33,7 @@ const PortfolioSection = () => {
               />
               <CldImage
                 className="showcase-card-container hidden md:block my-8"
-                alt="resume wrangler hero"
+                alt="lucha-tacos hero"
                 width="1000"
                 height="1000"
                 sizes="100vw"
@@ -41,7 +41,7 @@ const PortfolioSection = () => {
               />
               <CldImage
                 className="showcase-card-container hidden md:block xl:my-8"
-                alt="resume wrangler hero"
+                alt="lucha-tacos hero"
                 width="1000"
                 height="1000"
                 sizes="100vw"
