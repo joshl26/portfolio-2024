@@ -15,6 +15,7 @@ import MenuContextProvider from "@/context/menu-context";
 import "@/app/globals.css";
 import CursorContainer from "./CursorContainer";
 import { SandpackCSS } from "./blog/[slug]/sandpack";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const noto_sans = Noto_Sans({
   subsets: ["latin"],
@@ -111,6 +112,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta
+          name="keywords"
+          content="javascript, C++, blog, software development, software engineering, seo, web development, software engineer, engineering blog, seo blog, web development blog, artificial intelligence"
+        ></meta>
         <SandpackCSS />
         <meta
           name="google-adsense-account"
@@ -137,6 +142,7 @@ export default function RootLayout({
           </MenuContextProvider>
         </CursorContainer>
       </body>
+      <GoogleAnalytics gaId="G-M9Y769WX7E" />
     </html>
   );
 }

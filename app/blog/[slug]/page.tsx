@@ -107,7 +107,7 @@ export default function Blog({ params }: { params: any }) {
               dateModified: post.metadata.publishedAt,
               description: post.metadata.summary,
               image: post.metadata.image
-                ? `https://joshlehman.ca${post.metadata.image}`
+                ? `https://joshlehman.ca/${post.metadata.image}`
                 : `https://joshlehman.ca/og?title=${post.metadata.title}`,
               url: `https://joshlehman.ca/blog/${post.slug}`,
               author: {
