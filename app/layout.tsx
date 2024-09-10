@@ -70,16 +70,18 @@ const ubuntu = Ubuntu({
 export const metadata: Metadata = {
   metadataBase: new URL("https://joshlehman.ca"),
   title: {
-    default: "Josh Lehman Portfolio",
-    template: "%s | Josh Lehman Portfolio",
+    default: "Josh Lehman Portfolio Site",
+    template: "%s | Josh Lehman Portfolio Site",
   },
-  description: "Josh Lehman | Digital Craftsman",
+  description:
+    "Josh Lehman | Software Engineer | Web Developer | Digital Craftsman. Come see my software engineering and web development projects.",
   openGraph: {
-    title: "Come see my software engineering and web development projects.",
+    title: "Josh Lehman Portfolio Site",
     description:
-      "Come see my software engineering and web development projects.",
+      "Josh Lehman | Software Engineer | Web Developer | Digital Craftsman. Come see my software engineering and web development projects.",
     url: "https://joshlehman.ca",
-    siteName: "Joshua Lehman | Digital Craftsman",
+    siteName:
+      "Josh Lehman | Software Engineer | Web Developer | Digital Craftsman",
     locale: "en_CA",
     type: "website",
   },
@@ -95,7 +97,8 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Josh Lehman Portfolio",
+    title:
+      "Josh Lehman | Software Engineer | Web Developer | Digital Craftsman",
     card: "summary_large_image",
   },
   verification: {
