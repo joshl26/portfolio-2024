@@ -1,13 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { FaArrowCircleUp } from "react-icons/fa";
-import "@/app/Home.css";
 import ThreeScene from "./ui/ThreeScene";
 import IntroWorkCard from "./ui/IntroWorkCard";
-import TestScene from "./ui/TestScene";
-import { Canvas, extend } from "@react-three/fiber";
 import { TransitionLink } from "./utils/TransitionLink";
+import "@/app/Home.css";
 
 console.log("__________________**__________________");
 console.log("_________________*  *_________________");
@@ -109,7 +106,7 @@ export default function Home() {
             <div className="flex flex-col">
               <div className="flex flex-col md:flex-row md:justify-around flex-wrap m-auto">
                 <div className="flex flex-col pt-1">
-                  <h2 className="title-accent m-auto">CREATING</h2>
+                  <h3 className="title-accent m-auto">CREATING</h3>
                 </div>
                 <div className="flex md:flex-row md:justify-around flex-wrap">
                   <h3 className="title-main px-6 m-auto">PRAGMATIC</h3>
@@ -120,16 +117,16 @@ export default function Home() {
               </div>
               <div className="flex flex-col md:flex-row md:justify-around flex-wrap">
                 <div className="flex flex-col">
-                  <h2 className="title-main px-6">THOUGHTFUL</h2>
+                  <h3 className="title-main px-6">THOUGHTFUL</h3>
                 </div>
                 <div className="flex flex-col pt-1">
-                  <h2 className="title-accent m-auto">SOFTWARE</h2>
+                  <h3 className="title-accent m-auto">SOFTWARE</h3>
                 </div>
               </div>
             </div>
           </div>
           <div className="flex flex-row ">
-            <h2 className="title-year m-auto"> - CIRCA 2018 - </h2>
+            <h3 className="title-year m-auto"> - CIRCA 2018 - </h3>
           </div>
         </div>
       </section>
@@ -142,7 +139,7 @@ export default function Home() {
             <div className="spacer-small" />
             <div className="flex flex-row justify-between px-4 items-center h-full mt-1 mb-3">
               <div>
-                <h2 className="showcased-h2">RECENT SHOWCASED WORK</h2>
+                <h3 className="showcased-h2">RECENT SHOWCASED WORK</h3>
               </div>
               <div className="text-right">
                 <FaArrowCircleUp className="showcased-work-link" />

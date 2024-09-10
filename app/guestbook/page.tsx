@@ -19,9 +19,9 @@ export default async function GuestbookPage() {
       </section>
       <section className="w-screen min-h-[80vh]">
         <div className="m-auto md:w-[500px] p-6">
-          <h1 className="text-[2.5rem] mb-8 tracking-tighter">
+          <h2 className="text-[2.5rem] mb-8 tracking-tighter">
             Sign my interactive guestbook
-          </h1>
+          </h2>
           <Suspense>
             <GuestbookForm />
             <GuestbookEntries />

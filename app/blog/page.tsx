@@ -33,9 +33,9 @@ export default function BlogPage() {
         </div>
       </section>
       <section className="portfolio-main-section flex flex-col min-w-[300px] w-full min-h-[90vh] mx-auto xl:px-0">
-        <h1 className="font-medium text-4xl mt-6 mb-4 tracking-tighter text-center">
+        <h2 className="font-medium text-4xl mt-6 mb-4 tracking-tighter text-center">
           Latest articles from my blog:
-        </h1>
+        </h2>
         {allBlogs
           .sort((a, b) => {
             if (
@@ -56,7 +56,6 @@ export default function BlogPage() {
                 <p className="font-lite tracking-tight">
                   {post.metadata.publishedAt}
                 </p>
-
                 <p className="font-bold text-xl tracking-tight">
                   {post.metadata.title}
                 </p>
