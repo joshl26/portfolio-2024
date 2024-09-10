@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 export async function generateStaticParams() {
-  const blogResponse = await getBlogPosts();
+  const blogResponse = getBlogPosts();
   const allBlogs = blogResponse.map(({ slug }) => ({ slug }));
 
   const viewsResponse = await getViewsCount();
@@ -20,8 +20,8 @@ export async function generateStaticParams() {
   return [...allBlogs, ...views];
 }
 
-export default async function BlogPage() {
-  let allBlogs = await getBlogPosts();
+export default function BlogPage() {
+  let allBlogs = getBlogPosts();
 
   return (
     <main className="max-w-screen-xl m-auto px-4 xl:px-0">
