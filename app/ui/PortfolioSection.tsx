@@ -3,9 +3,9 @@
 import React from "react";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { CldImage } from "next-cloudinary";
 import RoundButton from "@/app/ui/RoundButton";
+import { TransitionLink } from "../utils/TransitionLink";
 
 const PortfolioSection = () => {
   return (
@@ -22,7 +22,7 @@ const PortfolioSection = () => {
               },
             }}
           >
-            <Link href={"/portfolio/lucha-tacos"}>
+            <TransitionLink className="" href={"/portfolio/lucha-tacos"}>
               <CldImage
                 className="showcase-card-container mt-8 xl:mb-8"
                 alt="lucha tacos hero"
@@ -47,7 +47,7 @@ const PortfolioSection = () => {
                 sizes="100vw"
                 src="v1718930368/PortfolioSite/lucha-tacos-screen_4_dwtqru.png"
               />
-            </Link>
+            </TransitionLink>
           </motion.div>
         </div>
         <div className="portfolio-container xl:mt-8">
@@ -109,7 +109,7 @@ const PortfolioSection = () => {
                 target="_blank"
                 rel=""
               />
-              <Link href={"/portfolio/lucha-tacos"}>
+              <TransitionLink className="" href={"/portfolio/lucha-tacos"}>
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"SEE MORE"}
@@ -117,7 +117,7 @@ const PortfolioSection = () => {
                   rel=""
                   href={""}
                 />
-              </Link>
+              </TransitionLink>
             </div>
           </motion.div>
         </div>
@@ -136,7 +136,7 @@ const PortfolioSection = () => {
               },
             }}
           >
-            <Link href={"/portfolio/resume-wrangler"}>
+            <TransitionLink className="" href={"/portfolio/resume-wrangler"}>
               <CldImage
                 className="showcase-card-container mt-8 xl:mb-8"
                 alt="resume wrangler hero"
@@ -161,7 +161,7 @@ const PortfolioSection = () => {
                 sizes="100vw"
                 src="v1713749853/ResumeWrangler/Resume_Wrangler_Resume_Styling_Page_1_guydrc.png"
               />
-            </Link>
+            </TransitionLink>
           </motion.div>
         </div>
         <div className="portfolio-container xl:mt-8">
@@ -225,7 +225,7 @@ const PortfolioSection = () => {
                 target="_blank"
                 rel=""
               />
-              <Link href={"/portfolio/resume-wrangler"}>
+              <TransitionLink className="" href={"/portfolio/resume-wrangler"}>
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"SEE MORE"}
@@ -233,7 +233,7 @@ const PortfolioSection = () => {
                   rel=""
                   href={""}
                 />
-              </Link>
+              </TransitionLink>
             </div>
           </motion.div>
         </div>
@@ -251,7 +251,10 @@ const PortfolioSection = () => {
               },
             }}
           >
-            <Link href={"/portfolio/ecommerce/cleaner-by-design"}>
+            <TransitionLink
+              className=""
+              href={"/portfolio/ecommerce/cleaner-by-design"}
+            >
               <CldImage
                 className="showcase-card-container mt-2 mb-0 sm:mb-8"
                 alt="cleaner by design hero"
@@ -276,7 +279,7 @@ const PortfolioSection = () => {
                 sizes="100vw"
                 src="v1713545943/PortfolioSite/CleanerByDesign_Checkout_Page_1_fcqqge.png"
               />
-            </Link>
+            </TransitionLink>
           </motion.div>
         </div>
         <div className="portfolio-container">
@@ -343,7 +346,10 @@ const PortfolioSection = () => {
                 target="_blank"
                 rel=""
               />
-              <Link href={"/portfolio/ecommerce/cleaner-by-design"}>
+              <TransitionLink
+                className=""
+                href={"/portfolio/ecommerce/cleaner-by-design"}
+              >
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"SEE MORE"}
@@ -351,7 +357,7 @@ const PortfolioSection = () => {
                   rel=""
                   href=""
                 />
-              </Link>
+              </TransitionLink>
             </div>
           </motion.div>
         </div>
@@ -369,7 +375,10 @@ const PortfolioSection = () => {
               },
             }}
           >
-            <Link href={"/portfolio/ecommerce/beanbag-coffee-co"}>
+            <TransitionLink
+              className=""
+              href={"/portfolio/ecommerce/beanbag-coffee-co"}
+            >
               <CldImage
                 className="showcase-card-container mt-3 mb-8"
                 alt="cleaner by design hero"
@@ -394,7 +403,7 @@ const PortfolioSection = () => {
                 sizes="100vw"
                 src="v1704378329/PortfolioSite/beanbag-coffee-2_rghloq.png"
               />
-            </Link>
+            </TransitionLink>
           </motion.div>
         </div>
         <div className="portfolio-container">
@@ -452,7 +461,10 @@ const PortfolioSection = () => {
                 target="_blank"
                 rel=""
               />
-              <Link href={"/portfolio/ecommerce/beanbag-coffee-co"}>
+              <TransitionLink
+                className=""
+                href={"/portfolio/ecommerce/beanbag-coffee-co"}
+              >
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"SEE MORE"}
@@ -460,7 +472,7 @@ const PortfolioSection = () => {
                   rel=""
                   href=""
                 />
-              </Link>
+              </TransitionLink>
             </div>
           </motion.div>
         </div>
@@ -478,7 +490,7 @@ const PortfolioSection = () => {
               },
             }}
           >
-            <Link href={"/portfolio/el-in"}>
+            <TransitionLink className="" href={"/portfolio/el-in"}>
               <CldImage
                 className="showcase-card-container"
                 alt="electronics inventory hero image"
@@ -487,7 +499,7 @@ const PortfolioSection = () => {
                 sizes="100vw"
                 src="v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png"
               />
-            </Link>
+            </TransitionLink>
           </motion.div>
         </div>
         <div className="portfolio-container">
@@ -553,7 +565,7 @@ const PortfolioSection = () => {
                 target="_blank"
                 rel=""
               />
-              <Link href={"/portfolio/el-in/"}>
+              <TransitionLink className="" href={"/portfolio/el-in/"}>
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"SEE MORE"}
@@ -561,7 +573,7 @@ const PortfolioSection = () => {
                   target=""
                   rel=""
                 />
-              </Link>
+              </TransitionLink>
             </div>
           </motion.div>
         </div>
@@ -579,7 +591,7 @@ const PortfolioSection = () => {
               },
             }}
           >
-            <Link href={"/portfolio/outdoorsy"}>
+            <TransitionLink className="" href={"/portfolio/outdoorsy"}>
               <CldImage
                 className="showcase-card-container"
                 alt="outdoorsy app hero"
@@ -588,7 +600,7 @@ const PortfolioSection = () => {
                 sizes="100vw"
                 src="v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png"
               />
-            </Link>
+            </TransitionLink>
           </motion.div>
         </div>
         <div className="portfolio-container">
@@ -641,7 +653,7 @@ const PortfolioSection = () => {
                 target="_blank"
                 rel=""
               />
-              <Link href={"/portfolio/outdoorsy"}>
+              <TransitionLink className="" href={"/portfolio/outdoorsy"}>
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"SEE MORE"}
@@ -649,7 +661,7 @@ const PortfolioSection = () => {
                   target=""
                   rel=""
                 />
-              </Link>
+              </TransitionLink>
             </div>
           </motion.div>
         </div>
@@ -667,7 +679,7 @@ const PortfolioSection = () => {
               },
             }}
           >
-            <Link href={"/portfolio/3dportfolio"}>
+            <TransitionLink className="" href={"/portfolio/3dportfolio"}>
               <CldImage
                 className="showcase-card-container"
                 alt="3d portfolio hero"
@@ -676,7 +688,7 @@ const PortfolioSection = () => {
                 sizes="100vw"
                 src="v1697384652/PortfolioSite/Iphone_3dportfolio_modern_desktop_1_unmjbe.png"
               />
-            </Link>
+            </TransitionLink>
           </motion.div>
         </div>
         <div className="portfolio-container">
@@ -731,7 +743,7 @@ const PortfolioSection = () => {
                 target=""
                 rel=""
               />
-              <Link href={"/portfolio/3dportfolio"}>
+              <TransitionLink className="" href={"/portfolio/3dportfolio"}>
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"SEE MORE"}
@@ -739,7 +751,7 @@ const PortfolioSection = () => {
                   rel=""
                   href=""
                 />
-              </Link>
+              </TransitionLink>
             </div>
           </motion.div>
         </div>
@@ -757,7 +769,7 @@ const PortfolioSection = () => {
               },
             }}
           >
-            <Link href={"/portfolio/pomodor"}>
+            <TransitionLink className="" href={"/portfolio/pomodor"}>
               <CldImage
                 className="showcase-card-container"
                 alt="pomodoro timer hero"
@@ -766,7 +778,7 @@ const PortfolioSection = () => {
                 sizes="100vw"
                 src="v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png"
               />
-            </Link>
+            </TransitionLink>
           </motion.div>
         </div>
         <div className="portfolio-container">
@@ -817,7 +829,7 @@ const PortfolioSection = () => {
                 target="_blank"
                 rel=""
               />
-              <Link href={"/portfolio/pomodor"}>
+              <TransitionLink className="" href={"/portfolio/pomodor"}>
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"SEE MORE"}
@@ -825,7 +837,7 @@ const PortfolioSection = () => {
                   target=""
                   rel=""
                 />
-              </Link>
+              </TransitionLink>
             </div>
           </motion.div>
         </div>
@@ -843,7 +855,7 @@ const PortfolioSection = () => {
               },
             }}
           >
-            <Link href={"/portfolio/blackrock-3d"}>
+            <TransitionLink className="" href={"/portfolio/blackrock-3d"}>
               <CldImage
                 className="showcase-card-container"
                 alt="nye mfg hero"
@@ -852,7 +864,7 @@ const PortfolioSection = () => {
                 sizes="100vw"
                 src="v1716859619/PortfolioSite/Untitled_n2iqdo.png"
               />
-            </Link>
+            </TransitionLink>
           </motion.div>
         </div>
         <div className="portfolio-container">
@@ -892,7 +904,7 @@ const PortfolioSection = () => {
                 target="_blank"
                 rel=""
               />
-              <Link href={"/portfolio/blackrock-3d"}>
+              <TransitionLink className="" href={"/portfolio/blackrock-3d"}>
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"SEE MORE"}
@@ -900,7 +912,7 @@ const PortfolioSection = () => {
                   target=""
                   rel=""
                 />
-              </Link>
+              </TransitionLink>
             </div>
           </motion.div>
         </div>
@@ -919,7 +931,7 @@ const PortfolioSection = () => {
               },
             }}
           >
-            <Link href={"/portfolio/nyemfg"}>
+            <TransitionLink className="" href={"/portfolio/nyemfg"}>
               <CldImage
                 className="showcase-card-container"
                 alt="nye mfg hero"
@@ -928,7 +940,7 @@ const PortfolioSection = () => {
                 sizes="100vw"
                 src="v1716856540/PortfolioSite/Untitled_ixlgk5.png"
               />
-            </Link>
+            </TransitionLink>
           </motion.div>
         </div>
         <div className="portfolio-container">
@@ -969,7 +981,7 @@ const PortfolioSection = () => {
                 target="_blank"
                 rel=""
               />
-              <Link href={"/portfolio/nyemfg"}>
+              <TransitionLink className="" href={"/portfolio/nyemfg"}>
                 <RoundButton
                   buttonClass={"round-button"}
                   buttonText={"SEE MORE"}
@@ -977,7 +989,7 @@ const PortfolioSection = () => {
                   target=""
                   rel=""
                 />
-              </Link>
+              </TransitionLink>
             </div>
           </motion.div>
         </div>

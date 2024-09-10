@@ -7,6 +7,7 @@ import ThreeScene from "./ui/ThreeScene";
 import IntroWorkCard from "./ui/IntroWorkCard";
 import TestScene from "./ui/TestScene";
 import { Canvas, extend } from "@react-three/fiber";
+import { TransitionLink } from "./utils/TransitionLink";
 
 console.log("__________________**__________________");
 console.log("_________________*  *_________________");
@@ -100,10 +101,8 @@ export default function Home() {
   ];
 
   return (
-    <div>
-      {/* <TestScene /> */}
+    <main>
       <ThreeScene />
-      {/* <ThreeFiberScene /> */}
       <section className="title-container">
         <div className="flex flex-col max-w-screen-xl m-auto">
           <div className="flex flex-row flex-wrap ">
@@ -136,7 +135,10 @@ export default function Home() {
       </section>
       <section className="showcased-work">
         <div className="max-w-screen-xl m-auto">
-          <Link href={"/portfolio"}>
+          <TransitionLink
+            className="nav-link hover:scale-95 hover:text-gray-800 transition-transform text-gray-800 duration-300 cursor-pointer"
+            href={"/portfolio"}
+          >
             <div className="spacer-small" />
             <div className="flex flex-row justify-between px-4 items-center h-full mt-1 mb-3">
               <div>
@@ -146,7 +148,7 @@ export default function Home() {
                 <FaArrowCircleUp className="showcased-work-link" />
               </div>
             </div>
-          </Link>
+          </TransitionLink>
           <div className="intro-grid">
             {workCardData.map((workCard) => (
               <IntroWorkCard key={workCard.id} workCard={workCard} />
@@ -154,6 +156,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

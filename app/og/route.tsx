@@ -50,7 +50,7 @@ export async function GET(req: NextRequest) {
           <h5
             style={{ fontFamily: "Roboto-Medium-Italic", fontStyle: "italic" }}
           >
-            Josh Lehmans Blog
+            Josh Lehman&apos;s Blog
           </h5>
           <p
             style={{

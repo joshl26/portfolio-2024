@@ -4,6 +4,8 @@ import React from "react";
 import "@/app/ui/ResponsiveHeader.css";
 import { useMenuClicked } from "@/context/menu-context";
 import { CldImage } from "next-cloudinary";
+import ResponsiveMenu from "./ResponsiveMenu";
+import { TransitionLink } from "../utils/TransitionLink";
 
 const ResponsiveHeader = () => {
   const { menuClicked, toggleMenuClicked } = useMenuClicked();
@@ -15,7 +17,7 @@ const ResponsiveHeader = () => {
       <div className="flex flex-row justify-between align-middle items-center">
         <div className="flex flex-col">
           <div className="header-hero-container">
-            <a href="/">
+            <TransitionLink className="" href="/">
               <CldImage
                 className="header-hero-image"
                 alt="header hero image"
@@ -25,7 +27,7 @@ const ResponsiveHeader = () => {
                 preserveTransformations
                 src="https://res.cloudinary.com/dv6keahg3/image/upload/q_auto/f_auto/v1697384652/PortfolioSite/JL_Icon_Small_kzcjux.svg"
               />
-            </a>
+            </TransitionLink>
           </div>
         </div>
         <div className="flex flex-col">

@@ -3,7 +3,6 @@ import { getGuestbookEntries } from "@/app/db/queries";
 import { SignIn, SignOut } from "./buttons";
 import { Suspense } from "react";
 import Form from "./form";
-import Link from "next/link";
 import { options } from "../api/auth/[...nextauth]/options";
 import { getServerSession } from "next-auth/next";
 
@@ -14,17 +13,22 @@ export const metadata = {
 
 export default async function GuestbookPage() {
   return (
-    <section className="w-screen min-h-[80vh]">
-      <div className="m-auto md:w-[500px] p-6">
-        <h1 className="text-[2.5rem] mb-8 tracking-tighter">
-          Sign my interactive guestbook
-        </h1>
-        <Suspense>
-          <GuestbookForm />
-          <GuestbookEntries />
-        </Suspense>
-      </div>
-    </section>
+    <main>
+      <section className="portfolio-section">
+        <h1 className="portfolio-h1">GUESTBOOK</h1>
+      </section>
+      <section className="w-screen min-h-[80vh]">
+        <div className="m-auto md:w-[500px] p-6">
+          <h1 className="text-[2.5rem] mb-8 tracking-tighter">
+            Sign my interactive guestbook
+          </h1>
+          <Suspense>
+            <GuestbookForm />
+            <GuestbookEntries />
+          </Suspense>
+        </div>
+      </section>
+    </main>
   );
 }
 

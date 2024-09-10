@@ -44,7 +44,6 @@ const NotFound = () => (
         left: "0px",
         top: " 0px",
       }}
-      className="container"
     >
       <Scene />
     </div>

@@ -40,7 +40,18 @@
   padding: 0;
 }
 
+.page-transition {
+  opacity: 0;
+  transform: scale(1.1);
+  filter: blur(8px);
+  transition: transform 500ms ease-in-out, opacity 500ms ease-in-out,
+    filter 500ms ease-in-out;
+}
+
 body {
+  transition-property: opacity, background, transform, filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 700ms;
   overflow-x: hidden;
   color: var(--bg-color-light);
 }

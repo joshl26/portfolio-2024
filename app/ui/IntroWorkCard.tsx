@@ -2,11 +2,15 @@ import { CldImage } from "next-cloudinary";
 import Link from "next/link";
 import React from "react";
 import { FaArrowCircleUp } from "react-icons/fa";
+import { TransitionLink } from "../utils/TransitionLink";
 
 const IntroWorkCard = ({ workCard }: { workCard: any }) => {
   return (
     <div className="intro-container">
-      <Link href={workCard.href}>
+      <TransitionLink
+        className="nav-link hover:scale-95 hover:text-gray-800 transition-transform text-gray-800 duration-300 cursor-pointer"
+        href={workCard.href}
+      >
         <CldImage
           className="showcase-card-container"
           alt="resume wrangler hero"
@@ -26,7 +30,7 @@ const IntroWorkCard = ({ workCard }: { workCard: any }) => {
           </div>
         </div>
         <div className="showcase-border-top mb-10" />
-      </Link>
+      </TransitionLink>
     </div>
   );
 };

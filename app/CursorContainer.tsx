@@ -22,7 +22,7 @@ export default function CursorContainer({ children }: CursorContainerProps) {
   const size = isHovered ? 400 : 40;
 
   return (
-    <main className="main-container">
+    <div className="main-container">
       <motion.div
         className={clsx(styles.mask, "bg-yellow-700 opacity-75")}
         animate={{
@@ -51,6 +51,6 @@ export default function CursorContainer({ children }: CursorContainerProps) {
           focus on producing high quality & impactful digital experience.
         </p>
       </div> */}
-    </main>
+    </div>
   );
 }
