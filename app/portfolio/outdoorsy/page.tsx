@@ -5,6 +5,9 @@ import OutdoorsySection from "@/app/ui/OutdoorsySection";
 export const metadata = {
   title: "Outdoorsy",
   description: "An modern outdoors enthusiast social platform.",
+  alternates: {
+    canonical: `/portfolio/outdoorsy`,
+  },
 };
 
 const PortfolioOutdoorsy = () => {

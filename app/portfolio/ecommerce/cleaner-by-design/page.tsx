@@ -6,6 +6,9 @@ export const metadata = {
   title: "CleanerByDesign",
   description:
     "CleanerByDesign is an e-commerce web application designed to provide a seamless online shopping experience.",
+  alternates: {
+    canonical: `/portfolio/ecommerce/cleaner-by-design`,
+  },
 };
 
 const Page = () => {

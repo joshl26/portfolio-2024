@@ -68,7 +68,7 @@ const ubuntu = Ubuntu({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://joshlehman.ca"),
+  metadataBase: new URL("https://joshlehman.ca/"),
   title: {
     default: "Josh Lehman Portfolio Site",
     template: "%s | Josh Lehman Portfolio Site",

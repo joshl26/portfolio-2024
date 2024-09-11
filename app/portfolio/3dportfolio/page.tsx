@@ -5,6 +5,9 @@ import ThreeDPortfolioSection from "@/app/ui/ThreeDPortfolioSection";
 export const metadata = {
   title: "3D Interactive Portfolio",
   description: "Learn about my interactive 3D animated portfolio site!",
+  alternates: {
+    canonical: `/portfolio/3dportfolio`,
+  },
 };
 
 const Page = () => {

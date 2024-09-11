@@ -5,6 +5,9 @@ import "../ui/Portfolio.css";
 export const metadata = {
   title: "About",
   description: "A little about myself.",
+  alternates: {
+    canonical: `/about`,
+  },
 };
 
 const About = () => {

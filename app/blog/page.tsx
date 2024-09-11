@@ -8,6 +8,9 @@ import "../ui/Portfolio.css";
 export const metadata = {
   title: "Blog",
   description: "Read my thoughts on software development, design, and more.",
+  alternates: {
+    canonical: `/blog`,
+  },
 };
 
 export async function generateStaticParams() {

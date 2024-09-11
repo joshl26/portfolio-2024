@@ -9,6 +9,9 @@ import { getServerSession } from "next-auth/next";
 export const metadata = {
   title: "Guestbook",
   description: "Sign my guestbook and leave your signature.",
+  alternates: {
+    canonical: `/guestbook`,
+  },
 };
 
 export default async function GuestbookPage() {

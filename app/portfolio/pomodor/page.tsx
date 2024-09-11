@@ -5,6 +5,9 @@ import PomodorSection from "@/app/ui/PomodorSection";
 export const metadata = {
   title: "Pomodoro",
   description: "A pomodoro timer built with ReactJS.",
+  alternates: {
+    canonical: `/portfolio/pomodor`,
+  },
 };
 
 const PortfolioPomodor = () => {

@@ -5,6 +5,9 @@ import PortfolioSection from "../ui/PortfolioSection";
 export const metadata = {
   title: "Portfolio",
   description: "Peruse some of my latest creations in the portfolio gallery.",
+  alternates: {
+    canonical: `/portfolio`,
+  },
 };
 
 const Portfolio = () => {

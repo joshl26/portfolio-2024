@@ -6,6 +6,9 @@ export const metadata = {
   title: "Electronics Inventory",
   description:
     "Resume Wrangler is an innovative and dynamic tool created to redefine the way job seekers prepare their application documents.",
+  alternates: {
+    canonical: `/portfolio/el-in`,
+  },
 };
 
 const Page = () => {
