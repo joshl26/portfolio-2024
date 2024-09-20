@@ -34,5 +34,5 @@ jobs:
           docker build . -t joshlehmandev/portfolio-2024:latest
       - name: publish
         run: |
-          docker login -u joshlehmandev --password-stdin ${{ secrets.DOCKER_HUB_TOKEN }}
+          docker login -u joshlehmandev -p ${{ secrets.DOCKER_HUB_TOKEN }}
           docker push joshlehmandev/portfolio-2024:latest

@@ -10,4 +10,5 @@ RUN pnpm install
 COPY . .
 RUN pnpm build
 EXPOSE 3050
+RUN pnpm exec next telemetry disable
 CMD pnpm start
