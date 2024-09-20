@@ -25,6 +25,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "portfolio/3dportfolio",
     "portfolio/blackrock-3d",
     "portfolio/nyemfg",
+    "privacy",
   ].map((route) => ({
     url: `${process.env.DEPLOYMENT_URL}/${route}`,
     lastModified: new Date().toISOString().split("T")[0],
