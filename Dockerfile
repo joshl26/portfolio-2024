@@ -8,6 +8,6 @@ WORKDIR /app
 COPY package*.json ./
 RUN pnpm install
 COPY . .
-RUN pnpm run build
+RUN pnpm build
 EXPOSE 3050
-CMD pnpm run start
+CMD pnpm start
