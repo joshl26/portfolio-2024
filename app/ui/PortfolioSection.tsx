@@ -22,6 +22,106 @@ const PortfolioSection = () => {
               },
             }}
           >
+            <TransitionLink className="" href={"https://jackolanternai.com"}>
+              <CldImage
+                className="showcase-card-container mt-8 xl:mb-8"
+                alt="Jack-O-Lantern hero"
+                width="1000"
+                height="1000"
+                sizes="100vw"
+                src="v1726856183/JackOLanternAi/homepage_tgtubt.jpg"
+              />
+              <CldImage
+                className="showcase-card-container hidden md:block my-8"
+                alt="Jack-O-Lantern hero"
+                width="1000"
+                height="1000"
+                sizes="100vw"
+                src="v1726856237/JackOLanternAi/homepage_banner_grey_il17ux.jpg"
+              />
+              <CldImage
+                className="showcase-card-container hidden md:block xl:my-8"
+                alt="Jack-O-Lantern hero"
+                width="1000"
+                height="1000"
+                sizes="100vw"
+                src="v1726856278/JackOLanternAi/8_msg7ff.jpg"
+              />
+            </TransitionLink>
+          </motion.div>
+        </div>
+        <div className="portfolio-container xl:mt-8">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                duration: 0.5,
+                delay: 0,
+              },
+            }}
+          >
+            <h3 className="showcased-h3">Jack-O-Lantern Ai</h3>
+            <p className="showcased-p">
+              Generate pumpkin carving templates with the power of Ai.
+            </p>
+            <p className="pt-6 text-3xl text-bold">
+              COMING SOON - OCTOBER 2024
+            </p>
+
+            <div className="my-8">
+              <div>
+                <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
+                  <li className="showcased-btn">NEXTJS</li>
+                  <li className="showcased-btn">TAILWINDCSS</li>
+                  <li className="showcased-btn">TRPC</li>
+                  <li className="showcased-btn">DRIZZLE</li>
+                  <li className="showcased-btn">POSTGRESQL</li>
+                  <li className="showcased-btn">DOCKER</li>
+                </ul>
+              </div>
+            </div>
+            <div className="flex flex-row flex-wrap gap-3 justify-around my-8">
+              <RoundButton
+                href={"#"}
+                buttonClass={"round-button"}
+                buttonText={"CODE"}
+                target="_blank"
+                rel=""
+              />
+              <RoundButton
+                buttonClass={"round-button"}
+                buttonText={"LIVE SITE"}
+                href={"https://jackolanternai.com"}
+                target="_blank"
+                rel=""
+              />
+              <RoundButton
+                buttonClass={"round-button"}
+                buttonText={"SEE MORE"}
+                target="_blank"
+                rel=""
+                href={
+                  "https://www.producthunt.com/posts/jack-o-lantern-ai/maker-invite?code=AMwAjM"
+                }
+              />
+            </div>
+          </motion.div>
+        </div>
+      </div>
+      <div className="border-t-[1px] mb-8 mt-2" />
+      <div className="portfolio-grid">
+        <div className="portfolio-container mt-2">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              transition: {
+                duration: 0.5,
+                delay: 0,
+              },
+            }}
+          >
             <TransitionLink className="" href={"/portfolio/lucha-tacos"}>
               <CldImage
                 className="showcase-card-container mt-8 xl:mb-8"

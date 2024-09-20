@@ -1,4 +1,3 @@
-import React from "react";
 import "@/app/ui/Portfolio.css";
 import PortfolioSection from "../ui/PortfolioSection";
 
