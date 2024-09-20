@@ -2,6 +2,7 @@
   "name": "portfolio-2024",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@9.11.0",
   "scripts": {
     "dev": "export PORT=3050 && next dev",
     "dev-windows": "set PORT=3050 && next dev",
