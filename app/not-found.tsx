@@ -18,7 +18,7 @@ import {
   RigidBody,
 } from "@react-three/rapier";
 import { EffectComposer, N8AO } from "@react-three/postprocessing";
-import { easing } from "maath";
+// import { easing } from "maath";
 
 const accents = ["#4060ff", "#20ffa0", "#ff4060", "#ffcc00"];
 const shuffle = (accent = 0) => [
@@ -235,9 +235,9 @@ function Pointer({ vec = new THREE.Vector3() }) {
 function Model({ children, color = "white", roughness = 0, ...props }: any) {
   const ref = useRef<any>(null);
   const { nodes, materials }: any = useGLTF("/c-transformed.glb");
-  useFrame((state, delta) => {
-    easing.dampC(ref.current.material.color, color, 0.2, delta);
-  });
+  // useFrame((state, delta) => {
+  //   easing.dampC(ref.current.material.color, color, 0.2, delta);
+  // });
   return (
     <mesh
       ref={ref}
