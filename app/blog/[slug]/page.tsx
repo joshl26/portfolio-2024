@@ -96,8 +96,8 @@ export default function Blog({ params }: { params: any }) {
   }
 
   return (
-    <main className="main-container">
-      <section className="mx-auto">
+    <main className="main-container mx-auto">
+      <section className="mx-auto px-2 ">
         <script
           type="application/ld+json"
           suppressHydrationWarning
@@ -125,7 +125,7 @@ export default function Blog({ params }: { params: any }) {
         </h1>
         <div className="flex justify-between items-center mt-2 mb-8 text-sm max-w-[650px]">
           <Suspense fallback={<p className="h-5" />}>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400">
+            <p className="text-sm text-white">
               {formatDate(post.metadata.publishedAt)}
             </p>
           </Suspense>
@@ -133,7 +133,7 @@ export default function Blog({ params }: { params: any }) {
             <Views slug={post.slug} />
           </Suspense>
         </div>
-        <article className="prose prose-quoteless prose-neutral dark:prose-invert">
+        <article className="prose prose-quoteless prose-invert w-100">
           <CustomMDX source={post.content} />
         </article>
       </section>
