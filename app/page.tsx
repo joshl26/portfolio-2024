@@ -37,67 +37,79 @@ export default function Home() {
     {
       id: "1",
       href: "/portfolio/",
+      cloudinaryPublicUrl:
+        "v1733070733/BlackRockEngineering/xhz37tcgmyu60y6p7k8s.png",
+      projectTitle: "BlackRock Engineering Services",
+    },
+    {
+      id: "2",
+      href: "/portfolio/",
+      cloudinaryPublicUrl: "v1733078445/XmasCardAi/r00nfrul6ym3ixglliiq.png",
+      projectTitle: "Xmas Card Ai",
+    },
+    {
+      id: "3",
+      href: "/portfolio/",
       cloudinaryPublicUrl: "v1726856183/JackOLanternAi/homepage_tgtubt.jpg",
       projectTitle: "Jack O'Lantern Ai",
     },
-
     {
-      id: "2",
+      id: "4",
       href: "/portfolio/lucha-tacos",
       cloudinaryPublicUrl:
         "v1718930369/PortfolioSite/lucha-tacos-screen_1_o70hjo.png",
       projectTitle: "Lucha Tacos",
     },
     {
-      id: "3",
+      id: "5",
       href: "/portfolio/resume-wrangler",
       cloudinaryPublicUrl:
         "v1713540526/PortfolioSite/Resume_Wrangler_Landing_Page_1_n2arsw.png",
       projectTitle: "Résumé Wrangler",
     },
     {
-      id: "4",
+      id: "6",
       href: "/portfolio/ecommerce/cleaner-by-design",
       cloudinaryPublicUrl:
         "v1713542395/PortfolioSite/CleanerByDesign_Landing_Page_1_npsuin.png",
       projectTitle: "CLEANER BY DESIGN",
     },
     {
-      id: "5",
+      id: "7",
       href: "/portfolio/ecommerce/beanbag-coffee-co",
       cloudinaryPublicUrl:
         "v1704379963/PortfolioSite/beanbag-coffee-2a_ocgeuz.png",
       projectTitle: "Beanbag Coffee Co.",
     },
     {
-      id: "6",
+      id: "8",
       href: "/portfolio/el-in",
       cloudinaryPublicUrl:
         "v1697384652/PortfolioSite/Laptop_apple_electronics_inventory_golden_lka0ur.png",
       projectTitle: "ELECTRONICS INVENTORY",
     },
     {
-      id: "7",
+      id: "9",
       href: "/portfolio/outdoorsy",
       cloudinaryPublicUrl:
         "v1697384652/PortfolioSite/Itab_outdoorsy_desert_horizontal_p92vrs.png",
       projectTitle: "OUTDOORSY",
     },
     {
-      id: "8",
+      id: "10",
       href: "/portfolio/pomodor",
       cloudinaryPublicUrl:
         "v1697384652/PortfolioSite/Iphone_leaves_shade_pomo_jhnhw6.png",
       projectTitle: "POMODOR TIMER",
     },
     {
-      id: "9",
+      id: "11",
       href: "/portfolio/blackrock-3d",
       cloudinaryPublicUrl: "v1688839247/PortfolioSite/blackrock_zgussj.png",
       projectTitle: "Blackrock 3D Wordpress",
     },
     {
-      id: "10",
+      id: "12",
       href: "/portfolio/nyemfg",
       cloudinaryPublicUrl: "v1716856540/PortfolioSite/Untitled_ixlgk5.png",
       projectTitle: "Nye Manufacturing",
