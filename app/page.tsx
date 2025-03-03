@@ -16,20 +16,20 @@ export default function Home() {
   const workCardData = [
     {
       id: "1",
-      href: "/portfolio/",
+      href: "https://blackrock-engineering.ca/",
       cloudinaryPublicUrl:
         "v1733070733/BlackRockEngineering/xhz37tcgmyu60y6p7k8s.png",
       projectTitle: "BlackRock Engineering Services",
     },
-    {
-      id: "2",
-      href: "/portfolio/",
-      cloudinaryPublicUrl: "v1733078445/XmasCardAi/r00nfrul6ym3ixglliiq.png",
-      projectTitle: "Xmas Card Ai",
-    },
+    // {
+    //   id: "2",
+    //   href: "/portfolio/",
+    //   cloudinaryPublicUrl: "v1733078445/XmasCardAi/r00nfrul6ym3ixglliiq.png",
+    //   projectTitle: "Xmas Card Ai",
+    // },
     {
       id: "3",
-      href: "/portfolio/",
+      href: "https://www.jackolanternai.com/",
       cloudinaryPublicUrl: "v1726856183/JackOLanternAi/homepage_tgtubt.jpg",
       projectTitle: "Jack O'Lantern Ai",
     },
