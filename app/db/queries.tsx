@@ -1,7 +1,7 @@
 "use server";
 
 // import { auth, youtube } from "@googleapis/youtube";
-import { conn } from "./postgres";
+import { getConnection } from "./postgres";
 
 import {
   unstable_cache as cache,
@@ -23,12 +23,13 @@ import {
 
 export async function getBlogViews() {
   if (!process.env.POSTGRES_DB_HOST) {
-    return [];
+    return 0;
   }
 
   noStore();
 
   try {
+    const conn = await getConnection();
     const query = `SELECT count FROM views`;
     const views = await conn.query(query);
     return views.rows.reduce(
@@ -51,6 +52,7 @@ export async function getViewsCount(): Promise<
   noStore();
 
   try {
+    const conn = await getConnection();
     const query = `SELECT slug, count FROM views`;
     const views = await conn.query(query);
     return views.rows;
@@ -100,6 +102,7 @@ export async function getGuestbookEntries() {
   noStore();
 
   try {
+    const conn = await getConnection();
     const query = `SELECT id, body, created_by, updated_at FROM guestbook ORDER BY created_at DESC LIMIT 100`;
     const guestbookEntries = await conn.query(query);
     return guestbookEntries.rows;

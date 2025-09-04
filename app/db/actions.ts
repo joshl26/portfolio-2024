@@ -1,7 +1,7 @@
 "use server";
 
 import { type Session } from "next-auth";
-import { conn } from "./postgres";
+import { getConnection } from "./postgres";
 import { revalidatePath, unstable_noStore as noStore } from "next/cache";
 
 import { options } from "../api/auth/[...nextauth]/options";
@@ -11,6 +11,7 @@ export async function increment(slug: string) {
   noStore();
 
   try {
+    const conn = await getConnection();
     const query = `INSERT INTO views (slug, count) VALUES ('${slug}', 1) ON CONFLICT (slug) DO UPDATE SET count = views.count + 1`;
     const data = await conn.query(query);
     return;
@@ -41,6 +42,8 @@ export async function saveGuestbookEntry(formData: FormData) {
   let entry = formData.get("entry")?.toString() || "";
   let body = entry.slice(0, 500);
   try {
+    const conn = await getConnection();
+
     const query = `INSERT INTO guestbook (email, body, created_by, created_at) VALUES ('${email}', '${body}', '${created_by}', NOW())`;
     const data = await conn.query(query);
     revalidatePath("/guestbook");
@@ -61,6 +64,7 @@ export async function deleteGuestbookEntries(selectedEntries: string[]) {
   let selectedEntriesAsNumbers = selectedEntries.map(Number);
   let arrayLiteral = `{${selectedEntriesAsNumbers.join(",")}}`;
   try {
+    const conn = await getConnection();
     const query = `DELETE FROM guestbook WHERE id = ANY('${arrayLiteral}'::int[])`;
     const data = await conn.query(query);
     revalidatePath("/admin");
