@@ -1,25 +1,10 @@
 "use server";
 
-// import { auth, youtube } from "@googleapis/youtube";
-import { conn } from "./postgres";
-
+import { query } from "./postgres";
 import {
   unstable_cache as cache,
   unstable_noStore as noStore,
 } from "next/cache";
-
-// let googleAuth = new auth.GoogleAuth({
-//   credentials: {
-//     client_email: process.env.GOOGLE_CLIENT_EMAIL,
-//     private_key: process.env.GOOGLE_PRIVATE_KEY,
-//   },
-//   scopes: ["https://www.googleapis.com/auth/youtube.readonly"],
-// });
-
-// let yt = youtube({
-//   version: "v3",
-//   auth: googleAuth,
-// });
 
 export async function getBlogViews(): Promise<number> {
   if (!process.env.POSTGRES_DB_HOST) {
@@ -29,8 +14,8 @@ export async function getBlogViews(): Promise<number> {
   noStore();
 
   try {
-    const query = `SELECT count FROM views`;
-    const result = await conn.query(query);
+    const queryText = `SELECT count FROM views`;
+    const result = await query(queryText);
     return result.rows.reduce(
       (acc: number, curr: any) => acc + Number(curr.count),
       0
@@ -51,46 +36,14 @@ export async function getViewsCount(): Promise<
   noStore();
 
   try {
-    const query = `SELECT slug, count FROM views`;
-    const result = await conn.query(query);
+    const queryText = `SELECT slug, count FROM views`;
+    const result = await query(queryText);
     return result.rows;
   } catch (error: any) {
     console.error("Database Error:", error);
     return [];
   }
 }
-
-// export const getLeeYouTubeSubs = cache(
-//   async () => {
-//     let response = await yt.channels.list({
-//       id: ["UCZMli3czZnd1uoc1ShTouQw"],
-//       part: ["statistics"],
-//     });
-
-//     let channel = response.data.items![0];
-//     return Number(channel?.statistics?.subscriberCount).toLocaleString();
-//   },
-//   ["leerob-youtube-subs"],
-//   {
-//     revalidate: 3600,
-//   }
-// );
-
-// export const getVercelYouTubeSubs = cache(
-//   async () => {
-//     let response = await yt.channels.list({
-//       id: ["UCLq8gNoee7oXM7MvTdjyQvA"],
-//       part: ["statistics"],
-//     });
-
-//     let channel = response.data.items![0];
-//     return Number(channel?.statistics?.subscriberCount).toLocaleString();
-//   },
-//   ["vercel-youtube-subs"],
-//   {
-//     revalidate: 3600,
-//   }
-// );
 
 export async function getGuestbookEntries(): Promise<any[]> {
   if (!process.env.POSTGRES_DB_HOST) {
@@ -100,11 +53,36 @@ export async function getGuestbookEntries(): Promise<any[]> {
   noStore();
 
   try {
-    const query = `SELECT id, body, created_by, updated_at FROM guestbook ORDER BY created_at DESC LIMIT 100`;
-    const result = await conn.query(query);
+    const queryText = `
+      SELECT id, body, created_by, created_at 
+      FROM guestbook 
+      ORDER BY created_at DESC
+    `;
+    const result = await query(queryText);
     return result.rows;
   } catch (error: any) {
     console.error("Database Error:", error);
     return [];
   }
 }
+
+// Cache expensive operations
+export const getCachedBlogViews = cache(
+  async () => {
+    return await getBlogViews();
+  },
+  ["blog-views"],
+  {
+    revalidate: 3600, // 1 hour
+  }
+);
+
+export const getCachedViewsCount = cache(
+  async () => {
+    return await getViewsCount();
+  },
+  ["views-count"],
+  {
+    revalidate: 3600, // 1 hour
+  }
+);

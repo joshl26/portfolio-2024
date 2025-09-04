@@ -1,19 +1,16 @@
 const nextConfig = {
   experimental: {
-    ppr: false,
     serverComponentsExternalPackages: ["pg"],
   },
   webpack: (config, { isServer }) => {
-    if (!isServer) {
-      // Don't resolve 'fs', 'net', 'tls', 'dns' modules on the client-side
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        net: false,
-        tls: false,
-        dns: false,
-      };
+    if (isServer) {
+      // Handle pg module properly on server side
+      config.externals.push({
+        pg: "commonjs pg",
+        "pg-native": "commonjs pg-native",
+      });
     }
+
     return config;
   },
 };
