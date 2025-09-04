@@ -1,108 +1,104 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import React, { RefObject, Suspense, useEffect, useRef } from "react";
+import React, {
+  RefObject,
+  Suspense,
+  useEffect,
+  useRef,
+  useMemo,
+  useCallback,
+  useState,
+} from "react";
 import css from "./ThreeScene.module.css";
 import * as THREE from "three";
-import { BoxGeometry, Color, MeshBasicMaterial } from "three";
+import { Color } from "three";
 import { OrbitControls } from "@react-three/drei";
-import gsap, { Power1 } from "gsap";
 
 // r150
 THREE.ColorManagement.enabled = true;
 
-//const red = new THREE.MeshLambertMaterial({ color: "darkgray" });
-// const sphere = new THREE.SphereGeometry(1, 28, 28);
-//const box = new THREE.BoxGeometry(1, 1, 1);
+// Optimized random function with memoization
+const mathRandom = (num = 5) => {
+  return -Math.random() * num + Math.random() * num;
+};
 
-//RANDOM Function
-function mathRandom(num = 5) {
-  var numValue = -Math.random() * num + Math.random() * num;
-  return numValue;
+// Pre-calculate building data interface
+interface BuildingData {
+  position: [number, number, number];
+  scale: [number, number, number];
+  matrix: THREE.Matrix4;
 }
 
-function CityScene({
-  count,
-  temp,
-  color,
-  container,
-}: {
-  count: number;
-  container: any;
-  temp: THREE.Object3D;
-  color: THREE.Color;
-}) {
-  let myMesh: any = React.useRef();
-  let myMesh2: any = React.useRef();
-  let myMesh3: any = React.useRef();
+function CityScene({ count, container }: { count: number; container: any }) {
+  const myMesh = useRef<THREE.InstancedMesh>(null);
+  const myMesh3 = useRef<THREE.Mesh>(null);
+  const [isInitialized, setIsInitialized] = useState(false);
 
-  console.log(container);
+  // Pre-calculate all building data once
+  const buildingData = useMemo<BuildingData[]>(() => {
+    const data: BuildingData[] = [];
+    const maxHeight = 4;
+    const minHeight = 1;
+    const cubeWidth = 0.8;
+    const temp = new THREE.Object3D();
 
-  useEffect(() => {
-    // Set positions
     for (let i = 0; i < count; i++) {
-      const maxHeight = 4;
-      const minHeight = 1;
-
       const angle = Math.random() * Math.PI * 2;
       const radius = 1.25 + Math.random() * 3;
       const x = Math.sin(angle) * radius;
       const z = Math.cos(angle) * radius;
 
-      let height = Math.min(
+      const height = Math.min(
         Math.max(
           Math.abs(Math.round(0.1 + Math.abs(mathRandom(8)))),
           minHeight
         ),
         maxHeight
       );
-      var cubeWidth = 0.8;
+
+      const scaleX = cubeWidth + mathRandom(1 - cubeWidth);
+      const scaleZ = cubeWidth + mathRandom(1 - cubeWidth);
+
+      // Pre-calculate matrix
       temp.position.set(x, height / 2, z);
-      temp.castShadow = true;
-      temp.receiveShadow = true;
-
-      temp.scale.y = 0.1 + Math.abs(mathRandom());
-
-      // temp.rotateY(0.1 + Math.abs(mathRandom(8)));
-      // temp.rotation.set();
-      temp.scale.set(
-        cubeWidth + mathRandom(1 - cubeWidth),
-        height,
-        cubeWidth + mathRandom(1 - cubeWidth)
-      );
+      temp.scale.set(scaleX, height, scaleZ);
       temp.updateMatrix();
-      myMesh.current.setMatrixAt(i, temp.matrix);
-      // console.log(Math.abs(Math.round(mathRandom())));
+
+      data.push({
+        position: [x, height / 2, z],
+        scale: [scaleX, height, scaleZ],
+        matrix: temp.matrix.clone(),
+      });
     }
-    // Update the instance
-    myMesh.antialiased;
+    return data;
+  }, [count]);
+
+  // Memoized colors to prevent recreation
+  const materialColor = useMemo(() => new Color(0x000000), []);
+
+  // Lazy initialization of instanced mesh
+  useEffect(() => {
+    if (!myMesh.current || isInitialized) return;
+
+    // Batch all matrix updates
+    buildingData.forEach((building, i) => {
+      myMesh.current!.setMatrixAt(i, building.matrix);
+    });
+
+    // Single update call
     myMesh.current.instanceMatrix.needsUpdate = true;
-  }, [count, temp]);
+    setIsInitialized(true);
+  }, [buildingData, isInitialized]);
 
-  // const boxColor = new Color(0xff1bbb);
-  const boxColor = new Color("darkgray");
-
+  // Optimized animation with useFrame
   useFrame(({ clock }) => {
-    const a = clock.getElapsedTime();
-    myMesh.current.rotation.y = a * 0.125;
-    // myMesh2.current.rotation.y = a * 0.0625;
-    myMesh3.current.rotation.y = a * 0.125;
-    myMesh.current.scale.y = Math.abs(Math.sin(a));
+    if (!myMesh.current || !myMesh3.current) return;
+
+    const elapsed = clock.getElapsedTime();
+    myMesh.current.rotation.y = elapsed * 0.125;
+    myMesh3.current.rotation.y = elapsed * 0.125;
+    myMesh.current.scale.y = Math.abs(Math.sin(elapsed));
   });
 
-  var setTintNum = true;
-
-  function setTintColor() {
-    if (setTintNum) {
-      setTintNum = false;
-      var setColor = 0x000000;
-    } else {
-      setTintNum = true;
-      var setColor = 0x000000;
-    }
-    // setColor = 0x000000;
-    return setColor;
-  }
-
-  //   return <mesh material={red} geometry={box} ref={myMesh} />;
   return (
     <mesh receiveShadow castShadow>
       <instancedMesh ref={myMesh} args={[undefined, undefined, count]}>
@@ -114,12 +110,9 @@ function CityScene({
           transparent={true}
           roughness={0.3}
           side={THREE.DoubleSide}
-          color={setTintColor()}
+          color={materialColor}
         />
       </instancedMesh>
-      {/* <mesh ref={myMesh2}>
-        <gridHelper args={[50, 50, 0xff0000, "gray"]} />
-      </mesh> */}
       <mesh position={[0, 0, 0]} ref={myMesh3}>
         <boxGeometry args={[200, 0, 200]} />
         <meshStandardMaterial
@@ -127,7 +120,7 @@ function CityScene({
           opacity={0.9}
           transparent={false}
           roughness={0.3}
-          color={setTintColor()}
+          color={materialColor}
           side={THREE.DoubleSide}
         />
       </mesh>
@@ -136,44 +129,82 @@ function CityScene({
 }
 
 const ThreeScene: React.FC = () => {
-  const bgColor = new Color(0xf02050);
-  const ambientColor = new Color(0x404040);
+  // Memoize expensive color and camera calculations
+  const { bgColor, ambientColor, camera } = useMemo(() => {
+    const bgColor = new Color(0xf02050);
+    const ambientColor = new Color(0x404040);
+
+    const camera = new THREE.PerspectiveCamera(15, undefined, 1, 500);
+    camera.position.set(0, 7, 14);
+    camera.rotation.set(0, 0, 0);
+
+    return { bgColor, ambientColor, camera };
+  }, []);
 
   const myContainer = useRef<HTMLDivElement>(null);
 
-  let camera = new THREE.PerspectiveCamera(15, undefined, 1, 500);
-  let [px, py, pz] = [0, 7, 14];
-  let [rx, ry, rz] = [0, 0, 0];
-  camera.position.set(px, py, pz);
-  camera.rotation.set(rx, ry, rz);
+  // Memoized lighting setup
+  const lightingProps = useMemo(
+    () => ({
+      ambientIntensity: 5,
+      spotPosition: [5, 5, 5] as [number, number, number],
+      spotRotation: [(45 * Math.PI) / 180, 0, (-45 * Math.PI) / 180] as [
+        number,
+        number,
+        number
+      ],
+      pointPosition: [0, 6, 0] as [number, number, number],
+      pointIntensity: 5,
+    }),
+    []
+  );
+
+  // Memoized canvas props
+  const canvasProps = useMemo(
+    () => ({
+      gl: { antialias: true },
+      dpr: [1, 2] as [number, number],
+      camera,
+    }),
+    [camera]
+  );
+
+  // Loading fallback component
+  const LoadingFallback = useCallback(
+    () => (
+      <mesh>
+        <boxGeometry args={[1, 1, 1]} />
+        <meshBasicMaterial color="gray" />
+      </mesh>
+    ),
+    []
+  );
 
   return (
     <div id="canvas-container" ref={myContainer} className={css.scene}>
-      <Canvas gl={{ antialias: true }} dpr={[1, 2]} camera={camera}>
+      <Canvas {...canvasProps}>
         <color attach="background" args={[bgColor.r, bgColor.g, bgColor.b]} />
-        <ambientLight color={ambientColor} intensity={5} />
+        <ambientLight
+          color={ambientColor}
+          intensity={lightingProps.ambientIntensity}
+        />
         <spotLight
           penumbra={0.1}
           color={ambientColor}
           castShadow={true}
-          position={[5, 5, 5]}
-          rotation={[(45 * Math.PI) / 180, 0, (-45 * Math.PI) / 180]}
+          position={lightingProps.spotPosition}
+          rotation={lightingProps.spotRotation}
         />
         <OrbitControls maxPolarAngle={Math.PI / 2.5} minPolarAngle={0} />
         <pointLight
           castShadow
           color={0xffffff}
-          intensity={5}
-          position={[0, 6, 0]}
+          intensity={lightingProps.pointIntensity}
+          position={lightingProps.pointPosition}
         />
         <fog attach="fog" color={bgColor} near={10} far={16} />
-        <Suspense fallback={false}>
-          <CityScene
-            container={myContainer}
-            count={50}
-            temp={new THREE.Object3D()}
-            color={new Color()}
-          />
+        <Suspense fallback={<LoadingFallback />}>
+          <CityScene container={myContainer} count={25} />
         </Suspense>
       </Canvas>
     </div>

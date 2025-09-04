@@ -1,5 +1,8 @@
 import "@/app/ui/Portfolio.css";
-import PortfolioSection from "../ui/PortfolioSection";
+import { lazy, Suspense } from "react";
+
+// Lazy load the heavy PortfolioSection component
+const PortfolioSection = lazy(() => import("../ui/PortfolioSection"));
 
 export const metadata = {
   title: "Portfolio",
@@ -16,7 +19,11 @@ const Portfolio = () => {
         <h1 className="portfolio-h1">Portfolio</h1>
       </section>
       <section className="portfolio-main-section">
-        <PortfolioSection />
+        <Suspense
+          fallback={<div className="loading-spinner">Loading portfolio...</div>}
+        >
+          <PortfolioSection />
+        </Suspense>
       </section>
     </main>
   );

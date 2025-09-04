@@ -3,6 +3,22 @@ const nextConfig = {
     serverComponentsExternalPackages: ["pg"],
     webpackBuildWorker: true, // Enable webpack build worker
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+        port: "",
+        pathname: "/**",
+      },
+    ],
+  },
   webpack: (config, { isServer, webpack }) => {
     if (isServer) {
       // Externalize pg and related modules
