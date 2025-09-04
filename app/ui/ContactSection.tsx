@@ -1,48 +1,101 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import CalendlyEmbed from "../ui/CalendlyEmbed";
 
 export default function ContactSection() {
-  const EMAIL_JS_SERVICEID: any = process.env.NEXT_PUBLIC_EMAIL_JS_SERVICEID;
-  const EMAIL_JS_TEMPLATEID: any = process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATEID;
-  const EMAIL_JS_PUBLIC_KEY: any = process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY;
+  const EMAIL_JS_SERVICEID = process.env.NEXT_PUBLIC_EMAIL_JS_SERVICEID;
+  const EMAIL_JS_TEMPLATEID = process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATEID;
+  const EMAIL_JS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY;
 
   const [emailSent, setEmailSent] = useState(false);
   const [confirmReceipt, setConfirmReceipt] = useState(false);
-  const [emailError, setEmailError] = useState(false);
+  const [emailError, setEmailError] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const form: any = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e: any) => {
-    e.preventDefault();
-    setEmailSent(true);
+  // Initialize EmailJS once when component mounts
+  useEffect(() => {
+    if (EMAIL_JS_PUBLIC_KEY) {
+      emailjs.init(EMAIL_JS_PUBLIC_KEY);
+    }
+  }, [EMAIL_JS_PUBLIC_KEY]);
 
-    emailjs
-      .sendForm(
-        EMAIL_JS_SERVICEID,
-        EMAIL_JS_TEMPLATEID,
-        form.current,
-        EMAIL_JS_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          console.log(form.current);
+  // Auto-reset form after successful submission
+  useEffect(() => {
+    if (confirmReceipt) {
+      const timer = setTimeout(() => {
+        resetForm();
+      }, 5000); // Reset after 5 seconds
 
-          console.log(result.text);
-          setConfirmReceipt(true);
-        },
-        (error) => {
-          console.log(error.text);
-          setEmailError(error.text);
-        }
-      );
+      return () => clearTimeout(timer);
+    }
+  }, [confirmReceipt]);
+
+  const resetForm = () => {
+    setEmailSent(false);
+    setConfirmReceipt(false);
+    setEmailError(null);
+    setIsLoading(false);
+    if (form.current) {
+      form.current.reset();
+    }
   };
 
+  const sendEmail = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (
+      isLoading ||
+      !form.current ||
+      !EMAIL_JS_SERVICEID ||
+      !EMAIL_JS_TEMPLATEID
+    ) {
+      return;
+    }
+
+    setIsLoading(true);
+    setEmailSent(true);
+    setEmailError(null);
+
+    try {
+      const result = await emailjs.sendForm(
+        EMAIL_JS_SERVICEID,
+        EMAIL_JS_TEMPLATEID,
+        form.current
+      );
+
+      console.log("Email sent successfully:", result.text);
+      setConfirmReceipt(true);
+    } catch (error: any) {
+      console.error("Email sending failed:", error);
+      setEmailError(error.text || "Failed to send message. Please try again.");
+      setEmailSent(false); // Allow retry
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Don't render if environment variables are missing
+  if (!EMAIL_JS_SERVICEID || !EMAIL_JS_TEMPLATEID || !EMAIL_JS_PUBLIC_KEY) {
+    console.error("EmailJS environment variables are missing");
+    return (
+      <section className="portfolio-main-section max-w-screen-xl w-full m-auto">
+        <div className="portfolio-contact-container">
+          <p>
+            Contact form is temporarily unavailable. Please contact directly via
+            email.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
   return (
-    <section className="portfolio-main-section max-w-screen-xl  w-full m-auto">
-      <div className="portfolio-contact-container ">
+    <section className="portfolio-main-section max-w-screen-xl w-full m-auto">
+      <div className="portfolio-contact-container">
         <div>
           <div>
             <div>
@@ -69,7 +122,7 @@ export default function ContactSection() {
                 onSubmit={sendEmail}
               >
                 <div className="form-container">
-                  {emailSent === false ? (
+                  {!emailSent ? (
                     <>
                       <div>
                         <div>
@@ -102,7 +155,7 @@ export default function ContactSection() {
                           <div>
                             <input
                               placeholder="Email address"
-                              autoComplete="off"
+                              autoComplete="email"
                               required
                               type="email"
                               name="email"
@@ -187,28 +240,49 @@ export default function ContactSection() {
                   <div className="spacer-small"></div>
                   <div>
                     <div className="submit-btn-col">
-                      {emailSent === false && confirmReceipt === false ? (
+                      {!emailSent && !confirmReceipt ? (
                         <button
                           className="round-button"
                           type="submit"
-                          data-sitekey="reCAPTCHA_site_key"
-                          data-callback="onSubmit"
-                          data-action="submit"
+                          disabled={isLoading}
                         >
-                          Submit Message
+                          {isLoading ? "Sending..." : "Submit Message"}
                         </button>
+                      ) : confirmReceipt ? (
+                        <div>
+                          <p className="email-confirmation">
+                            Message received! <br />
+                            Check your inbox to confirm.
+                          </p>
+                          <button
+                            type="button"
+                            className="round-button"
+                            onClick={resetForm}
+                            style={{ marginTop: "10px" }}
+                          >
+                            Send Another Message
+                          </button>
+                        </div>
                       ) : (
                         <p className="email-sent">
                           Message sent, awaiting confirmation...
                         </p>
                       )}
-                      {emailSent === true && confirmReceipt === true ? (
-                        <p className="email-confirmation">
-                          Message received! <br />
-                          Check your inbox to confirm.
-                        </p>
-                      ) : (
-                        <p className="email-confirmation">{emailError}</p>
+
+                      {emailError && (
+                        <div>
+                          <p className="email-error" style={{ color: "red" }}>
+                            {emailError}
+                          </p>
+                          <button
+                            type="button"
+                            className="round-button"
+                            onClick={resetForm}
+                            style={{ marginTop: "10px" }}
+                          >
+                            Try Again
+                          </button>
+                        </div>
                       )}
                     </div>
                   </div>
