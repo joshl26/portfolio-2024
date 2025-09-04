@@ -1,8 +1,10 @@
 "use client";
 
 import { useRef } from "react";
-import { saveGuestbookEntry } from "../db/actions";
 import { useFormStatus } from "react-dom";
+
+// Import the server action - this should work with proper next.config.js
+import { saveGuestbookEntry } from "../db/actions";
 
 export default function Form() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -17,6 +19,7 @@ export default function Form() {
           formRef.current?.reset();
         } catch (error) {
           console.error("Error saving guestbook entry:", error);
+          // You might want to show a toast notification here
         }
       }}
     >

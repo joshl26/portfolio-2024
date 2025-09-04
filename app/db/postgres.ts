@@ -1,52 +1,53 @@
-import { Pool } from "pg";
+import { Pool, PoolConfig } from "pg";
 
-let conn: Pool | null = null;
+// Use a singleton pattern to avoid webpack async dependency issues
+class DatabaseConnection {
+  private static instance: DatabaseConnection;
+  private pool: Pool | null = null;
 
-export async function getConnection(): Promise<Pool> {
-  if (!conn) {
-    conn = new Pool({
-      user: process.env.POSTGRES_DB_USERNAME,
-      password: process.env.POSTGRES_DB_PASSWORD,
-      host: process.env.POSTGRES_DB_HOST,
-      port: parseInt(process.env.POSTGRES_DB_PORT || "5432", 10),
-      database: process.env.POSTGRES_DB_DATABASE,
-      // Additional connection options for better reliability
-      max: 20, // Maximum number of clients in the pool
-      idleTimeoutMillis: 30000, // Close idle clients after 30 seconds
-      connectionTimeoutMillis: 2000, // Return an error after 2 seconds if connection could not be established
-    });
+  private constructor() {}
 
-    // Test the connection
+  public static getInstance(): DatabaseConnection {
+    if (!DatabaseConnection.instance) {
+      DatabaseConnection.instance = new DatabaseConnection();
+    }
+    return DatabaseConnection.instance;
+  }
+
+  public getPool(): Pool {
+    if (!this.pool) {
+      const config: PoolConfig = {
+        user: process.env.POSTGRES_DB_USERNAME,
+        password: process.env.POSTGRES_DB_PASSWORD,
+        host: process.env.POSTGRES_DB_HOST,
+        port: parseInt(process.env.POSTGRES_DB_PORT || "5432", 10),
+        database: process.env.POSTGRES_DB_DATABASE,
+        max: 20,
+        idleTimeoutMillis: 30000,
+        connectionTimeoutMillis: 2000,
+      };
+
+      this.pool = new Pool(config);
+    }
+
+    return this.pool;
+  }
+
+  public async testConnection(): Promise<boolean> {
     try {
-      const client = await conn.connect();
-      client.release(); // Release the test client back to the pool
-      console.log("Database connected successfully");
+      const client = await this.getPool().connect();
+      client.release();
+      return true;
     } catch (error) {
-      console.error("Database connection failed:", error);
-      conn = null; // Reset conn to null on failure
-      throw error;
+      console.error("Database connection test failed:", error);
+      return false;
     }
   }
-
-  return conn;
 }
 
-// Initialize connection on module load
-let connectionPromise: Promise<Pool> | null = null;
+// Export the connection instance
+const dbInstance = DatabaseConnection.getInstance();
+export const conn = dbInstance.getPool();
 
-export function getConnectionSync(): Pool {
-  if (!conn) {
-    throw new Error(
-      "Database connection not initialized. Call getConnection() first."
-    );
-  }
-  return conn;
-}
-
-// For immediate use without async/await
-export async function initializeConnection(): Promise<Pool> {
-  if (!connectionPromise) {
-    connectionPromise = getConnection();
-  }
-  return connectionPromise;
-}
+// Export helper function for connection testing
+export const testDatabaseConnection = () => dbInstance.testConnection();

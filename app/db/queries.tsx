@@ -1,7 +1,7 @@
 "use server";
 
 // import { auth, youtube } from "@googleapis/youtube";
-import { getConnection } from "./postgres";
+import { conn } from "./postgres";
 
 import {
   unstable_cache as cache,
@@ -21,7 +21,7 @@ import {
 //   auth: googleAuth,
 // });
 
-export async function getBlogViews() {
+export async function getBlogViews(): Promise<number> {
   if (!process.env.POSTGRES_DB_HOST) {
     return 0;
   }
@@ -29,11 +29,10 @@ export async function getBlogViews() {
   noStore();
 
   try {
-    const conn = await getConnection();
     const query = `SELECT count FROM views`;
-    const views = await conn.query(query);
-    return views.rows.reduce(
-      (acc: any, curr: any) => acc + Number(curr.count),
+    const result = await conn.query(query);
+    return result.rows.reduce(
+      (acc: number, curr: any) => acc + Number(curr.count),
       0
     );
   } catch (error: any) {
@@ -52,10 +51,9 @@ export async function getViewsCount(): Promise<
   noStore();
 
   try {
-    const conn = await getConnection();
     const query = `SELECT slug, count FROM views`;
-    const views = await conn.query(query);
-    return views.rows;
+    const result = await conn.query(query);
+    return result.rows;
   } catch (error: any) {
     console.error("Database Error:", error);
     return [];
@@ -94,7 +92,7 @@ export async function getViewsCount(): Promise<
 //   }
 // );
 
-export async function getGuestbookEntries() {
+export async function getGuestbookEntries(): Promise<any[]> {
   if (!process.env.POSTGRES_DB_HOST) {
     return [];
   }
@@ -102,10 +100,9 @@ export async function getGuestbookEntries() {
   noStore();
 
   try {
-    const conn = await getConnection();
     const query = `SELECT id, body, created_by, updated_at FROM guestbook ORDER BY created_at DESC LIMIT 100`;
-    const guestbookEntries = await conn.query(query);
-    return guestbookEntries.rows;
+    const result = await conn.query(query);
+    return result.rows;
   } catch (error: any) {
     console.error("Database Error:", error);
     return [];
