@@ -5,8 +5,18 @@ jobs:
   publish_image:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: joshlehmandev
+          password: ${{ secrets.DOCKER_HUB_TOKEN }}
+
       - name: Make envfile
         uses: SpicyPizza/create-envfile@v2.0
         with:
@@ -29,10 +39,13 @@ jobs:
           file_name: .env
           fail_on_empty: false
           sort_keys: false
-      - name: build
-        run: |
-          docker build . -t joshlehmandev/portfolio-2024:latest
-      - name: publish
-        run: |
-          docker login -u joshlehmandev -p ${{ secrets.DOCKER_HUB_TOKEN }}
-          docker push joshlehmandev/portfolio-2024:latest
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: joshlehmandev/portfolio-2024:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          platforms: linux/amd64,linux/arm64
