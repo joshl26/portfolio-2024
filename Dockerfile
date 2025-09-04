@@ -1,14 +1,24 @@
 FROM node:18-alpine
 
-RUN corepack enable
-RUN corepack prepare pnpm@9.11.0 --activate
-
 WORKDIR /app
 
+# Copy package files
 COPY package*.json ./
-RUN pnpm install
+
+# Install dependencies with npm
+RUN npm ci --only=production
+
+# Copy source code
 COPY . .
-RUN pnpm build
+
+# Build the application
+RUN npm run build
+
+# Expose port
 EXPOSE 3050
-RUN pnpm exec next telemetry disable
-CMD pnpm start
+
+# Disable Next.js telemetry
+RUN npx next telemetry disable
+
+# Start the application
+CMD ["npm", "start"]

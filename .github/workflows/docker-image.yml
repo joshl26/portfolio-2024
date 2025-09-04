@@ -18,7 +18,7 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
       - name: Make envfile
-        uses: SpicyPizza/create-envfile@v2.0
+        uses: SpicyPizza/create-envfile@v1.3
         with:
           envkey_NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
           envkey_NEXT_PUBLIC_EMAIL_JS_SERVICEID: ${{ secrets.NEXT_PUBLIC_EMAIL_JS_SERVICEID }}
@@ -38,7 +38,6 @@ jobs:
           envkey_DEPLOYMENT_URL: ${{ secrets.DEPLOYMENT_URL }}
           file_name: .env
           fail_on_empty: false
-          sort_keys: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
