@@ -12,8 +12,12 @@ export default function Form() {
       className="relative max-w-[500px]"
       ref={formRef}
       action={async (formData) => {
-        await saveGuestbookEntry(formData);
-        formRef.current?.reset();
+        try {
+          await saveGuestbookEntry(formData);
+          formRef.current?.reset();
+        } catch (error) {
+          console.error("Error saving guestbook entry:", error);
+        }
       }}
     >
       <input

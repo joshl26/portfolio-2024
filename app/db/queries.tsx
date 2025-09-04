@@ -31,11 +31,13 @@ export async function getBlogViews() {
   try {
     const query = `SELECT count FROM views`;
     const views = await conn.query(query);
-    return views.reduce((acc: any, curr: any) => acc + Number(curr.count), 0);
+    return views.rows.reduce(
+      (acc: any, curr: any) => acc + Number(curr.count),
+      0
+    );
   } catch (error: any) {
     console.error("Database Error:", error);
-    // throw new Error("Failed to fetch resume templates.");
-    return;
+    return 0;
   }
 }
 
@@ -54,8 +56,6 @@ export async function getViewsCount(): Promise<
     return views.rows;
   } catch (error: any) {
     console.error("Database Error:", error);
-    // throw new Error("Failed to fetch resume templates.");
-    // return;
     return [];
   }
 }
@@ -105,7 +105,6 @@ export async function getGuestbookEntries() {
     return guestbookEntries.rows;
   } catch (error: any) {
     console.error("Database Error:", error);
-    // throw new Error("Failed to fetch resume templates.");
-    return;
+    return [];
   }
 }
