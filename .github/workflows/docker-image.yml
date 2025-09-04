@@ -40,7 +40,7 @@ jobs:
           fail_on_empty: false
           sort_keys: false
 
-      # Optional: Add Node.js setup for better caching
+      # Optional: Add Node.js setup for better cachings
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
