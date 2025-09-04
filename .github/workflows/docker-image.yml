@@ -40,12 +40,17 @@ jobs:
           fail_on_empty: false
           sort_keys: false
 
-      # Optional: Add Node.js setup for better caching
+      # Setup pnpm instead of npm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.11.0
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "18"
-          cache: "npm"
+          cache: "pnpm"
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
@@ -58,5 +63,3 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           platforms: linux/amd64
-          build-args: |
-            BUILDKIT_INLINE_CACHE=1
