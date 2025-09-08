@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import Form from "./form";
 import { options } from "../api/auth/[...nextauth]/options";
 import { getServerSession } from "next-auth/next";
+import "../ui/Portfolio.css";
 
 export const metadata = {
   title: "Guestbook",
