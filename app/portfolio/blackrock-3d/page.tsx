@@ -1,5 +1,4 @@
 import React from "react";
-import "@/app/ui/Portfolio.css";
 import BlackRock3DSection from "@/app/ui/BlackRock3DSection";
 
 export const metadata = {
@@ -7,7 +6,7 @@ export const metadata = {
   description:
     "BlackRock3D is a wordpress site that was designed by Joshua Lehman in 2018 to showcase his skills in Engineering. This turned out to be the final catalyst in making me want to switch careers into software engineering.",
   alternates: {
-    canonical: `/portfolio/blackrock-3d`,
+    canonical: "/portfolio/blackrock-3d/",
   },
 };
 

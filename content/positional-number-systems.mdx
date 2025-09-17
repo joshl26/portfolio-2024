@@ -1,139 +1,217 @@
 ---
 title: "Positional Numbering Systems"
 publishedAt: "2024-04-06"
-summary: "Notes on the use of positional numbering systems in CS."
+summary: "A comprehensive guide to understanding positional numbering systems and their crucial role in computer science."
 imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/af/Abacus_6.png"
+tags: ["computer-science", "mathematics", "binary", "hexadecimal", "fundamentals"]
 ---
 
-# Use of Positional Numbering Systems in Computer Science
+# Positional Numbering Systems in Computer Science
 
-- [General Formula](#general-formula)
-- [Binary (Base 2)](#binary-numbers-base-2)
-- [Decimal (Base 10)](#decimal-numbers-base-10)
-- [Hexadecimal (Base 16)](#hexadecimal-numbers-base-16)
+Understanding different numbering systems is fundamental to computer science. From the binary code that runs our processors to the hexadecimal shortcuts that make memory addresses readable, these systems form the mathematical foundation of computing.
+
+## Table of Contents
+
+- [What Are Positional Numbering Systems?](#what-are-positional-numbering-systems)
+- [The General Formula](#the-general-formula)
+- [Binary (Base 2)](#binary-base-2)
+- [Decimal (Base 10)](#decimal-base-10)
+- [Hexadecimal (Base 16)](#hexadecimal-base-16)
+- [Converting Between Systems](#converting-between-systems)
+- [Practical Applications](#practical-applications)
 
 ![Positional Numeral System](https://upload.wikimedia.org/wikipedia/commons/4/4c/Decimal_digit.png)
 
-## How do we define a positional numeral system?
+## What Are Positional Numbering Systems?
 
-In a base b numeral system, b symbols represent the first b natural numbers, 
-including zero. The value of each symbol is determined by its position, 
-with the last symbol having its own value, and each symbol to the left being 
-multiplied by b.
+A **positional numeral system** is a method of representing numbers where the value of each digit depends on both the digit itself and its position within the number. In a base-*b* system:
 
-## General Formula
+- We use exactly *b* different symbols (digits)
+- Each position represents a power of the base
+- The rightmost position has the lowest power (usually b⁰ = 1)
+- Each position to the left represents the next higher power
 
-In general, if b is the base, one writes a number in the numeral system of base
-b by expressing it in the form:
+This elegant system allows us to represent any number using a finite set of symbols, making it perfect for digital computation.
 
-aⁿbⁿ + aⁿ - 1bⁿ - 1 + aⁿ - 2bⁿ - 2 + ... + a⁰b⁰
+## The General Formula
 
-And then writing the enumerated digits aⁿaⁿ - 1aⁿ - 2 ... a⁰ in descending order.
+For any base *b*, a number can be expressed as:
 
-The digits are natural numbers between 0 and b - 1, inclusive.
+```
+aₙ×bⁿ + aₙ₋₁×bⁿ⁻¹ + aₙ₋₂×bⁿ⁻² + ... + a₁×b¹ + a₀×b⁰
+```
 
-## Binary Numbers (Base 2)
+Where:
+- **b** is the base of the numeral system
+- **aᵢ** are the digits (0 ≤ aᵢ < b)
+- **n** is the highest power (position of the leftmost digit)
 
-![Positional Numeral System](https://upload.wikimedia.org/wikipedia/commons/7/75/Binary_counter.gif)
+The number is written as the sequence of digits: `aₙaₙ₋₁aₙ₋₂...a₁a₀`
 
-Binary numbers are expressed in the base-2 numeral system using only 
-"0" and "1". Each digit is called a bit. This system is used by modern 
-computers for its simplicity and noise immunity in digital electronic 
-circuitry. As computer scientists, we should have a solid understanding
-that this is the numbering system which computer hardware (i.e. RAM memory) 
-uses under the hood, at the root level. You can think of it like this, 
-an electrical switch (aka a transistor) can only ever be ON or OFF, 
-or in other words 1 or 0.
+## Binary (Base 2)
 
-### Example
+![Binary Counter](https://upload.wikimedia.org/wikipedia/commons/7/75/Binary_counter.gif)
 
-<Callout emoji="💡">
+Binary is the fundamental language of computers. Using only two symbols (0 and 1), it perfectly matches the on/off states of electronic switches (transistors) that make up computer hardware.
 
-In the binary numbering system the number 1234 can be represented as
+### Key Characteristics
+- **Base**: 2
+- **Digits**: 0, 1
+- **Each digit**: Called a "bit" (binary digit)
+- **Why computers use it**: Electrical circuits naturally have two states - on (1) or off (0)
 
-<br/>
+### Example: Converting 1234 to Binary
 
-1 0 0 1 1 0 1 0 0 1
+Let's break down how 1234₁₀ becomes 10011010010₂:
 
-<br/>
+<Callout emoji="🔢">
+**Binary representation of 1234:**
 
-(1x2¹⁰) + (0x2⁹) + (0x2⁸) + (1x2⁷) + (1x2⁶) + (0x2⁵) + (1x2⁴) + (0x2³) + (0x2²) + (1x2¹)
+```
+1 0 0 1 1 0 1 0 0 1 0
+```
 
-<br/>
-
-1024 + 0 + 0 + 128 + 64 + 0 + 16 + 0 + 0 + 2 = 1234
-
-<br/>
-
-Where 2⁰ = 1.
-
+**Calculation:**
+- 1×2¹⁰ + 0×2⁹ + 0×2⁸ + 1×2⁷ + 1×2⁶ + 0×2⁵ + 1×2⁴ + 0×2³ + 0×2² + 1×2¹ + 0×2⁰
+- = 1024 + 0 + 0 + 128 + 64 + 0 + 16 + 0 + 0 + 2 + 0
+- = **1234₁₀**
 </Callout>
 
-## Decimal Numbers (Base 10)
+### Powers of 2 (Quick Reference)
+| Power | Value | Power | Value |
+|-------|-------|-------|-------|
+| 2⁰    | 1     | 2⁸    | 256   |
+| 2¹    | 2     | 2⁹    | 512   |
+| 2²    | 4     | 2¹⁰   | 1024  |
+| 2³    | 8     | 2¹¹   | 2048  |
+| 2⁴    | 16    | 2¹²   | 4096  |
+| 2⁵    | 32    | 2¹³   | 8192  |
+| 2⁶    | 64    | 2¹⁴   | 16384 |
+| 2⁷    | 128   | 2¹⁵   | 32768 |
 
-The decimal numeral system, which is also known as the base-ten 
-positional numeral system or denary, is the most commonly used 
-system for representing both integer and non-integer numbers. 
-It is an expansion of the Hindu-Arabic numeral system to include 
-decimal fractions. The notation used for numbers in the decimal 
-system is called decimal notation.
+## Decimal (Base 10)
 
-### Example
+The decimal system is our everyday counting system, likely developed because humans have ten fingers. It uses ten distinct symbols and is the most intuitive system for human calculation.
 
-<Callout emoji="💡">
+### Key Characteristics
+- **Base**: 10
+- **Digits**: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+- **Origin**: Hindu-Arabic numeral system
+- **Usage**: Universal standard for human mathematics
 
-In the decimal system the number 1234 is represented as:
+### Example: Understanding 1234 in Decimal
 
-<br/>
+<Callout emoji="🔢">
+**Decimal representation of 1234:**
 
-(1x10³) + (2x10²) + (3x10¹) + (4x10⁰)
+```
+Position:  3    2    1    0
+Digit:     1    2    3    4
+Power:    10³  10²  10¹  10⁰
+Value:   1000  100   30    4
+```
 
-<br/>
-
-Where 10⁰ = 1.
-
+**Calculation:**
+- 1×10³ + 2×10² + 3×10¹ + 4×10⁰
+- = 1000 + 200 + 30 + 4
+- = **1234₁₀**
 </Callout>
 
-## Hexadecimal Numbers (Base 16)
+## Hexadecimal (Base 16)
 
-The hexadecimal numeral system is a method of representing numbers using a base 
-of sixteen, commonly used in mathematics and computing. Unlike the decimal system, 
-which uses ten symbols to represent values from zero to nine, hexadecimal uses 
-sixteen symbols, including "0" to "9" for values zero to nine, and "A" to "F" 
-(or "a" to "f") for values ten to fifteen.
+Hexadecimal provides a compact way to represent binary data. Since 16 = 2⁴, each hexadecimal digit corresponds exactly to 4 binary digits, making conversion between hex and binary straightforward.
 
-### Example
+### Key Characteristics
+- **Base**: 16
+- **Digits**: 0-9, A-F (where A=10, B=11, C=12, D=13, E=14, F=15)
+- **Usage**: Memory addresses, color codes, debugging, assembly language
+- **Advantage**: More compact than binary, easier to convert than decimal
 
-<Callout emoji="💡">
+### Hexadecimal Digit Values
+| Hex | Decimal | Binary |
+|-----|---------|--------|
+| 0   | 0       | 0000   |
+| 1   | 1       | 0001   |
+| 2   | 2       | 0010   |
+| 3   | 3       | 0011   |
+| 4   | 4       | 0100   |
+| 5   | 5       | 0101   |
+| 6   | 6       | 0110   |
+| 7   | 7       | 0111   |
+| 8   | 8       | 1000   |
+| 9   | 9       | 1001   |
+| A   | 10      | 1010   |
+| B   | 11      | 1011   |
+| C   | 12      | 1100   |
+| D   | 13      | 1101   |
+| E   | 14      | 1110   |
+| F   | 15      | 1111   |
 
-In the hexadecimal system the number 1234 is represented as:
+### Example: Converting 1234 to Hexadecimal
 
-<br/>
+<Callout emoji="🔢">
+**Hexadecimal representation of 1234:**
 
+```
 4 D 2
+```
 
-<br/>
+**Calculation:**
+- 4×16² + D×16¹ + 2×16⁰
+- = 4×256 + 13×16 + 2×1
+- = 1024 + 208 + 2
+- = **1234₁₀**
 
-(4x16²) + (13x16¹) + (2x16⁰)
-
-<br/>
-
-1024 + 208 + 2 = 1234
-
-<br/>
-
-Where 16⁰ = 1.
-
+**Note**: D represents 13 in hexadecimal
 </Callout>
 
-## Where do we go from here?
+## Converting Between Systems
 
-In a future blog I may discuss how these numbering systems can be 
-utilized by programmers in computer science.
+### Quick Conversion Methods
 
-Thanks for reading!
+**Binary ↔ Hexadecimal (Easy!)**
+- Group binary digits in sets of 4 (from right to left)
+- Convert each group to its hex equivalent
+- Example: `10011010010₂ = 0100 1101 0010₂ = 4D2₁₆`
+
+**Decimal to Any Base (Division Method)**
+1. Divide the decimal number by the target base
+2. Record the remainder
+3. Divide the quotient by the base again
+4. Repeat until quotient is 0
+5. Read remainders from bottom to top
+
+**Any Base to Decimal (Multiplication Method)**
+- Use the general formula: multiply each digit by its position's power and sum
+
+## Practical Applications
+
+### In Programming
+- **Memory addresses**: Often displayed in hexadecimal (e.g., `0x7FFF`)
+- **Bitwise operations**: Require understanding of binary representation
+- **Color codes**: CSS colors use hex (e.g., `#FF5733`)
+- **Debugging**: Assembly code and memory dumps use hex
+
+### In Computer Systems
+- **Data storage**: Everything is stored in binary at the hardware level
+- **Network protocols**: IP addresses, MAC addresses use different bases
+- **Cryptography**: Hash functions often output in hexadecimal
+- **File formats**: Binary file headers, magic numbers
+
+<Callout emoji="💡" type="tip">
+**Pro Tip**: Practice converting small numbers (1-255) between binary, decimal, and hexadecimal. This range covers one byte and appears frequently in programming!
+</Callout>
+
+## Key Takeaways
+
+1. **Positional systems** use place value to represent numbers efficiently
+2. **Binary** is the foundation of all digital computing
+3. **Hexadecimal** provides a human-friendly way to work with binary data
+4. **Understanding these systems** is crucial for low-level programming, debugging, and computer science theory
+
+Mastering these numbering systems will deepen your understanding of how computers work and make you a more effective programmer. Whether you're debugging memory issues, working with bitwise operations, or simply trying to understand computer architecture, these fundamentals will serve you well.
 
 ---
 
-<br/>
+*Ready to dive deeper? In future posts, we'll explore practical applications like bitwise operations, data encoding, and how these systems enable everything from graphics programming to network protocols.*
 

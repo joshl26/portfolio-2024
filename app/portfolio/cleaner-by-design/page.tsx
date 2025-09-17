@@ -1,5 +1,4 @@
 import React from "react";
-import "@/app/ui/Portfolio.css";
 import CleanerByDesignSection from "@/app/ui/CleanerByDesignSection";
 
 export const metadata = {
@@ -7,7 +6,7 @@ export const metadata = {
   description:
     "CleanerByDesign is an e-commerce web application designed to provide a seamless online shopping experience.",
   alternates: {
-    canonical: `/portfolio/ecommerce/cleaner-by-design`,
+    canonical: "/portfolio/ecommerce/cleaner-by-design/",
   },
 };
 

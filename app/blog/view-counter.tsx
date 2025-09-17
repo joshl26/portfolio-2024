@@ -1,6 +1,6 @@
 import { memo, useMemo } from "react";
 
-interface ViewData {
+export interface ViewData {
   slug: string;
   count: number;
 }

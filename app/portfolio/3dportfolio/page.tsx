@@ -1,5 +1,4 @@
 import React from "react";
-import "@/app/ui/Portfolio.css";
 import ThreeDPortfolioSection from "@/app/ui/ThreeDPortfolioSection";
 
 export const metadata = {

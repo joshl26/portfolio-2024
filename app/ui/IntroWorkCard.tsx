@@ -1,10 +1,15 @@
 import { CldImage } from "next-cloudinary";
-import Link from "next/link";
 import React from "react";
 import { FaArrowCircleUp } from "react-icons/fa";
 import { TransitionLink } from "../utils/TransitionLink";
 
-const IntroWorkCard = ({ workCard }: { workCard: any }) => {
+const IntroWorkCard = ({
+  workCard,
+  priority,
+}: {
+  workCard: any;
+  priority: any;
+}) => {
   return (
     <div className="intro-container">
       <TransitionLink
@@ -12,12 +17,13 @@ const IntroWorkCard = ({ workCard }: { workCard: any }) => {
         href={workCard.href}
       >
         <CldImage
+          src={workCard.cloudinaryPublicUrl}
+          alt={workCard.alt || `${workCard.projectTitle} project screenshot`}
+          priority={priority}
           className="showcase-card-container"
-          alt="resume wrangler hero"
           width="1000"
           height="1000"
           sizes="100vw"
-          src={workCard.cloudinaryPublicUrl}
           placeholder="blur"
           blurDataURL={workCard.cloudinaryPublicUrl}
         />

@@ -1,12 +1,11 @@
 import React from "react";
-import "@/app/ui/Portfolio.css";
 import OutdoorsySection from "@/app/ui/OutdoorsySection";
 
 export const metadata = {
   title: "Outdoorsy",
   description: "An modern outdoors enthusiast social platform.",
   alternates: {
-    canonical: `/portfolio/outdoorsy`,
+    canonical: "/portfolio/outdoorsy/",
   },
 };
 

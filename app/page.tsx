@@ -1,97 +1,129 @@
-"use client";
+// app/page.tsx (Server Component)
+import Home from "./components/Home/Home"; // Adjust path to your Home component
+import type { Metadata } from "next";
 
-import { FaArrowCircleUp } from "react-icons/fa";
-import ThreeScene from "./ui/ThreeScene";
-import IntroWorkCard from "./ui/IntroWorkCard";
-import { TransitionLink } from "./utils/TransitionLink";
-import "@/app/Home.css";
+export const metadata: Metadata = {
+  title: "Portfolio | Full-Stack Software Developer",
+  description:
+    "Experienced full-stack software developer specializing in React, Next.js, and modern web technologies. Creating pragmatic and thoughtful digital solutions since 2018.",
+  keywords: [
+    "full stack developer",
+    "software engineer",
+    "React developer",
+    "Next.js developer",
+    "JavaScript developer",
+    "TypeScript developer",
+    "web development",
+    "portfolio",
+  ],
+  authors: [{ name: "Joshua Lehman" }],
+  creator: "Joshua Lehman",
+  publisher: "Joshua Lehman",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://joshlehman.ca",
+    title: "Portfolio | Full-Stack Software Developer",
+    description:
+      "Experienced full-stack software developer specializing in React, Next.js, and modern web technologies.",
+    siteName: "Joshua Lehman - Portfolio",
+    images: [
+      {
+        url: "https://joshlehman.ca/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Full-Stack Software Developer Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Portfolio | Full-Stack Software Developer",
+    description:
+      "Experienced full-stack software developer specializing in React, Next.js, and modern web technologies.",
+    creator: "@yourhandle",
+    images: ["https://joshlehman.ca/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://joshlehman.ca",
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
+};
 
-console.log("Thanks for visiting my portfolio site!");
-console.log(
-  "You can find me on Linked: https://www.linkedin.com/in/joshrlehman/"
-);
-console.log("Or contact me by email here: joshlehman.dev@gmail.com");
+// Generate structured data for enhanced SEO
+function generateStructuredData() {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://joshlehman.ca/#person",
+        name: "Joshua Lehman",
+        jobTitle: "Full-Stack Software Developer",
+        description:
+          "Experienced full-stack software developer specializing in React, Next.js, and modern web technologies. Creating pragmatic and thoughtful digital solutions since 2018.",
+        url: "https://joshlehman.ca",
+        image: {
+          "@type": "ImageObject",
+          url: "https://joshlehman.ca/profile-image.jpg",
+          width: 400,
+          height: 400,
+        },
+        sameAs: [
+          "https://linkedin.com/in/yourprofile",
+          "https://github.com/joshl26",
+        ],
+        worksFor: {
+          "@type": "Organization",
+          name: "Freelance Software Developer",
+        },
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://joshlehman.ca/#website",
+        url: "https://joshlehman.ca",
+        name: "Joshua Lehman - Portfolio",
+        description:
+          "Portfolio website showcasing full-stack software development projects and expertise",
+        publisher: {
+          "@id": "https://joshlehman.ca/#person",
+        },
+      },
+    ],
+  };
+}
 
-export default function Home() {
-  const initialWorkCards = [
-    {
-      id: "1",
-      href: "https://blackrock-engineering.ca/",
-      cloudinaryPublicUrl:
-        "v1733070733/BlackRockEngineering/xhz37tcgmyu60y6p7k8s.png",
-      projectTitle: "BlackRock Engineering Services",
-    },
-    {
-      id: "3",
-      href: "https://www.jackolanternai.com/",
-      cloudinaryPublicUrl: "v1726856183/JackOLanternAi/homepage_tgtubt.jpg",
-      projectTitle: "Jack O'Lantern Ai",
-    },
-    {
-      id: "4",
-      href: "/portfolio/lucha-tacos",
-      cloudinaryPublicUrl:
-        "v1718930369/PortfolioSite/lucha-tacos-screen_1_o70hjo.png",
-      projectTitle: "Lucha Tacos",
-    },
-  ];
+// Optimize for static generation and improve first load JS
+export const dynamic = "force-static";
+export const revalidate = 3600; // Revalidate at most once per hour
+
+export default function Page() {
+  const structuredData = generateStructuredData();
 
   return (
-    <main>
-      <ThreeScene />
-      <section className="title-container">
-        <div className="flex flex-col max-w-screen-xl m-auto">
-          <div className="flex flex-row flex-wrap ">
-            <div className="flex flex-col">
-              <div className="flex flex-col md:flex-row md:justify-around flex-wrap m-auto">
-                <div className="flex flex-col pt-1">
-                  <h3 className="title-accent m-auto">CREATING</h3>
-                </div>
-                <div className="flex md:flex-row md:justify-around flex-wrap">
-                  <h3 className="title-main px-6 m-auto">PRAGMATIC</h3>
-                </div>
-                <div className="flex flex-col pt-1">
-                  <h3 className="title-accent m-auto">&</h3>
-                </div>
-              </div>
-              <div className="flex flex-col md:flex-row md:justify-around flex-wrap">
-                <div className="flex flex-col">
-                  <h3 className="title-main px-6">THOUGHTFUL</h3>
-                </div>
-                <div className="flex flex-col pt-1">
-                  <h3 className="title-accent m-auto">SOFTWARE</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-row ">
-            <h3 className="title-year m-auto"> - CIRCA 2018 - </h3>
-          </div>
-        </div>
-      </section>
-      <section className="showcased-work">
-        <div className="max-w-screen-xl m-auto">
-          <TransitionLink
-            className="nav-link hover:scale-95 hover:text-gray-800 transition-transform text-gray-800 duration-300 cursor-pointer"
-            href={"/portfolio"}
-          >
-            <div className="spacer-small" />
-            <div className="flex flex-row justify-between px-4 items-center h-full mt-1 mb-3">
-              <div>
-                <h3 className="showcased-h2">RECENT SHOWCASED WORK</h3>
-              </div>
-              <div className="text-right">
-                <FaArrowCircleUp className="showcased-work-link" />
-              </div>
-            </div>
-          </TransitionLink>
-          <div className="intro-grid">
-            {initialWorkCards.map((workCard) => (
-              <IntroWorkCard key={workCard.id} workCard={workCard} />
-            ))}
-          </div>
-        </div>
-      </section>
-    </main>
+    <>
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        suppressHydrationWarning
+      />
+
+      {/* Your Home component */}
+      <Home />
+    </>
   );
 }

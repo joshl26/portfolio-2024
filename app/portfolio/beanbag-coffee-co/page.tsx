@@ -1,5 +1,4 @@
 import React from "react";
-import "@/app/ui/Portfolio.css";
 import BeanbagCoffeeSection from "@/app/ui/BeanbagCoffeeSection";
 
 export const metadata = {
@@ -7,7 +6,7 @@ export const metadata = {
   description:
     "The Beanbag Coffee Co. e-commerce project is a fully functional online store.",
   alternates: {
-    canonical: `/portfolio/ecommerce/beanbag-coffee-co`,
+    canonical: "/portfolio/ecommerce/beanbag-coffee-co/",
   },
 };
 

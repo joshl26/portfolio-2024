@@ -1,310 +1,320 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import "../ui/Portfolio.css";
+import type { Metadata } from "next";
+import Link from "next/link";
+import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 
-export const metadata = {
-  title: "About",
-  description: "A little about myself.",
+export const metadata: Metadata = {
+  title:
+    "About | Blackrock Design - Full Stack Developer & Engineering Solutions",
+  description:
+    "Learn about our 20+ years of experience in mechanical engineering, robotics, software development, and full-stack web development. Specializing in React, NextJS, TypeScript, AWS, and industrial IoT solutions.",
+  keywords: [
+    "full stack developer",
+    "mechanical engineer",
+    "robotics engineer",
+    "React developer",
+    "NextJS developer",
+    "TypeScript",
+    "AWS",
+    "industrial IoT",
+    "software engineering",
+    "web development",
+  ],
+  authors: [{ name: "Blackrock Design" }],
+  creator: "Blackrock Design",
+  publisher: "Blackrock Design",
+  openGraph: {
+    title:
+      "About | Blackrock Design - Full Stack Developer & Engineering Solutions",
+    description:
+      "Experienced full-stack developer and mechanical engineer with 20+ years in software development, robotics, and industrial automation.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Blackrock Design",
+    images: [
+      {
+        url: "/og-about.png",
+        width: 1200,
+        height: 630,
+        alt: "Blackrock Design About",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "About | Blackrock Design - Full Stack Developer & Engineering Solutions",
+    description:
+      "20+ years experience in mechanical engineering, robotics, and full-stack web development.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   alternates: {
-    canonical: `/about`,
+    canonical: "/about/",
   },
 };
 
 const About = () => {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "About", url: "/about/" },
+  ];
+
   return (
-    <main className="max-w-screen-xl m-auto px-4 xl:px-0">
-      <section className="flex flex-row  h-full w-full min-h-[85vh]">
-        <div className="m-auto">
-          <h1 className="flex portfolio-h1 h-full w-full  items-center ">
+    <main className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 relative overflow-hidden">
+      {/* Decorative background orbs */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="hidden lg:block absolute -top-28 -left-28 w-96 h-96 rounded-full bg-amber-600/6 blur-3xl transform rotate-45" />
+        <div className="hidden lg:block absolute -bottom-28 -right-28 w-96 h-96 rounded-full bg-amber-400/6 blur-3xl transform -rotate-12" />
+      </div>
+
+      <div className="relative z-10 max-w-screen-xl mx-auto px-6 lg:px-8 py-12">
+        {/* Structured data for Person (JSON-LD) */}
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Blackrock Design",
+              url: "https://blackrock.design/",
+              sameAs: ["https://github.com/", "https://www.linkedin.com/"],
+              jobTitle: "Full Stack Developer / Mechanical Engineer",
+              description:
+                "Experienced full-stack developer and mechanical engineer with 20+ years in software development, robotics, and industrial automation.",
+            }),
+          }}
+        />
+
+        {/* Breadcrumb */}
+        <div className="pt-4">
+          <Breadcrumb items={breadcrumbItems} />
+        </div>
+
+        {/* HERO - main title now matches Blog styling */}
+        <section className="flex flex-col items-center text-center min-h-[56vh] justify-center py-10">
+          <h1
+            className="portfolio-h1 bg-gradient-to-r from-white via-amber-200 to-yellow-200 
+                        bg-clip-text text-transparent mb-8 tracking-tight
+                        drop-shadow-2xl text-6xl md:text-7xl lg:text-8xl font-black"
+          >
             ABOUT
           </h1>
-        </div>
-      </section>
-      <section className="portfolio-main-section py-3">
-        <div className="">
-          <p className="portfolio-p">
+
+          <div className="mt-4 w-28 h-1 rounded-full bg-gradient-to-r from-amber-300 to-yellow-500" />
+
+          <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl">
+            Experienced in mechanical engineering, robotics, embedded systems,
+            and full-stack web development. I design and build industrial IoT
+            solutions, cloud-backed web apps, and reliable automation systems —
+            focused on pragmatic, maintainable engineering.
+          </p>
+
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+            <span className="inline-flex items-center px-4 py-2 rounded-full bg-gray-800/60 border border-amber-500/20 text-amber-300 font-medium">
+              Full‑Stack & Embedded
+            </span>
+            <span className="inline-flex items-center px-4 py-2 rounded-full bg-gray-800/50 border border-gray-700 text-gray-200">
+              Industrial IoT
+            </span>
+          </div>
+        </section>
+
+        {/* INTRO */}
+        <section className="py-10 max-w-4xl mx-auto prose prose-invert text-gray-300">
+          <p>
             With two decades of experience in mechanical engineering, robotics,
-            software engineering and full stack web development. I have a proven
-            track record of success as a versatile and creative problem-solver
-            who can deliver innovative digital solutions for various industries
-            and domains. I have multiple certifications in mechanical
-            engineering, software development, robotics engineering and embedded
-            electronics.
+            software engineering and full-stack web development, I bring a
+            practical and multidisciplinary approach to complex problems. I am
+            certified in areas spanning mechanical engineering, robotics, and
+            embedded systems.
           </p>
-        </div>
-        <div className="">
-          <p className="portfolio-p ">
-            Currently, I am working as the Owner/Operator at my company
-            Blackrock Design. Where I design, develop and maintain web
-            applications using some of the latest technologies including:
-            NextJS, React, CSSModules, Tailwind, TypeScript, PostgreSQL, MongoDB
-            and AWS just to name a few.
+
+          <p>
+            As the Owner/Operator of Blackrock Design, I build and maintain web
+            applications using modern stacks including Next.js, React,
+            TypeScript, Tailwind CSS, PostgreSQL, MongoDB, and AWS. I also
+            prototype embedded solutions with ESP32/ESP8266 and C++.
           </p>
-          <p className="portfolio-p">
-            I enjoy meeting and collaborating with new people who also love to
-            design and implement user-friendly and functional interfaces,
-            systems and devices that meet or exceed the needs and expectations
-            of our clients.
+
+          <p>
+            I enjoy collaborating with clients and teams to deliver user-focused
+            interfaces, reliable systems, and maintainable software. My work
+            spans enterprise web apps, industrial automation, and
+            research-oriented projects such as machine vision and autonomous
+            systems.
           </p>
-          <p className="portfolio-p">
-            My goal is to continue learning and pushing the boundaries of
-            software engineering and development. Whether it be on the world
-            wide web, in a financial institution, blockchain research,
-            manufacturing or even Ai.
+
+          <p>
+            I am passionate about continuing to learn, contributing to
+            open-source, and applying engineering discipline to build safe,
+            scalable, and efficient systems.
           </p>
-          <p className="portfolio-p">
-            Software engineering is a passion of mine, and I look forward to
-            contributing to the advancement, innovation and accessibility of the
-            modern digital world.
-          </p>
-        </div>
-      </section>
-      <section className="portfolio-main-section mb-16">
-        <div>
-          <h2 className="portfolio-h2 mt-4 mb-10">ENGINEERING EXPERIENCE</h2>
-        </div>
-        <div className="flex flex-col gap-24">
-          <div className="flex flex-col p-6 border rounded-lg shadow-2xl shadow-blue-500/20 bg-slate-900">
-            <h2 className="text-center text-2xl">
-              LEAD SOFTWARE DEVELOPER/ENGINEERING MANAGER
-            </h2>
-            <div className="w-full flex m-4">
-              <h4 className="py-2 px-4 rounded-full text-center border m-auto">
-                SEPT 2022 - CURRENT
-              </h4>
-            </div>
-            <ul className="portfolio-about-list list-disc ml-4">
-              <li>
-                Develop and maintain web applications using React, TypeScript,
-                MySQL, MongoDB, AWS and Google Cloud.
-              </li>
-              <li>
-                Develop cloud-based industrial WiFi IOT sensors using ESP8266,
-                ESP32 micro controllers running modified C++ software. Utilize
-                MQTT data transmission protocol (PUB/SUB).
-              </li>
-              <li>
-                Develop Touchscreen HMI UI/UX to support customers requirements,
-                combining previous skills in electromechanical engineering with
-                my latest skill set in web development and programming.
-              </li>
-              <li>
-                Develop Machine learning and Machine vision algorithms to
-                support future projects in robotics and self-driving vehicles.
-              </li>
-              <li>
-                Write clean, maintainable, and testable code. Red-to-green
-                testing is not nice to have, its a requirement.
-              </li>
-              <li>
-                Stay up-to-date with emerging technologies and industry trends
-                by participating in online code reviews. Or contributing to the
-                development of best practices and coding standards in the
-                industry by attending in-person events.
-              </li>
-              <li>
-                Troubleshoot and debug software issues in a timely and effective
-                manner.
-              </li>
-              <li>
-                Enjoy volunteering in the community through open-source
-                programming projects, most recently on two projects for
-                Hacktoberfest 2023.
-              </li>
-              <li>
-                Provide professional robotics and automation engineering design,
-                stress calculations, manufacturing tolerances, drafting services
-                and engineering drawings.
-              </li>
-              <li>
-                Familiar with containerizing applications for shipping using
-                Docker in combination with Kubernetes.
-              </li>
-            </ul>
-            <section className="flex flex-row flex-wrap pt-4 h-full justify-start gap-4">
-              <div className="py-2 px-4 rounded-full text-center border m-auto ">
-                <p>HTML5</p>
+        </section>
+
+        {/* EXPERIENCE */}
+        <section className="py-12 max-w-6xl mx-auto">
+          <h2 className="text-center text-2xl md:text-3xl font-bold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-yellow-500">
+            ENGINEERING &amp; SOFTWARE EXPERIENCE
+          </h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <article className="group bg-gradient-to-br from-gray-900/80 to-gray-800/70 border border-gray-700/40 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+              <header className="text-center">
+                <h3 className="text-xl md:text-2xl font-semibold text-amber-300 mb-2">
+                  LEAD SOFTWARE DEVELOPER / OWNER
+                </h3>
+                <div className="inline-flex items-center justify-center gap-3">
+                  <span className="px-4 py-2 rounded-full bg-amber-400/10 text-amber-300 font-semibold">
+                    SEPT 2022 - CURRENT
+                  </span>
+                </div>
+              </header>
+
+              <div className="mt-6 space-y-4 text-gray-300">
+                <ul className="list-inside list-disc space-y-2">
+                  <li>
+                    Develop modern web applications using Next.js, React, and
+                    TypeScript.
+                  </li>
+                  <li>
+                    Design and deploy cloud infrastructure on AWS and managed
+                    services.
+                  </li>
+                  <li>
+                    Prototype embedded IoT devices using ESP32/ESP8266 and MQTT.
+                  </li>
+                  <li>
+                    Build machine-vision and ML prototyping pipelines for
+                    robotics projects.
+                  </li>
+                </ul>
+
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {[
+                    "React",
+                    "Next.js",
+                    "TypeScript",
+                    "Tailwind",
+                    "AWS",
+                    "Node.js",
+                    "Postgres",
+                    "MongoDB",
+                    "C++",
+                    "Embedded",
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1.5 bg-gray-800 text-amber-300 rounded-full text-sm border border-amber-500/20"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>CSS3</p>
+            </article>
+
+            <article className="group bg-gradient-to-br from-gray-900/80 to-gray-800/70 border border-gray-700/40 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+              <header className="text-center">
+                <h3 className="text-xl md:text-2xl font-semibold text-amber-300 mb-2">
+                  SOFTWARE &amp; AUTOMATION ENGINEER
+                </h3>
+                <div className="inline-flex items-center justify-center gap-3">
+                  <span className="px-4 py-2 rounded-full bg-gray-800/50 text-amber-200 font-semibold border border-amber-400/10">
+                    2006 - 2022
+                  </span>
+                </div>
+              </header>
+
+              <div className="mt-6 space-y-4 text-gray-300">
+                <ul className="list-inside list-disc space-y-2">
+                  <li>
+                    Custom CAD automation with AutoCAD LISP and Inventor
+                    tooling.
+                  </li>
+                  <li>
+                    SQL reporting, custom VB utilities, and legacy system
+                    integration.
+                  </li>
+                  <li>
+                    Robotic cell design and commissioning for manufacturing
+                    lines.
+                  </li>
+                </ul>
+
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {[
+                    "AutoCAD",
+                    "LISP",
+                    "SQL Server",
+                    "VB",
+                    "Robotics",
+                    "HMI",
+                    "Kubernetes",
+                  ].map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1.5 bg-gray-800 text-amber-300 rounded-full text-sm border border-amber-500/10"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>JAVASCRIPT</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>REACT</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>MYSQL</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>AWS</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>C++</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>UI/UX DESIGN</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>SEO</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>SECURITY</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>DATABASE DESIGN</p>
-              </div>
-            </section>
+            </article>
           </div>
-          <div className="flex flex-col p-6 border rounded-lg shadow-2xl shadow-blue-500/20 bg-slate-900">
-            <h2 className="text-center text-2xl">
-              SOFTWARE DEVELOPER (LISP)/GRAPHIC DESIGNER
-            </h2>
-            <div className="w-full flex m-4">
-              <h4 className="py-2 px-4 rounded-full text-center border m-auto">
-                MAR 2018 - FEB 2022
-              </h4>
-            </div>
-            <ul className="portfolio-about-list list-disc ml-4">
-              <li>
-                Created custom AutoCAD LISP routines to take CAD drawings from
-                Autodesk Inventor and convert them to native AutoCAD 2000 file
-                type. Each layers line type and weights were adjusted while
-                conforming to the company's standards which were precise and
-                pre-determined by years of experience.
-              </li>
-              <li>
-                These LISP routines have helped to save the engineering
-                department hours of extra work that was spent doing this by hand
-                when the routines achieve a better result in seconds.
-              </li>
-              <li>
-                Participated in several successful Research and Development
-                projects including Pilot1000 Stretch Wrapper, Automatic Film Cut
-                Mechanism, and Rover Mobile Battery Powered Stretch Wrapper.
-              </li>
-              <li>
-                Managed Robotic Weld Cell creation thru installation created a
-                marked improvement in factory throughput. Designed and
-                commissioned dozens of custom weld fixtures for every major
-                product line.
-              </li>
-              <li>
-                Oversaw administration of Autodesk Inventor Vault containing
-                upwards of 50,000 individual parts, assemblies, and drawings.
-                Mentoring employees in current best practices for the team
-                environment.
-              </li>
-              <li>
-                Created Autodesk Inventor to DWG export system using LISP
-                routines which export and then reduce/rename the AutoCad DWG
-                layers to match Cousins Engineering Standards.
-              </li>
-            </ul>
-            <section className="flex flex-row flex-wrap pt-4 h-full justify-start gap-4">
-              <div className="py-2 px-4 rounded-full text-center border m-auto ">
-                <p>AUTOCAD</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>LISP</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>TYPESCRIPT</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>HMI</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>ADOBE</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>PHOTOSHOP</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>ILLUSTRATOR</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>JQUERY</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>LOGO DESIGN</p>
-              </div>
-            </section>
+        </section>
+
+        {/* CTA */}
+        <section className="py-12">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-gray-300 mb-6">
+              Interested in collaborating or need engineering help? I enjoy
+              practical engineering challenges and building reliable systems.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block px-6 py-3 bg-gradient-to-r from-amber-400 to-yellow-500 text-gray-900 font-semibold rounded-lg shadow-md hover:scale-[1.02] transform transition-all duration-200"
+            >
+              Get in touch
+            </Link>
           </div>
-          <div className="flex flex-col p-6 border rounded-lg shadow-2xl shadow-blue-500/20 bg-slate-900">
-            <h2 className="text-center text-2xl">
-              JUNIOR SOFTWARE DEV/WEBSITE DESIGNER/SQL ADMIN
-            </h2>
-            <div className="w-full flex m-4">
-              <h4 className="py-2 px-4 rounded-full text-center border m-auto">
-                OCT 2006 - FEB 2018
-              </h4>
-            </div>
-            <ul className="portfolio-about-list list-disc ml-4">
-              <li>
-                Coded custom SQL queries/views/detailed cost reports using
-                Crystal in conjunction with INFOR VISUAL Manufacturing CRM SQL
-                Server database to produce stunning, live data cost reports for
-                the CEO of the company.
-              </li>
-              <li>
-                Developed custom VB applications to allow the Engineering
-                department to interface with SolidWorks 3D CAD design software.
-                The program opens a new window within the SolidWorks
-                application. This window has multiple sliders and input boxes
-                that allow live control of model constraints. This was
-                accomplished by using SolidWorks built-in API.
-              </li>
-              <li>
-                Worked with a local studio to design/produce a WordPress
-                website: www.nyemfg.ca. Utilized open source program Blender and
-                Adobe Creative suite (PS, Ai, id) to accomplish this.
-              </li>
-              <li>
-                Custom programming of Siemens Micromaster VFD AC drive
-                controllers to regulate the HVAC system in a large welding shop.
-                Features a custom user interface. This upgrade resulted in a 20%
-                increase in air quality during periods of heavy welding.
-              </li>
-              <li>
-                Successful application and receipt of a $50,000 grant towards
-                the training of the Engineering department, via the Yves Landry
-                Foundation.
-              </li>
-            </ul>
-            <section className="flex flex-row flex-wrap pt-4 h-full justify-start gap-4">
-              <div className="py-2 px-4 rounded-full text-center border m-auto ">
-                <p>SQL SERVER</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>ODBC</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>CRYSTAL REPORTS</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>INFOR VISUAL</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>VISUAL BASIC</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>API</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>ADOBE</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>PHOTOSHOP</p>
-              </div>
-              <div className="py-2 px-4 rounded-full text-center border m-auto">
-                <p>INDESIGN</p>
-              </div>
-            </section>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
+      {/* Page JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "About — Blackrock Design",
+            description:
+              "Experienced full-stack developer and mechanical engineer with 20+ years in software development, robotics, and industrial automation.",
+            url: "/about/",
+            author: {
+              "@type": "Person",
+              name: "Blackrock Design",
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "/about/",
+            },
+          }),
+        }}
+      />
     </main>
   );
 };

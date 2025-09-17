@@ -30,6 +30,21 @@ const config: Config = {
           },
         },
       },
+      colors: {
+        gold: {
+          DEFAULT: "#D4AF37", // primary gold
+          50: "#FFF9E6",
+          100: "#FFF3CC",
+          200: "#FFE599",
+          300: "#FFD866",
+          400: "#FFCC33",
+          500: "#D4AF37",
+          600: "#B58E2B",
+          700: "#8A6B20",
+          800: "#604915",
+          900: "#37290A",
+        },
+      },
     },
   },
   future: {

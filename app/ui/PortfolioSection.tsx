@@ -2,14 +2,27 @@
 
 import React, { useState, useMemo } from "react";
 import { lazy, Suspense } from "react";
+import Card from ".././components/ui/Card";
+import Badge from ".././components/ui/Badge";
+import Thumbnail from ".././components/ui/Thumbnail";
 
-// Type definitions
+// Lazy heavy deps
+const MotionDiv = lazy(() =>
+  import("framer-motion").then((mod) => ({ default: mod.motion.div }))
+);
+const RoundButton = lazy(() => import("@/app/ui/RoundButton"));
+const TransitionLink = lazy(() =>
+  import("../utils/TransitionLink").then((mod) => ({
+    default: mod.TransitionLink,
+  }))
+);
+
+// Types
 interface PortfolioLinks {
   code?: string;
   live?: string;
   more?: string;
 }
-
 interface PortfolioItem {
   id: string;
   title: string;
@@ -20,27 +33,12 @@ interface PortfolioItem {
   links: PortfolioLinks;
   href: string;
 }
-
 interface PortfolioItemProps {
   item: PortfolioItem;
   index: number;
 }
 
-// Lazy load heavy dependencies
-const MotionDiv = lazy(() =>
-  import("framer-motion").then((mod) => ({ default: mod.motion.div }))
-);
-const CldImage = lazy(() =>
-  import("next-cloudinary").then((mod) => ({ default: mod.CldImage }))
-);
-const RoundButton = lazy(() => import("@/app/ui/RoundButton"));
-const TransitionLink = lazy(() =>
-  import("../utils/TransitionLink").then((mod) => ({
-    default: mod.TransitionLink,
-  }))
-);
-
-// Portfolio data moved to separate constant to reduce inline code
+// Data (keep your items; truncated here to keep file readable)
 const portfolioItems: PortfolioItem[] = [
   {
     id: "jack-o-lantern",
@@ -96,110 +94,173 @@ const portfolioItems: PortfolioItem[] = [
     },
     href: "/portfolio/resume-wrangler",
   },
-  // Add more items as needed...
 ];
 
-const PortfolioItemComponent: React.FC<PortfolioItemProps> = ({
-  item,
-  index,
-}) => (
-  <Suspense
-    fallback={<div className="animate-pulse bg-gray-200 h-64 rounded"></div>}
-  >
-    <div className="portfolio-grid">
-      <div className="portfolio-container mt-2">
-        <MotionDiv
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: { duration: 0.5, delay: index * 0.1 },
-          }}
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <TransitionLink className="" href={item.href}>
-            {item.images.map((src, idx) => (
-              <CldImage
-                key={idx}
-                className={`showcase-card-container ${
-                  idx === 0 ? "mt-8 xl:mb-8" : "hidden md:block my-8"
-                }`}
-                alt={`${item.title} screenshot ${idx + 1}`}
-                width="1000"
-                height="1000"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                src={src}
-                loading={idx === 0 ? "eager" : "lazy"}
-              />
-            ))}
-          </TransitionLink>
-        </MotionDiv>
-      </div>
+function PortfolioItem({ item, index }: PortfolioItemProps) {
+  const [activeImg, setActiveImg] = useState<number>(0);
 
-      <div className="portfolio-container xl:mt-8">
-        <MotionDiv
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: { duration: 0.5, delay: index * 0.1 + 0.2 },
-          }}
-          viewport={{ once: true }}
-        >
-          <h3 className="showcased-h3">{item.title}</h3>
-          <p className="showcased-p">{item.description}</p>
-          {item.status && (
-            <p className="pt-6 text-3xl text-bold">{item.status}</p>
-          )}
+  return (
+    <Suspense
+      fallback={
+        <div className="animate-pulse bg-gray-800/40 h-64 rounded-2xl" />
+      }
+    >
+      <Card className="p-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-0">
+          {/* Media column */}
+          <div className="relative">
+            <div className="absolute top-4 right-4 z-10">
+              {item.status && <Badge>{item.status}</Badge>}
+            </div>
 
-          <div className="my-8">
-            <ul className="showcased-list flex flex-row align-middle flex-wrap gap-4 justify-start my-2">
-              {item.tech.map((tech) => (
-                <li key={tech} className="showcased-btn">
-                  {tech}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="flex flex-row flex-wrap gap-3 justify-around my-8">
-            <Suspense
-              fallback={<div className="w-24 h-10 bg-gray-200 rounded"></div>}
+            <MotionDiv
+              initial={{ opacity: 0, scale: 0.995 }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                transition: { duration: 0.45, delay: index * 0.06 },
+              }}
+              viewport={{ once: true }}
             >
-              {item.links.code && (
-                <RoundButton
-                  href={item.links.code}
-                  buttonClass="round-button"
-                  buttonText="CODE"
-                  target="_blank"
-                  rel=""
-                />
-              )}
-              {item.links.live && (
-                <RoundButton
-                  href={item.links.live}
-                  buttonClass="round-button"
-                  buttonText="LIVE SITE"
-                  target="_blank"
-                  rel=""
-                />
-              )}
-              {item.links.more && (
-                <RoundButton
-                  href={item.links.more}
-                  buttonClass="round-button"
-                  buttonText="SEE MORE"
-                  target="_blank"
-                  rel=""
-                />
-              )}
-            </Suspense>
-          </div>
-        </MotionDiv>
-      </div>
-    </div>
-  </Suspense>
-);
+              <TransitionLink href={item.href} className="block w-full">
+                <div className="relative w-full h-64 md:h-80 lg:h-96 bg-gray-800 rounded-t-2xl lg:rounded-l-2xl overflow-hidden">
+                  <Thumbnail
+                    src={item.images[activeImg]}
+                    alt={`${item.title} screenshot ${activeImg + 1}`}
+                    className="w-full h-full"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent pointer-events-none" />
+                </div>
+              </TransitionLink>
+            </MotionDiv>
 
-const PortfolioSection: React.FC = () => {
+            {/* Thumbnails row */}
+            {item.images && item.images.length > 1 && (
+              <div className="hidden md:flex items-center gap-3 px-4 py-3 bg-gray-900/20 border-t border-gray-700/20 rounded-b-lg lg:rounded-br-lg">
+                {item.images.map((src, idx) => (
+                  <button
+                    key={src}
+                    onClick={() => setActiveImg(idx)}
+                    aria-label={`Show image ${idx + 1}`}
+                    className={`relative rounded-md overflow-hidden w-20 h-12 flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-gold-400 ${
+                      activeImg === idx ? "ring-2 ring-gold-400/60" : ""
+                    }`}
+                  >
+                    <Thumbnail
+                      src={src}
+                      alt={`${item.title} thumb ${idx + 1}`}
+                      width={160}
+                      height={90}
+                    />
+                    {activeImg === idx && (
+                      <span className="absolute inset-0 ring-1 ring-gold-400/30 pointer-events-none" />
+                    )}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Meta column */}
+          <div className="p-6 flex flex-col justify-between">
+            <MotionDiv
+              initial={{ opacity: 0, x: 8 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+                transition: { duration: 0.45, delay: index * 0.06 + 0.08 },
+              }}
+              viewport={{ once: true }}
+            >
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  {item.description}
+                </p>
+
+                <ul className="flex flex-wrap gap-2 mb-4">
+                  {item.tech.map((tech) => (
+                    <li
+                      key={tech}
+                      className="text-xs font-medium px-3 py-1 rounded-full bg-gray-800/50 text-gray-200 border border-gray-700/40 hover:bg-gold-500/10 hover:text-gold-200 transition-colors"
+                    >
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="flex flex-wrap gap-3 mt-3">
+                  <Suspense
+                    fallback={
+                      <div className="w-24 h-10 bg-gray-700/40 rounded" />
+                    }
+                  >
+                    {item.links.code && (
+                      <RoundButton
+                        href={item.links.code}
+                        buttonClass="round-button bg-gray-800/70 hover:bg-gray-700/80 text-gray-100"
+                        buttonText="Code"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      />
+                    )}
+
+                    {item.links.live && (
+                      <RoundButton
+                        href={item.links.live}
+                        buttonClass="round-button bg-gold-500 hover:bg-gold-400 text-black shadow-sm"
+                        buttonText="Live site"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      />
+                    )}
+
+                    {item.links.more && (
+                      <RoundButton
+                        href={item.links.more}
+                        buttonClass="round-button bg-transparent border border-gray-700/40 text-gray-200 hover:bg-gray-800/50"
+                        buttonText="See more"
+                        target="_self"
+                        rel=""
+                      />
+                    )}
+                  </Suspense>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <TransitionLink
+                  href={item.href}
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-gold-300 hover:text-gold-200"
+                >
+                  <span>Open project</span>
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </TransitionLink>
+              </div>
+            </MotionDiv>
+          </div>
+        </div>
+      </Card>
+    </Suspense>
+  );
+}
+
+export default function PortfolioSection() {
   const [visibleItems, setVisibleItems] = useState<number>(3);
 
   const displayedItems = useMemo(
@@ -212,29 +273,29 @@ const PortfolioSection: React.FC = () => {
   };
 
   return (
-    <section className="mb-10">
-      {displayedItems.map((item, index) => (
-        <React.Fragment key={item.id}>
-          <PortfolioItemComponent item={item} index={index} />
-          {index < displayedItems.length - 1 && (
-            <div className="border-t-[1px] mb-8 mt-2" />
-          )}
-        </React.Fragment>
-      ))}
+    <section className="mb-10 max-w-screen-xl mx-auto px-4 lg:px-0">
+      <div className="grid gap-8">
+        {displayedItems.map((item, index) => (
+          <div key={item.id}>
+            <PortfolioItem item={item} index={index} />
+            {index < displayedItems.length - 1 && (
+              <div className="border-t border-gray-800/30 my-6" />
+            )}
+          </div>
+        ))}
+      </div>
 
       {visibleItems < portfolioItems.length && (
         <div className="text-center mt-8">
           <button
             onClick={loadMore}
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center gap-3 px-6 py-3 bg-gold-500 text-black rounded-lg hover:bg-gold-400 transition-colors font-semibold shadow-md focus:outline-none focus:ring-4 focus:ring-gold-300/30"
           >
-            Load More Projects ({portfolioItems.length - visibleItems}{" "}
+            Load more projects ({portfolioItems.length - visibleItems}{" "}
             remaining)
           </button>
         </div>
       )}
     </section>
   );
-};
-
-export default PortfolioSection;
+}

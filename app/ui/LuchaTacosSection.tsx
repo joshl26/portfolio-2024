@@ -28,11 +28,11 @@ const techStack = [
 // Key features data
 const keyFeatures = [
   "Interactive User Interface: Offers a clean, responsive design for easy navigation through various functionalities.",
-  "Data Security: Implement secure login mechanisms and encrypted personal data storage.",
-  "Direct Integration with Job Boards: Fetches live data from popular hiring platforms for accurate tailoring of documents.",
-  "User-Friendly Interface: Ensures simple navigation and interaction across various functionalities within the platform.",
-  "Dynamic Customization Capabilities: Uses bespoke algorithms to match users' profiles with suitable job descriptions, emphasizing necessary skills and experiences.",
-  "Data Security Measures: Incorporates high-level security protocols to protect user data throughout their interaction with the service.",
+  "Authentic Mexican Experience: Brings the vibrant culture of Mexican street food to your plate.",
+  "Fresh Ingredient Focus: Highlights locally sourced ingredients for maximum flavor.",
+  "Lucha Libre Theme: Unique wrestling-inspired presentation that makes dining memorable.",
+  "Customizable Options: Allows customers to build their perfect taco combination.",
+  "Mobile Ordering: Streamlined mobile experience for quick ordering and pickup.",
 ];
 
 // Screen images data
@@ -40,32 +40,26 @@ const screenImages = [
   {
     src: "v1718930369/PortfolioSite/lucha-tacos-screen_1_o70hjo.png",
     alt: "Lucha Tacos homepage",
-    className: "showcase-card-container",
   },
   {
     src: "v1718930369/PortfolioSite/lucha-tacos-screen_2_kdh3wm.png",
     alt: "Lucha Tacos menu page",
-    className: "portfolio-screen my-8",
   },
   {
     src: "v1718930368/PortfolioSite/lucha-tacos-screen_3_bnag4c.png",
     alt: "Lucha Tacos product details",
-    className: "showcase-card-container my-8",
   },
   {
     src: "v1718930368/PortfolioSite/lucha-tacos-screen_4_dwtqru.png",
     alt: "Lucha Tacos ordering interface",
-    className: "showcase-card-container my-8",
   },
   {
     src: "v1718930368/PortfolioSite/lucha-tacos-screen_5_wob8pc.png",
     alt: "Lucha Tacos cart and checkout",
-    className: "showcase-card-container my-8",
   },
   {
     src: "v1718930367/PortfolioSite/lucha-tacos-screen_6_korhr6.png",
     alt: "Lucha Tacos contact page",
-    className: "showcase-card-container my-8",
   },
 ];
 
@@ -77,6 +71,36 @@ const LuchaTacosSection = () => {
           <div className="animate-pulse bg-gray-200 h-64 rounded"></div>
         }
       >
+        {/* Enhanced Hero Section */}
+        <section className="flex flex-col justify-center items-center min-h-[50vh] text-center mb-16">
+          <h1
+            className="bg-gradient-to-r from-white via-amber-200 to-yellow-200 
+                        bg-clip-text text-transparent mb-8 tracking-tight
+                        drop-shadow-2xl text-5xl md:text-6xl lg:text-7xl font-black"
+          >
+            LUCHA TACOS
+          </h1>
+
+          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10">
+            Authentic Mexican street food with a twist of excitement inspired by
+            lucha libre culture
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-8 mt-6 text-sm text-gray-400">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
+              <span>Full Stack Development</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div
+                className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"
+                style={{ animationDelay: "0.5s" }}
+              />
+              <span>UI/UX Design</span>
+            </div>
+          </div>
+        </section>
+
         <section>
           <MotionDiv
             initial={{ opacity: 0 }}
@@ -87,7 +111,7 @@ const LuchaTacosSection = () => {
             viewport={{ once: true }}
           >
             <CldImage
-              className="showcase-card-container"
+              className="rounded-2xl overflow-hidden shadow-2xl shadow-amber-500/10 border border-gray-700/40 w-full"
               alt="Lucha Tacos hero image"
               width="1000"
               height="1000"
@@ -126,20 +150,20 @@ const LuchaTacosSection = () => {
               <RoundButton
                 href="https://github.com/joshl26/lucha-tacos"
                 buttonText="GIT"
-                buttonClass="round-button"
+                buttonClass="px-6 py-3 bg-gradient-to-r from-amber-500 to-yellow-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 rel=""
                 target="_blank"
               />
               <RoundButton
                 buttonText="LIVE SITE"
-                buttonClass="round-button"
+                buttonClass="px-6 py-3 bg-gradient-to-r from-amber-500 to-yellow-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 href="https://lucha-tacos.vercel.app/"
                 rel=""
                 target="_blank"
               />
               <RoundButton
                 buttonText="UI/UX"
-                buttonClass="round-button"
+                buttonClass="px-6 py-3 bg-gradient-to-r from-amber-500 to-yellow-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 rel=""
                 target=""
                 href=""
@@ -156,16 +180,24 @@ const LuchaTacosSection = () => {
           }}
           viewport={{ once: true }}
         >
-          <section className="portfolio-main-section pb-6">
-            <h2 className="portfolio-h2 mb-6">PROJECT DETAILS</h2>
-            <div className="flex flex-row justify-between">
-              <h4 className="portfolio-h4">SPRING 2023 - CURRENT</h4>
-              <h4 className="xl:text-left text-right portfolio-h4">
+          <section
+            className="pb-6 bg-gradient-to-br from-gray-900/95 via-gray-800/95 to-gray-900/95
+                     backdrop-blur-sm shadow-2xl shadow-amber-500/5 border border-gray-700/40
+                     rounded-2xl overflow-hidden p-8 mb-10"
+          >
+            <h2 className="mb-6 text-3xl font-bold text-white">
+              PROJECT DETAILS
+            </h2>
+            <div className="flex flex-row justify-between mb-6">
+              <h4 className="text-amber-400 font-semibold">
+                SPRING 2023 - CURRENT
+              </h4>
+              <h4 className="xl:text-left text-right text-amber-400 font-semibold">
                 COMMERCIAL PRODUCT
               </h4>
             </div>
 
-            <div className="flex flex-row flex-wrap gap-y-3 justify-between py-8 font-ayer tracking-wider">
+            <div className="flex flex-row flex-wrap gap-y-3 justify-between py-8 tracking-wider mb-6">
               <Suspense
                 fallback={
                   <div className="flex gap-2 flex-wrap">
@@ -184,7 +216,10 @@ const LuchaTacosSection = () => {
                   <RoundButton
                     key={tech}
                     buttonText={tech}
-                    buttonClass="showcased-btn"
+                    buttonClass="px-4 py-2 bg-gradient-to-r from-amber-500/90 to-yellow-600/90 
+                               text-white text-xs font-semibold rounded-full backdrop-blur-md
+                               shadow-lg border border-white/20 uppercase tracking-wider
+                               transform hover:scale-105 transition-transform duration-300"
                     rel=""
                     target=""
                     href=""
@@ -193,7 +228,7 @@ const LuchaTacosSection = () => {
               </Suspense>
             </div>
 
-            <p className="portfolio-p">
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">
               Bring the dynamic and lively flavors of Mexico to your dining
               experience, infusing it with an extra element of excitement. Our
               tacos embody the spirit of masked wrestlers in the ring - brimming
@@ -204,7 +239,7 @@ const LuchaTacosSection = () => {
               each one bursting with a powerful medley of the freshest
               ingredients and the most mouthwatering seasonings.
             </p>
-            <p className="portfolio-p">
+            <p className="text-gray-300 text-lg leading-relaxed">
               Lucha Tacos brings the bold and vibrant flavors of Mexico to your
               plate with a twist of excitement. Our tacos are like masked
               wrestlers in the ring - packed with powerful combinations of fresh
@@ -224,12 +259,20 @@ const LuchaTacosSection = () => {
           }}
           viewport={{ once: true }}
         >
-          <section className="portfolio-main-section mb-8">
-            <h2 className="portfolio-h2">KEY FEATURES</h2>
-            <ul className="list-disc list-inside xl:list-outside">
+          <section
+            className="mb-8 bg-gradient-to-br from-gray-900/95 via-gray-800/95 to-gray-900/95
+                     backdrop-blur-sm shadow-2xl shadow-amber-500/5 border border-gray-700/40
+                     rounded-2xl overflow-hidden p-8"
+          >
+            <h2 className="text-3xl font-bold text-white mb-6">KEY FEATURES</h2>
+            <ul className="space-y-4">
               {keyFeatures.map((feature, index) => (
-                <li key={index} className="portfolio-p">
-                  {feature}
+                <li
+                  key={index}
+                  className="text-gray-300 text-lg flex items-start"
+                >
+                  <span className="text-amber-400 mr-2 mt-2">•</span>
+                  <span>{feature}</span>
                 </li>
               ))}
             </ul>
@@ -244,37 +287,45 @@ const LuchaTacosSection = () => {
           }}
           viewport={{ once: true }}
         >
-          <section className="portfolio-main-section mb-8">
-            <h2 className="portfolio-h2">FONT TYPES</h2>
-            <div className="flex justify-between items-end">
+          <section
+            className="mb-8 bg-gradient-to-br from-gray-900/95 via-gray-800/95 to-gray-900/95
+                     backdrop-blur-sm shadow-2xl shadow-amber-500/5 border border-gray-700/40
+                     rounded-2xl overflow-hidden p-8"
+          >
+            <h2 className="text-3xl font-bold text-white mb-6">FONT TYPES</h2>
+            <div className="flex justify-between items-end mb-6">
               <span>
-                <h1 className="portfolio-font-lusi">LUSI</h1>
+                <h1 className="text-5xl text-white font-lusi">LUSI</h1>
               </span>
-              <div className="portfolio-li">
+              <div className="text-gray-300">
                 <span>Weight</span>
                 <ul className="list-none flex gap-2">
-                  <li>200</li>
-                  <li>500</li>
-                  <li>800</li>
+                  <li className="bg-gray-700/60 px-3 py-1 rounded-lg">200</li>
+                  <li className="bg-gray-700/60 px-3 py-1 rounded-lg">500</li>
+                  <li className="bg-gray-700/60 px-3 py-1 rounded-lg">800</li>
                 </ul>
               </div>
             </div>
             <div className="flex justify-between items-end">
               <span>
-                <h1 className="portfolio-font-roboto">ROBO</h1>
+                <h1 className="text-5xl text-white font-roboto">ROBO</h1>
               </span>
-              <div className="portfolio-li">
+              <div className="text-gray-300">
                 <span>Weight</span>
                 <ul className="list-none flex gap-2">
-                  <li>200</li>
-                  <li>500</li>
+                  <li className="bg-gray-700/60 px-3 py-1 rounded-lg">200</li>
+                  <li className="bg-gray-700/60 px-3 py-1 rounded-lg">500</li>
                 </ul>
               </div>
             </div>
           </section>
         </MotionDiv>
 
-        <section className="portfolio-main-section">
+        <section
+          className="bg-gradient-to-br from-gray-900/95 via-gray-800/95 to-gray-900/95
+                     backdrop-blur-sm shadow-2xl shadow-amber-500/5 border border-gray-700/40
+                     rounded-2xl overflow-hidden p-8"
+        >
           <MotionDiv
             initial={{ opacity: 0 }}
             whileInView={{
@@ -283,30 +334,33 @@ const LuchaTacosSection = () => {
             }}
             viewport={{ once: true }}
           >
-            <h2 className="portfolio-h2 mb-8">SCREENS</h2>
+            <h2 className="text-3xl font-bold text-white mb-8">SCREENS</h2>
           </MotionDiv>
 
-          {screenImages.map((image, index) => (
-            <MotionDiv
-              key={index}
-              initial={{ opacity: 0 }}
-              whileInView={{
-                opacity: 1,
-                transition: { duration: 0.75, delay: 0.5 + index * 0.1 },
-              }}
-              viewport={{ once: true }}
-            >
-              <CldImage
-                className={image.className}
-                alt={image.alt}
-                width="1000"
-                height="1000"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                src={image.src}
-                loading={index === 0 ? "eager" : "lazy"}
-              />
-            </MotionDiv>
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {screenImages.map((image, index) => (
+              <MotionDiv
+                key={index}
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: { duration: 0.75, delay: 0.5 + index * 0.1 },
+                }}
+                viewport={{ once: true }}
+                className="mb-8 last:mb-0"
+              >
+                <CldImage
+                  className="rounded-xl overflow-hidden shadow-lg border border-gray-700/40 transition-all duration-500 hover:shadow-amber-500/20 hover:border-amber-500/40"
+                  alt={image.alt}
+                  width="1000"
+                  height="1000"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  src={image.src}
+                  loading={index === 0 ? "eager" : "lazy"}
+                />
+              </MotionDiv>
+            ))}
+          </div>
         </section>
       </Suspense>
     </div>

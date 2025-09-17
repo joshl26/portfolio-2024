@@ -8,16 +8,8 @@ const STATIC_ROUTES = [
   "contact",
   "guestbook",
   "portfolio",
-  "portfolio/ecommerce/beanbag-coffee-co",
-  "portfolio/ecommerce/cleaner-by-design",
-  "portfolio/el-in",
   "portfolio/lucha-tacos",
-  "portfolio/outdoorsy",
-  "portfolio/pomodor",
   "portfolio/resume-wrangler",
-  "portfolio/3dportfolio",
-  "portfolio/blackrock-3d",
-  "portfolio/nyemfg",
   "privacy",
 ] as const;
 

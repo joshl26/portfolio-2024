@@ -13,7 +13,7 @@ import ResponsiveHeader from "@/app/ui/ResponsiveHeader";
 import ResponsiveMenu from "@/app/ui/ResponsiveMenu";
 import MenuContextProvider from "@/context/menu-context";
 import "@/app/globals.css";
-import CursorContainer from "./CursorContainer";
+import CursorContainer from "./components/CursorContainer";
 import { SandpackCSS } from "./blog/[slug]/sandpack";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
@@ -134,16 +134,16 @@ export default function RootLayout({
         suppressHydrationWarning={true}
         className={`${lusitana.variable} ${raleway.variable} ${nunito.variable} ${cabin.variable} ${noto_sans.variable} ${roboto.variable} antialiased w-full h-full`}
       >
-        <CursorContainer>
-          <MenuContextProvider>
-            <div className="w-full overflow-x-hidden m-auto">
-              <ResponsiveHeader />
-              <ResponsiveMenu />
-              {children}
-              <ResponsiveFooter />
-            </div>
-          </MenuContextProvider>
-        </CursorContainer>
+        {/* <CursorContainer> */}
+        <MenuContextProvider>
+          <div className="min-h-screen flex flex-col">
+            <ResponsiveHeader />
+            {/* <ResponsiveMenu /> */}
+            {children}
+            <ResponsiveFooter />
+          </div>
+        </MenuContextProvider>
+        {/* </CursorContainer> */}
       </body>
       <GoogleAnalytics gaId="G-M9Y769WX7E" />
     </html>

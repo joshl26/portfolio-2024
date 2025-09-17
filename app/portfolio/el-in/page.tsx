@@ -1,5 +1,4 @@
 import React from "react";
-import "@/app/ui/Portfolio.css";
 import ElectronicsInventorySection from "@/app/ui/ElectronicsInventorySection";
 
 export const metadata = {
@@ -7,7 +6,7 @@ export const metadata = {
   description:
     "Resume Wrangler is an innovative and dynamic tool created to redefine the way job seekers prepare their application documents.",
   alternates: {
-    canonical: `/portfolio/el-in`,
+    canonical: "/portfolio/el-in/",
   },
 };
 
