@@ -10,9 +10,9 @@ export const metadata = {
     "Experience the bold flavors of Mexico with Lucha Tacos - authentic street food with a twist of excitement. Fresh ingredients, vibrant seasonings, and wrestling-inspired presentation.",
   keywords:
     "mexican food, tacos, street food, lucha libre, authentic mexican, fresh ingredients",
-  authors: [{ name: "Your Name" }],
-  creator: "Your Name",
-  publisher: "Your Name",
+  authors: [{ name: "Joshua Lehman" }],
+  creator: "Joshua Lehman",
+  publisher: "Joshua Lehman",
   robots: {
     index: true,
     follow: true,
@@ -97,11 +97,11 @@ const Page = () => {
             url: "/portfolio/lucha-tacos/",
             author: {
               "@type": "Person",
-              name: "Your Name",
+              name: "Joshua Lehman",
             },
             publisher: {
               "@type": "Person",
-              name: "Your Name",
+              name: "Joshua Lehman",
             },
             mainEntityOfPage: {
               "@type": "WebPage",

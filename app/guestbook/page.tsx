@@ -14,9 +14,9 @@ export const metadata = {
     "Sign my interactive guestbook and leave your message. Connect with other visitors through this shared digital space.",
   keywords:
     "guestbook, visitor messages, interactive, digital guestbook, community",
-  authors: [{ name: "Your Name" }],
-  creator: "Your Name",
-  publisher: "Your Name",
+  authors: [{ name: "Joshua Lehman" }],
+  creator: "Joshua Lehman",
+  publisher: "Joshua Lehman",
   robots: {
     index: true,
     follow: true,
@@ -131,7 +131,7 @@ export default async function GuestbookPage() {
             url: "/guestbook/",
             author: {
               "@type": "Person",
-              name: "Your Name",
+              name: "Joshua Lehman",
             },
             mainEntityOfPage: {
               "@type": "WebPage",

@@ -1,4 +1,5 @@
 import { FaLinkedinIn, FaGithub, FaYoutubeSquare } from "react-icons/fa";
+import FeedDiscovery from "../components/FeedDiscovery";
 
 const ResponsiveFooter = () => {
   return (
@@ -25,6 +26,7 @@ const ResponsiveFooter = () => {
               </p>
             </a>
           </div>
+          <FeedDiscovery />
 
           {/* Social media links */}
           <nav

@@ -31,9 +31,9 @@ export const metadata = {
     "Discover in-depth articles, tutorials, and insights on software development, web design, programming best practices, and cutting-edge technology trends.",
   keywords:
     "software development, web development, programming, design, technology, tutorials, coding, javascript, react, nextjs",
-  authors: [{ name: "Your Name" }], // Replace with your name
-  creator: "Your Name", // Replace with your name
-  publisher: "Your Name", // Replace with your name
+  authors: [{ name: "Josh Lehman" }],
+  creator: "Josh Lehman",
+  publisher: "Josh Lehman",
   robots: {
     index: true,
     follow: true,
@@ -52,10 +52,10 @@ export const metadata = {
     title: "Blog | Software Development Insights",
     description:
       "Read my latest thoughts on software development, design patterns, and technology trends.",
-    siteName: "Your Site Name", // Replace with your site name
+    siteName: "Josh Lehman's Portfolio",
     images: [
       {
-        url: "/og-blog.jpg", // Add your blog OG image
+        url: "/og-blog.jpg",
         width: 1200,
         height: 630,
         alt: "Blog - Software Development Insights",
@@ -67,14 +67,24 @@ export const metadata = {
     title: "Blog | Software Development Insights",
     description:
       "Read my latest thoughts on software development, design patterns, and technology trends.",
-    images: ["/twitter-blog.jpg"], // Add your Twitter card image
-    creator: "@yourusername", // Replace with your Twitter handle
+    images: ["/twitter-blog.jpg"],
+    creator: "@joshlehman_dev",
   },
   alternates: {
     canonical: "/blog",
     types: {
-      "application/rss+xml": "/blog/rss.xml", // Add if you have RSS feed
-      "application/atom+xml": "/blog/atom.xml", // Add if you have Atom feed
+      "application/rss+xml": [
+        {
+          url: "/blog/rss.xml",
+          title: "Josh Lehman's Blog RSS Feed",
+        },
+      ],
+      "application/atom+xml": [
+        {
+          url: "/blog/atom.xml",
+          title: "Josh Lehman's Blog Atom Feed",
+        },
+      ],
     },
   },
   category: "Technology",
@@ -494,11 +504,11 @@ export default function BlogPage() {
             url: "/blog",
             author: {
               "@type": "Person",
-              name: "Your Name", // Replace with your name
+              name: "Joshua Lehman",
             },
             publisher: {
               "@type": "Person",
-              name: "Your Name", // Replace with your name
+              name: "Joshua Lehman",
             },
             mainEntityOfPage: {
               "@type": "WebPage",

@@ -89,7 +89,10 @@ const About = () => {
               "@type": "Person",
               name: "Blackrock Design",
               url: "https://blackrock.design/",
-              sameAs: ["https://github.com/", "https://www.linkedin.com/"],
+              sameAs: [
+                "https://github.com/joshl26/",
+                "https://www.linkedin.com/in/joshrlehman/",
+              ],
               jobTitle: "Full Stack Developer / Mechanical Engineer",
               description:
                 "Experienced full-stack developer and mechanical engineer with 20+ years in software development, robotics, and industrial automation.",
